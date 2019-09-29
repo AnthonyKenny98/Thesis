@@ -1,0 +1,227 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{\textsc{Thesis Proposal} \\ 
+	\small{for} \\ 
+	\Large{Reducing Execution Time of Robot Motion Planning Algorithms with RISC-V ISA}}
+\author{Anthony JW Kenny \\ \\
+        Electrical Engineering \\
+        Advisor: Vijay Janapa Reddi}
+\date{September 9th, 2019}
+
+
+\begin{document}
+\maketitle
+
+\section{Project}
+This thesis aims to improve the speed of robotic motion planning algorithms at run-time by altering the architecture on which these algorithms run. My approach will explore the possibilities of extending the Instruction Set Architecture and altering the microarchitecture to achieve this speed-up. By working with the RISC-V ISA, which is open-source and extendable, I will be able to explore optimization through extending the ISA and the number of instructions.
+
+\subsection{Background and Motivation}
+Robotics now have the potential to shape the world in ways much more profound than ever seen before, through a wide range of applications. Central to robots being useful in these applications is the need for real-time motion planning, since they are no longer confined to static environments like an assembly line, and now need to adapt to complex changing environments. Motion planning algorithms running on existing hardware is typically too slow currently for robots to be able to perform in these applications. There is a limitation on how efficiently these algorithms can be designed, or implemented in code. Thus, there exists the opportunity for significant speedups at the computer architecture level. 
+
+\subsection{Specific Problem and Metrics of Success}
+Modern robotics applications require run-time motion planning, which is implemented with computationally complex algorithms. There is a limit to how efficiently an algorithm can be designed to solve these problems, and so, how can I work in the computer architecture space to increase the speed with which these algorithms run on hardware.
+
+While the specific metrics of success will be dependent on the algorithm I eventually select, I will measure and verify based on the following aspects:
+
+\begin{itemize}
+    \item \textbf{Extended Instruction Set Architecture} (if applicable) is well defined and correct
+
+    \item \textbf{Modified processor design} (if applicable) produces correct output for a given input, and will reliably compute correct paths.
+
+
+    \item \textbf{Faster CPU performance} for the implementation of the selected algorithm. This can be measured through the CPU performance equation:
+        \begin{itemize}
+        \item Instructions/program is an area that could be targeted through extending the ISA
+        \item Cycles/instruction could be brought down through a modified processor design
+        \item Seconds/cycle is probably something that will remain constant and is beyond the scope of my intended optimizations.
+        \end{itemize}
+        While it is hard to define a specific speed-up benchmark, my research indicates that different methods of using hardware to quicken motion planning algorithms yield speed-ups from several times to several orders of magnitude.
+
+    \item \textbf{Power use} is such that total energy consumption declines by nature of the increase in speed of execution.
+
+    \item \textbf{Area of chip} is not prohibitive for potential applications.
+
+    \item \textbf{Latency} is lower than benchmark tests (again, specific amount of speedup will depend on the algorithm that is eventually selected).
+
+\end{itemize}
+
+\section{End User}
+The use of robotics across different industries is increasing rapidly, with global sales of industrial robotics doubling over the last 5 years (World Robotics Report, 2018). There are many factors driving this increase, such as the concept of “Co-Bots” (collaborative autonomous robots), Robotics as a Service (RaaS) businesses, the integration of AI into robotics, and the rise of the drones in many varied applications.\\
+The overall problem that end users of robotics face is that current motion planning algorithms cannot execute at run time fast enough to adapt to changing working environments. The significance of working in computer architecture to speed up these algorithms is such that it will extend the situations in which robots can be useful.\\
+The specific end user of this application may vary based on the final algorithm chosen, but more generally the system developed for this thesis could find use in a wide variety of final robotics applications. More specifically, the concern for speed in this thesis is particularly focussed on run-time computation. Thus, within the space of robot motion planning, it is most likely to see application where require robots to adapt to their changing environments. \\
+At any rate, the extended ISA and/or adapted microarchitecture will sit within larger robotic systems to provide the specific functionality of efficiently computing motion planning.
+
+\section{Existing Solutions and Previous Work}
+
+\subsection{Previous Work}
+
+\begin{itemize}
+    \item \textit{Robot Motion Planning on a Chip:} constructs robot-specific circuitry for motion planning that calculates plans approximately 3 orders of magnitude faster than existing methods. It uses parallelized collision detection for each edge of a robotic arm, so that the time taken to determine potential collisions with an edge is independent of the number of edges. Prototyped in Verilog HDL and compiled circuit design onto an FPGA for testing. (Murray, S., Floyd-Jones, W., Qi, Y., Sorin, D., Konidaris, G., 2016) 
+
+    \item \textit{Robot Motion Planning on a Chip:} constructs robot-specific circuitry for motion planning that calculates plans approximately 3 orders of magnitude faster than existing methods. It uses parallelized collision detection for each edge of a robotic arm, so that the time taken to determine potential collisions with an edge is independent of the number of edges. Prototyped in Verilog HDL and compiled circuit design onto an FPGA for testing. (Murray, S., Floyd-Jones, W., Qi, Y., Sorin, D., Konidaris, G., 2016) 
+
+    \item \textit{High-throughput Computation of Shannon Mutual Information on Chip:} uses multiple cores to compute Shannon mutual information without the use of approximation. When implemented on an FPGA, this architecture computes approximately 2 orders of magnitude faster and consumes an order of magnitude less power. (Zhi Xuan Li, P., Zhang, Z., Karaman, S., Sze, V.)
+
+    \item \textit{FPGA based Combinatorial Architecture for Parallelizing RRT:} aims to accomplish more per clock cycle in the application of RRT. They use FPGA combinatorial architecture that allows multiple RRTs to work together to explore a map. (Malik, G. S., Gupta, K., Krishna, K. M., Chowdhury, S. R. 2015)
+
+
+    \item \textit{A Motion Planning Processor on Reconfigurable Hardware:} studies the possibility of an FPGA based motion planning processor and evaluates its performance in executing the feasibility checks associated with motion planning algorithms. (Atay, N., Bayazit, B. 2006)
+
+
+    \item \textit{A Programmable Architecture for Robot Motion Planning Acceleration:} developed a microarchitecture of an accelerator for collision detection and graph search, implemented in Verilog and using an FPGA as a platform.. (Murray, S., Floyd-Jones, W., Konidaris, G., Sorin, D.)
+
+
+    \item \textit{MAVBench: Micro Aerial Vehicle Benchmarking:} introduces a framework to foster the development of autonomous Micro Aerial Vehicles, consisting of a simulator and application benchmark suite. It shows that efficient system design can improve MAV battery life by up to 1.8x. (Boroujerdian, B., Genc, H., Krishnan, S., Cui, W., Faust, A., Reddi, V. J. 2019)
+
+
+    \item \textit{Towards Deep Learning using TensorFlow Lite on RISC-V:} presented the software infrastructure for optimizing the execution of neural network calculations by extending the RISC-V ISA. A small number of instruction extensions achieved coverage over a wide variety of speech and vision application deep neural networks. (Louis, M. S., Azad, Z., Delshadtehrani, L., Gupta, S., Warden, P., Reddi, V. J., Joshi, A. 2019)
+
+
+    \item \textit{GAP-8: A RISC-V SoC for AI at the Edge of the IoT:} proposed a programmable RISC-V computing engine with 8-core and convolutional neural network accelerator for power efficient, battery operated, IoT edge-device computing. (Flamand, E., Rossi, et al. 2018)
+
+\end{itemize}
+
+\subsection{Existing Technology}
+
+FPGA: My research shows that previous work in speeding up motion planning algorithms has made extensive use of Field Programmable Gate Arrays as a platform, which allows for easy prototyping of microarchitecture designs.\\
+
+RISC-V: Is an open-source, extendable Instruction Set Architecture based on the reduced instruction set computer principles. By being extendable, it allows for potential optimizations within the ISA, as shown in the final two papers listed above in my research.
+
+\clearpage
+
+\section{New, Innovative, Interesting Approach}
+
+While optimizing hardware for motion planning is a very popular area of research, from my research nobody has attempted to do so by extending the RISC-V Instruction Set Architecture.
+
+Looking at the field of Computer Architecture, I anticipate making changes to the ISA or the processor in order to improve the performance of a specific algorithm. \\
+
+Considering the CPU Performance Equation;
+
+\[
+\text{CPU Execution Time} = \frac{\text{instructions}}{\text{program}} \times \frac{\text{cycles}}{\text{instruction}} \times \frac{\text{seconds}}{\text{cycle}} = \frac{\text{seconds}}{\text{program}}
+\]
+
+One potential approach to improve the CPU speed of a motion planning algorithm is to reduce instructions per program, through extending the RISC-V ISA. This is an approach that I’ve found has been used to optimise Deep Learning and AI on edge-computing IoT devices, but not in the robot motion planning area.
+
+Another avenue through which the CPU speed could be increased is be reducing Cycles/Instruction. This would be done by altering the microarchitecture itself, with the aim of lowering how many cycles are required to execute instructions commonly used in motion planning algorithms. 
+
+\clearpage
+
+\section{Related Courses and Required Skills}
+
+\subsection{Courses}
+
+\begin{center}
+\begin{tabular}{ |m{0.4\linewidth}|m{0.6\linewidth}|}
+    \hline
+    \textbf{Course}                                     & \textbf{Relevant Concepts \& Experience} \\
+    \hline
+    CS141: Computing Hardware                           & Digital Logic, Basic Computer Architecture, Machine Code, ISAs, Processor Design, FPGA, HDLs. \\
+    \hline
+    CS146: Computer Architecture                        & Processor Design, Computer Organization, quantitative evaluation of design alternatives. \\
+    \hline
+    CS182: Artificial Intelligence                      & Background understanding of motion planning algorithms and their complexity. \\
+    \hline
+    ES153: Laboratory Electronics                       & Basics of processor and computer design, assembly and machine language. \\
+    \hline
+    ES96r: Engineering Problem Solving                  & Project management, defining problem space,techniques to find solutions to a problem. \\
+    \hline
+    ES150: Probability for Engineering                  & Fundamental understanding of probability, which is often used in robot motion planning algorithms. \\
+    \hline
+    CS50 \& CS51: Introduction to CS                    & Basic programming skills, version control. \\
+    \hline
+    CS61: Systems Programming and Machine Organization  & Fundamentals of low-level machine organisation, C and machine language. \\
+    \hline
+    Physics 12 A \& B                                   & Python and matlab for data collection, manipulation, visualization and analysis, which will assist with the Measure \& Verify stage of this thesis. \\
+    \hline
+\end{tabular}
+\end{center}
+
+\subsection{New Skills}
+
+\begin{itemize}
+    \item Familiarity with the RISC-V Instruction Set Architecture and extending it
+    \item Aladdin: a simulator tool that will help with research
+    \item Firesim: another simulation framework 
+    \item Vivado Design Suite from Xlinix
+\end{itemize}
+
+\clearpage 
+
+\section{Preliminary Project Milestones}
+
+\begin{center}
+\begin{tabular}{ |m{0.7\linewidth}|m{0.3\linewidth}|}
+    \hline
+    \textbf{Project Milestone}                                      & \textbf{Completion Date} \\
+    \hline
+    Project Proposal Due                                            & 9 September 2019 \\
+    \hline
+    Set up testing and development environment                      & 18 September 2019 \\
+    \hline
+    Determine most suitable algorithm to optimize                   & 31 September 2019 \\
+    \hline
+    Checkpoint 1: Design Specs                                      & 4 October 2019 \\
+    \hline
+    Categorize algorithm’s performance in hardware and define bottlenecks/key areas suitable for optimization & 10 October 2019 \\
+    \hline
+    Design initial solution                                         & 25 October 2019 \\
+    \hline
+    Checkpoint 2: Design Documentation                              & 1 November 2019 \\
+    \hline
+    Complete initial solution implementation                        & 20 November \\
+    \hline
+    Measure and verify comparative performance                      & 1 December 2019 \\
+    \hline
+    Checkpoint 3: Mid Year Report                                   & 4 December 2019 \\
+    \hline
+    Design and complete implementation 2                            & 25 January 2020 \\
+    \hline
+    Checkpoint 4: Poster Session and Peer Reviews                   & 31 January 2020 \\
+    \hline
+    Measure and verify comparative performance                      & 15 February 2020 \\
+    \hline
+    Checkpoint 5: Report Draft                                      & 28 February 2020 \\
+    \hline
+    Final Oral Presentation                                         & 24 March 2020 \\
+    \hline
+    Final Written Report                                            & 3 April 2020 \\
+    \hline
+    Final Poster                                                    & 6 May \\
+    \hline
+    
+\end{tabular}
+\end{center}
+
+\section{Budget}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|}
+    \hline
+    \textbf{Item}           & \textbf{Link}                                                     & \textbf{Cost} \\
+    \hline
+    Zynq Board              & \href{https://www.xilinx.com/products/boards-and-kits/1-elhabt.html}{https://www.xilinx.com/products/boards-and-kits/1-elhabt.html}     & \$495 \\
+    \hline
+\end{tabular}
+\end{center}
+
+\clearpage  % remove this after you have added your text to get rid of the vertical space
+\end{document}  
