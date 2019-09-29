@@ -55,6 +55,6 @@ Mkfile.old
 dkms.conf
 
 # Only commit tex pdf files
-*.texoutput/*.aux
-*.texoutput/*.log
-*.texoutput/*.out
+*/texoutput/*.aux
+*/texoutput/*.log
+*/texoutput/*.out
