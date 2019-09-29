@@ -1,0 +1,4 @@
+# Only commit tex pdf files
+*.aux
+*.log
+*.out
