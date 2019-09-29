@@ -1,0 +1,101 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template for ES 100 Technical Specifications Document
+
+\title{\textsc{Technical Specifications} \\ 
+	\small{for} \\ 
+	\Large{Project Title}}  % change Project Title to your actual project title
+\author{Author Name}  % change Author Name to your name
+\date{\today \\ 
+	Version: 1.0 \footnote{The date and version number is to emphasize that this document is dynamic and is bound to change as you make progress in your project. Keep updating this document with new versions as your project evolves.}} % change the version number to your current version and remove the footnote
+
+\begin{document}
+\maketitle
+
+\section{Project Summary}
+This section is meant to be a very short and precise summary of your project. 
+\subsection{Problem Statement}
+A concise and complete description of the problem that your project aims to solve and for whom.
+\subsection{Client and/or End User}
+Clearly identify who the clients and end users of the system are (your project can be a subsystem of a larger system that has an end user and clients).
+\subsubsection{Stakeholder Map}
+A map of all the stakeholders in your project. See below for definition of stakeholders and users.
+Stakeholder: An individual or group of individuals who is materially (directly/indirectly, negatively/positively) affected by the outcome of the system or the project(s) producing the system. 
+User: An important subset of the stakeholder that will use the system or the project(s) producing the system.
+If a stakeholder map is not relevant, include a diagram showing where your project resides in a larger system.
+\subsection{Constraints and/or Requirements}
+Clearly list the descriptive constraints or requirements of your project.
+\subsection{Project Goals}
+Specific goals your project aims to achieve.
+
+\section{System Model Diagram / Flow Chart / Process Diagram}
+A system model diagram is a block diagram of the solution you are designing. Try to identify all the subcomponent in your system and represent them with blocks while making appropriate connections between them. If your design is not a system but a single thing, for e.g. a hydrogel, that must have certain specific properties, use this diagram as a block diagram for the process for making it and how the various properties might be inter-related. If your design has a computational, mathematical modeling, or machine learning approach a flow chart might be an appropriate diagram here. 
+
+Please include a useful caption. You may also include a few sentences explaining the diagram if needed.
+
+\clearpage  % remove this after you have added your text to get rid of the vertical space
+
+
+\section{Overall System Specifications}
+This section contains specifications for the overall system. These can include overall performance, total cost, overall accuracy/precision, etc.
+\subsection{Specification 1}
+\subsubsection{Quantitative Description}
+Describe the specification using numerical values, tolerances, etc. Try to be as concise and quantitative as possible.
+\subsubsection{Justification}
+Provide a justification for using this specification and the specific numerical values that you have chosen. Cite appropriate scientific literature, patents, product design documents, etc in this section to support your justifications \cite{item1}.
+\subsubsection{Measurement}
+Describe in as much detail as possible, how you might measure and verify this particular technical specification. Untestable specifications are not valid. In most situations, if you cannot think of a way to measure a specification, it might mean that your specification could be broken down further into multiple simpler ones that are more quantitative. 
+
+As an example, say you are building a mechanical system that you want to be easy to maintain. As is, this is not an easily measurable and testable specification. Think of how you can make this more quantitative. Easy to maintain could mean either making the system physically easy to maintain or could also mean having a long maintenance interval, say 500 hours, or both. For the prior, then, think of what will make the system easy to maintain, for example, having the internal components be easy to reach and mounted on a board that can be detached and removed using a window in the housing. For the later, you might want your components built with a material that is rugged and can last 500 hours of use. Then, your ``easy to maintain,'' specification can be split into the following measurable specifications, a) the housing will support a window of size $m+\Delta$ by $n+\Delta$ for the removal of internal components, b) the components will be mounted on a detachable board of size $m$ by $n$. c) Moving parts will made of material $x$ to last 500 hours of use.
+
+\subsection{Specification 2}
+\subsubsection{Quantitative Description}
+\subsubsection{Justification}
+\subsubsection{Measurement}
+\clearpage
+\section{Subcomponent $A$ Specifications}
+This section contains specifications that are broken down according to the sub-components in your system. Refer to your system model, process diagram, or flow chart for identifying subcomponents\footnote{On rare occasions, your designs might not have any subcomponents, in which case it is ok to omit this section}. Describe the subcomponent including identifying what function it serves and what properties it might have. Think of how you can turn these functions and properties into quantitative, measurable specifications. For example, you might have a subcomponent that performs the role of a filter. This could be a physical filter, an electronic filter, or an information/data filter. Think of what needs to be filtered and in what quantity, what noise levels can be tolerated, how frequently does the filter need to do its job, etc. Answers to each of these should be able to given you the specifications for that filter. Each subcomponent can also have its own performance, cost, and accuracy specifications.
+
+\subsection{Specification 1}
+\subsubsection{Quantitative Description}
+\subsubsection{Justification}
+\subsubsection{Measurement}
+
+\subsection{Specification 2}
+\subsubsection{Quantitative Description}
+\subsubsection{Justification}
+\subsubsection{Measurement}
+
+\section{Subcomponent $B$ Specifications}
+
+\subsection{Specification 1}
+\subsubsection{Quantitative Description}
+\subsubsection{Justification}
+\subsubsection{Measurement}
+
+\subsection{Specification 1}
+\subsubsection{Quantitative Description}
+\subsubsection{Justification}
+\subsubsection{Measurement}
+
+\clearpage
+\begin{thebibliography}{99}  % This is a way to insert an embedded bibliography
+ 
+\bibitem{item1} 
+All your cited references go in this section. \textit{Make sure to use a consistent style (IEEE style recommended) for your references.}, Harvard University Press, Cambridge, MA, 2019.
+
+\end{thebibliography}
+
+% Comment the lines above and uncomment the lines below to insert a Bibtex file that contains your references. Replace bibtex_file_name with the name of your Bibtex file.
+% \bibliographystyle{ieeetr}
+% \bibliography{bibtex_file_name}
+
+
+\end{document}  
