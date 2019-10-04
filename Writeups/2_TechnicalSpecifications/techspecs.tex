@@ -1,101 +1,144 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex		
+\documentclass[11pt, oneside]{article}      % use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                       % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                       % Activate for rotated page geometry
+% \usepackage[parfill]{parskip}          % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}               % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+                                % TeX will automatically convert eps --> pdf in pdflatex        
 \usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage[printonlyused]{acronym}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Template for ES 100 Technical Specifications Document
 
 \title{\textsc{Technical Specifications} \\ 
 	\small{for} \\ 
-	\Large{Project Title}}  % change Project Title to your actual project title
-\author{Author Name}  % change Author Name to your name
-\date{\today \\ 
-	Version: 1.0 \footnote{The date and version number is to emphasize that this document is dynamic and is bound to change as you make progress in your project. Keep updating this document with new versions as your project evolves.}} % change the version number to your current version and remove the footnote
+	\Large{RISC-V Architecture for Motion Planning Algorithms in Autonomous Drone Applications}}
+\author{Anthony Kenny} 
+\date{October 4th, 2019 \\ 
+	Version: 1.0}
 
 \begin{document}
 \maketitle
 
+\abstract{This thesis aims to design RISC-V computer architecture that supports fast execution of motion planning algorithms for drone applications. First, the computation of sampling-based motion planning algorithms commonly used in autonomous drones (such as RRT, RRT*, PRM) will be profiled on an unmodified RISC-V processor. From this profiling, common bottlenecks and hotspots in execution will be identified. Based on these results, this project will extend the RISC-V \ac{ISA} and design a modified processor to support the extensions.}
+
 \section{Project Summary}
-This section is meant to be a very short and precise summary of your project. 
+
+
 \subsection{Problem Statement}
-A concise and complete description of the problem that your project aims to solve and for whom.
-\subsection{Client and/or End User}
-Clearly identify who the clients and end users of the system are (your project can be a subsystem of a larger system that has an end user and clients).
+Current processors cannot compute motion planning algorithms quickly enough for robots to operate in high complexity environments. Autonomous drones are a specific case of robots requiring real-time motion planning in complex environments. The state-of-the-art strategy of using a \ac{GPU} to accelerate the execution of these algorithms requires too much power to be cost effective or feasible for drones to sustain flight for useful periods of time.
+
+\subsection{End User}
+The end user of this project is a developer of autonomous drones. Such developers have a need for computing hardware that executes motion planning algorithms faster and more power efficiently than existing methods. This thesis will provide a processor design that is synthesizable on an \ac{FPGA}, giving developers a processer for which a \ac{RTOS}, or bare metal code, can be written. 
+Additionally, these developers have a requirement that using a new processor for a drone will not require a massive investment in re-development. As such, this thesis will provide the toolchain necessary to compile C code into executable instructions on the new processor.
+
 \subsubsection{Stakeholder Map}
-A map of all the stakeholders in your project. See below for definition of stakeholders and users.
-Stakeholder: An individual or group of individuals who is materially (directly/indirectly, negatively/positively) affected by the outcome of the system or the project(s) producing the system. 
-User: An important subset of the stakeholder that will use the system or the project(s) producing the system.
-If a stakeholder map is not relevant, include a diagram showing where your project resides in a larger system.
-\subsection{Constraints and/or Requirements}
-Clearly list the descriptive constraints or requirements of your project.
-\subsection{Project Goals}
-Specific goals your project aims to achieve.
+Where the processor and \ac{ISA} lies within the map of drone, developer, user of drones.
 
-\section{System Model Diagram / Flow Chart / Process Diagram}
-A system model diagram is a block diagram of the solution you are designing. Try to identify all the subcomponent in your system and represent them with blocks while making appropriate connections between them. If your design is not a system but a single thing, for e.g. a hydrogel, that must have certain specific properties, use this diagram as a block diagram for the process for making it and how the various properties might be inter-related. If your design has a computational, mathematical modeling, or machine learning approach a flow chart might be an appropriate diagram here. 
 
-Please include a useful caption. You may also include a few sentences explaining the diagram if needed.
+\subsection{Project Requirements} \label{subsection:projectRequirements}
+Table ~\ref{table:projectRequirements} outlines conceptually the requirements of the project. Specific technical specifications will be detailed in later sections. 
 
-\clearpage  % remove this after you have added your text to get rid of the vertical space
+\begin{table}[h]
+\begin{centering}
+\begin{tabular}{| m{0.25\linewidth} | m{0.75\linewidth} |}
+\hline
+\textbf{Requirement}       & \textbf{Description} \\
+\hline
+RISC-V Compliance   & RISC-V is an extendable \ac{ISA}. This project will extend the \ac{ISA} to add new instructions. The contstraint of RISC-V compliance means that the new ISA I define must follow RISC-V conventions, and that the processor can implement any program compiled into the original RISC-V ISA, as well as the extended RISC-V ISA.\\
+\hline
+Synthesizable       & The finished processor design must be such that it is practically useable by drone developers. Since having such a processor design mass-produced on a chip is beyond the scope of this project, this project must deliver a processor defined in an \ac{HDL} that is synthesizable on an FPGA.\\
+\hline
+Speed               & One of the motivating factors of this project is the need for motion planning algorithms to execute faster for autonomous drones to become more useful in real world applications. \\
+\hline
+Power consumption   & The second motivating factor is the need for computation aboard drones to be as power efficient as possible to enable them to remain in flight for long enough periods of time.\\
+\hline
+\end{tabular}
+\caption{Conceptual Outline of Project Requirements}
+\label{table:projectRequirements}
+\end{centering}
+\end{table}
+
+\subsection{Project Goals} \label{subsection:projectGoals}
+This thesis aims to design a RISC-V processor, optimized for motion planning computation, that is synthesizeable on an \ac{FPGA} and adheres to the requirements outlined in Section \ref{subsection:projectRequirements}. It will also provide the tools necessary to complile programs for the processor. 
+
+The nature of research into accelerating computation through modified computer architecture is such that, when asked a question of how fast/efficient/small/etc a system must be, the answer is, with consideration to certain trade-offs, as fast/efficient/small/etc as it can be! Thus, when defining goals for certain metrics such as speed or power efficiency, this thesis will do so by comparing performance of the modified processor with benchmark performance of an unmodified, off-the-shelf RISC-V processor synthesized on the same \ac{FPGA}.
+
+\section{System Model Diagram}
+
+\clearpage  
 
 
 \section{Overall System Specifications}
-This section contains specifications for the overall system. These can include overall performance, total cost, overall accuracy/precision, etc.
-\subsection{Specification 1}
+Let the overall system be defined as 2 part: the Processor Module and the Compiler/Assembler Module. These parts are highlighted in Figure X \textbf{Complete!!!} \\
+The following subsections detail the technical specifications of the overall system. As stated in Section \ref{subsection:projectGoals}, system specifications based on comparison with benchmarks will be compared against the same programs running on an unmodified, off-the-shelf RISC-V processor synthesized on the same \ac{FPGA}.
+\subsection{Speed}
 \subsubsection{Quantitative Description}
-Describe the specification using numerical values, tolerances, etc. Try to be as concise and quantitative as possible.
+This project aims to achieve a speedup of at least one order of magnitude (10 times) when compared to benchmark performance, in the execution of pure motion planning algorithm programs. That is, given a program that implements, in C, an algorithm often used in autonomous drone motion planning, this project's system can return a valid path at least 10 times faster than a generic RISC-V processor. 
+
 \subsubsection{Justification}
-Provide a justification for using this specification and the specific numerical values that you have chosen. Cite appropriate scientific literature, patents, product design documents, etc in this section to support your justifications \cite{item1}.
+
 \subsubsection{Measurement}
-Describe in as much detail as possible, how you might measure and verify this particular technical specification. Untestable specifications are not valid. In most situations, if you cannot think of a way to measure a specification, it might mean that your specification could be broken down further into multiple simpler ones that are more quantitative. 
+There will be two broad stages of measurement for this metric. First, in simulation, the Vivado Design Suite\cite{Vivado} will allow the execution of a given compiled program to be timed on a simulated processor that is defined in an \ac{HDL}. Secondly, in synthesis, a to-be-determined tool will allow for me to time the execution of the same program, now on a processor physically synthesized on an FPGA. 
 
-As an example, say you are building a mechanical system that you want to be easy to maintain. As is, this is not an easily measurable and testable specification. Think of how you can make this more quantitative. Easy to maintain could mean either making the system physically easy to maintain or could also mean having a long maintenance interval, say 500 hours, or both. For the prior, then, think of what will make the system easy to maintain, for example, having the internal components be easy to reach and mounted on a board that can be detached and removed using a window in the housing. For the later, you might want your components built with a material that is rugged and can last 500 hours of use. Then, your ``easy to maintain,'' specification can be split into the following measurable specifications, a) the housing will support a window of size $m+\Delta$ by $n+\Delta$ for the removal of internal components, b) the components will be mounted on a detachable board of size $m$ by $n$. c) Moving parts will made of material $x$ to last 500 hours of use.
-
-\subsection{Specification 2}
+\subsection{Power Consumption}
 \subsubsection{Quantitative Description}
+Power is defined as energy dissipated over time. As such, when considering the application of this system in autonomous drones, we want to minimize the amount electrical energy committed to the computation of paths. Since the primary goal of this thesis is to reduce the execution time, it can aim to keep power use comparable between the benchmark system and the new system. If power remains roughly constant, but the time taken to execute a program is reduced 10 times, we should see a proportional improvement in energy efficiency.
 \subsubsection{Justification}
 \subsubsection{Measurement}
 \clearpage
-\section{Subcomponent $A$ Specifications}
-This section contains specifications that are broken down according to the sub-components in your system. Refer to your system model, process diagram, or flow chart for identifying subcomponents\footnote{On rare occasions, your designs might not have any subcomponents, in which case it is ok to omit this section}. Describe the subcomponent including identifying what function it serves and what properties it might have. Think of how you can turn these functions and properties into quantitative, measurable specifications. For example, you might have a subcomponent that performs the role of a filter. This could be a physical filter, an electronic filter, or an information/data filter. Think of what needs to be filtered and in what quantity, what noise levels can be tolerated, how frequently does the filter need to do its job, etc. Answers to each of these should be able to given you the specifications for that filter. Each subcomponent can also have its own performance, cost, and accuracy specifications.
 
-\subsection{Specification 1}
+
+
+
+\section{Processor Specifications}
+The first subcomponent of the system is the Processor Unit. It has two specifications, RISC-V Compliance and Syntheizability.
+
+\subsection{RISC-V Compliance} \label{subsection:riscvCompliance}
+\subsubsection{Quantitative Description}
+A processor must be such that it supports the execution of all instructions defined in the \ac{ISA} for which it was designed. So too must this project's finished processor be able to correctly support any correctly compiled RISC-V assembly code. This may range from simple programs compiled into either the original or extended RISC-V \ac{ISA}, to complete operating systems, whether for drone applications or a generic linux distribution, for example. 
+\subsubsection{Justification}
+
+\subsubsection{Measurement}
+Github\cite{Compliance} 
+
+\subsection{Synthesizable}
+\subsubsection{Quantitative Description}
+The project must deliver a processor defined in an \ac{HDL} that is synthesizable on an FPGA for the project to be useful for drone developers. While this project will use and test with the Diligent Zync-7000 \ac{SoC}\cite{Zync}, the design should be synthesizable on most Zync boards.
+\subsubsection{Justification}
+\subsubsection{Measurement}
+Measurement for this specification is relatively simple. Once the processor is designed in an \ac{HDL}, it can be synthesized onto an FPGA using the Vivado Design Suite, given the design is synthesizable (although this is not always simple to achieve). If it is not synthesizable, the design suite will throw and error.
+Finally, while the design should be correct and RISC-V compliant by the tests performed in section \ref{subsection:riscvCompliance}, to be safe, these compliance tests along with any other unit tests designed during this thesis will then be run on the \ac{FPGA} processor.
+
+\section{Recompiler \& Assembler Specifications}
+\subsection{Input and Output Relationship}
 \subsubsection{Quantitative Description}
 \subsubsection{Justification}
 \subsubsection{Measurement}
 
-\subsection{Specification 2}
+\subsection{RISC-V Compliance}
 \subsubsection{Quantitative Description}
 \subsubsection{Justification}
 \subsubsection{Measurement}
 
-\section{Subcomponent $B$ Specifications}
+\section{List of Acronyms}
+\input{acronyms}
 
-\subsection{Specification 1}
-\subsubsection{Quantitative Description}
-\subsubsection{Justification}
-\subsubsection{Measurement}
-
-\subsection{Specification 1}
-\subsubsection{Quantitative Description}
-\subsubsection{Justification}
-\subsubsection{Measurement}
 
 \clearpage
-\begin{thebibliography}{99}  % This is a way to insert an embedded bibliography
- 
-\bibitem{item1} 
-All your cited references go in this section. \textit{Make sure to use a consistent style (IEEE style recommended) for your references.}, Harvard University Press, Cambridge, MA, 2019.
 
-\end{thebibliography}
-
-% Comment the lines above and uncomment the lines below to insert a Bibtex file that contains your references. Replace bibtex_file_name with the name of your Bibtex file.
-% \bibliographystyle{ieeetr}
-% \bibliography{bibtex_file_name}
+\bibliography{techspecs}
+\bibliographystyle{ieeetr}
 
 
 \end{document}  

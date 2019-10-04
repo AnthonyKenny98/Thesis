@@ -1,6 +1,8 @@
 TEX_COMMAND = pdflatex
+BIB_COMMAND = bibtex
 
 TEX_FILES = $(wildcard **/*.tex)
+BIB_FILES = $(wildcard **/*.bib)
 
 OUTPUT_DIRECTORIES = $(addsuffix output/,$(wildcard */))
 PDF_FILES = $(join $(dir $(TEX_FILES)),$(addprefix output/,$(notdir $(TEX_FILES:tex=pdf))))
