@@ -1,0 +1,52 @@
+\begin{thebibliography}{10}
+
+\bibitem{Murraya}
+S.~Murray, W.~Floyd-Jones, Y.~Qi, G.~Konidaris, and D.~J. Sorin, {\em {The
+  Microarchitecture of a Real-Time Robot Motion Planning Accelerator}}.
+
+\bibitem{Murray}
+S.~Murray, W.~Floyd-Jones, G.~Konidaris, and D.~J. Sorin, ``{A Programmable
+  Architecture for Robot Motion Planning Acceleration},'' tech. rep.
+
+\bibitem{Atay2006}
+N.~Atay and B.~Bayazit, ``{A motion planning processor on reconfigurable
+  hardware},'' in {\em Proceedings - IEEE International Conference on Robotics
+  and Automation}, vol.~2006, pp.~125--132, 2006.
+
+\bibitem{Malik2015}
+G.~S. Malik, K.~Gupta, K.~M. Krishna, and S.~R. Chowdhury, ``{FPGA based
+  combinatorial architecture for parallelizing RRT},'' in {\em 2015 European
+  Conference on Mobile Robots, ECMR 2015 - Proceedings}, Institute of
+  Electrical and Electronics Engineers Inc., nov 2015.
+
+\bibitem{Murrayb}
+S.~Murray, W.~Floyd-Jones, Y.~Qi, D.~Sorin, G.~Konidaris, and D.~Robotics,
+  ``{Robot Motion Planning on a Chip},'' tech. rep.
+
+\bibitem{Zhi}
+P.~Zhi, X.~Li, Z.~Zhang, S.~Karaman, and V.~Sze, ``{High-throughput Computation
+  of Shannon Mutual Information on Chip},'' tech. rep.
+
+\bibitem{Vivado}
+``{Vivado Design Suite},'' 2018.
+
+\bibitem{AmericanElectricianHandbook}
+``{American electricians' handbook},'' {\em Journal of the Franklin Institute},
+  vol.~256, p.~99, jul 1953.
+
+\bibitem{IBM1964}
+IBM, ``{IBM 360},'' 1964.
+
+\bibitem{Isa2012}
+V.~I. B. U.-l. Isa, A.~Waterman, Y.~Lee, D.~Patterson, K.~Asanovi, and B.~U.-l.
+  Isa, ``{The RISC-V Instruction Set Manual v2.1},'' {\em 2012 IEEE
+  International Conference on Industrial Technology, ICIT 2012, Proceedings},
+  vol.~I, pp.~1--32, 2012.
+
+\bibitem{Compliance}
+J.~Bennett and L.~Moore, ``{RISC-V Compliance Github Repository}.''
+
+\bibitem{Zync}
+``{Diligent Zync-7000 SoC}.''
+
+\end{thebibliography}
