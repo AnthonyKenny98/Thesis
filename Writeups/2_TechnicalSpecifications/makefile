@@ -3,6 +3,9 @@
 
 PROJECT = techspecs
 
+CURRENT_DIR = $(shell pwd)
+PARENT_DIR = $(shell dirname "$(CURRENT_DIR)")
+
 default: obj/$(PROJECT).pdf
 
 display: default
@@ -17,7 +20,8 @@ TEXMFOUTPUT = obj/
 
 ### File Types (for dependancies)
 TEX_FILES = $(shell find . -name '*.tex' -or -name '*.sty' -or -name '*.cls')
-BIB_FILES = $(shell find . -name '*.bib')
+# BIB_FILES = $(shell find .. -name '*.bib')
+BIB_FILES = $(shell find .. -path  '*.bib')
 BST_FILES = $(shell find . -name '*.bst')
 IMG_FILES = $(shell find . -path '*.jpg' -or -path '*.png' -or \( \! -path './obj/*.pdf' -path '*.pdf' \) )
 
