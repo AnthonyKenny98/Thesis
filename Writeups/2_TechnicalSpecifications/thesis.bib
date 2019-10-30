@@ -1,0 +1,361 @@
+@techreport{Boroujerdian,
+abstract = {Unmanned Aerial Vehicles (UAVs) are getting closer to becoming ubiquitous in everyday life. Among them, Micro Aerial Vehicles (MAVs) have seen an outburst of attention recently, specifically in the area with a demand for autonomy. A key challenge standing in the way of making MAVs autonomous is that researchers lack the comprehensive understanding of how performance, power, and computational bottlenecks affect MAV applications. MAVs must operate under a stringent power budget, which severely limits their flight endurance time. As such, there is a need for new tools, benchmarks, and methodologies to foster the systematic development of autonomous MAVs. In this paper, we introduce the "MAVBench" framework which consists of a closed-loop simulator and an end-to-end application benchmark suite. A closed-loop simulation platform is needed to probe and understand the intra-system (application data flow) and inter-system (system and environment) interactions in MAV applications to pinpoint bottlenecks and identify opportunities for hardware and software co-design and optimization. In addition to the simulator, MAVBench provides a benchmark suite, the first of its kind, consisting of a variety of MAV applications designed to enable computer architects to perform characterization and develop future aerial computing systems. Using our open source, end-to-end experimental platform, we uncover a hidden, and thus far unexpected compute to total system energy relationship in MAVs. Furthermore, we explore the role of compute by presenting three case studies targeting performance, energy and reliability. These studies confirm that an efficient system design can improve MAV's battery consumption by up to 1.8X.},
+author = {Boroujerdian, Behzad and Genc, Hasan and Krishnan, Srivatsan and Cui, Wenzhi and {Faust Vijay Janapa Reddi}, Aleksandra},
+mendeley-groups = {Misc},
+title = {{MAVBench: Micro Aerial Vehicle Benchmarking}},
+url = {https://github.com/MAVBench}
+}
+@techreport{Karandikar2019,
+abstract = {The explosive growth in the RISC-V ecosystem has brought about a multitude of open RTL SoC implementations, as well as broad software compatibility, presenting the opportunity to perform computer architecture research with direct impact using real implementations. However, putting these together in a research context with small, agile teams of developers has been challenging due to difficulty maintaining hardware compatibility with complicated software stacks, slow software RTL simulators, and poor introspec-tion, productivity, and modeling-accuracy with FPGA prototyping. While our prior work described FireSim's capabilities as an FPGA-accelerated cycle-exact datacenter simulation platform, in this paper , we delve into the internals of FireSim and walk through a case study simulating a novel hardware accelerator (Hwacha) that shows how a researcher would use FireSim as a tool for rapidly and cycle-exactly modeling their own systems that build on a single-node RISC-V SoC. We discuss how FireSim addresses the challenges of building a reliable, reproducible, and productive RISC-V research environment, including packaging standardized releases of compatible RISC-V software and hardware, automating the process of running cycle-exact simulations on cloud FPGAs that are orders of magnitude faster than any software simulator, and providing debugging tools that allow introspection capabilities not available in FPGA prototypes.},
+author = {Karandikar, Sagar and Biancolin, David and Amid, Alon and Pemberton, Nathan and Ou, Albert and Katz, Randy and Nikolic, Borivoje and Bachrach, Jonathan and Asanovic, Krste},
+keywords = {CCS CONCEPTS • Computing methodologies → Modeling,KEYWORDS FPGA Simulation, Agile Hardware, Open-sou,Modeling and simulation,• Computer systems organization},
+mendeley-groups = {RISC-V (1)},
+title = {{Using FireSim to Enable Agile End-to-End RISC-V Computer Architecture Research}},
+year = {2019}
+}
+@techreport{Elsabbagh2019,
+abstract = {The open-source RISC-V instruction set architecture (ISA) has enabled computer architects to propose several innovative processors for a wide range of applications. One of the domains of processor design that can take advantage from RISC-V, but has not seen enough attention, is general-purpose GPU (GPGPU) design. To support the development of open source GPGPU system, we present Vortex, our solution for building single instruction, multiple thread (SIMT) execution using RISC-V. In addition to a synthesizable microarchi-tecture model, we propose a GPU ISA extension to RISC-V and a software model, in the form of a runtime kernel, which makes Vortex practical and easy to integrate. As a result, Vortex does not require any modiications to the current RISC-V compilers.},
+author = {Elsabbagh, Fares and Asgari, Bahar and Kim, Hyesoon and Yalamanchili, Sudhakar},
+mendeley-groups = {RISC-V (1)},
+title = {{Vortex RISC-V GPGPU System: Extending the ISA, Synthesizing the Microarchitecture, and Modeling the Sooware Stack}},
+year = {2019}
+}
+@article{Cas$caval2010,
+abstract = {As the clock frequency of silicon chips is leveling off, the computer architecture community is looking for different solutions to continue application performance scaling. One such solution is the multicore approach, i.e., using multiple simple cores that enable higher performance than wide superscalar processors, provided that the workload can exploit the parallelism. Another emerging alternative is the use of customized designs (accelerators) at different levels within the system. These are specialized functional units integrated with the core, specialized cores, attached processors, or attached appliances. The design tradeoff is quite compelling because current processor chips have billions of transistors, but they cannot all be activated or switched at the same time at high frequencies. Specialized designs provide increased power efficiency but cannot be used as general-purpose compute engines. Therefore, architects trade area for power efficiency by placing in the design additional units that are known to be active at different times. The resulting system is a heterogeneous architecture, with the potential of specialized execution that accelerates different workloads. While designing and building such hardware systems is attractive, writing and porting software to a heterogeneous platform is even more challenging than parallelism for homogeneous multicore systems. In this paper, we propose a taxonomy that allows us to define classes of accelerators, with the goal of focusing on a small set of programming models for accelerators. We discuss several types of currently popular accelerators and identify challenges to exploiting such accelerators in current software stacks. This paper serves as a guide for both hardware designers by providing them with a view on how software best exploits specialization and software programmers by focusing research efforts to address parallelism and heterogeneity.},
+author = {{Cas {\$}caval}, C and Chatterjee, S and Franke, H and Gildea, K J and Pattnaik, P},
+doi = {10.1147/JRD.2010.2059721},
+mendeley-groups = {Misc},
+title = {{A taxonomy of accelerator architectures and their programming models}},
+year = {2010}
+}
+@article{Xu,
+abstract = {Machine perception applications are increasingly moving toward manipulating and processing 3D point cloud. This paper focuses on point cloud registration, a key primitive of 3D data processing widely used in high-level tasks such as odometry, simultaneous localization and mapping, and 3D reconstruction. As these applications are routinely deployed in energy-constrained environments, real-time and energy-efficient point cloud registration is critical. We present Tigris, an algorithm-architecture co-designed system specialized for point cloud registration. Through an extensive exploration of the registration pipeline design space, we find that, while different design points make vastly different trade-offs between accuracy and performance, KD-tree search is a common performance bottleneck, and thus is an ideal candidate for architectural specialization. While KD-tree search is inherently sequential, we propose an acceleration-amenable data structure and search algorithm that exposes different forms of parallelism of KD-tree search in the context of point cloud registration. The co-designed accelerator systematically exploits the parallelism while incorporating a set of architectural techniques that further improve the accelerator efficiency. Overall, Tigris achieves 77.2× speedup and 7.4× power reduction in KD-tree search over an RTX 2080 Ti GPU, which translates to a 41.7{\%} registration performance improvements and 3.0× power reduction. CCS Concepts • Computer systems organization → Special purpose systems; • Human-centered computing → Mixed / augmented reality.},
+author = {Xu, Tiancheng and Tian, Boyuan and Zhu, Yuhao},
+doi = {10.1145/3352460.3358259},
+isbn = {9781450369381},
+keywords = {Architecture-Algorithm Co-Design * Tiancheng Xu an,KD-Tree,Nearest Neighbor Search,Perception,Point Cloud,Registration},
+mendeley-groups = {Other Accelerators (1)},
+title = {{Tigris: Architecture and Algorithms for 3D Perception in Point Clouds}},
+url = {http://horizon-lab.org}
+}
+@book{Shao,
+abstract = {Increasing demand for power-efficient, high-performance computing has spurred a growing number and diversity of hardware accelerators in mobile and server Systems on Chip (SoCs). This paper makes the case that the co-design of the accelerator microarchitecture with the system in which it belongs is critical to balanced, efficient accelerator microar-chitectures. We find that data movement and coherence management for accelerators are significant yet often unaccounted components of total accelerator runtime, resulting in misleading performance predictions and inefficient accelerator designs. To explore the design space of accelerator-system co-design, we develop gem5-Aladdin, an SoC simulator that captures dynamic interactions between accelerators and the SoC platform, and validate it to within 6{\%} against real hardware. Our co-design studies show that the optimal energy-delay-product (EDP) of an accelerator microarchitecture can improve by up to 7.4× when system-level effects are considered compared to optimizing accelerators in isolation.},
+author = {Shao, Yakun Sophia and Likun, Sam ( and Xi, ) and Srinivasan, Vijayalakshmi and Wei, Gu-Yeon and Brooks, David},
+isbn = {9781509035083},
+mendeley-groups = {Accelerator Design Tools},
+title = {{Co-Designing Accelerators and SoC Interfaces using gem5-Aladdin}}
+}
+@techreport{Chin,
+abstract = {There is growing interest in object detection in advanced driver assistance systems and autonomous robots and vehicles. To enable such innovative systems, we need faster object detection. In this article, we investigate the trade-off between accuracy and speed with domain-specific approximations (DSAs) for two state-of-the-art deep learning-based object detection meta-architectures. We study the effectiveness of applying approximation both statically and dynamically to understand their potential and applicability. By conducting experiments on the ImageNet VID dataset, we show that DSA has great potential to improve the speed of the system without deteriorating the accuracy of object detectors. To this end, we present our insights on harvesting DSA and devise a proof-of-concept runtime, AutoFocus, that exploits dynamic DSA. With rapid progress being made in the field of computer vision and machine learning, there is growing interest in the practical deployment of intelligent algorithms in systems, such as autonomous vehicles, autonomous robots, and advanced driver assistance systems. For many of these "intelligent" systems, detection is one of the fundamental algorithms involved in developing end-to-end applications. Detection can lead to obstacle recognition, avoidance, and navigation. As a result, detection is becoming an important algorithm for developing cognitive visual agents. Thus far, the majority of effort on object detection has been focused on achieving high accuracy. However, from a system's perspective, object detection speed also matters. For instance, how},
+author = {Chin, Ting-Wu and Yu, Chia-Lin and Halpern, Matthew and Genc, Hasan and Tsao, Shiao-Li and Reddi, Vijay Janapa},
+title = {{Domain-Specific Approximation for Object Detection}},
+url = {www.computer.org/micro}
+}
+@techreport{Chen,
+abstract = {A recent trend in deep neural network (DNN) development is to extend the reach of deep learning applications to platforms that are more resource and energy constrained, e.g., mobile devices. These endeavors aim to reduce the DNN model size and improve the hardware processing efficiency, and have resulted in DNNs that are much more compact in their structures and/or have high data sparsity. These compact or sparse models are different from the traditional large ones in that there is much more variation in their layer shapes and sizes, and often require specialized hardware to exploit sparsity for performance improvement. Therefore, many DNN accelerators designed for large DNNs do not perform well on these models. In this work, we present Eyeriss v2, a DNN accelerator architecture designed for running compact and sparse DNNs. To deal with the widely varying layer shapes and sizes, it introduces a highly flexible on-chip network, called hierarchical mesh, that can adapt to the different amounts of data reuse and bandwidth requirements of different data types, which improves the utilization of the computation resources. Furthermore, Eyeriss v2 can process sparse data directly in the compressed domain for both weights and activations, and therefore is able to improve both processing speed and energy efficiency with sparse models. Overall, with sparse MobileNet, Eyeriss v2 in a 65nm CMOS process achieves a throughput of 1470.6 inferences/sec and 2560.3 inferences/J at a batch size of 1, which is 12.6× faster and 2.5× more energy efficient than the original Eyeriss running MobileNet.},
+archivePrefix = {arXiv},
+arxivId = {1807.07928v2},
+author = {Chen, Yu-Hsin and Member, Student and Yang, Tien-Ju and Emer, Joel and Sze, Vivienne and Member, Senior},
+eprint = {1807.07928v2},
+keywords = {Dataflow Processing,Deep Learn-ing,Energy-Efficient Accelerators,Index Terms-Deep Neural Network Accelerators,Spatial Architecture},
+title = {{Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices}}
+}
+@article{Hornung2013,
+abstract = {Three-dimensional models provide a volumetric representation of space which is important for a variety of robotic applications including flying robots and robots that are equipped with manipulators. In this paper, we present an open-source framework to generate volumetric 3D environment models. Our mapping approach is based on octrees and uses probabilistic occupancy estimation. It explicitly represents not only occupied space, but also free and unknown areas. Furthermore, we propose an octree map compression method that keeps the 3D models compact. Our framework is available as an open-source C++ library and has already been successfully applied in several robotics projects. We present a series of experimental results carried out with real robots and on publicly available real-world datasets. The results demonstrate that our approach is able to update the representation efficiently and models the data consistently while keeping the memory requirement at a minimum.},
+author = {Hornung, Armin and Wurm, Kai M and Bennewitz, Maren and Stachniss, Cyrill and Burgard, Wolfram},
+doi = {10.1007/s10514-012-9321-0},
+journal = {Autonomous Robots},
+keywords = {3D {\textperiodcentered},Mapping {\textperiodcentered},Navigation,Probabilistic {\textperiodcentered}},
+mendeley-groups = {Mapping Algorithms (1)},
+title = {{OctoMap: An Efficient Probabilistic 3D Mapping Framework Based on Octrees}},
+url = {http://octomap.github.com.},
+year = {2013}
+}
+@article{Xua,
+abstract = {Machine perception applications are increasingly moving toward manipulating and processing 3D point cloud. This paper focuses on point cloud registration, a key primitive of 3D data processing widely used in high-level tasks such as odometry, simultaneous localization and mapping, and 3D reconstruction. As these applications are routinely deployed in energy-constrained environments, real-time and energy-efficient point cloud registration is critical. We present Tigris, an algorithm-architecture co-designed system specialized for point cloud registration. Through an extensive exploration of the registration pipeline design space, we find that, while different design points make vastly different trade-offs between accuracy and performance, KD-tree search is a common performance bottleneck, and thus is an ideal candidate for architectural specialization. While KD-tree search is inherently sequential, we propose an acceleration-amenable data structure and search algorithm that exposes different forms of parallelism of KD-tree search in the context of point cloud registration. The co-designed accelerator systematically exploits the parallelism while incorporating a set of architectural techniques that further improve the accelerator efficiency. Overall, Tigris achieves 77.2× speedup and 7.4× power reduction in KD-tree search over an RTX 2080 Ti GPU, which translates to a 41.7{\%} registration performance improvements and 3.0× power reduction. CCS Concepts • Computer systems organization → Special purpose systems; • Human-centered computing → Mixed / augmented reality.},
+author = {Xu, Tiancheng and Tian, Boyuan and Zhu, Yuhao},
+doi = {10.1145/3352460.3358259},
+isbn = {9781450369381},
+keywords = {Architecture-Algorithm Co-Design * Tiancheng Xu an,KD-Tree,Nearest Neighbor Search,Perception,Point Cloud,Registration},
+title = {{Tigris: Architecture and Algorithms for 3D Perception in Point Clouds}},
+url = {http://horizon-lab.org}
+}
+@techreport{Adolf,
+abstract = {Deep learning has been popularized by its recent successes on challenging artificial intelligence problems. One of the reasons for its dominance is also an ongoing challenge: the need for immense amounts of computational power. Hardware architects have responded by proposing a wide array of promising ideas, but to date, the majority of the work has focused on specific algorithms in somewhat narrow application domains. While their specificity does not diminish these approaches, there is a clear need for more flexible solutions. We believe the first step is to examine the characteristics of cutting edge models from across the deep learning community. Consequently, we have assembled Fathom: a collection of eight archetypal deep learning workloads for study. Each of these models comes from a seminal work in the deep learning community, ranging from the familiar deep convolutional neural network of Krizhevsky et al., to the more exotic memory networks from Facebook's AI research group. Fathom has been released online, and this paper focuses on understanding the fundamental performance characteristics of each model. We use a set of application-level modeling tools built around the TensorFlow deep learning framework in order to analyze the behavior of the Fathom workloads. We present a breakdown of where time is spent, the similarities between the performance profiles of our models, an analysis of behavior in inference and training, and the effects of parallelism on scaling.},
+archivePrefix = {arXiv},
+arxivId = {1608.06581v1},
+author = {Adolf, Robert and Rama, Saketh and Reagen, Brandon and Wei, Gu-Yeon and Brooks, David},
+eprint = {1608.06581v1},
+mendeley-groups = {Accelerator Design Tools},
+title = {{Fathom: Reference Workloads for Modern Deep Learning Methods}}
+}
+@techreport{DeGregorio,
+abstract = {Fig. 1. SkiMap encodes seamlessly a full 3D reconstruction of the environment (left), a height map (center) and a 2D occupancy grid (right). The three representations can be delivered on-line with decreasing time complexity. The displayed maps have been obtained on the Freiburg Campus dataset. Abstract-We present a novel mapping framework for robot navigation which features a multi-level querying system capable to obtain rapidly representations as diverse as a 3D voxel grid, a 2.5D height map and a 2D occupancy grid. These are inherently embedded into a memory and time efficient core data structure organized as a Tree of SkipLists. Compared to the well-known Octree representation, our approach exhibits a better time efficiency, thanks to its simple and highly parallelizable computational structure, and a similar memory footprint when mapping large workspaces. Peculiarly within the realm of mapping for robot navigation, our framework supports real-time erosion and reintegration of measurements upon reception of optimized poses from the sensor tracker, so as to improve continuously the accuracy of the map.},
+archivePrefix = {arXiv},
+arxivId = {1704.05832v1},
+author = {{De Gregorio}, Daniele and {Di Stefano}, Luigi},
+eprint = {1704.05832v1},
+mendeley-groups = {Mapping Algorithms (1)},
+title = {{SkiMap: An Efficient Mapping Framework for Robot Navigation}},
+url = {https://github.com/m4nh/skimap{\_}ros}
+}
+@techreport{,
+isbn = {02721732/15},
+mendeley-groups = {Accelerator Design Tools},
+title = {{THE AUTHORS DEVELOPED ALADDIN, A PRE-RTL, POWER-PERFORMANCE ACCELERATOR MODELING FRAMEWORK AND DEMONSTRATED ITS APPLICATION TO SYSTEM-ON-CHIP}},
+url = {http://vlsiarch.eecs.harvard.}
+}
+@article{Museth2013,
+abstract = {We have developed a novel hierarchical data structure for the efficient representation of sparse, time-varying volumetric data discretized on a 3D grid. Our "VDB", so named because it is a Volumetric, Dynamic grid that shares several characteristics with B+trees, exploits spatial coherency of time-varying data to separately and compactly encode data values and grid topology. VDB models a virtually infinite 3D index space that allows for cache-coherent and fast data access into sparse volumes of high resolution. It imposes no topology restrictions on the sparsity of the volumetric data, and it supports fast (average O(1)) random access patterns when the data are inserted, retrieved, or deleted. This is in contrast to most existing sparse volumetric data structures, which assume either static or manifold topology and require specific data access patterns to compensate for slow random access. Since the VDB data structure is fundamentally hierarchical, it also facilitates adaptive grid sampling, and the inherent acceleration structure leads to fast algorithms that are well-suited for simulations. As such, VDB has proven useful for several applications that call for large, sparse, animated volumes, for example, level set dynamics and cloud modeling. In this article, we showcase some of these algorithms and compare VDB with existing, state-of-the-art data structures.},
+author = {Museth, Ken},
+doi = {10.1145/2487228.2487235},
+journal = {ACM Trans. Graph},
+keywords = {I37 [Computer Graphics]: Three-Dimensional Graphic,fluid animation,implicit surfaces,level sets},
+mendeley-groups = {Mapping Algorithms (1)},
+title = {{VDB: High-Resolution Sparse Volumes with Dynamic Topology}},
+url = {http://dx.doi.org/10.1145/2487228.2487235},
+volume = {32},
+year = {2013}
+}
+@techreport{Reagen,
+abstract = {The continued success of Deep Neural Networks (DNNs) in classification tasks has sparked a trend of accelerating their execution with specialized hardware. While published designs easily give an order of magnitude improvement over general-purpose hardware, few look beyond an initial implementation. This paper presents Minerva, a highly automated co-design approach across the algorithm, architecture , and circuit levels to optimize DNN hardware accelerators. Compared to an established fixed-point accelerator baseline, we show that fine-grained, heterogeneous data-type optimization reduces power by 1.5×; aggressive, in-line predication and pruning of small activity values further reduces power by 2.0×; and active hardware fault detection coupled with domain-aware error mitigation eliminates an additional 2.7× through lowering SRAM voltages. Across five datasets, these optimizations provide a collective average of 8.1× power reduction over an accelerator baseline without compromising DNN model accuracy. Minerva enables highly accurate, ultra-low power DNN accelerators (in the range of tens of milliwatts), making it feasible to deploy DNNs in power-constrained IoT and mobile devices.},
+author = {Reagen, Brandon and Whatmough, Paul and Adolf, Robert and Rama, Saketh and Lee, Hyunkwang and Lee, Sae Kyu and {Miguel Hern{\'{a}}ndez-Lobato}, Jos{\'{e}} and Wei, Gu-Yeon and Brooks, David},
+mendeley-groups = {Accelerator Design Tools},
+title = {{Minerva: Enabling Low-Power, Highly-Accurate Deep Neural Network Accelerators}}
+}
+@techreport{Murray,
+abstract = {We have designed a programmable architecture to accelerate collision detection and graph search, two of the principal components of robotic motion planning. The programmability enables the architecture to be applied to a wide range of different robots and motion planning applications. We present the architecture of our accelerator and describe and evaluate its microarchitecture implementation.},
+author = {Murray, Sean and Floyd-Jones, Will and Konidaris, George and Sorin, Daniel J},
+mendeley-groups = {Motion Planning Accelerators},
+title = {{A Programmable Architecture for Robot Motion Planning Acceleration}}
+}
+@book{Shaoa,
+abstract = {Hardware specialization, in the form of accelerators that provide custom datapath and control for specific algorithms and applications, promises impressive performance and energy advantages compared to traditional architectures. Current research in accelerator analysis relies on RTL-based synthesis flows to produce accurate timing, power, and area estimates. Such techniques not only require significant effort and expertise but are also slow and tedious to use, making large design space exploration infeasible. To overcome this problem, we present Aladdin, a pre-RTL, power-performance accelerator modeling framework and demonstrate its application to system-on-chip (SoC) simulation. Aladdin estimates performance , power, and area of accelerators within 0.9{\%}, 4.9{\%}, and 6.6{\%} with respect to RTL implementations. Integrated with architecture-level core and memory hierarchy simulators, Aladdin provides researchers an approach to model the power and performance of accelerators in an SoC environment.},
+author = {Shao, Yakun Sophia and Reagen, Brandon and Wei, Gu-Yeon and Brooks, David},
+isbn = {9781479943944},
+mendeley-groups = {Accelerator Design Tools},
+title = {{Aladdin: A Pre-RTL, Power-Performance Accelerator Simulator Enabling Large Design Space Exploration of Customized Architectures}}
+}
+@techreport{Chena,
+abstract = {A recent trend in deep neural network (DNN) development is to extend the reach of deep learning applications to platforms that are more resource and energy constrained, e.g., mobile devices. These endeavors aim to reduce the DNN model size and improve the hardware processing efficiency, and have resulted in DNNs that are much more compact in their structures and/or have high data sparsity. These compact or sparse models are different from the traditional large ones in that there is much more variation in their layer shapes and sizes, and often require specialized hardware to exploit sparsity for performance improvement. Therefore, many DNN accelerators designed for large DNNs do not perform well on these models. In this work, we present Eyeriss v2, a DNN accelerator architecture designed for running compact and sparse DNNs. To deal with the widely varying layer shapes and sizes, it introduces a highly flexible on-chip network, called hierarchical mesh, that can adapt to the different amounts of data reuse and bandwidth requirements of different data types, which improves the utilization of the computation resources. Furthermore, Eyeriss v2 can process sparse data directly in the compressed domain for both weights and activations, and therefore is able to improve both processing speed and energy efficiency with sparse models. Overall, with sparse MobileNet, Eyeriss v2 in a 65nm CMOS process achieves a throughput of 1470.6 inferences/sec and 2560.3 inferences/J at a batch size of 1, which is 12.6× faster and 2.5× more energy efficient than the original Eyeriss running MobileNet.},
+archivePrefix = {arXiv},
+arxivId = {1807.07928v2},
+author = {Chen, Yu-Hsin and Member, Student and Yang, Tien-Ju and Emer, Joel and Sze, Vivienne and Member, Senior},
+eprint = {1807.07928v2},
+keywords = {Dataflow Processing,Deep Learn-ing,Energy-Efficient Accelerators,Index Terms-Deep Neural Network Accelerators,Spatial Architecture},
+title = {{Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices}}
+}
+@inproceedings{Atay2006,
+abstract = {Motion planning algorithms enable us to find feasible paths for moving objects. These algorithms utilize feasibility checks to differentiate valid paths from invalid ones. Unfortunately, the computationally expensive nature of such checks reduces the effectiveness of motion planning algorithms. However, by using hardware acceleration to speed up the feasibility checks, we can greatly enhance the performance of the motion planning algorithms. Of course, such acceleration is not limited to feasibility checks; other components of motion planning algorithms can also be accelerated using specially designed hardware. A field programmable gate array (FPGA) is a great platform to support such an acceleration. An FPGA is a collection of digital gates which can be reprogrammed at run time, i.e., it can be used as a CPU that reconfigures itself for a given task. In this paper, we study the feasibility of an FPGA based motion planning processor and evaluate its performance. In order to leverage its highly parallel nature and its modular structure, our processor utilizes the probabilistic roadmap method at its core. The modularity enables us to replace the feasibility criteria with other ones. The reconfigurability lets us run our processor in different roles, such as a motion planning co-processor, an autonomous motion planning processor or dedicated collision detection chip. Our experiments show that such a processor is not only feasible but also can greatly increase the performance of current algorithms},
+author = {Atay, Nuzhet and Bayazit, Burchan},
+booktitle = {Proceedings - IEEE International Conference on Robotics and Automation},
+doi = {10.1109/ROBOT.2006.1641172},
+isbn = {0780395069},
+issn = {10504729},
+mendeley-groups = {Motion Planning Accelerators},
+pages = {125--132},
+title = {{A motion planning processor on reconfigurable hardware}},
+volume = {2006},
+year = {2006}
+}
+@inproceedings{Flamand2018,
+abstract = {Current ultra-low power smart sensing edge devices, operating for years on small batteries, are limited to low- bandwidth sensors, such as temperature or pressure. Enabling the next generation of edge devices to process data from richer sensors such as image, video, audio, or multi-axial motion/vibration has huge application potential. However, edge processing of data-rich sensors poses the extreme challenge of squeezing the computational requirements of advanced, machine-learning- based near-sensor data analysis algorithms (such as Convolutional Neural Networks) within the mW-range power envelope of always-ON battery-powered IoT end-nodes. To address this challenge, we propose GAP-8: a multi-GOPS fully programmable RISC-V IoT-edge computing engine, featuring a 8-core cluster with CNN accelerator, coupled with an ultra-low power MCU with 30 µW state-retentive sleep power. GAP-8 delivers up to 10 GMAC/s for CNN inference (90 MHz, 1.0V) at the energy efficiency of 600 GMAC/s/W within a worst-case power envelope of 75 mW.},
+author = {Flamand, Eric and Rossi, Davide and Conti, Francesco and Loi, Igor and Pullini, Antonio and Rotenberg, Florent and Benini, Luca},
+booktitle = {Proceedings of the International Conference on Application-Specific Systems, Architectures and Processors},
+doi = {10.1109/ASAP.2018.8445101},
+isbn = {9781538674796},
+issn = {10636862},
+keywords = {Convolutional Neural Networks,Edge Processing,Internet of Things,Near Sensor Processing,parallel Architectures},
+mendeley-groups = {RISC-V (1)},
+month = {aug},
+publisher = {Institute of Electrical and Electronics Engineers Inc.},
+title = {{GAP-8: A RISC-V SoC for AI at the Edge of the IoT}},
+volume = {2018-July},
+year = {2018}
+}
+@inproceedings{Malik2015,
+abstract = {{\textcopyright} 2015 IEEE. Complex tasks are often handled through software implementation in combination with high performance processors. Taking advantage of hardware parallelism, FPGA is breaking the paradigm by accomplishing more per clock cycle with closely matched application requirements. With the aim to minimise computation delay with increase in map's size and geometric constraints, we present the FPGA based combinatorial architecture that allows multiple RRTs to work together to achieve accelerated, uniform exploration of the map. We also analyse our architecture against hardware implementation of other scalable RRT methods for motion planning. We observe notable furtherance of acceleration capabilities with the proposed architecture delivering a minimum 3X gain over the other implementations while maintaining uniformity in exploration.},
+author = {Malik, Gurshaant Singh and Gupta, Krishna and Krishna, K. Madhava and Chowdhury, Shubhajit Roy},
+booktitle = {2015 European Conference on Mobile Robots, ECMR 2015 - Proceedings},
+doi = {10.1109/ECMR.2015.7324211},
+isbn = {9781467391634},
+keywords = {Acceleration,Collision avoidance,Computer architecture,Field programmable gate arrays,Hardware,Robots,Space exploration},
+mendeley-groups = {Motion Planning Accelerators},
+month = {nov},
+publisher = {Institute of Electrical and Electronics Engineers Inc.},
+title = {{FPGA based combinatorial architecture for parallelizing RRT}},
+year = {2015}
+}
+@article{Palossi2018,
+author = {Palossi, Daniele ; and Loquercio, Antonio ; and Conti, Francesco ; and Flamand, Eric ; and Scaramuzza, Davide ; and Benini},
+doi = {10.3929/ethz-b-000314353},
+title = {{Ultra Low Power Deep-Learning-powered Autonomous Nano Drones}},
+url = {https://doi.org/10.3929/ethz-b-000314353},
+year = {2018}
+}
+@article{Cas$caval2010a,
+abstract = {As the clock frequency of silicon chips is leveling off, the computer architecture community is looking for different solutions to continue application performance scaling. One such solution is the multicore approach, i.e., using multiple simple cores that enable higher performance than wide superscalar processors, provided that the workload can exploit the parallelism. Another emerging alternative is the use of customized designs (accelerators) at different levels within the system. These are specialized functional units integrated with the core, specialized cores, attached processors, or attached appliances. The design tradeoff is quite compelling because current processor chips have billions of transistors, but they cannot all be activated or switched at the same time at high frequencies. Specialized designs provide increased power efficiency but cannot be used as general-purpose compute engines. Therefore, architects trade area for power efficiency by placing in the design additional units that are known to be active at different times. The resulting system is a heterogeneous architecture, with the potential of specialized execution that accelerates different workloads. While designing and building such hardware systems is attractive, writing and porting software to a heterogeneous platform is even more challenging than parallelism for homogeneous multicore systems. In this paper, we propose a taxonomy that allows us to define classes of accelerators, with the goal of focusing on a small set of programming models for accelerators. We discuss several types of currently popular accelerators and identify challenges to exploiting such accelerators in current software stacks. This paper serves as a guide for both hardware designers by providing them with a view on how software best exploits specialization and software programmers by focusing research efforts to address parallelism and heterogeneity.},
+author = {{Cas {\$}caval}, C and Chatterjee, S and Franke, H and Gildea, K J and Pattnaik, P},
+doi = {10.1147/JRD.2010.2059721},
+title = {{A taxonomy of accelerator architectures and their programming models}},
+year = {2010}
+}
+@techreport{Zhi,
+abstract = {Exploration problems are fundamental to robotics, arising in various domains, ranging from search and rescue to space exploration. Many effective exploration algorithms rely on the computation of mutual information between the current map and potential future measurements in order to make planning decisions. Unfortunately, computing mutual information metrics is computationally challenging. In fact, a large fraction of the current literature focuses on approximation techniques to devise computationally-efficient algorithms. In this paper, we propose a novel computing hardware architecture to efficiently compute Shannon mutual information. The proposed architecture consists of multiple mutual information computation cores, each evaluating the mutual information between a single sensor beam and the occupancy grid map. The key challenge is to ensure that each core is supplied with data when requested, so that all cores are maximally utilized. Our key contribution consists of a novel memory architecture and data delivery method that ensures effective utilization of all mutual information computation cores. This architecture was optimized for 16 mutual information computation cores, and was implemented on an FPGA. We show that it computes the mutual information metric for an entire map of 20m × 20m at 0.1m resolution in near real time, at 2 frames per second, which is approximately two orders of magnitude faster, while consuming an order of magnitude less power, when compared to an equivalent implementation on a Xeon CPU.},
+author = {Zhi, Peter and Li, Xuan and Zhang, Zhengdong and Karaman, Sertac and Sze, Vivienne},
+mendeley-groups = {Motion Planning Accelerators},
+title = {{High-throughput Computation of Shannon Mutual Information on Chip}}
+}
+@article{Louis2019,
+abstract = {Deep neural networks have been extensively adopted for a myr-iad of applications due to their ability to learn patterns from large amounts of data. The desire to preserve user privacy and reduce user-perceived latency has created the need to perform deep neu-ral network inference tasks on low-power consumer edge devices. Since such tasks often tend to be computationally intensive, of-floading this compute from mobile/embedded CPU to a purpose-designed "Neural Processing Engines" is a commonly adopted solution for accelerating deep learning computations. While these accelerators offer significant speed-ups for key machine learning kernels, overheads resulting from frequent host-accelerator communication often diminish the net application-level benefit of this heterogeneous system. Our solution for accelerating such work-loads involves developing ISA extensions customized for machine learning kernels and designing a custom in-pipeline execution unit for these specialized instructions. We base our ISA extensions on RISC-V: an open ISA specification that lends itself to such special-izations. In this paper, we present the software infrastructure for optimizing neural network execution on RISC-V with ISA extensions. Our ISA extensions are derived from the RISC-V Vector ISA proposal, and we develop optimized implementations of the critical kernels such as convolution and matrix multiplication using these instructions. These optimized functions are subsequently added to the TensorFlow Lite source code and cross-compiled for RISC-V. We find that only a small set of instruction extensions achieves coverage over a wide variety of deep neural networks designed for vision and speech-related tasks. On average, our software implementation using the extended instructions set reduces the executed instruction count by 8X in comparison to baseline implementation. In parallel, we are also working on the hardware design of the in-pipeline machine learning accelerator. We plan to open-source our software modifications to TF Lite, as well as the micro-architecture design in due course.},
+author = {Louis, Marcia Sahaya and Azad, Zahra and Delshadtehrani, Leila and Gupta, Suyog and Warden, Pete and Reddi, Vijay Janapa and Joshi, Ajay},
+doi = {10.1145/1122445.1122456},
+isbn = {9781450399999},
+keywords = {Deep Learning,RISC-V Vector ISA extension,TensorFlow Lite},
+mendeley-groups = {RISC-V (1)},
+title = {{Towards Deep Learning using TensorFlow Lite on RISC-V}},
+url = {https://doi.org/10.1145/1122445.1122456},
+year = {2019}
+}
+@techreport{Suleiman,
+abstract = {This paper presents Navion, an energy-efficient accelerator for visual-inertial odometry (VIO) that enables autonomous navigation of miniaturized robots (e.g., nano drones), and virtual/augmented reality on portable devices. The chip uses inertial measurements and mono/stereo images to estimate the drone's trajectory and a 3D map of the environment. This estimate is obtained by running a state-of-the-art VIO algorithm based on non-linear factor graph optimization, which requires large irregularly structured memories and heterogeneous computation flow. To reduce the energy consumption and footprint, the entire VIO system is fully integrated on chip to eliminate costly off-chip processing and storage. This work uses compression and exploits both structured and unstructured sparsity to reduce on-chip memory size by 4.1×. Parallelism is used under tight area constraints to increase throughput by 43{\%}. The chip is fabricated in 65nm CMOS, and can process 752×480 stereo images from EuRoC dataset in real-time at 20 frames per second (fps) consuming only an average power of 2mW. At its peak performance, Navion can process stereo images at up to 171 fps and inertial measurements at up to 52 kHz, while consuming an average of 24mW. The chip is configurable to maximize accuracy, throughput and energy-efficiency trade-offs and to adapt to different environments. To the best of our knowledge, this is the first fully integrated VIO system in an ASIC.},
+archivePrefix = {arXiv},
+arxivId = {1809.05780v1},
+author = {Suleiman, Amr and Zhang, Zhengdong and Carlone, Luca and Karaman, Sertac and Sze, Vivienne},
+eprint = {1809.05780v1},
+keywords = {Index Terms-visual inertial odometry,SLAM,VIO,localization,map-ping,nano drones,navigation},
+title = {{Navion: A 2mW Fully Integrated Real-Time Visual-Inertial Odometry Accelerator for Autonomous Navigation of Nano Drones}},
+url = {http://navion.mit.edu/}
+}
+@techreport{Suleimana,
+abstract = {This paper presents Navion, an energy-efficient accelerator for visual-inertial odometry (VIO) that enables autonomous navigation of miniaturized robots (e.g., nano drones), and virtual/augmented reality on portable devices. The chip uses inertial measurements and mono/stereo images to estimate the drone's trajectory and a 3D map of the environment. This estimate is obtained by running a state-of-the-art VIO algorithm based on non-linear factor graph optimization, which requires large irregularly structured memories and heterogeneous computation flow. To reduce the energy consumption and footprint, the entire VIO system is fully integrated on chip to eliminate costly off-chip processing and storage. This work uses compression and exploits both structured and unstructured sparsity to reduce on-chip memory size by 4.1×. Parallelism is used under tight area constraints to increase throughput by 43{\%}. The chip is fabricated in 65nm CMOS, and can process 752×480 stereo images from EuRoC dataset in real-time at 20 frames per second (fps) consuming only an average power of 2mW. At its peak performance, Navion can process stereo images at up to 171 fps and inertial measurements at up to 52 kHz, while consuming an average of 24mW. The chip is configurable to maximize accuracy, throughput and energy-efficiency trade-offs and to adapt to different environments. To the best of our knowledge, this is the first fully integrated VIO system in an ASIC.},
+archivePrefix = {arXiv},
+arxivId = {1809.05780v1},
+author = {Suleiman, Amr and Zhang, Zhengdong and Carlone, Luca and Karaman, Sertac and Sze, Vivienne},
+eprint = {1809.05780v1},
+keywords = {Index Terms-visual inertial odometry,SLAM,VIO,localization,map-ping,nano drones,navigation},
+title = {{Navion: A 2mW Fully Integrated Real-Time Visual-Inertial Odometry Accelerator for Autonomous Navigation of Nano Drones}},
+url = {http://navion.mit.edu/}
+}
+@article{Palossi2018a,
+author = {Palossi, Daniele ; and Loquercio, Antonio ; and Conti, Francesco ; and Flamand, Eric ; and Scaramuzza, Davide ; and Benini},
+doi = {10.3929/ethz-b-000314353},
+title = {{Ultra Low Power Deep-Learning-powered Autonomous Nano Drones}},
+url = {https://doi.org/10.3929/ethz-b-000314353},
+year = {2018}
+}
+@techreport{China,
+abstract = {There is growing interest in object detection in advanced driver assistance systems and autonomous robots and vehicles. To enable such innovative systems, we need faster object detection. In this article, we investigate the trade-off between accuracy and speed with domain-specific approximations (DSAs) for two state-of-the-art deep learning-based object detection meta-architectures. We study the effectiveness of applying approximation both statically and dynamically to understand their potential and applicability. By conducting experiments on the ImageNet VID dataset, we show that DSA has great potential to improve the speed of the system without deteriorating the accuracy of object detectors. To this end, we present our insights on harvesting DSA and devise a proof-of-concept runtime, AutoFocus, that exploits dynamic DSA. With rapid progress being made in the field of computer vision and machine learning, there is growing interest in the practical deployment of intelligent algorithms in systems, such as autonomous vehicles, autonomous robots, and advanced driver assistance systems. For many of these "intelligent" systems, detection is one of the fundamental algorithms involved in developing end-to-end applications. Detection can lead to obstacle recognition, avoidance, and navigation. As a result, detection is becoming an important algorithm for developing cognitive visual agents. Thus far, the majority of effort on object detection has been focused on achieving high accuracy. However, from a system's perspective, object detection speed also matters. For instance, how},
+author = {Chin, Ting-Wu and Yu, Chia-Lin and Halpern, Matthew and Genc, Hasan and Tsao, Shiao-Li and Reddi, Vijay Janapa},
+title = {{Domain-Specific Approximation for Object Detection}},
+url = {www.computer.org/micro}
+}
+@article{Palossi2018b,
+author = {Palossi, Daniele ; and Loquercio, Antonio ; and Conti, Francesco ; and Flamand, Eric ; and Scaramuzza, Davide ; and Benini},
+doi = {10.3929/ethz-b-000314353},
+mendeley-groups = {Other Accelerators (1)},
+title = {{Ultra Low Power Deep-Learning-powered Autonomous Nano Drones}},
+url = {https://doi.org/10.3929/ethz-b-000314353},
+year = {2018}
+}
+@book{Murraya,
+abstract = {We have developed a hardware accelerator for motion planning, a critical operation in robotics. In this paper, we present the microarchitecture of our accelerator and describe a prototype implementation on an FPGA. We experimentally show that the accelerator improves performance by three orders of magnitude and improves power consumption by more than one order of magnitude. These gains are achieved through careful hardware/software co-design. We modify conventional motion planning algorithms to aggressively precompute collision data, as well as implement a microarchitecture that leverages the parallelism present in the problem.},
+author = {Murray, Sean and Floyd-Jones, William and Qi, Ying and Konidaris, George and Sorin, Daniel J},
+isbn = {9781509035083},
+mendeley-groups = {Motion Planning Accelerators},
+title = {{The Microarchitecture of a Real-Time Robot Motion Planning Accelerator}}
+}
+@techreport{Murrayb,
+abstract = {We describe a process that constructs robot-specific circuitry for motion planning, capable of generating motion plans approximately three orders of magnitude faster than existing methods. Our method is based on building collision detection circuits for a probabilistic roadmap. Collision detection for the roadmap edges is completely parallelized, so that the time to determine which edges are in collision is independent of the number of edges. We demonstrate planning using a 6-degree-of-freedom robot arm in less than 1 millisecond.},
+author = {Murray, Sean and Floyd-Jones, Will and Qi, Ying and Sorin, Daniel and Konidaris, George and Robotics, Duke},
+mendeley-groups = {Motion Planning Accelerators},
+title = {{Robot Motion Planning on a Chip}},
+url = {https://youtu.be/u4snHh}
+}
+@article{Xub,
+abstract = {Machine perception applications are increasingly moving toward manipulating and processing 3D point cloud. This paper focuses on point cloud registration, a key primitive of 3D data processing widely used in high-level tasks such as odometry, simultaneous localization and mapping, and 3D reconstruction. As these applications are routinely deployed in energy-constrained environments, real-time and energy-efficient point cloud registration is critical. We present Tigris, an algorithm-architecture co-designed system specialized for point cloud registration. Through an extensive exploration of the registration pipeline design space, we find that, while different design points make vastly different trade-offs between accuracy and performance, KD-tree search is a common performance bottleneck, and thus is an ideal candidate for architectural specialization. While KD-tree search is inherently sequential, we propose an acceleration-amenable data structure and search algorithm that exposes different forms of parallelism of KD-tree search in the context of point cloud registration. The co-designed accelerator systematically exploits the parallelism while incorporating a set of architectural techniques that further improve the accelerator efficiency. Overall, Tigris achieves 77.2× speedup and 7.4× power reduction in KD-tree search over an RTX 2080 Ti GPU, which translates to a 41.7{\%} registration performance improvements and 3.0× power reduction. CCS Concepts • Computer systems organization → Special purpose systems; • Human-centered computing → Mixed / augmented reality.},
+author = {Xu, Tiancheng and Tian, Boyuan and Zhu, Yuhao},
+doi = {10.1145/3352460.3358259},
+isbn = {9781450369381},
+keywords = {Architecture-Algorithm Co-Design * Tiancheng Xu an,KD-Tree,Nearest Neighbor Search,Perception,Point Cloud,Registration},
+title = {{Tigris: Architecture and Algorithms for 3D Perception in Point Clouds}},
+url = {http://horizon-lab.org}
+}
+@techreport{Suleimanb,
+abstract = {This paper presents Navion, an energy-efficient accelerator for visual-inertial odometry (VIO) that enables autonomous navigation of miniaturized robots (e.g., nano drones), and virtual/augmented reality on portable devices. The chip uses inertial measurements and mono/stereo images to estimate the drone's trajectory and a 3D map of the environment. This estimate is obtained by running a state-of-the-art VIO algorithm based on non-linear factor graph optimization, which requires large irregularly structured memories and heterogeneous computation flow. To reduce the energy consumption and footprint, the entire VIO system is fully integrated on chip to eliminate costly off-chip processing and storage. This work uses compression and exploits both structured and unstructured sparsity to reduce on-chip memory size by 4.1×. Parallelism is used under tight area constraints to increase throughput by 43{\%}. The chip is fabricated in 65nm CMOS, and can process 752×480 stereo images from EuRoC dataset in real-time at 20 frames per second (fps) consuming only an average power of 2mW. At its peak performance, Navion can process stereo images at up to 171 fps and inertial measurements at up to 52 kHz, while consuming an average of 24mW. The chip is configurable to maximize accuracy, throughput and energy-efficiency trade-offs and to adapt to different environments. To the best of our knowledge, this is the first fully integrated VIO system in an ASIC.},
+archivePrefix = {arXiv},
+arxivId = {1809.05780v1},
+author = {Suleiman, Amr and Zhang, Zhengdong and Carlone, Luca and Karaman, Sertac and Sze, Vivienne},
+eprint = {1809.05780v1},
+keywords = {Index Terms-visual inertial odometry,SLAM,VIO,localization,map-ping,nano drones,navigation},
+mendeley-groups = {Other Accelerators (1)},
+title = {{Navion: A 2mW Fully Integrated Real-Time Visual-Inertial Odometry Accelerator for Autonomous Navigation of Nano Drones}},
+url = {http://navion.mit.edu/}
+}
+@techreport{Chenb,
+abstract = {A recent trend in deep neural network (DNN) development is to extend the reach of deep learning applications to platforms that are more resource and energy constrained, e.g., mobile devices. These endeavors aim to reduce the DNN model size and improve the hardware processing efficiency, and have resulted in DNNs that are much more compact in their structures and/or have high data sparsity. These compact or sparse models are different from the traditional large ones in that there is much more variation in their layer shapes and sizes, and often require specialized hardware to exploit sparsity for performance improvement. Therefore, many DNN accelerators designed for large DNNs do not perform well on these models. In this work, we present Eyeriss v2, a DNN accelerator architecture designed for running compact and sparse DNNs. To deal with the widely varying layer shapes and sizes, it introduces a highly flexible on-chip network, called hierarchical mesh, that can adapt to the different amounts of data reuse and bandwidth requirements of different data types, which improves the utilization of the computation resources. Furthermore, Eyeriss v2 can process sparse data directly in the compressed domain for both weights and activations, and therefore is able to improve both processing speed and energy efficiency with sparse models. Overall, with sparse MobileNet, Eyeriss v2 in a 65nm CMOS process achieves a throughput of 1470.6 inferences/sec and 2560.3 inferences/J at a batch size of 1, which is 12.6× faster and 2.5× more energy efficient than the original Eyeriss running MobileNet.},
+archivePrefix = {arXiv},
+arxivId = {1807.07928v2},
+author = {Chen, Yu-Hsin and Member, Student and Yang, Tien-Ju and Emer, Joel and Sze, Vivienne and Member, Senior},
+eprint = {1807.07928v2},
+keywords = {Dataflow Processing,Deep Learn-ing,Energy-Efficient Accelerators,Index Terms-Deep Neural Network Accelerators,Spatial Architecture},
+mendeley-groups = {Other Accelerators (1)},
+title = {{Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices}}
+}
+@techreport{Chinb,
+abstract = {There is growing interest in object detection in advanced driver assistance systems and autonomous robots and vehicles. To enable such innovative systems, we need faster object detection. In this article, we investigate the trade-off between accuracy and speed with domain-specific approximations (DSAs) for two state-of-the-art deep learning-based object detection meta-architectures. We study the effectiveness of applying approximation both statically and dynamically to understand their potential and applicability. By conducting experiments on the ImageNet VID dataset, we show that DSA has great potential to improve the speed of the system without deteriorating the accuracy of object detectors. To this end, we present our insights on harvesting DSA and devise a proof-of-concept runtime, AutoFocus, that exploits dynamic DSA. With rapid progress being made in the field of computer vision and machine learning, there is growing interest in the practical deployment of intelligent algorithms in systems, such as autonomous vehicles, autonomous robots, and advanced driver assistance systems. For many of these "intelligent" systems, detection is one of the fundamental algorithms involved in developing end-to-end applications. Detection can lead to obstacle recognition, avoidance, and navigation. As a result, detection is becoming an important algorithm for developing cognitive visual agents. Thus far, the majority of effort on object detection has been focused on achieving high accuracy. However, from a system's perspective, object detection speed also matters. For instance, how},
+author = {Chin, Ting-Wu and Yu, Chia-Lin and Halpern, Matthew and Genc, Hasan and Tsao, Shiao-Li and Reddi, Vijay Janapa},
+mendeley-groups = {Other Accelerators (1)},
+title = {{Domain-Specific Approximation for Object Detection}},
+url = {www.computer.org/micro}
+}
+
+@article{Isa2012,
+abstract = {Because of the wide industrial adoption of IEC 61131-3 there exist a large amount of libraries and know-how, much of it in ST. Reusing these for IEC 61499 can greatly reduce the cost for changing to the new paradigm and allows to leverage existing investments. In this work we investigate how such a re-use can be performed. We develop a concept for IEC 61499 FBs encapsulating existing ST based IEC 61131-3 FBs and functions. Furthermore we develop transformation and design guidelines for using existing ST FBs and functions inside of IEC 61499. This not only improves an automatic transformation of IEC 61131-3 to IEC 61499 but also provides valuable input for IEC 61499 application developers as well as for the standardization committee to improve and extend IEC 61499.},
+author = {Isa, Volume I Base User-level and Waterman, Andrew and Lee, Yunsup and Patterson, David and Asanovi, Krste and Isa, Base User-level},
+doi = {10.1109/ICIT.2012.6209917},
+isbn = {9781467303422},
+journal = {2012 IEEE International Conference on Industrial Technology, ICIT 2012, Proceedings},
+pages = {1--32},
+title = {{The RISC-V Instruction Set Manual v2.1}},
+volume = {I},
+year = {2012}
+}
+
+@misc{Vivado,
+title = {{Vivado Design Suite}},
+year = {2018}
+}
+
+@misc{Zync,
+title = {{Diligent Zync-7000 SoC}},
+url = {https://www.xilinx.com/products/boards-and-kits/1-elhabt.html}
+}
+
+@misc{Compliance,
+author = {Bennett, Jeremy and Moore, Lee},
+title = {{RISC-V Compliance Github Repository}}, 
+url = {https://github.com/riscv/riscv-compliance}
+}
+
+@article{AmericanElectricianHandbook,
+abstract = {The most popular electricians' handbook for the past 95 years has been completely updated to provide the latest NEC and NESC rules and standards, and new references to solar power, photovoltaics, induction lighting, and more. Providing all the information you'll need to design, maintain, and operate systems and equipment, the Fifteenth Edition of the American Electricians' Handbook is the key to tackling even the most complex jobs with complete confidence. This one-stop resource focuses on systems and equipment rather than codes and calculations, making it the most practical, hands-on guide available. No matter what kind of electrical project you plan to take on, the American Electricians' Handbook is the only guide you'll need. American Electrician's Handbook covers: Solar power and photovoltaics Variable- and adjustable-speed drives Variable-speed-drive programming Continuous load calculations Induction lighting New NEC and NESC rules NEMA motor and generator standards Voltage drops in circuits with non-unity power factors},
+doi = {10.1016/0016-0032(53)90923-5},
+issn = {00160032},
+journal = {Journal of the Franklin Institute},
+month = {jul},
+number = {1},
+pages = {99},
+publisher = {Elsevier BV},
+title = {{American electricians' handbook}},
+volume = {256},
+year = {1953}
+}
+
+@misc{IBM1964,
+author = {IBM},
+title = {{IBM 360}},
+year = {1964}
+}
+
+
