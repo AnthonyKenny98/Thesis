@@ -11,10 +11,15 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
+    citecolor=black,
+    linkcolor=black,
     filecolor=magenta,      
     urlcolor=cyan,
 }
+\usepackage[printonlyused]{acronym}
+
+\RequirePackage{../support/thesis}
+\RequirePackage{../master/master}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -24,11 +29,14 @@
 \author{Anthony JW Kenny \\ \\
         Electrical Engineering \\
         Advisor: Vijay Janapa Reddi}
-\date{September 9th, 2019}
-
+\masterDateAndVersion 
 
 \begin{document}
 \maketitle
+
+
+% ABSTRACT
+\input{../master/abstract}
 
 \section{Project}
 This thesis aims to improve the speed of robotic motion planning algorithms at run-time by altering the architecture on which these algorithms run. My approach will explore the possibilities of extending the Instruction Set Architecture and altering the microarchitecture to achieve this speed-up. By working with the RISC-V ISA, which is open-source and extendable, I will be able to explore optimization through extending the ISA and the number of instructions.
@@ -222,6 +230,9 @@ Another avenue through which the CPU speed could be increased is be reducing Cyc
     \hline
 \end{tabular}
 \end{center}
+
+\section{List of Acronyms}
+\input{\acronymsName}
 
 \clearpage  % remove this after you have added your text to get rid of the vertical space
 \end{document}  
