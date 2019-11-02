@@ -2,7 +2,7 @@
 * @Author: AnthonyKenny98
 * @Date:   2019-10-31 11:57:52
 * @Last Modified by:   AnthonyKenny98
-* @Last Modified time: 2019-11-01 21:04:07
+* @Last Modified time: 2019-11-01 21:16:56
 */
 
 #include "rrt.h"
@@ -106,15 +106,17 @@ double perpendicularDistance(point_t node, edge_t line) {
 bool pointInRectangle(point_t node, obstacle_t obs) {
     return  ((perpendicularDistance(node, (edge_t) {.p1=obs.v1, .p2=obs.v2}) < distance(obs.v1, obs.v4)) && 
             (perpendicularDistance(node, (edge_t) {.p1=obs.v2, .p2=obs.v3}) < distance(obs.v2, obs.v1))) ||
-            ((perpendicularDistance(node, (edge_t) {.p1=obs.v3, .p2=obs.v4}) > distance(obs.v3, obs.v2)) &&
-            (perpendicularDistance(node, (edge_t) {.p1=obs.v4, .p2=obs.v1}) > distance(obs.v4, obs.v3)));
+            ((perpendicularDistance(node, (edge_t) {.p1=obs.v3, .p2=obs.v4}) < distance(obs.v3, obs.v2)) &&
+            (perpendicularDistance(node, (edge_t) {.p1=obs.v4, .p2=obs.v1}) < distance(obs.v4, obs.v3)));
 }
 
 // Returns true if point collides with obstacle
 // Works only for Rectangular obstacles
 bool point_collision(point_t node, space_t *space) {
     for (int i=0; i<NUM_OBSTACLES; i++) {
+        obstacle_t obs = space->obstacles[i];
         if (pointInRectangle(node, space->obstacles[i])) 
+        // if (node.x > obs.v1.x && node.x < obs.v3.x && node.y > obs.v1.y && node.y < obs.v3.y)
             return true;
     }
     return false;

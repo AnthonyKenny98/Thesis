@@ -12,9 +12,9 @@
 #define XDIM 640
 #define YDIM 480
 
-#define EPSILON 30.0
+#define EPSILON 10.0
 #define NUM_NODES 500
-#define NUM_OBSTACLES 2
+#define NUM_OBSTACLES 10
 
 #define STEP_DELAY 2
 
