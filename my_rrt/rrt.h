@@ -8,14 +8,18 @@
 #include <math.h>
 #include <time.h>
 
+#include "tools.h"
+
 
 #define XDIM 1000
 #define YDIM 1000
-
 #define EPSILON 20.0
-#define NUM_NODES 500
-#define NUM_OBSTACLES 500
-#define OBSTACLE_SIZE 10
+#define OBSTACLE_SIZE 50
+
+#define NUM_OBSTACLES 4
+
+#define NUM_NODES 1000
+
 
 #define STEP_DELAY 2
 

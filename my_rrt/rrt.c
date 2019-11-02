@@ -2,15 +2,15 @@
 * @Author: AnthonyKenny98
 * @Date:   2019-10-31 11:57:52
 * @Last Modified by:   AnthonyKenny98
-* @Last Modified time: 2019-11-01 23:19:37
+* @Last Modified time: 2019-11-02 14:53:58
 */
 
 #include "rrt.h"
-#include "tools.h"
 
 // Euclidean Distance between two points
 double distance(point_t p1, point_t p2) {
-    return sqrt(pow((p1.x-p2.x),2) + pow((p1.y-p2.y),2));
+    return sqrt(((p1.x-p2.x)*(p1.x-p2.x)) + ((p1.y-p2.y)*(p1.y-p2.y)));
+    // return sqrt(pow((p1.x-p2.x),2) + pow((p1.y-p2.y),2));
 }
 
 // Returns a random node in the state space
@@ -182,65 +182,64 @@ int main(int argc, char *argv[]) {
     rrt(graph, space, startNode);
 
     // GUI
-    if (argc > 1 && !strcmp(argv[1], "-n")) {
-        return 0;
+    if (argc > 1 && !strcmp(argv[1], "-gui")) {
+        FILE *pipe = popen("gnuplot -persist", "w");
+        FILE *temp = fopen("path.temp", "w");
+        FILE *start = fopen("start.temp", "w");
+
+        // set axis ranges
+        fprintf(pipe,"set size square 1,1\n");
+        fprintf(pipe,"set key outside\n");
+        fprintf(pipe,"set xrange [0:%d]\n", XDIM);
+        fprintf(pipe,"set yrange [0:%d]\n", YDIM);
+
+
+        // Set Start and End Points
+        fprintf(start, "%lf %lf \n", startNode.x, startNode.y);
+
+        // Set Obstacles
+        for (int i=0; i<NUM_OBSTACLES; i++) {
+            fprintf(pipe, 
+                    "set object %d rect from %lf,%lf to %lf,%lf fc lt 0 back\n", 
+                    i+1, 
+                    space->obstacles[i].v1.x, 
+                    space->obstacles[i].v1.y, 
+                    space->obstacles[i].v3.x, 
+                    space->obstacles[i].v3.y);
+        }
+
+        for (int a=1; a < graph->existingNodes+1; a++) // a plots
+        {
+
+            fprintf(pipe,"set title \"Number of Nodes: %d\"\n", a+1);
+            
+            fprintf(temp, "%lf %lf %lf %lf\n", graph->edges[a].p1.x, graph->edges[a].p1.y, graph->edges[a].p2.x, graph->edges[a].p2.y); //Write the data to a temporary file
+
+            char *gnu_command = "plot \
+                                'path.temp' using 1:2:($3-$1):($4-$2) with vectors nohead lw 0.5 lc rgb \"red\" title \'RRT\', \
+                                'start.temp' with point pointtype 3 ps 2 lc rgb \"blue\" title \'Start Node\'\n";
+            fprintf(pipe, "%s\n", gnu_command);
+
+            // flush the pipe to update the plot
+            fflush(start);
+            fflush(temp);
+            fflush(pipe);
+            delay(STEP_DELAY);
+        }
+
+        //  Close Files
+        fclose(start);
+        fclose(temp);
+        fclose(pipe);
+
+        // Delete Files
+        remove("path.temp");
+        remove("start.temp");   
     }
-
-    FILE *pipe = popen("gnuplot -persist", "w");
-    FILE *temp = fopen("path.temp", "w");
-    FILE *start = fopen("start.temp", "w");
-
-    // set axis ranges
-    fprintf(pipe,"set size square 1,1\n");
-    fprintf(pipe,"set key outside\n");
-    fprintf(pipe,"set xrange [0:%d]\n", XDIM);
-    fprintf(pipe,"set yrange [0:%d]\n", YDIM);
-
-
-    // Set Start and End Points
-    fprintf(start, "%lf %lf \n", startNode.x, startNode.y);
-
-    // Set Obstacles
-    for (int i=0; i<NUM_OBSTACLES; i++) {
-        fprintf(pipe, 
-                "set object %d rect from %lf,%lf to %lf,%lf fc lt 0 back\n", 
-                i+1, 
-                space->obstacles[i].v1.x, 
-                space->obstacles[i].v1.y, 
-                space->obstacles[i].v3.x, 
-                space->obstacles[i].v3.y);
-    }
-
-    for (int a=1; a < graph->existingNodes+1; a++) // a plots
-    {
-
-        fprintf(pipe,"set title \"Number of Nodes: %d\"\n", a+1);
-        
-        fprintf(temp, "%lf %lf %lf %lf\n", graph->edges[a].p1.x, graph->edges[a].p1.y, graph->edges[a].p2.x, graph->edges[a].p2.y); //Write the data to a temporary file
-
-        char *gnu_command = "plot \
-                            'path.temp' using 1:2:($3-$1):($4-$2) with vectors nohead lw 0.5 lc rgb \"red\" title \'RRT\', \
-                            'start.temp' with point pointtype 3 ps 2 lc rgb \"blue\" title \'Start Node\'\n";
-        fprintf(pipe, "%s\n", gnu_command);
-
-        // flush the pipe to update the plot
-        fflush(start);
-        fflush(temp);
-        fflush(pipe);
-        delay(STEP_DELAY);
-    }
-
-    //  Close Files
-    fclose(start);
-    fclose(temp);
-    fclose(pipe);
-
-    // Delete Files
-    remove("path.temp");
-    remove("start.temp");
     
     // Free Memory
     free(graph);
+    free(space);
 
     return 0;
 }

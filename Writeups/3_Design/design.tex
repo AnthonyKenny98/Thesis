@@ -1,0 +1,91 @@
+% @Author: AnthonyKenny98
+% @Date:   2019-10-30 22:08:06
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2019-11-02 19:41:57
+
+\documentclass[11pt, oneside]{article}      % use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                       % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                       % Activate for rotated page geometry
+% \usepackage[parfill]{parskip}          % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}               % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+                                % TeX will automatically convert eps --> pdf in pdflatex        
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage[printonlyused]{acronym}
+
+% Import custom commands
+\RequirePackage{../support/thesis}
+\RequirePackage{../master/master}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\textsc{Design Documentation} \\ 
+    \small{for} \\ 
+    \Large{\masterThesisTitle}}
+\author{Anthony JW Kenny \\ \\
+        Electrical Engineering \\
+        Advisor: Vijay Janapa Reddi} 
+\masterDateAndVersion
+
+\begin{document}
+\maketitle
+
+% ABSTRACT
+\input{../master/abstract}
+
+% PROJECT SUMMARY
+\input{../master/projectSummary}
+
+% TECHNICAL SPECIFICATIONS
+\input{../master/specifications}
+
+\section{Analysis}
+The design process has, quite necessarily, begun with significant anaylsis of the RRT algorithm. This section will first describe RRT, and then explain my analysis of the algorithm.
+
+\subsection{RRT}
+\input{../master/rrt/rrtAlgorithm.tex}
+
+\subsection{RRT Profiling}
+\input{../master/rrt/rrtProfiling.tex}
+
+\section{Design}
+
+\subsection{System Diagram}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{../master/img/systemDiagramHorizontal.png}
+\end{center}
+
+\subsection{Processor Modifications}
+
+\subsection{RISC-V Extension, Compiler/Assembler Module}
+
+\section{Build}
+
+\section{Logistics}
+\subsection{Project Timeline}
+\subsection{Budget}
+
+\section{List of Acronyms}
+\input{\acronymsName}
+
+
+\clearpage
+
+\bibliography{\bibliographyName}
+\bibliographystyle{ieeetr}
+
+
+\end{document}  
