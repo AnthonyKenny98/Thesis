@@ -9,11 +9,11 @@
 #include <time.h>
 
 
-#define XDIM 640
-#define YDIM 480
+#define XDIM 1000
+#define YDIM 1000
 
 #define EPSILON 10.0
-#define NUM_NODES 500
+#define NUM_NODES 5000
 #define NUM_OBSTACLES 10
 
 #define STEP_DELAY 2

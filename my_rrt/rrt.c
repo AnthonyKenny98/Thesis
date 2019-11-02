@@ -2,12 +2,11 @@
 * @Author: AnthonyKenny98
 * @Date:   2019-10-31 11:57:52
 * @Last Modified by:   AnthonyKenny98
-* @Last Modified time: 2019-11-01 21:16:56
+* @Last Modified time: 2019-11-01 22:24:24
 */
 
 #include "rrt.h"
 #include "tools.h"
-
 
 // Euclidean Distance between two points
 double distance(point_t p1, point_t p2) {
@@ -87,14 +86,6 @@ bool LineIntersectsRect(point_t p1, point_t p2, obstacle_t r) {
            LineIntersectsLine(p1, p2, (point_t) {.x=r.v1.x, .y=r.v2.y}, (point_t) {.x=r.v1.x, .y=r.v1.y});
 }
 
-bool edgeCollisions(edge_t edge, space_t *space) {
-    for (int i=0; i<NUM_OBSTACLES; i++) {
-        if (LineIntersectsRect(edge.p1, edge.p2, space->obstacles[i]))
-            return true;
-    }
-    return false;
-}
-
 double perpendicularDistance(point_t node, edge_t line) {
     double m = (line.p1.y - line.p2.y) / (line.p1.x - line.p2.x);
     double a = (line.p1.y - line.p2.y);
@@ -104,10 +95,18 @@ double perpendicularDistance(point_t node, edge_t line) {
 }
 
 bool pointInRectangle(point_t node, obstacle_t obs) {
-    return  ((perpendicularDistance(node, (edge_t) {.p1=obs.v1, .p2=obs.v2}) < distance(obs.v1, obs.v4)) && 
-            (perpendicularDistance(node, (edge_t) {.p1=obs.v2, .p2=obs.v3}) < distance(obs.v2, obs.v1))) ||
-            ((perpendicularDistance(node, (edge_t) {.p1=obs.v3, .p2=obs.v4}) < distance(obs.v3, obs.v2)) &&
-            (perpendicularDistance(node, (edge_t) {.p1=obs.v4, .p2=obs.v1}) < distance(obs.v4, obs.v3)));
+    return ((perpendicularDistance(node, (edge_t) {.p1=obs.v1, .p2=obs.v2}) < distance(obs.v1, obs.v4)) && 
+        (perpendicularDistance(node, (edge_t) {.p1=obs.v2, .p2=obs.v3}) < distance(obs.v2, obs.v1))) ||
+        ((perpendicularDistance(node, (edge_t) {.p1=obs.v3, .p2=obs.v4}) < distance(obs.v3, obs.v2)) &&
+        (perpendicularDistance(node, (edge_t) {.p1=obs.v4, .p2=obs.v1}) < distance(obs.v4, obs.v3)));
+}
+
+bool edgeCollisions(edge_t edge, space_t *space) {
+    for (int i=0; i<NUM_OBSTACLES; i++) {
+        if (LineIntersectsRect(edge.p1, edge.p2, space->obstacles[i]))
+            return true;
+    }
+    return false;
 }
 
 // Returns true if point collides with obstacle
@@ -115,8 +114,7 @@ bool pointInRectangle(point_t node, obstacle_t obs) {
 bool point_collision(point_t node, space_t *space) {
     for (int i=0; i<NUM_OBSTACLES; i++) {
         obstacle_t obs = space->obstacles[i];
-        if (pointInRectangle(node, space->obstacles[i])) 
-        // if (node.x > obs.v1.x && node.x < obs.v3.x && node.y > obs.v1.y && node.y < obs.v3.y)
+        if (pointInRectangle(node, obs)) 
             return true;
     }
     return false;
@@ -143,18 +141,19 @@ int rrt(graph_t *graph, space_t *space) {
         // Get Random Point that is not in collision with 
         do {
             randomNode = getRandomNode();
-        } while (point_collision(randomNode, space));
-        
-        // Run through all points in graph, returns point nearest to randomPoint 
-        nearestNode = findNearestNode(randomNode, graph);
+            // Run through all points in graph, returns point nearest to randomPoint 
+            nearestNode = findNearestNode(randomNode, graph);
 
-        // Moves an incremental distance from nearestNode to (randomPoint if distance is < Epsilon) or new point
-        newNode = stepFromTo(nearestNode, randomNode);
+            // Moves an incremental distance from nearestNode to (randomPoint if distance is < Epsilon) or new point
+            newNode = stepFromTo(nearestNode, randomNode);
+
+        } while (point_collision(newNode, space));
         
         // Draw edge
         edge_t newEdge = {.p1 = nearestNode, .p2 = newNode};
 
         if (!edgeCollisions(newEdge, space)) {
+
             // Update graph
             graph->nodes[i] = newNode;
             graph->existingNodes++;
@@ -168,6 +167,7 @@ int rrt(graph_t *graph, space_t *space) {
             }
         }
         else {
+            printf("FUCKUP");
             i--;
         }
     }
