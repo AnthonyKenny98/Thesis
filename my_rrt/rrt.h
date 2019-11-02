@@ -4,14 +4,19 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <math.h>
 #include <time.h>
+
 
 #define XDIM 640
 #define YDIM 480
 
-#define EPSILON 20.0
-#define NUM_NODES 5000
+#define EPSILON 30.0
+#define NUM_NODES 500
+#define NUM_OBSTACLES 2
+
+#define STEP_DELAY 2
 
 typedef struct point {
     double x;
@@ -28,5 +33,18 @@ typedef struct graph {
     edge_t edges[NUM_NODES];
     int existingNodes;
 } graph_t;
+
+typedef struct obstacle {
+    point_t v1;
+    point_t v2;
+    point_t v3;
+    point_t v4;
+} obstacle_t;
+
+typedef struct space {
+    obstacle_t obstacles[NUM_OBSTACLES];
+} space_t;
+
+
 
 #endif

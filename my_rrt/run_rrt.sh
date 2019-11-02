@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./rrt
+./rrt --no-gui
