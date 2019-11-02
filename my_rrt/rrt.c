@@ -2,7 +2,7 @@
 * @Author: AnthonyKenny98
 * @Date:   2019-10-31 11:57:52
 * @Last Modified by:   AnthonyKenny98
-* @Last Modified time: 2019-11-01 22:24:24
+* @Last Modified time: 2019-11-01 22:40:33
 */
 
 #include "rrt.h"
@@ -80,10 +80,10 @@ bool LineIntersectsLine(point_t l1p1, point_t l1p2, point_t l2p1, point_t l2p2) 
 }
 
 bool LineIntersectsRect(point_t p1, point_t p2, obstacle_t r) {
-    return LineIntersectsLine(p1, p2, (point_t) {.x=r.v1.x, .y=r.v1.y}, (point_t) {.x=r.v2.x, .y=r.v1.y}) ||
-           LineIntersectsLine(p1, p2, (point_t) {.x=r.v2.x, .y=r.v1.y}, (point_t) {.x=r.v2.x, .y=r.v2.y}) ||
-           LineIntersectsLine(p1, p2, (point_t) {.x=r.v2.x, .y=r.v2.y}, (point_t) {.x=r.v1.x, .y=r.v2.y}) ||
-           LineIntersectsLine(p1, p2, (point_t) {.x=r.v1.x, .y=r.v2.y}, (point_t) {.x=r.v1.x, .y=r.v1.y});
+    return LineIntersectsLine(p1, p2, (point_t) {.x=r.v1.x, .y=r.v1.y}, (point_t) {.x=r.v2.x, .y=r.v2.y}) ||
+           LineIntersectsLine(p1, p2, (point_t) {.x=r.v2.x, .y=r.v2.y}, (point_t) {.x=r.v3.x, .y=r.v3.y}) ||
+           LineIntersectsLine(p1, p2, (point_t) {.x=r.v3.x, .y=r.v3.y}, (point_t) {.x=r.v4.x, .y=r.v4.y}) ||
+           LineIntersectsLine(p1, p2, (point_t) {.x=r.v4.x, .y=r.v4.y}, (point_t) {.x=r.v1.x, .y=r.v1.y});
 }
 
 double perpendicularDistance(point_t node, edge_t line) {
@@ -201,7 +201,7 @@ int main(int argc, char *argv[]) {
     int status = rrt(graph, space);
 
     // GUI
-    if (argc > 1 && !strcmp(argv[1], "--no-gui")) {
+    if (argc > 1 && !strcmp(argv[1], "-n")) {
         return status;
     }
 
@@ -211,6 +211,7 @@ int main(int argc, char *argv[]) {
     FILE *end = fopen("end.temp", "w");
 
     // set axis ranges
+    fprintf(pipe,"set size square 1,1\n");
     fprintf(pipe,"set xrange [0:%d]\n", XDIM);
     fprintf(pipe,"set yrange [0:%d]\n", YDIM);
 
@@ -229,8 +230,9 @@ int main(int argc, char *argv[]) {
                 space->obstacles[i].v3.y);
     }
 
-    for (int a=0; a < graph->existingNodes; a++) // a plots
+    for (int a=1; a < graph->existingNodes+1; a++) // a plots
     {
+
         fprintf(pipe,"set title \"Number of Nodes: %d\"\n", a+1);
         
         fprintf(temp, "%lf %lf %lf %lf\n", graph->edges[a].p1.x, graph->edges[a].p1.y, graph->edges[a].p2.x, graph->edges[a].p2.y); //Write the data to a temporary file
