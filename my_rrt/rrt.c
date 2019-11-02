@@ -2,7 +2,7 @@
 * @Author: AnthonyKenny98
 * @Date:   2019-10-31 11:57:52
 * @Last Modified by:   AnthonyKenny98
-* @Last Modified time: 2019-11-01 22:40:33
+* @Last Modified time: 2019-11-01 23:19:37
 */
 
 #include "rrt.h"
@@ -23,9 +23,9 @@ void initObstacles(space_t *space) {
     
     for (int i=0; i<NUM_OBSTACLES; i++) {
         point_t p1 = getRandomNode();
-        point_t p2 = {.x = p1.x, .y = p1.y+50};
-        point_t p3 = {.x = p1.x+50, .y = p1.y+50};
-        point_t p4 = {.x = p1.x+50, .y = p1.y};
+        point_t p2 = {.x = p1.x, .y = p1.y+OBSTACLE_SIZE};
+        point_t p3 = {.x = p1.x+OBSTACLE_SIZE, .y = p1.y+OBSTACLE_SIZE};
+        point_t p4 = {.x = p1.x+OBSTACLE_SIZE, .y = p1.y};
         obstacle_t obstacle = {.v1 = p1, .v2 = p2, .v3 = p3, .v4 = p4};
         space->obstacles[i] = obstacle;
     }
@@ -57,9 +57,9 @@ point_t stepFromTo(point_t p1, point_t p2) {
     }
 }
 
-bool LineIntersectsLine(point_t l1p1, point_t l1p2, point_t l2p1, point_t l2p2) {
-    double q = (l1p1.y - l2p1.y) * (l2p2.x - l2p1.x) - (l1p1.x - l2p1.x) * (l2p2.y - l2p1.y);
-    double d = (l1p2.x - l1p1.x) * (l2p2.y - l2p1.y) - (l1p2.y - l1p1.y) * (l2p2.x - l2p1.x);
+bool LineIntersectsLine(edge_t e1, edge_t e2) {
+    double q = (e1.p1.y - e2.p1.y) * (e2.p2.x - e2.p1.x) - (e1.p1.x - e2.p1.x) * (e2.p2.y - e2.p1.y);
+    double d = (e1.p2.x - e1.p1.x) * (e2.p2.y - e2.p1.y) - (e1.p2.y - e1.p1.y) * (e2.p2.x - e2.p1.x);
 
     if( d == 0 )
     {
@@ -68,7 +68,7 @@ bool LineIntersectsLine(point_t l1p1, point_t l1p2, point_t l2p1, point_t l2p2) 
 
     double r = q / d;
 
-    q = (l1p1.y - l2p1.y) * (l1p2.x - l1p1.x) - (l1p1.x - l2p1.x) * (l1p2.y - l1p1.y);
+    q = (e1.p1.y - e2.p1.y) * (e1.p2.x - e1.p1.x) - (e1.p1.x - e2.p1.x) * (e1.p2.y - e1.p1.y);
     double s = q / d;
 
     if( r < 0 || r > 1 || s < 0 || s > 1 )
@@ -79,11 +79,11 @@ bool LineIntersectsLine(point_t l1p1, point_t l1p2, point_t l2p1, point_t l2p2) 
     return true;
 }
 
-bool LineIntersectsRect(point_t p1, point_t p2, obstacle_t r) {
-    return LineIntersectsLine(p1, p2, (point_t) {.x=r.v1.x, .y=r.v1.y}, (point_t) {.x=r.v2.x, .y=r.v2.y}) ||
-           LineIntersectsLine(p1, p2, (point_t) {.x=r.v2.x, .y=r.v2.y}, (point_t) {.x=r.v3.x, .y=r.v3.y}) ||
-           LineIntersectsLine(p1, p2, (point_t) {.x=r.v3.x, .y=r.v3.y}, (point_t) {.x=r.v4.x, .y=r.v4.y}) ||
-           LineIntersectsLine(p1, p2, (point_t) {.x=r.v4.x, .y=r.v4.y}, (point_t) {.x=r.v1.x, .y=r.v1.y});
+bool LineIntersectsRect(edge_t edge, obstacle_t r) {
+    return LineIntersectsLine(edge, (edge_t) {.p1 = (point_t) {.x=r.v1.x, .y=r.v1.y}, .p2 = (point_t) {.x=r.v2.x, .y=r.v2.y}}) ||
+           LineIntersectsLine(edge, (edge_t) {.p1 = (point_t) {.x=r.v2.x, .y=r.v2.y}, .p2 = (point_t) {.x=r.v3.x, .y=r.v3.y}}) ||
+           LineIntersectsLine(edge, (edge_t) {.p1 = (point_t) {.x=r.v3.x, .y=r.v3.y}, .p2 = (point_t) {.x=r.v4.x, .y=r.v4.y}}) ||
+           LineIntersectsLine(edge, (edge_t) {.p1 = (point_t) {.x=r.v4.x, .y=r.v4.y}, .p2 = (point_t) {.x=r.v1.x, .y=r.v1.y}});
 }
 
 double perpendicularDistance(point_t node, edge_t line) {
@@ -103,7 +103,7 @@ bool pointInRectangle(point_t node, obstacle_t obs) {
 
 bool edgeCollisions(edge_t edge, space_t *space) {
     for (int i=0; i<NUM_OBSTACLES; i++) {
-        if (LineIntersectsRect(edge.p1, edge.p2, space->obstacles[i]))
+        if (LineIntersectsRect(edge, space->obstacles[i]))
             return true;
     }
     return false;
@@ -120,16 +120,10 @@ bool point_collision(point_t node, space_t *space) {
     return false;
 }
 
-int rrt(graph_t *graph, space_t *space) {
-
-    int status = 1;
+void rrt(graph_t *graph, space_t *space, point_t startNode) {
 
     // Start Point
-    point_t startNode = {.x = XDIM/2.0, .y = YDIM/2.0};
     graph->nodes[0] = startNode;
-
-    // Goal Point
-    point_t goalNode = {.x = 100, .y = 100};
 
     // Init points
     point_t randomNode = startNode;
@@ -158,20 +152,11 @@ int rrt(graph_t *graph, space_t *space) {
             graph->nodes[i] = newNode;
             graph->existingNodes++;
             graph->edges[i] = newEdge;
-
-            // Check if done
-            if (distance(newNode, goalNode) < 10) {
-                printf("%i\n", i);
-                printf("Found End Node\n");
-                status = 0;
-            }
         }
         else {
-            printf("FUCKUP");
             i--;
         }
     }
-    return status;
 }
 
 int main(int argc, char *argv[]) {
@@ -187,37 +172,33 @@ int main(int argc, char *argv[]) {
     graph_t *graph = malloc(sizeof(graph_t));
     graph->existingNodes = 0;
 
-    // Allocate Memory for Start and End Nodes
-    point_t *startNode = malloc(sizeof(point_t));
-    point_t *goalNode = malloc(sizeof(point_t));
+    // Allocate Memory for Start Node
+    point_t startNode;
 
     // Init Start and End Nodes
-    startNode->x = XDIM/2.0;
-    startNode->y = YDIM/2.0;
-    goalNode->x = 100;
-    goalNode->y = 100;
+    do { startNode = getRandomNode(); } while (point_collision(startNode, space));
 
     // run RRT
-    int status = rrt(graph, space);
+    rrt(graph, space, startNode);
 
     // GUI
     if (argc > 1 && !strcmp(argv[1], "-n")) {
-        return status;
+        return 0;
     }
 
     FILE *pipe = popen("gnuplot -persist", "w");
     FILE *temp = fopen("path.temp", "w");
     FILE *start = fopen("start.temp", "w");
-    FILE *end = fopen("end.temp", "w");
 
     // set axis ranges
     fprintf(pipe,"set size square 1,1\n");
+    fprintf(pipe,"set key outside\n");
     fprintf(pipe,"set xrange [0:%d]\n", XDIM);
     fprintf(pipe,"set yrange [0:%d]\n", YDIM);
 
+
     // Set Start and End Points
-    fprintf(start, "%lf %lf \n", startNode->x, startNode->y);
-    fprintf(end, "%lf %lf \n", goalNode->x, goalNode->y);
+    fprintf(start, "%lf %lf \n", startNode.x, startNode.y);
 
     // Set Obstacles
     for (int i=0; i<NUM_OBSTACLES; i++) {
@@ -238,14 +219,12 @@ int main(int argc, char *argv[]) {
         fprintf(temp, "%lf %lf %lf %lf\n", graph->edges[a].p1.x, graph->edges[a].p1.y, graph->edges[a].p2.x, graph->edges[a].p2.y); //Write the data to a temporary file
 
         char *gnu_command = "plot \
-                            'path.temp' using 1:2:($3-$1):($4-$2) with vectors nohead lw 0.5 lc rgb \"red\" notitle, \
-                            'start.temp' with point pointtype 3 ps 2 lc rgb \"blue\" title \'Start Node\', \
-                            'end.temp' with point pointtype 3 ps 2 lc rgb \"green\" title \'Goal Node\'\n";
+                            'path.temp' using 1:2:($3-$1):($4-$2) with vectors nohead lw 0.5 lc rgb \"red\" title \'RRT\', \
+                            'start.temp' with point pointtype 3 ps 2 lc rgb \"blue\" title \'Start Node\'\n";
         fprintf(pipe, "%s\n", gnu_command);
 
         // flush the pipe to update the plot
         fflush(start);
-        fflush(end);
         fflush(temp);
         fflush(pipe);
         delay(STEP_DELAY);
@@ -253,19 +232,15 @@ int main(int argc, char *argv[]) {
 
     //  Close Files
     fclose(start);
-    fclose(end);
     fclose(temp);
     fclose(pipe);
 
     // Delete Files
     remove("path.temp");
     remove("start.temp");
-    remove("end.temp");
     
     // Free Memory
     free(graph);
-    free(startNode);
-    free(goalNode);
 
-    return status;
+    return 0;
 }
