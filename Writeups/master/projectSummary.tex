@@ -1,0 +1,42 @@
+% @Author: AnthonyKenny98
+% @Date:   2019-10-30 22:48:26
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2019-10-31 10:52:39
+
+\section{Project Summary}
+
+\subsection{Problem Statement}
+Current processors cannot compute motion planning algorithms quickly enough for robots to operate in high complexity environments. Autonomous drones are a specific case of robots requiring real-time motion planning in complex environments. The state-of-the-art strategy of using a \ac{GPU} to accelerate the execution of these algorithms requires too much power to be cost effective or feasible for drones to sustain flight for useful periods of time.
+% 65 words ^
+
+\subsection{End User}
+The end user of this project is a developer of autonomous drones. Such developers have a need for computing hardware that executes motion planning algorithms faster and more power efficiently than existing methods. This thesis will provide a processor design that is synthesizable on an \ac{FPGA}, giving developers a processer for which a \ac{RTOS}, or bare metal code, can be written. 
+Additionally, these developers have a requirement that using a new processor for a drone will not require a massive investment in re-development. As such, this thesis will provide the toolchain necessary to compile C code into executable instructions on the new processor.
+
+\subsection{Project Goals} \label{subsection:projectGoals}
+This thesis aims to design a RISC-V processor, optimized for motion planning computation, that is synthesizeable on an \ac{FPGA} and adheres to the requirements outlined in Section \ref{subsection:projectRequirements}. It will also provide the tools necessary to complile programs for the processor. 
+
+The nature of research into accelerating computation through modified computer architecture is such that, when asked a question of how fast/efficient/small/etc a system must be, the answer is, with consideration to certain trade-offs, as fast/efficient/small/etc as it can be! Thus, when defining goals for certain metrics such as speed or power efficiency, this thesis will do so by comparing performance of the modified processor with benchmark performance of an unmodified, off-the-shelf RISC-V processor synthesized on the same \ac{FPGA}.
+
+\subsection{Project Requirements} \label{subsection:projectRequirements}
+Table ~\ref{table:projectRequirements} outlines conceptually the requirements of the project.
+
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{| m{0.25\linewidth} | m{0.75\linewidth} |}
+\hline
+\textbf{Requirement}       & \textbf{Description} \\
+\hline
+RISC-V Compliance   & This project will extend the RISC-V \ac{ISA} to add new instructions. The contstraint of RISC-V compliance means that the new ISA must follow RISC-V conventions, and that the processor can implement any program compiled into the original RISC-V ISA.\\
+\hline
+Synthesizable       & The processor design must be such that it is practically useable by drone developers. Since having such a processor design produced on a chip is beyond this project's scope, this project must deliver a processor defined in an \ac{HDL} that is synthesizable on an FPGA.\\
+\hline
+Speed               & One of the motivating factors of this project is the need for motion planning algorithms to execute faster for autonomous drones to become more useful in real world applications. \\
+\hline
+Power consumption   & The second motivating factor is the need for computation aboard drones to be as power efficient as possible to enable them to remain in flight for long enough periods of time.\\
+\hline
+\end{tabular}
+\caption{Conceptual Outline of Project Requirements}
+\label{table:projectRequirements}
+\end{centering}
+\end{table}

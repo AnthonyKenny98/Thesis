@@ -1,0 +1,32 @@
+% @Author: AnthonyKenny98
+% @Date:   2019-11-02 18:44:43
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2019-11-02 19:53:49
+
+\SetArgSty{textnormal}
+
+\ac{RRT} is an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the problem. RRT was developed by S. LaVelle \cite{LaValle1998} and J. Kuffner \cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones, the focus of this thesis. \\
+
+The RRT Algorithm with Collision Detection can be seen in Algorthim 1.
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\textbf{Inputs:} Space $S$ with obstacles \\ 
+\textbf{Output:} Collision free graph $G$ with $K$ nodes \& edges \\
+    $G$.init()\;
+    \For{$k = 1$ to $K$}{
+        \While { !\text{pointCollision}($node_{new}$) } {
+            $q_{rand} \leftarrow $ getRandomNode(); \\
+            $q_{near} \leftarrow $ findNearestNode(); \\
+            $q_{new} \leftarrow $ stepFromTo(); \\
+        }
+        $e_{new} \leftarrow $ newEdge($q_{near}, q_{new}$) \\
+        \eIf{\text{!edgeCollision($e_{new}$)}} {
+            $G$.addNode($q_{new}$); \\
+            $G$.addEdge($e_{new}$);
+        }{
+            $k = k-1$;
+        }
+    }
+ \caption{Rapidly-exploring Random Tree with Collision Detection}
+\end{algorithm}

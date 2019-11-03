@@ -12,36 +12,38 @@ Warning--empty year in Murrayb
 Warning--empty institution in Zhi
 Warning--empty year in Zhi
 Warning--empty author in AmericanElectricianHandbook
-You've used 14 entries,
+Warning--empty journal in Vss2sn2019
+Warning--empty institution in Yasin2014
+You've used 19 entries,
             1876 wiz_defined-function locations,
-            555 strings with 5472 characters,
-and the built_in function-call counts, 2830 in all, are:
-= -- 243
-> -- 137
+            585 strings with 6089 characters,
+and the built_in function-call counts, 3485 in all, are:
+= -- 306
+> -- 157
 < -- 0
-+ -- 52
-- -- 38
-* -- 213
-:= -- 414
-add.period$ -- 12
-call.type$ -- 14
-change.case$ -- 16
++ -- 62
+- -- 43
+* -- 240
+:= -- 516
+add.period$ -- 21
+call.type$ -- 19
+change.case$ -- 22
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 132
-empty$ -- 287
-format.name$ -- 38
-if$ -- 667
+cite$ -- 30
+duplicate$ -- 159
+empty$ -- 370
+format.name$ -- 43
+if$ -- 827
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 8
-newline$ -- 45
-num.names$ -- 11
-pop$ -- 67
+int.to.str$ -- 19
+missing$ -- 9
+newline$ -- 64
+num.names$ -- 16
+pop$ -- 96
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 90
+skip$ -- 101
 stack$ -- 0
 substring$ -- 111
 swap$ -- 37
@@ -49,8 +51,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 9
-while$ -- 24
-width$ -- 16
-write$ -- 111
-(There were 9 warnings)
+warning$ -- 11
+while$ -- 29
+width$ -- 21
+write$ -- 155
+(There were 11 warnings)
