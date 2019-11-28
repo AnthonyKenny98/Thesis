@@ -14,11 +14,11 @@
 #define XDIM 1000
 #define YDIM 1000
 #define EPSILON 20.0
-#define OBSTACLE_SIZE 10
 
-#define NUM_OBSTACLES 500
+#define OBSTACLE_SIZE 50
+#define NUM_OBSTACLES 50
 
-#define NUM_NODES 10000
+#define NUM_NODES 2500
 
 
 #define STEP_DELAY 2

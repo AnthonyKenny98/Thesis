@@ -2,7 +2,7 @@
 * @Author: AnthonyKenny98
 * @Date:   2019-10-31 11:57:52
 * @Last Modified by:   AnthonyKenny98
-* @Last Modified time: 2019-11-02 14:53:58
+* @Last Modified time: 2019-11-05 14:06:38
 */
 
 #include "rrt.h"
@@ -233,8 +233,8 @@ int main(int argc, char *argv[]) {
         fclose(pipe);
 
         // Delete Files
-        remove("path.temp");
-        remove("start.temp");   
+        // remove("path.temp");
+        // remove("start.temp");   
     }
     
     // Free Memory
