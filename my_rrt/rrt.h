@@ -10,7 +10,6 @@
 
 #include "tools.h"
 
-
 #define XDIM 1000
 #define YDIM 1000
 #define EPSILON 20.0
@@ -18,7 +17,7 @@
 #define OBSTACLE_SIZE 50
 #define NUM_OBSTACLES 50
 
-#define NUM_NODES 2500
+#define NUM_NODES 1000
 
 
 #define STEP_DELAY 2
@@ -49,7 +48,5 @@ typedef struct obstacle {
 typedef struct space {
     obstacle_t obstacles[NUM_OBSTACLES];
 } space_t;
-
-
 
 #endif
