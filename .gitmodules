@@ -2,3 +2,6 @@
 [submodule "RRT"]
 	path = RRT
 	url = git@github.com:AnthonyKenny98/RRT.git
+[submodule "PhilosophyV"]
+	path = PhilosophyV
+	url = git@github.com:AnthonyKenny98/PhilosophyV.git
