@@ -4,12 +4,13 @@ This thesis aims to design RISC-V computer architecture that supports the fast e
 
 ## Table of Contents
 + [Repository Structure](#structure)
-	+ [Research](#research)
-	+ [Writeups](#writeups)
-	+ [RRT](#rrt)
-	+ [PhilosophyV](#phil_v)
 	
 ## <a name=#structure></a>Repository Structure
++ [Research](#research)
++ [Writeups](#writeups)
++ [RRT](#rrt)
++ [PhilosophyV](#phil_v)
+
 
 ### <a name=#research></a>Research
 This folder holds the academic papers that constitute the background research of this Thesis.
