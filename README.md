@@ -10,6 +10,7 @@ This thesis aims to design RISC-V computer architecture that supports the fast e
 + [Writeups](#writeups)
 + [RRT](#rrt)
 + [PhilosophyV](#phil_v)
++ [HoneyBee](#honeybee)
 
 
 ### <a name=#research></a>Research
@@ -27,3 +28,6 @@ This subrepository holds:
 
 ### <a name=#phil_v></a>PhilosophyV
 This subrepository holds the PhilosophyV RISCV chip
+
+### <a name=honeybee></a>HoneyBee
+This subrepository holds the HoneyBee functional unit, a hardware implementation of collision detection.
