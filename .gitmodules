@@ -5,3 +5,6 @@
 [submodule "PhilosophyV"]
 	path = PhilosophyV
 	url = git@github.com:AnthonyKenny98/PhilosophyV.git
+[submodule "HoneyBee"]
+	path = HoneyBee
+	url = git@github.com:AnthonyKenny98/HoneyBee.git
