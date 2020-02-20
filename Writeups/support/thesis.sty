@@ -28,6 +28,28 @@
     urlcolor=cyan,
 }
 \usepackage[printonlyused]{acronym}
+\usepackage[toc,page]{appendix}
+
+\usepackage[nottoc]{tocbibind}
+
+\makeatletter
+\renewcommand\listoftables{%
+    \newpage
+    \section*{\listtablename}%
+    \addcontentsline{toc}{section}{List of Tables}
+    \@mkboth{\MakeUppercase\listtablename}%
+        {\MakeUppercase\listtablename}%
+    \@starttoc{lot}%
+}
+\renewcommand\listoffigures{%
+    \newpage
+    \section*{\listfigurename}%
+    \addcontentsline{toc}{section}{List of Figures}
+    \@mkboth{\MakeUppercase\listfigurename}%
+        {\MakeUppercase\listfigurename}%
+    \@starttoc{lof}%
+}
+\makeatother
 
 
 \newcommand\bibliographyName{../support/thesis}
