@@ -1,22 +1,29 @@
 % @Author: AnthonyKenny98
 % @Date:   2019-10-30 22:08:06
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-20 00:47:40
+% @Last Modified time: 2020-02-20 01:21:25
 
-\documentclass[11pt, letterpaper, draft, oneside]{report}      % use "amsart" instead of "article" for AMSLaTeX format
- 
+% Define Document Class
+\documentclass[
+    11pt,           % Font Size
+    letterpaper,    % Page Size
+    draft,          % Draft Mode - error checking and no image rendering
+    oneside         % Single Sided
+]{report}           % Report Mode
  
 % Import custom commands
 \RequirePackage{../support/thesis}
 \RequirePackage{../newmaster/master}
 
-% \renewcommand{\listoffigures}{\begingroup
-%  \tocsection*
-%  \tocfile{\listfigurename}{lof}
-%  \endgroup}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% DEFINE HEADER & FOOTER: (Name and Page Number)
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Anthony JW Kenny}
+\cfoot{\thepage}
+
+% DEFINE COVER PAGE
 \title{\textsc{\masterThesisTitle} \\ 
     \bigskip
     \small{A senior design project submitted in partial fulfillment of the requirements for the degree of Bachelor of Science at Harvard University} \\
@@ -27,33 +34,51 @@
         \small{Cambridge, MA}}
 \masterDateAndVersion}
 
+
 \begin{document}
+
+% Cover Page
 \maketitle
 
+% PREFACE
 \pagenumbering{roman}
 \addcontentsline{toc}{chapter}{Preface}
 
-% ABSTRACT
-\addcontentsline{toc}{section}{Abstract}
-\input{../newmaster/abstract}
-\clearpage
+    % ABSTRACT
+    \addcontentsline{toc}{section}{Abstract}
+    \input{../newmaster/abstract}
+    \clearpage
 
-% TABLE OF CONTENTS
-\tableofcontents
-\clearpage
+    % TABLE OF CONTENTS
+    \tableofcontents
+    \clearpage
 
-% ACRONYMNS
-% \addcontentsline{toc}{section}{List of Acronymns}
-\section*{List of Acronyms}
-\addcontentsline{toc}{section}{List of Acronyms}
-\input{\acronymsName}
+    % ACRONYMNS
+    \section*{List of Acronyms}
+    \addcontentsline{toc}{section}{List of Acronyms}
+    \input{\acronymsName}
 
-\listoffigures
+    % FIGURES
+    \listoffigures
 
-\listoftables
+    % TABLES
+    \listoftables
 
-% CHAPTER 1
-\input{chapters/chapter1/chapter1.tex}
+% CHAPTERS
+
+% Chapter 1
+\chapter{Introduction}
+    \pagenumbering{arabic}                      % Change Page numbering to arabic
+    \input{chapters/chapter1/chapter1.tex}
+    \lhead{Chapter \thechapter}                 % Include Chapter name on subsequent headers
+
+
+% Chapter 2
+\chapter{Background Information}
+
+
+% Chapter 3
+\chapter{RRT}
 
 % % TECHNICAL SPECIFICATIONS
 % \input{../newmaster/specifications}
