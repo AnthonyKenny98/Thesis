@@ -3,7 +3,7 @@
 # @Author: AnthonyKenny98
 # @Date:   2019-10-30 16:22:45
 # @Last Modified by:   AnthonyKenny98
-# @Last Modified time: 2019-10-31 10:11:28
+# @Last Modified time: 2020-02-19 23:04:19
 
 ### Constants
 
@@ -12,6 +12,7 @@ PROJECTS=(\
     1_Proposal \
     2_TechnicalSpecifications \
     3_Design \
+    4_Report \
 )
 
 ### GLOBAL VARS

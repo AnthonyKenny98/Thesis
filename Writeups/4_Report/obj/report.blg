@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: obj/report.aux
+The style file: ieeetr.bst
+Database file #1: ../support/thesis.bib
+Warning--empty publisher in Murraya
+Warning--empty year in Murraya
+Warning--empty institution in Murray
+Warning--empty year in Murray
+Warning--empty institution in Murrayb
+Warning--empty year in Murrayb
+Warning--empty institution in Zhi
+Warning--empty year in Zhi
+Warning--empty author in AmericanElectricianHandbook
+Warning--empty journal in Vss2sn2019
+Warning--empty institution in Yasin2014
+You've used 19 entries,
+            1876 wiz_defined-function locations,
+            585 strings with 6089 characters,
+and the built_in function-call counts, 3485 in all, are:
+= -- 306
+> -- 157
+< -- 0
++ -- 62
+- -- 43
+* -- 240
+:= -- 516
+add.period$ -- 21
+call.type$ -- 19
+change.case$ -- 22
+chr.to.int$ -- 0
+cite$ -- 30
+duplicate$ -- 159
+empty$ -- 370
+format.name$ -- 43
+if$ -- 827
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 9
+newline$ -- 64
+num.names$ -- 16
+pop$ -- 96
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 101
+stack$ -- 0
+substring$ -- 111
+swap$ -- 37
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 11
+while$ -- 29
+width$ -- 21
+write$ -- 155
+(There were 11 warnings)
