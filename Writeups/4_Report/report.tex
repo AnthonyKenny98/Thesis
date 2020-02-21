@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2019-10-30 22:08:06
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-20 01:21:25
+% @Last Modified time: 2020-02-20 11:39:57
 
 % Define Document Class
 \documentclass[
@@ -33,7 +33,6 @@
         Harvard University School of Engineering and Applied Sciences \\
         \small{Cambridge, MA}}
 \masterDateAndVersion}
-
 
 \begin{document}
 
@@ -78,91 +77,19 @@
 
 
 % Chapter 3
-\chapter{RRT}
+\chapter{Motion Planning in Software}
 
-% % TECHNICAL SPECIFICATIONS
-% \input{../newmaster/specifications}
+% Chapter 4
+\chapter{Motion Planning in Hardware}
 
-% \section{Analysis}
-% The design process has, quite necessarily, begun with significant anaylsis of the RRT algorithm. This section will first describe RRT, and then explain my analysis of the algorithm.
+% Chapter 5
+\chapter{RISC-V Processor}
 
-% \subsection{RRT}
-% \input{../newmaster/rrt/rrtAlgorithm}
+% Chapter 6
+\chapter{Discussion}
 
-% \subsection{RRT Profiling}
-% \input{../newmaster/rrt/rrtProfiling}
-
-
-% \section{Design}
-
-% \subsection{System Diagram}
-% The overall system can be defined as two subcomponents: a Compiler \& Assembler Module, and a modified RISC-V Processor.
-
-% \begin{center}
-% \includegraphics[width=\linewidth]{../newmaster/img/systemDiagramHorizontal.png}
-% \end{center}
-
-% \subsection{Subcomponent B Design}
-% As can be seen in the \ac{RRT} profiling results shown in Figure \ref{table:rrtPerformance}, \texttt{pointCollision()} occupies the majority of CPU execution time. Looking at the graphs on the left, where for each graph the number of nodes remain constant, it can be seen that for a given number $K$ of nodes in a graph, the percentage of CPU time occupied by \texttt{pointCollision()} increases. When considering the application of RRT to autonomous drones, it is important to note that improving performance as obstacles increase (and the space becomes more complex) is crucial. As such, it makes the most sense to target the execution of \texttt{pointCollision()} on the processor. \\
-
-% S. Murray et al., in their paper \"Robot Motion Planning on a Chip\" describes a method for reducing the execution time of collision detection within the context of the \ac{PRM} algorithm.\cite{Murrayb} They introduced the concept of a \ac{CDC}. They implement a series of $N$ collision detection circuits on the processor, where $N$ is the maximum number of nodes in the graph, to simultaneously compute which nodes collide with obstacles in the state space. While their approach centered on discretizing the state space into a series of "depth pixels", I believe that the necessary calculations to perform the \texttt{pointCollision()} function can be converted into boolean logic and built into a set of $N$ \ac{CDC}s in my modified RISC-V processor. \\
-
-% I will be implementing the entire processor in a \ac{HDL}, most likely Verilog, and then using Xilinx to simulate the processor and synthesize onto an FPGA. Due to setbacks in the approach I will be taking to actually synthesize the processor, the board has only just been ordered, and will arrive soon for me to start this process.
-
-% \subsection{Subcomponent A Design}
-% I've placed the Subcomponent A Design section beneath Subcomponent B in this document because it logically follows that the design of Subcomponent A will rely very much on the ultimate design of Subcomponent B. The design of the extended instructions for the RISC-V ISA will depend on how the \ac{CDC}s interact with the processor, and how best to feed these calculations from the control module to the \ac{CDC}s in the processor. As such, much of this is currently unknown and will depend on how the project develops. I do know that I will rely on the RISC-V GNU toolchain (available on GitHub) to compile C code. From there, I will need to convert assembled code from basic RISC-V to my extended RISC-V ISA.
-
-
-% \section{Logistics}
-% \subsection{Project Timeline}
-
-% \begin{center}
-% \begin{tabular}{ |m{0.7\linewidth}|m{0.3\linewidth}|}
-%     \hline
-%     \textbf{Project Milestone}                                      & \textbf{Completion Date} \\
-%     \hline
-%     Checkpoint 2: Design Documentation                              & 3 November 2019 \\
-%     \hline
-%     Synthesize RISC-V Processor on FPGA                         & 17 November 2019\\
-%     \hline
-%     Checkpoint 3: Mid Year Presentation                             & 3 December 2019 \\
-%     \hline
-%     Synthesize with successful \ac{CDC}s                           & 15 December 2020 \\
-%     \hline
-%     Implement RISC-V Extensions and Compiler Module                                & 29 December 2020 \\
-%     \hline
-%     Complete First Round Analysis                                   & 12 January 2020 \\
-%     \hline
-%     Checkpoint 4: Poster Session and Peer Reviews               & 9 February 2020 \\
-%     \hline
-%     Second Design Iteration and Analysis                            & 23 January 2020 \\
-%     \hline
-%     Checkpoint 5: Report Draft                                      & 28 February 2020 \\
-%     \hline
-%     More Analysis                            & 8 March 2020 \\
-%     \hline
-%     Finalize Presentation and Report                            & 22 March 2020 \\
-%     \hline
-%     Final Oral Presentation                                         & 24 March 2020 \\
-%     \hline
-%     Final Written Report                                            & 3 April 2020 \\
-%     \hline
-%     Final Poster                                                    & 6 May 2020 \\
-%     \hline
-    
-% \end{tabular}
-% \end{center}
-
-% \subsection{Budget}
-% \begin{center}
-% \begin{tabular}{ |c|c|c|}
-%     \hline
-%     \textbf{Item}           & \textbf{Link}                                                     & \textbf{Cost} \\
-%     \hline
-%     Zynq Board              & \href{https://www.xilinx.com/products/boards-and-kits/1-elhabt.html}{https://www.xilinx.com/products/boards-and-kits/1-elhabt.html}     & \$495 \\
-%     \hline
-% \end{tabular}
-% \end{center}
+% Conclusion
+\chapter{Conclusion}
 
 \bibliography{\bibliographyName}
 \bibliographystyle{ieeetr}

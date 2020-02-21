@@ -2,35 +2,34 @@ This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: obj/report.aux
 The style file: ieeetr.bst
+I found no \citation commands---while reading file obj/report.aux
 Database file #1: ../support/thesis.bib
-Warning--empty institution in Murrayb
-Warning--empty year in Murrayb
-You've used 1 entry,
+You've used 0 entries,
             1876 wiz_defined-function locations,
-            481 strings with 3640 characters,
-and the built_in function-call counts, 211 in all, are:
-= -- 11
-> -- 20
+            477 strings with 3487 characters,
+and the built_in function-call counts, 20 in all, are:
+= -- 0
+> -- 0
 < -- 0
-+ -- 7
-- -- 6
-* -- 23
-:= -- 47
-add.period$ -- 1
-call.type$ -- 1
-change.case$ -- 2
++ -- 0
+- -- 0
+* -- 2
+:= -- 9
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 6
-empty$ -- 13
-format.name$ -- 6
-if$ -- 37
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 1
+int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 6
-num.names$ -- 1
-pop$ -- 4
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
@@ -42,8 +41,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 1
-width$ -- 2
-write$ -- 9
-(There were 2 warnings)
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There was 1 error message)
