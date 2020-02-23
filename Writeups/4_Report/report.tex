@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2019-10-30 22:08:06
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-20 11:39:57
+% @Last Modified time: 2020-02-23 14:22:00
 
 % Define Document Class
 \documentclass[
@@ -10,21 +10,22 @@
     draft,          % Draft Mode - error checking and no image rendering
     oneside         % Single Sided
 ]{report}           % Report Mode
- 
+
 % Import custom commands
 \RequirePackage{../support/thesis}
-\RequirePackage{../newmaster/master}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % DEFINE HEADER & FOOTER: (Name and Page Number)
 \pagestyle{fancy}
+\setlength{\headheight}{14pt}
 \fancyhf{}
 \rhead{Anthony JW Kenny}
 \cfoot{\thepage}
 
 % DEFINE COVER PAGE
-\title{\textsc{\masterThesisTitle} \\ 
+\title{\textsc{ISC-V Architecture for Motion Planning Algorithms in Autonomous Drone Applications} \\ 
     \bigskip
     \small{A senior design project submitted in partial fulfillment of the requirements for the degree of Bachelor of Science at Harvard University} \\
 \author{Anthony JW Kenny \\
@@ -32,7 +33,8 @@
         Faculty Advisor: Vijay Janapa Reddi \\ \\
         Harvard University School of Engineering and Applied Sciences \\
         \small{Cambridge, MA}}
-\masterDateAndVersion}
+\date{March 1st, 2020 \\ 
+    \small{Version: 4.1}}}
 
 \begin{document}
 
@@ -45,10 +47,11 @@
 
     % ABSTRACT
     \addcontentsline{toc}{section}{Abstract}
-    \input{../newmaster/abstract}
+    \input{../master/abstract}
     \clearpage
 
     % TABLE OF CONTENTS
+    \addcontentsline{toc}{section}{Table of Contents}
     \tableofcontents
     \clearpage
 
@@ -57,11 +60,15 @@
     \addcontentsline{toc}{section}{List of Acronyms}
     \input{\acronymsName}
 
+    % ALGORITHMS
+    \listofalgorithms
+ 
     % FIGURES
     \listoffigures
 
     % TABLES
     \listoftables
+
 
 % CHAPTERS
 
@@ -73,19 +80,17 @@
 
 
 % Chapter 2
-\chapter{Background Information}
-
+\chapter{Motion Planning in Software}
+    \label{chap:MotionPlanningInSoftware}
+    \input{chapters/chapter2/chapter2.tex}
 
 % Chapter 3
-\chapter{Motion Planning in Software}
-
-% Chapter 4
 \chapter{Motion Planning in Hardware}
 
-% Chapter 5
+% Chapter 4
 \chapter{RISC-V Processor}
 
-% Chapter 6
+% Chapter 5
 \chapter{Discussion}
 
 % Conclusion
@@ -96,10 +101,18 @@
 
 \begin{appendices}
 
-\chapter{Appendix 1}
+\chapter{Project Repository}
+    \label{appendix:repository}
+    \input{appendices/repository.tex}
+\ifdraft{
+        \chapter{General ToDos}
+        \begin{enumerate}
+            \item Use glossary package
+            \item Use better acronym package that includes plurals
+        \end{enumerate}
+}
 
 \end{appendices}
-
 \clearpage
 
 

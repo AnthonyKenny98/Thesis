@@ -7,7 +7,8 @@
 \ProvidesPackage{../support/thesis}
   [2011/01/11 v0.01 LaTeX package for my own purpose]
 
-\usepackage[ruled]{algorithm2e}
+% For Algorithms
+\usepackage[ruled,algochapter]{algorithm2e}
 
 \usepackage{geometry}                       % See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
@@ -19,20 +20,54 @@
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage{float}
+
+% For Hyperlinks within document
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
+    linktoc=all,
     citecolor=black,
     linkcolor=black,
     filecolor=magenta,      
     urlcolor=cyan,
 }
-\usepackage[printonlyused]{acronym}
-\usepackage[toc,page]{appendix}
 
+% For Managing Algorithms
+\usepackage[printonlyused]{acronym}
+
+% Table of Contents
+\usepackage[toc,page]{appendix}
 \usepackage[nottoc]{tocbibind}
 
+\usepackage{ifdraft}
+\ifdraft{\usepackage{todonotes}}{
+    \usepackage[disable]{todonotes}}
+\ifoptiondraft{%
+    \usepackage{draftwatermark}
+    \SetWatermarkText{DRAFT}
+    \SetWatermarkScale{1}
+    \SetWatermarkColor[rgb]{0.95,0.95,0.95}
+}{%
+    % nothing to be done here
+}
+
 \makeatletter
+
+% Allows me to only include some things in draft mode
+% \def\ifdraft{\textcolor{red}{
+%     \ifdim\overfullrule>\z@
+%     \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi
+% }}
+
+% Makes List of Algorithms command a section not a chapter
+\renewcommand\listofalgorithms{%
+    \newpage
+    \section*{\listalgorithmcfname}%
+    \addcontentsline{toc}{section}{List of Algorithms}
+    \@starttoc{loa}%
+}
+
+% Makes List of Tables command a section not a chapter
 \renewcommand\listoftables{%
     \newpage
     \section*{\listtablename}%
@@ -41,6 +76,8 @@
         {\MakeUppercase\listtablename}%
     \@starttoc{lot}%
 }
+
+% Makes List of Figures command a section not a chapter
 \renewcommand\listoffigures{%
     \newpage
     \section*{\listfigurename}%
@@ -49,10 +86,15 @@
         {\MakeUppercase\listfigurename}%
     \@starttoc{lof}%
 }
+
 \makeatother
 
 % Header and Footer
 \usepackage{fancyhdr}
+
+% Color
+\usepackage{xcolor}
+
 
 
 \newcommand\bibliographyName{../support/thesis}

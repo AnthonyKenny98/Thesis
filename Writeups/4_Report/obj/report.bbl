@@ -1,3 +1,30 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Alexandrinus}
+H.~(Alexandrinus), {\em {De gli automati, overo machine se moventi, Volume 2}}.
+
+\bibitem{LaValle1998}
+S.~M. LaValle, ``{Rapidly-Exploring Random Trees: A New Tool for Path
+  Planning},'' {\em In}, vol.~129, pp.~98--11, 1998.
+
+\bibitem{LaValle2001}
+S.~M. LaValle and J.~J. Kuffner, ``{Randomized kinodynamic planning},'' {\em
+  International Journal of Robotics Research}, vol.~20, pp.~378--400, may 2001.
+
+\bibitem{RoboJackets2019}
+RoboJackets, ``{RRT},'' 2019.
+\newblock \\ \url{https://github.com/RoboJackets/rrt}.
+
+\bibitem{Planning2019}
+M.~Planning, ``rrt-algorithms,'' 2019.
+\newblock \\ \url{https://github.com/motion-planning/rrt-algorithms}.
+
+\bibitem{Sourishg2017}
+Sourishg, ``rrt-simulator,'' 2017.
+\newblock \\ \url{https://github.com/sourishg/rrt-simulator}.
+
+\bibitem{Vss2sn2019}
+Vss2sn, ``{Path Planning},'' 2019.
+\newblock \\ \url{https://github.com/vss2sn/path{\_}planning}.
 
 \end{thebibliography}
