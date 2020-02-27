@@ -1,16 +1,19 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-27 11:13:29
+% @Last Modified time: 2020-02-27 15:46:33
+
+\ac{RRT} is an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the problem. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones, the focus of this thesis.
 
 \subsection{Algorithm}
 
-    \ac{RRT} is an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the problem. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones, the focus of this thesis.
-
-    The generic version of RRT can be seen in Algorithm \ref{algorithm:rrt}
+    The pseudocode for \ac{RRT} can be seen in Algorithm \ref{algorithm:rrt}
     \input{chapters/chapter2/algorithms/rrt_alg}
 
     \todo[inline]{Explanation of RRT and how it relates to configuration}
+    Algorithm \ref{algorithm:rrt} can be visually represented in Figure \ref{fig:rrt-step-by-step}. Consider a \ac{2D} robot operating in a \ac{2D} workspace. A Graph $G$ is initialized containing an initial configuration, $q_{init}$, with constraints on the number of nodes that the graph can hold, $K$, and the maximum distance between two nodes, $\Delta q$. This is shown in Subfigure \ref{subfig:rrt-step-by-step-A}. A random configuration for the robot, $q_{rand}$ is generated (\ref{subfig:rrt-step-by-step-B}). The nearest existing configuration in $G$, $q_{near}$, is found. (In the first iteration, $q_{near} = q_{init}$, shown in Subfigure \ref{subfig:rrt-step-by-step-C}). The distance between $q_{near}$ and $q_{rand}$ is calculated. If this distance is less than $\Delta q$, $q_{new} = q_{rand}$. If not, $q_{new}$ is selected, typically by moving by $\Delta q$ from $q_{near}$ towards $q_{rand}$ (\ref{subfig:rrt-step-by-step-C}). $q_{new}$ is then added to $G$. This is repeated for $K$ configurations.
+
+    \input{chapters/chapter2/figures/rrt-step-by-step}
 
     \newpage % Delete
 

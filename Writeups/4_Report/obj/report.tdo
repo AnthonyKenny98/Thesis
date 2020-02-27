@@ -1,23 +1,23 @@
 \contentsline {todo}{Use glossary package}{iv}{section*.5}
 \contentsline {todo}{Use better acronym package that includes plurals}{iv}{section*.6}
 \contentsline {todo}{TODO: Summarize the following points: \\ 1) Need for faster execution of motion planning in drones \\ 2) Strategy of specialized hardware \\ 3) RISC-V ISA and its potentials including extendibility \\ }{1}{section*.11}
-\contentsline {todo}{Figure: Some sort of line/bar graph showing the increasing use of Autonomous robots over time. Need to find}{2}{section*.12}
-\contentsline {todo}{TODO: More of an introduction to motion planning.}{2}{section*.14}
-\contentsline {todo}{More detail here. Reference prior work}{2}{section*.18}
-\contentsline {todo}{TODO: Introduction to RISC-V and its merits in this problem}{2}{section*.20}
-\contentsline {todo}{Revise problem statement}{3}{section*.22}
-\contentsline {todo}{TODO: Revise End User}{3}{section*.26}
-\contentsline {todo}{TODO: Summary of prior work}{3}{section*.27}
-\contentsline {todo}{Proposed Solution}{3}{section*.28}
-\contentsline {todo}{Project Specifications}{3}{section*.29}
-\contentsline {todo}{Project Structure/Timeline}{4}{section*.30}
-\contentsline {todo}{TODO: Background on Motion Planning Algorithms.}{5}{section*.31}
-\contentsline {todo}{Explanation of RRT and how it relates to configuration}{6}{section*.32}
-\contentsline {todo}{Relook at above algorithm}{7}{section*.33}
-\contentsline {todo}{More detail}{8}{section*.36}
-\contentsline {todo}{Describe implementation in 3D}{9}{section*.38}
-\contentsline {todo}{Figure: Simulations of 3D RRT Implementations}{9}{section*.38}
-\contentsline {todo}{Introduction to purpose of analysis and methods of doing so. Something better than the above}{9}{section*.39}
-\contentsline {todo}{Rewrite the above}{10}{section*.41}
-\contentsline {todo}{Figure: Screenshot of VTune Top Down Analysis (Maybe)}{10}{section*.41}
-\contentsline {todo}{TODO: Provide information about this project's repository}{16}{section*.46}
+\contentsline {todo}{Figure: Some sort of line/bar graph showing the increasing use of Autonomous robots over time. Need to find}{2}{figure.caption.13}
+\contentsline {todo}{TODO: More of an introduction to motion planning.}{2}{section*.15}
+\contentsline {todo}{More detail here. Reference prior work}{2}{section*.19}
+\contentsline {todo}{TODO: Introduction to RISC-V and its merits in this problem}{2}{section*.21}
+\contentsline {todo}{Revise problem statement}{3}{section*.23}
+\contentsline {todo}{TODO: Revise End User}{3}{section*.27}
+\contentsline {todo}{TODO: Summary of prior work}{3}{section*.28}
+\contentsline {todo}{Proposed Solution}{3}{section*.29}
+\contentsline {todo}{Project Specifications}{3}{section*.30}
+\contentsline {todo}{Project Structure/Timeline}{4}{section*.31}
+\contentsline {todo}{TODO: Background on Motion Planning Algorithms.}{5}{section*.32}
+\contentsline {todo}{Explanation of RRT and how it relates to configuration}{6}{section*.33}
+\contentsline {todo}{Relook at above algorithm}{8}{section*.36}
+\contentsline {todo}{More detail}{9}{section*.39}
+\contentsline {todo}{Describe implementation in 3D}{10}{section*.42}
+\contentsline {todo}{Figure: Simulations of 3D RRT Implementations}{10}{figure.caption.43}
+\contentsline {todo}{Introduction to purpose of analysis and methods of doing so. Something better than the above}{10}{section*.44}
+\contentsline {todo}{Rewrite the above}{11}{section*.46}
+\contentsline {todo}{Figure: Screenshot of VTune Top Down Analysis (Maybe)}{11}{figure.caption.47}
+\contentsline {todo}{TODO: Provide information about this project's repository}{17}{section*.53}
