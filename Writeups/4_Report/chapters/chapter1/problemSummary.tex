@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 12:45:54
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-23 14:25:32
+% @Last Modified time: 2020-02-26 08:59:51
 
 \subsection{Background}
     \todo[inline]{TODO: Summarize the following points: \\ 
@@ -39,4 +39,6 @@
     Current processors cannot compute motion planning algorithms quickly enough for robots to operate in high complexity environments. Autonomous drones are a specific case of robots requiring real-time motion planning in complex environments. The state-of-the-art strategy of using a Graphics Processing Unit (GPU) to accelerate the execution of these algorithms requires too much power to be cost-effective or feasible for drones to sustain flight for useful periods of time.
 
     \subsubsection*{End User}
-    \todo[inline]{TODO: End User}
+    The end user of this project is a developer of autonomous drones. Such developers have a need for computing hardware that executes motion planning algorithms faster and more power efficiently than existing methods. This thesis will provide a processor design that is synthesizable on an \ac{FPGA}, giving developers a processer for which a \ac{RTOS}, or bare metal code, can be written. 
+    Additionally, these developers have a requirement that using a new processor for a drone will not require a massive investment in re-development. As such, this thesis will provide the toolchain necessary to compile C code into executable instructions on the new processor.
+    \todo[inline]{TODO: Revise End User}

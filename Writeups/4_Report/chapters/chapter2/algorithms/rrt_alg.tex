@@ -1,30 +1,26 @@
 % @Author: AnthonyKenny98
-% @Date:   2020-02-22 16:15:38
+% @Date:   2020-02-27 10:55:29
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-23 14:06:05
+% @Last Modified time: 2020-02-27 11:13:07
 
 \begin{algorithm}[H]
-    \caption{Rapidly-exploring Random Tree with Collision Detection}
+    \caption{Rapidly-Exploring Random Tree}
     \SetAlgoLined
     \SetArgSty{textnormal}
-    \textbf{Inputs:} Space $S$ with obstacles \\ 
-    \textbf{Output:} Collision free graph $G$ with $K$ nodes \& edges \\
+    \begin{tabular}{l l}
+    \textbf{Inputs:}    & Initial configuration $q_{init}$,\\ 
+                        & Number of nodes in graph $K$, \\
+                        & Incremental Distance $\Delta q$ \\
+    \textbf{Output:}    & RRT Graph $G$ with $K$ configurations \& edges \\
+    \end{tabular}
+
         $G$.init()\;
         \For{$k = 1$ to $K$}{
-            \While { !\text{pointCollision}($node_{new}$) } {
-                $q_{rand} \leftarrow $ getRandomNode(); \\
-                $q_{near} \leftarrow $ findNearestNode(); \\
-                $q_{new} \leftarrow $ stepFromTo(); \\
-            }
-            $e_{new} \leftarrow $ newEdge($q_{near}, q_{new}$) \\
-            \eIf{\text{!edgeCollision($e_{new}$)}} {
-                $G$.addNode($q_{new}$); \\
-                $G$.addEdge($e_{new}$);
-            }{
-                $k = k-1$;
-            }
+            $q_{rand} \leftarrow $ randomConfiguration(); \\
+            $q_{near} \leftarrow $ nearestVertex($q_{rand}$, $G$); \\
+            $q_{new} \leftarrow $ newVertex($q_{near}$, $q_{rand}$, $\Delta q$); \\
+            $G$.addVertex($q_{new}$); \\  
+            $G$.addEdge($q_{near}$, $q_{new}$);
         }
 \label{algorithm:rrt}
 \end{algorithm}
-
-\todo[inline]{Relook at above algorithm}

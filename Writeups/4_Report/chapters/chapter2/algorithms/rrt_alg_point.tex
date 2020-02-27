@@ -1,0 +1,30 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-02-22 16:15:38
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-02-27 10:54:26
+
+\begin{algorithm}[H]
+    \caption{Rapidly-Exploring Random Tree with Collision Detection for Point Robot}
+    \SetAlgoLined
+    \SetArgSty{textnormal}
+    \textbf{Inputs:} Space $S$ with obstacles \\ 
+    \textbf{Output:} Collision free graph $G$ with $K$ nodes \& edges \\
+        $G$.init()\;
+        \For{$k = 1$ to $K$}{
+            \While { !\text{pointCollision}($node_{new}$) } {
+                $q_{rand} \leftarrow $ getRandomNode(); \\
+                $q_{near} \leftarrow $ findNearestNode(); \\
+                $q_{new} \leftarrow $ stepFromTo(); \\
+            }
+            $e_{new} \leftarrow $ newEdge($q_{near}, q_{new}$) \\
+            \eIf{\text{!edgeCollision($e_{new}$)}} {
+                $G$.addNode($q_{new}$); \\
+                $G$.addEdge($e_{new}$);
+            }{
+                $k = k-1$;
+            }
+        }
+\label{algorithm:rrt_point}
+\end{algorithm}
+
+\todo[inline]{Relook at above algorithm}

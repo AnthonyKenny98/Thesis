@@ -1,14 +1,21 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-23 14:36:55
+% @Last Modified time: 2020-02-27 11:13:29
 
 \subsection{Algorithm}
 
-    \ac{RRT} is an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the problem. RRT was developed by S. LaVelle \cite{LaValle1998} and J. Kuffner \cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones, the focus of this thesis.
+    \ac{RRT} is an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the problem. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones, the focus of this thesis.
 
-    The RRT Algorithm with Collision Detection can be seen in Algorthim \ref{algorithm:rrt}.
+    The generic version of RRT can be seen in Algorithm \ref{algorithm:rrt}
     \input{chapters/chapter2/algorithms/rrt_alg}
+
+    \todo[inline]{Explanation of RRT and how it relates to configuration}
+
+    \newpage % Delete
+
+    The RRT Algorithm with Collision Detection can be seen in Algorthim \ref{algorithm:rrt_point}.
+    \input{chapters/chapter2/algorithms/rrt_alg_point}
 
 \subsection{Implementation}
     
