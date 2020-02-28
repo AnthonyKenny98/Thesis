@@ -3,7 +3,7 @@
 # @Author: AnthonyKenny98
 # @Date:   2020-02-24 15:06:14
 # @Last Modified by:   AnthonyKenny98
-# @Last Modified time: 2020-02-24 15:42:28
+# @Last Modified time: 2020-02-27 18:57:05
 
 import sys
 import csv
@@ -48,7 +48,7 @@ def main():
         # Write Table Options
         header = next(reader)
         out.write('{|')
-        [out.write('m{' + str(1 / len(header)) + '\\linewidth}|')
+        [out.write('m{' + str(0.94 / len(header)) + '\\linewidth}|')
             for h in header]
         out.write('}\n\\hline\n')
 

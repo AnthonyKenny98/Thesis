@@ -1,0 +1,18 @@
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{.3\linewidth}|p{.64\linewidth}|}
+    \hline
+    Requirement             & Description and Justification \\
+    \hline
+    C/C++ Implementation    & As outlined in Section \ref{subsection:project_structure}, the critical step in determining the design of specialized hardware to accelerate \ac{RRT} is CPU performance analysis of the algorithm to determine computational hot-spots. Implementations in C allow for the use of certain CPU profiling tools, described in Section \ref{subsubsection:vtune}, unlike higher-level languages such as Python. \\
+    \hline
+    Models Drone as Point   & In reality, implementing \ac{RRT} for a drone would model the robot as a \ac{3D} object defined by coordinates $\{x, y, z\}$ and Euler angles $\{\alpha, \beta, \gamma \}$. However, for simplicity's sake, modelling the drone as a point defined by coordinates $\{x, y, z\}$ will suffice. Time permitting, this could be revisited. \todo[inline]{Change this based on whether time does permit} \\
+    \hline
+    Mirrors Algorithm       & In order for the results of CPU performance analysis to be easy to understand, software implementation of \ac{RRT} should call functions that mirror the functions described in Algorithms \ref{algorithm:rrt} and \ref{algorithm:rrt_collision}. \\
+    \hline
+\end{tabular}
+\caption{Technical Specifications for \ac{RRT} Implementation}
+\label{table:RRT_Tech_Specs}
+\end{center}
+\end{table}
+\todo[inline]{Improve this table}
