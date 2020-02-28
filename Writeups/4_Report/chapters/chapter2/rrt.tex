@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-27 19:32:32
+% @Last Modified time: 2020-02-28 15:02:26
 
 % INTRO
 \ac{RRT} is an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the problem. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones, the focus of this thesis.
@@ -51,20 +51,3 @@
     \subsubsection{Implementation in 3D}
     \todo[inline]{Describe implementation in 3D}
     \input{chapters/chapter2/figures/rrtImplementation3D.tex}
-
-    
-
-
-\subsection{Performance Analysis}
-    To restate, the aim of this thesis is to design a computer processor with reduced execution time of motion planning algorithms, such as \ac{RRT}. As such, it is important to understand the elements of the algorithm that have the highest percentage of CPU execution time. To determine this, it was necessary to implement my own, naive but typical, \ac{RRT} in C. This program could then be compiled and analysed using a software performance profiling tool. With this, I could design experiments to determine the critical RRT functions (those occupying a majority of CPU time) and see how this varies given different parameters.
-    \todo[inline]{Introduction to purpose of analysis and methods of doing so. Something better than the above}
-
-    \subsubsection{VTune Amplifier Analysis}
-    \label{subsubsection:vtune}
-        VTune Amplifier performance profiler is an application for software performance analysis. It provides functionality to examine hot-spots for CPU execution time through a top down analysis, shown below in Figure \ref{figure:VTuneTopDown}. As can be seen from the figure, the top down analysis tool shows the percentage of CPU time taken up by each function. I used this tool to profile the algorithm's performance as I changed certain parameters.
-        \todo[inline]{Rewrite the above}
-        \input{chapters/chapter2/figures/VTuneTopDown.tex}
-
-    \subsubsection{Internal Timing Analysis}
-
-    \subsubsection{Comparison}

@@ -11,14 +11,15 @@
 \contentsline {todo}{Proposed Solution}{3}{section*.29}
 \contentsline {todo}{Project Specifications}{3}{section*.30}
 \contentsline {todo}{Project Structure/Timeline}{4}{section*.31}
-\contentsline {todo}{TODO: Background on Motion Planning Algorithms.}{5}{section*.32}
-\contentsline {todo}{Better RRT Implementation introductory sentence}{10}{section*.37}
-\contentsline {todo}{Change this based on whether time does permit}{10}{section*.40}
-\contentsline {todo}{Improve this table}{10}{section*.41}
-\contentsline {todo}{More detail}{11}{section*.44}
-\contentsline {todo}{Describe implementation in 3D}{12}{section*.47}
-\contentsline {todo}{Figure: Simulations of 3D RRT Implementations}{12}{figure.caption.48}
-\contentsline {todo}{Introduction to purpose of analysis and methods of doing so. Something better than the above}{12}{section*.49}
-\contentsline {todo}{Rewrite the above}{13}{section*.51}
-\contentsline {todo}{Figure: Screenshot of VTune Top Down Analysis (Maybe)}{13}{figure.caption.52}
-\contentsline {todo}{TODO: Provide information about this project's repository}{19}{section*.58}
+\contentsline {todo}{Write a better introduction that more accurately defines sections and makes the POINT of this chapter clear.}{5}{section*.32}
+\contentsline {todo}{TODO: Background on Motion Planning Algorithms.}{5}{section*.33}
+\contentsline {todo}{Better RRT Implementation introductory sentence}{10}{section*.38}
+\contentsline {todo}{Change this based on whether time does permit}{10}{section*.41}
+\contentsline {todo}{Improve this table}{10}{section*.42}
+\contentsline {todo}{More detail}{11}{section*.45}
+\contentsline {todo}{Describe implementation in 3D}{12}{section*.48}
+\contentsline {todo}{Figure: Simulations of 3D RRT Implementations}{12}{figure.caption.49}
+\contentsline {todo}{Introduction to purpose of analysis and methods of doing so. Something better than the above}{12}{section*.50}
+\contentsline {todo}{Rewrite the above}{13}{section*.52}
+\contentsline {todo}{Figure: Screenshot of VTune Top Down Analysis (Maybe)}{13}{figure.caption.53}
+\contentsline {todo}{TODO: Provide information about this project's repository}{19}{section*.59}

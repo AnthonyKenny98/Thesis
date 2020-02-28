@@ -19,15 +19,16 @@
 \contentsline {section}{\numberline {2.1}Background}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Rapidly-Exploring Random Tree}{6}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Algorithm}{6}{subsection.2.2.1}
-\contentsline {subsubsection}{Collision Detection}{9}{section*.36}
+\contentsline {subsubsection}{Collision Detection}{9}{section*.37}
 \contentsline {subsection}{\numberline {2.2.2}Implementation}{10}{subsection.2.2.2}
-\contentsline {subsubsection}{Implementation in 2D}{11}{section*.43}
-\contentsline {subsubsection}{Implementation in 3D}{12}{section*.46}
-\contentsline {subsection}{\numberline {2.2.3}Performance Analysis}{12}{subsection.2.2.3}
-\contentsline {subsubsection}{VTune Amplifier Analysis}{13}{section*.50}
-\contentsline {subsubsection}{Internal Timing Analysis}{13}{section*.53}
-\contentsline {subsubsection}{Comparison}{13}{section*.54}
-\contentsline {section}{\numberline {2.3}Improving Performance}{13}{section.2.3}
+\contentsline {subsubsection}{Implementation in 2D}{11}{section*.44}
+\contentsline {subsubsection}{Implementation in 3D}{12}{section*.47}
+\contentsline {section}{\numberline {2.3}Performance Analysis}{12}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Methodology}{12}{subsection.2.3.1}
+\contentsline {subsubsection}{VTune Amplifier Analysis}{13}{section*.51}
+\contentsline {subsubsection}{Internal Timing Analysis}{13}{section*.54}
+\contentsline {subsubsection}{Comparison}{13}{section*.55}
+\contentsline {subsection}{\numberline {2.3.2}Results}{13}{subsection.2.3.2}
 \contentsline {chapter}{\numberline {3}Motion Planning in Hardware}{14}{chapter.3}
 \contentsline {section}{\numberline {3.1}Background to Hardware Optimization}{14}{section.3.1}
 \contentsline {section}{\numberline {3.2}HoneyBee}{14}{section.3.2}
@@ -41,6 +42,6 @@
 \contentsline {section}{\numberline {4.3}PhilosophyV}{15}{section.4.3}
 \contentsline {chapter}{\numberline {5}Conclusion}{16}{chapter.5}
 \contentsline {section}{\numberline {5.1}Discussion of Results}{16}{section.5.1}
-\contentsline {chapter}{Bibliography}{17}{chapter*.56}
-\contentsline {chapter}{Appendices}{18}{section*.57}
+\contentsline {chapter}{Bibliography}{17}{chapter*.57}
+\contentsline {chapter}{Appendices}{18}{section*.58}
 \contentsline {chapter}{\numberline {A}Project Repository}{19}{Appendix.1.A}

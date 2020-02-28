@@ -1,16 +1,23 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:42:12
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-27 15:59:12
+% @Last Modified time: 2020-02-28 15:05:58
 
-\section{Background}
-Motion Planning Algorithms refer to the set of algorithms that find possible sequences of valid configurations for a robot in a space.
-\newline
-\newline
-\todo[inline]{TODO: Background on Motion Planning Algorithms.}
+Section \ref{section:motion_planning_background} provides an introduction to Motion Planning Algorithms in general. Section \ref{section:rrt} outlines the \ac{RRT} algorithm, and describes the implementation of \ac{RRT} for this project. Finally, Section \ref{section:rrt_analysis} outlines a method for performance analysis of \ac{RRT} and the results of such analysis.
+\todo[inline]{Write a better introduction that more accurately defines sections and makes the POINT of this chapter clear.}
+
+\section{Background} 
+\label{section:motion_planning_background}
+    Motion Planning Algorithms refer to the set of algorithms that find possible sequences of valid configurations for a robot in a space.
+    \newline
+    \newline
+    \todo[inline]{TODO: Background on Motion Planning Algorithms.}
 
 \newpage
 \section{Rapidly-Exploring Random Tree}
-    \input{chapters/chapter2/rrt.tex}
+\label{section:rrt}
+    \input{chapters/chapter2/rrt}
 
-\section{Improving Performance}
+\section{Performance Analysis}
+\label{section:rrt_analysis}
+    \input{chapters/chapter2/rrt_analysis}
