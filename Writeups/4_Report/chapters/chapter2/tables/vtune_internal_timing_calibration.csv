@@ -1,0 +1,7 @@
+function,vtune,vtune,internal,internal
+,time (s),time (% main),time (s),time (% main)
+func5,0.488,57.41%,0.497208,57.62%
+func4,0.2,23.53%,0.198323,22.98%
+func3,0.102,12.00%,0.099443,11.52%
+func2,0.048,5.65%,0.048573,5.63%
+func1,0.012,1.41%,0.019304,2.24%

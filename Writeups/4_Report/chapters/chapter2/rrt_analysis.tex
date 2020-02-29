@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-28 15:02:19
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-28 23:28:59
+% @Last Modified time: 2020-02-29 14:30:55
 
 \todo[inline]{Brief introduction outlining purpose of performance analysis}
 
@@ -16,9 +16,14 @@
         \input{chapters/chapter2/figures/VTuneTopDown.tex}
 
     \subsubsection{Internal Timing}
-        The limitation of VTune Profiler is that it can only profile software running on Intel processors, which implement the x86-64 \ac{ISA}. As such, when the time comes to analyse performance of the software running on a RISC-V processor, another method will be required. A simple and effective way of measuring execution performance is to insert timing functionality into the software itself. 
+        The limitation of VTune Profiler is that it can only profile software running on Intel processors, which implement the x86-64 \ac{ISA}. As such, when the time comes to analyse performance of the software running on a RISC-V processor, another method will be required. A simple and effective way of measuring execution performance is to insert timing functionality into the software itself. \\
+
+        \todo[inline]{Provide or link to appendix of explanation of internal timing}
 
     \subsubsection{Comparison}
+        Before proceeding to use either of these methods to profile the software implementation of \ac{RRT}, it was important to verify that the two methods yielded similar results for the same program. Table \ref{table:timing_calibration} summarizes the results of analysis of a simple C executable. The program calls 5 functions, $\{A, B, C, D, E\}$, each a simple iteration in which a integer is incremented. Since the Internal Timing method returned similar results to the (trusted) VTune Profiler, it was considered to be a reliable method. While it was encouraging to see both methods returned similar results for absolute execution time, the more important metric was the similarity in percentage of total execution time.
+
+        \input{chapters/chapter2/tables/timing_calibration}
 
 \subsection{Results}
 \label{section:rrt_analysis_results}
