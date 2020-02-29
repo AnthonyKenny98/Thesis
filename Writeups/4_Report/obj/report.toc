@@ -19,15 +19,15 @@
 \contentsline {section}{\numberline {2.1}Background}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Rapidly-Exploring Random Tree}{6}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Algorithm}{6}{subsection.2.2.1}
-\contentsline {subsubsection}{Collision Detection}{9}{section*.37}
-\contentsline {subsection}{\numberline {2.2.2}Implementation}{10}{subsection.2.2.2}
-\contentsline {subsubsection}{Implementation in 2D}{11}{section*.44}
-\contentsline {subsubsection}{Implementation in 3D}{12}{section*.47}
+\contentsline {subsubsection}{Collision Detection}{8}{section*.37}
+\contentsline {subsection}{\numberline {2.2.2}Implementation}{9}{subsection.2.2.2}
+\contentsline {subsubsection}{Implementation in 2D}{10}{section*.44}
+\contentsline {subsubsection}{Implementation in 3D}{11}{section*.47}
 \contentsline {section}{\numberline {2.3}Performance Analysis}{12}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Methodology}{12}{subsection.2.3.1}
-\contentsline {subsubsection}{VTune Amplifier Analysis}{13}{section*.51}
-\contentsline {subsubsection}{Internal Timing Analysis}{13}{section*.54}
-\contentsline {subsubsection}{Comparison}{13}{section*.55}
+\contentsline {subsubsection}{VTune Profiler}{12}{section*.52}
+\contentsline {subsubsection}{Internal Timing}{12}{section*.55}
+\contentsline {subsubsection}{Comparison}{13}{section*.56}
 \contentsline {subsection}{\numberline {2.3.2}Results}{13}{subsection.2.3.2}
 \contentsline {chapter}{\numberline {3}Motion Planning in Hardware}{14}{chapter.3}
 \contentsline {section}{\numberline {3.1}Background to Hardware Optimization}{14}{section.3.1}
@@ -36,12 +36,12 @@
 \contentsline {subsection}{\numberline {3.2.2}Build}{14}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Measurement and Analysis}{14}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Iterations}{14}{subsection.3.2.4}
-\contentsline {chapter}{\numberline {4}RISC-V Processor}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}RISC-V ISA}{15}{section.4.1}
-\contentsline {section}{\numberline {4.2}Extending RISC-V}{15}{section.4.2}
-\contentsline {section}{\numberline {4.3}PhilosophyV}{15}{section.4.3}
-\contentsline {chapter}{\numberline {5}Conclusion}{16}{chapter.5}
-\contentsline {section}{\numberline {5.1}Discussion of Results}{16}{section.5.1}
-\contentsline {chapter}{Bibliography}{17}{chapter*.57}
-\contentsline {chapter}{Appendices}{18}{section*.58}
-\contentsline {chapter}{\numberline {A}Project Repository}{19}{Appendix.1.A}
+\contentsline {chapter}{\numberline {4}RISC-V Processor}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}RISC-V ISA}{16}{section.4.1}
+\contentsline {section}{\numberline {4.2}Extending RISC-V}{16}{section.4.2}
+\contentsline {section}{\numberline {4.3}PhilosophyV}{16}{section.4.3}
+\contentsline {chapter}{\numberline {5}Conclusion}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion of Results}{17}{section.5.1}
+\contentsline {chapter}{Bibliography}{18}{chapter*.60}
+\contentsline {chapter}{Appendices}{19}{section*.61}
+\contentsline {chapter}{\numberline {A}Project Repository}{20}{Appendix.1.A}
