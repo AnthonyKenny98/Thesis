@@ -1,16 +1,22 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 14:27:21
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-03-01 11:13:56
+% @Last Modified time: 2020-03-01 12:59:03
 
 \subsection{Proposed Solution}
-    This thesis proposes a non-standard RISC-V Instruction Set Extension, supported by a functional unit embedded in a \ac{FPGA} synthesizable processor design that more rapidly computes motion planning for autonomous \ac{UAV}s
+    This thesis proposes a non-standard RISC-V Instruction Set Extension, supported by a functional unit embedded in a \ac{FPGA} synthesizable processor design that more rapidly computes motion planning for autonomous \ac{UAV}s. It will use the \ac{RRT} algorithm as a benchmark for performance analysis. Profiling of \ac{RRT} described in chapter \ref{chap:MotionPlanningInSoftware} found that edge collision detection was the most performance limiting function of \ac{RRT}. As such, this thesis aims to design a RISC-V extension and specific circuitry that support the faster execution of edge collision detection.
 
     \subsubsection*{System Overview}
-    \input{chapters/chapter1/figures/systemDiagram.tex}
-
+        Figure \ref{fig:systemDiagram} shows a high level overview of the system this thesis proposes.
+        \input{chapters/chapter1/figures/systemDiagram.tex}
+        The \textbf{Extended RISC-V \ac{ISA}} is made up of the \ac{RV32I} Base Instruction Set and a \ifdraft{\color{red}\textbf{currently unnamed}\color{black}} non-standard extension that this thesis will define.
+        The \textbf{PhilosophyV Processor} is a RISC-V chip built in \ac{HDL} for this thesis. It implements both the \ac{RV32I} instruction set and the non-standard extension.
+        The PhilosphyV Core includes, along with a baseline 5-stage processor implementation, the \textbf{HoneyBee} collision detection unit.
+        A \textbf{C Implementation of RRT} is loaded into the instruction memory of the PhilosophyV processor. This processor, synthesized on an \textbf{\ac{FPGA}}, is used as the main processor, co-processor, or accelerator on an \textbf{Autonomous \ac{UAV}}. Table \ref{table:componentList} outlines the components of this system and their descriptions.
+        \input{chapters/chapter1/tables/componentList}
 
 \subsection{Project Specifications}
+
     \todo[inline]{Project Specifications}
 
 \subsection{Project Structure}
