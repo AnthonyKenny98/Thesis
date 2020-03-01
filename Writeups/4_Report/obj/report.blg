@@ -5,46 +5,51 @@ The style file: ieeetr.bst
 Database file #1: ../support/thesis.bib
 Warning--empty publisher in Alexandrinus
 Warning--empty year in Alexandrinus
+Warning--empty institution in Murray
+Warning--empty year in Murray
+Warning--empty institution in Murrayb
+Warning--empty year in Murrayb
+Warning--empty journal in Waterman2019
 Warning--empty journal in Vss2sn2019
-You've used 8 entries,
+You've used 14 entries,
             1876 wiz_defined-function locations,
-            527 strings with 4447 characters,
-and the built_in function-call counts, 1689 in all, are:
-= -- 171
-> -- 43
+            562 strings with 5639 characters,
+and the built_in function-call counts, 3077 in all, are:
+= -- 283
+> -- 130
 < -- 0
-+ -- 19
-- -- 11
-* -- 95
-:= -- 234
-add.period$ -- 12
-call.type$ -- 8
-change.case$ -- 7
++ -- 50
+- -- 36
+* -- 214
+:= -- 453
+add.period$ -- 18
+call.type$ -- 14
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 84
-empty$ -- 186
-format.name$ -- 11
-if$ -- 417
+cite$ -- 22
+duplicate$ -- 151
+empty$ -- 313
+format.name$ -- 36
+if$ -- 730
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 6
-newline$ -- 31
-num.names$ -- 8
-pop$ -- 44
+int.to.str$ -- 14
+missing$ -- 10
+newline$ -- 49
+num.names$ -- 14
+pop$ -- 72
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 56
+skip$ -- 85
 stack$ -- 0
-substring$ -- 96
-swap$ -- 28
+substring$ -- 147
+swap$ -- 43
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 17
-width$ -- 9
-write$ -- 73
-(There were 3 warnings)
+warning$ -- 8
+while$ -- 29
+width$ -- 16
+write$ -- 124
+(There were 8 warnings)

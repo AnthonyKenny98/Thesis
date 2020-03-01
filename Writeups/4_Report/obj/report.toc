@@ -1,31 +1,32 @@
 \contentsline {chapter}{Preface}{i}{Doc-Start}
-\contentsline {section}{Abstract}{i}{Doc-Start}
-\contentsline {section}{Table of Contents}{ii}{Doc-Start}
-\contentsline {section}{List of Acronyms}{iv}{section*.4}
-\contentsline {section}{List of Algorithms}{v}{section*.7}
-\contentsline {section}{List of Figures}{vi}{section*.8}
-\contentsline {section}{List of Tables}{vii}{section*.10}
+\contentsline {section}{Abstract}{i}{section*.1}
+\contentsline {section}{Table of Contents}{ii}{section*.1}
+\contentsline {section}{List of Acronyms}{iv}{section*.5}
+\contentsline {section}{List of Algorithms}{v}{section*.6}
+\contentsline {section}{List of Figures}{vi}{section*.7}
+\contentsline {section}{List of Tables}{vii}{section*.9}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem Summary}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Background}{1}{subsection.1.1.1}
-\contentsline {subsubsection}{RISC-V}{3}{section*.21}
-\contentsline {subsection}{\numberline {1.1.2}Problem Definition}{4}{subsection.1.1.2}
-\contentsline {section}{\numberline {1.2}Prior Work}{4}{section.1.2}
-\contentsline {section}{\numberline {1.3}Project Overview}{4}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Proposed Solution}{4}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Project Specifications}{4}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Project Structure}{5}{subsection.1.3.3}
-\contentsline {chapter}{\numberline {2}Motion Planning in Software}{6}{chapter.2}
-\contentsline {section}{\numberline {2.1}Background}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}Rapidly-Exploring Random Tree}{7}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Algorithm}{7}{subsection.2.2.1}
-\contentsline {subsubsection}{Collision Detection}{9}{section*.39}
-\contentsline {subsection}{\numberline {2.2.2}Implementation}{10}{subsection.2.2.2}
-\contentsline {subsubsection}{Implementation in 2D}{11}{section*.46}
-\contentsline {subsubsection}{Implementation in 3D}{12}{section*.49}
-\contentsline {section}{\numberline {2.3}Performance Analysis}{13}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Methodology}{13}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Results}{14}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {1.1.2}Problem Definition}{3}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Prior Work}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Hardware Acceleration}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}RISC-V}{5}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Project Overview}{7}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Proposed Solution}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Project Specifications}{7}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Project Structure}{7}{subsection.1.3.3}
+\contentsline {chapter}{\numberline {2}Motion Planning in Software}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}Background}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Rapidly-Exploring Random Tree}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Algorithm}{9}{subsection.2.2.1}
+\contentsline {subsubsection}{Collision Detection}{11}{section*.36}
+\contentsline {subsection}{\numberline {2.2.2}Implementation}{12}{subsection.2.2.2}
+\contentsline {subsubsection}{Implementation in 2D}{12}{section*.40}
+\contentsline {subsubsection}{Implementation in 3D}{13}{section*.42}
+\contentsline {section}{\numberline {2.3}Performance Analysis}{14}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Methodology}{14}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Results}{15}{subsection.2.3.2}
 \contentsline {chapter}{\numberline {3}Motion Planning in Hardware}{20}{chapter.3}
 \contentsline {section}{\numberline {3.1}Background to Hardware Optimization}{20}{section.3.1}
 \contentsline {section}{\numberline {3.2}HoneyBee}{20}{section.3.2}
@@ -39,6 +40,6 @@
 \contentsline {section}{\numberline {4.3}PhilosophyV}{22}{section.4.3}
 \contentsline {chapter}{\numberline {5}Conclusion}{23}{chapter.5}
 \contentsline {section}{\numberline {5.1}Discussion of Results}{23}{section.5.1}
-\contentsline {chapter}{Bibliography}{24}{chapter*.72}
-\contentsline {chapter}{Appendices}{25}{section*.73}
-\contentsline {chapter}{\numberline {A}Project Repository}{26}{Appendix.1.A}
+\contentsline {chapter}{Bibliography}{24}{chapter*.56}
+\contentsline {chapter}{Appendices}{26}{section*.57}
+\contentsline {chapter}{\numberline {A}Project Repository}{27}{Appendix.1.A}

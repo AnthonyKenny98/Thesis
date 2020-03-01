@@ -40,7 +40,8 @@
 \usepackage[nottoc]{tocbibind}
 
 \usepackage{ifdraft}
-\ifdraft{\usepackage{todonotes}}{
+\ifdraft{\usepackage[
+	colorinlistoftodos,prependcaption]{todonotes}}{
     \usepackage[disable]{todonotes}}
 \ifoptiondraft{%
     \usepackage{draftwatermark}
