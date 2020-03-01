@@ -8,40 +8,37 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem Summary}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Background}{1}{subsection.1.1.1}
-\contentsline {subsubsection}{RISC-V}{2}{section*.20}
-\contentsline {subsection}{\numberline {1.1.2}Problem Definition}{3}{subsection.1.1.2}
-\contentsline {section}{\numberline {1.2}Prior Work}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Project Overview}{3}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Proposed Solution}{3}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Project Specifications}{3}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Project Structure}{4}{subsection.1.3.3}
-\contentsline {chapter}{\numberline {2}Motion Planning in Software}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Background}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Rapidly-Exploring Random Tree}{6}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Algorithm}{6}{subsection.2.2.1}
-\contentsline {subsubsection}{Collision Detection}{8}{section*.37}
-\contentsline {subsection}{\numberline {2.2.2}Implementation}{9}{subsection.2.2.2}
-\contentsline {subsubsection}{Implementation in 2D}{10}{section*.44}
-\contentsline {subsubsection}{Implementation in 3D}{11}{section*.47}
-\contentsline {section}{\numberline {2.3}Performance Analysis}{12}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Methodology}{12}{subsection.2.3.1}
-\contentsline {subsubsection}{VTune Profiler}{12}{section*.52}
-\contentsline {subsubsection}{Internal Timing}{12}{section*.55}
-\contentsline {subsubsection}{Comparison}{13}{section*.57}
-\contentsline {subsection}{\numberline {2.3.2}Results}{13}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Motion Planning in Hardware}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Background to Hardware Optimization}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}HoneyBee}{14}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Design}{14}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Build}{14}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Measurement and Analysis}{14}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Iterations}{14}{subsection.3.2.4}
-\contentsline {chapter}{\numberline {4}RISC-V Processor}{16}{chapter.4}
-\contentsline {section}{\numberline {4.1}RISC-V ISA}{16}{section.4.1}
-\contentsline {section}{\numberline {4.2}Extending RISC-V}{16}{section.4.2}
-\contentsline {section}{\numberline {4.3}PhilosophyV}{16}{section.4.3}
-\contentsline {chapter}{\numberline {5}Conclusion}{17}{chapter.5}
-\contentsline {section}{\numberline {5.1}Discussion of Results}{17}{section.5.1}
-\contentsline {chapter}{Bibliography}{18}{chapter*.62}
-\contentsline {chapter}{Appendices}{19}{section*.63}
-\contentsline {chapter}{\numberline {A}Project Repository}{20}{Appendix.1.A}
+\contentsline {subsubsection}{RISC-V}{3}{section*.21}
+\contentsline {subsection}{\numberline {1.1.2}Problem Definition}{4}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Prior Work}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Project Overview}{4}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Proposed Solution}{4}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Project Specifications}{4}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Project Structure}{5}{subsection.1.3.3}
+\contentsline {chapter}{\numberline {2}Motion Planning in Software}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Background}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}Rapidly-Exploring Random Tree}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Algorithm}{7}{subsection.2.2.1}
+\contentsline {subsubsection}{Collision Detection}{9}{section*.39}
+\contentsline {subsection}{\numberline {2.2.2}Implementation}{10}{subsection.2.2.2}
+\contentsline {subsubsection}{Implementation in 2D}{11}{section*.46}
+\contentsline {subsubsection}{Implementation in 3D}{12}{section*.49}
+\contentsline {section}{\numberline {2.3}Performance Analysis}{13}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Methodology}{13}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Results}{14}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}Motion Planning in Hardware}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Background to Hardware Optimization}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}HoneyBee}{20}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Design}{20}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Build}{20}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Measurement and Analysis}{20}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Iterations}{20}{subsection.3.2.4}
+\contentsline {chapter}{\numberline {4}RISC-V Processor}{22}{chapter.4}
+\contentsline {section}{\numberline {4.1}RISC-V ISA}{22}{section.4.1}
+\contentsline {section}{\numberline {4.2}Extending RISC-V}{22}{section.4.2}
+\contentsline {section}{\numberline {4.3}PhilosophyV}{22}{section.4.3}
+\contentsline {chapter}{\numberline {5}Conclusion}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion of Results}{23}{section.5.1}
+\contentsline {chapter}{Bibliography}{24}{chapter*.72}
+\contentsline {chapter}{Appendices}{25}{section*.73}
+\contentsline {chapter}{\numberline {A}Project Repository}{26}{Appendix.1.A}

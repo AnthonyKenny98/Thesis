@@ -1,10 +1,14 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces The use of Autonomous Robots over time\relax }}{2}{figure.caption.13}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The use of Autonomous Robots over time\relax }}{2}{figure.caption.14}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Simple Visualization of Computer Implementation Hierarchy\relax }}{3}{figure.caption.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Step by step demonstration of \ac {RRT} Algorithm for 2D robot in 2D space\relax }}{7}{figure.caption.36}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces 2D RRT Implementation shown by \ac {GUI}\relax }}{10}{figure.caption.46}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces 3D RRT Implementation shown by \ac {GUI}\relax }}{11}{figure.caption.49}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces VTune Amplifier TopDown Analysis Example\relax }}{12}{figure.caption.54}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Step by step demonstration of \ac {RRT} Algorithm for 2D robot in 2D space\relax }}{8}{figure.caption.38}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 2D RRT Implementation shown by \ac {GUI}\relax }}{11}{figure.caption.48}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces 3D RRT Implementation shown by \ac {GUI}\relax }}{12}{figure.caption.51}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces VTune Amplifier TopDown Analysis Example\relax }}{13}{figure.caption.56}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \ac {RRT} Functions as a \% of Total CPU Exectution Time\relax }}{15}{figure.caption.63}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \ac {RRT} Functions as a \% of Total CPU Exectution Time (cont.)\relax }}{16}{figure.caption.64}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \ac {RRT} Functions Exectution Time, with Bucket Optimization\relax }}{18}{figure.caption.67}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

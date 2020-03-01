@@ -6,45 +6,45 @@ Database file #1: ../support/thesis.bib
 Warning--empty publisher in Alexandrinus
 Warning--empty year in Alexandrinus
 Warning--empty journal in Vss2sn2019
-You've used 7 entries,
+You've used 8 entries,
             1876 wiz_defined-function locations,
-            520 strings with 4238 characters,
-and the built_in function-call counts, 1292 in all, are:
-= -- 130
-> -- 32
+            527 strings with 4447 characters,
+and the built_in function-call counts, 1689 in all, are:
+= -- 171
+> -- 43
 < -- 0
-+ -- 15
-- -- 8
-* -- 70
-:= -- 187
-add.period$ -- 11
-call.type$ -- 7
-change.case$ -- 6
++ -- 19
+- -- 11
+* -- 95
+:= -- 234
+add.period$ -- 12
+call.type$ -- 8
+change.case$ -- 7
 chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 61
-empty$ -- 146
-format.name$ -- 8
-if$ -- 317
+cite$ -- 11
+duplicate$ -- 84
+empty$ -- 186
+format.name$ -- 11
+if$ -- 417
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 5
-newline$ -- 28
-num.names$ -- 7
-pop$ -- 37
+int.to.str$ -- 8
+missing$ -- 6
+newline$ -- 31
+num.names$ -- 8
+pop$ -- 44
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 38
+skip$ -- 56
 stack$ -- 0
-substring$ -- 56
-swap$ -- 17
+substring$ -- 96
+swap$ -- 28
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 13
-width$ -- 8
-write$ -- 64
+while$ -- 17
+width$ -- 9
+write$ -- 73
 (There were 3 warnings)

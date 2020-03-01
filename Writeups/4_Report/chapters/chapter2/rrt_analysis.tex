@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-28 15:02:19
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-29 14:30:55
+% @Last Modified time: 2020-02-29 17:52:08
 
 \todo[inline]{Brief introduction outlining purpose of performance analysis}
 
@@ -9,21 +9,38 @@
     To restate, the aim of this thesis is to design a computer processor with reduced execution time of motion planning algorithms, such as \ac{RRT}. As such, it is important to understand the elements of the algorithm that have the highest percentage of CPU execution time. To determine this, it was necessary to implement my own, naive but typical, \ac{RRT} in C. This program could then be compiled and analysed using a software performance profiling tool. With this, I could design experiments to determine the critical RRT functions (those occupying a majority of CPU time) and see how this varies given different parameters.
     \todo[inline]{Outline of method of analysis. Something better than the above}
 
-    \subsubsection{VTune Profiler}
+    \subsubsection*{VTune Profiler}
     \label{subsubsection:vtune}
         VTune Profiler performance profiler is an application for software performance analysis. It provides functionality to examine hot-spots for CPU execution time through a top down analysis, shown below in Figure \ref{figure:VTuneTopDown}. As can be seen from the figure, the top down analysis tool shows the percentage of CPU time taken up by each function. I used this tool to profile the algorithm's performance as I changed certain parameters.
         \todo[inline]{Rewrite the above}
         \input{chapters/chapter2/figures/VTuneTopDown.tex}
 
-    \subsubsection{Internal Timing}
+    \subsubsection*{Internal Timing}
         The limitation of VTune Profiler is that it can only profile software running on Intel processors, which implement the x86-64 \ac{ISA}. As such, when the time comes to analyse performance of the software running on a RISC-V processor, another method will be required. A simple and effective way of measuring execution performance is to insert timing functionality into the software itself. \\
 
         \todo[inline]{Provide or link to appendix of explanation of internal timing}
 
-    \subsubsection{Comparison}
+    \subsubsection*{Comparison}
         Before proceeding to use either of these methods to profile the software implementation of \ac{RRT}, it was important to verify that the two methods yielded similar results for the same program. Table \ref{table:timing_calibration} summarizes the results of analysis of a simple C executable. The program calls 5 functions, $\{A, B, C, D, E\}$, each a simple iteration in which a integer is incremented. Since the Internal Timing method returned similar results to the (trusted) VTune Profiler, it was considered to be a reliable method. While it was encouraging to see both methods returned similar results for absolute execution time, the more important metric was the similarity in percentage of total execution time.
 
         \input{chapters/chapter2/tables/timing_calibration}
 
+    \subsubsection*{Experimental Design}
+        In profiling \ac{RRT} in software, the goal was to find the critical task across different values of $K$ and sizes of configuration space. Multiple tests were run, varying these two constraints, to find this critical function. The results of this analysis can be found in Section \ref{section:rrt_analysis_results}.
+
 \subsection{Results}
 \label{section:rrt_analysis_results}
+    Figure \ref{fig:rrt_profiling} shows the profile of functions within \ac{RRT}, for $100 \leq K \leq 10000$, and cubic configuration spaces with dimensions $\{4, 8, 16, 32\}$. Each subfigure shows a similar profile, with the \% of CPU Execution Time taken by findNearestNode increasing with $K$. This is to be expected. \todo{Explanation of time complexity}. However, it is also seen that edgeCollisions increases with larger configuration spaces, taking up the overwhelming majority of execution time for a 32x32x32 configuration space.
+    
+    \newpage
+    \input{chapters/chapter2/figures/rrtprofiling}
+
+    Furthermore, the computational load of findNearestNode can be reduced through a variety of software optimizations. A simple one used here to demonstrate that fact is storing nodes in seperate ``buckets,'' sorted by their $x$ value. By using only two buckets, the execution time of findNearestNode fell drastically. Figure \ref{subfig:32x32x32rrt2} shows edge collision detection accounting for over 95\% of execution time for $100 \leq K \leq 10000$. This is consistent with the profiling results of \ac{RRT} in prior work\cite{Bialkowski2011}.
+
+    \subsubsection*{Conclusion}
+        From the above data, it was identified that, as prior work suggested, edge collision detection shows the greatest promise for potential speedup through specialized hardware. The next chapter details the process of designing and building this hardware.
+
+    \input{chapters/chapter2/figures/rrt_profiling_2}
+
+
+\todo[inline]{Add simulations to determine correct K}

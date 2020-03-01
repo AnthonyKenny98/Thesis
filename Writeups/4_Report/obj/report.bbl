@@ -27,4 +27,9 @@ Sourishg, ``rrt-simulator,'' 2017.
 Vss2sn, ``{Path Planning},'' 2019.
 \newblock \\ \url{https://github.com/vss2sn/path{\_}planning}.
 
+\bibitem{Bialkowski2011}
+J.~Bialkowski, S.~Karaman, and E.~Frazzoli, ``{Massively parallelizing the RRT
+  and the RRT},'' in {\em IEEE International Conference on Intelligent Robots
+  and Systems}, pp.~3513--3518, 2011.
+
 \end{thebibliography}
