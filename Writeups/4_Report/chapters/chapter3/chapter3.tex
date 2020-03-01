@@ -1,18 +1,56 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-26 08:22:07
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-28 23:31:30
+% @Last Modified time: 2020-03-01 15:47:32
 
-\section{Background to Hardware Optimization}
-    \todo[inline]{Brief introduction to the concept of hardware optimization and examples of work in the field}
+\section{Defining the Collision Detection Unit}
 
+    It was demonstrated in Section \ref{section:rrt_analysis_results} that the critical function of \ac{RRT} was edge collision detection. As such, the thesis proposes designing a functional unit that takes advantage of pipelining and parallelization to speed up the detection of edge collisions. Section \ref{subsection:HoneyBeeTechSpechs} outlines the technical specifications for the functional unit. Section \ref{subsection:HoneyBeePerfSpechs} outlines the performance specifications.
+
+    \subsection{Edge Collision Function}
+    \label{subsection:EdgeCollisionFunction}
+        \todo[inline, caption={Edge Collision Function Description}]{Edge collision function and algorithm, perhaps both for normal and parallelized?}
+   
+    \subsection{Technical Specifications}
+    \label{subsection:HoneyBeeTechSpechs}
+        Put simply, the functional unit that implements the edge collision detection function in hardware should have the same rough technical specifications as when the function is defined in software (Section \ref{subsection:EdgeCollisionFunction}). That is, it should take an edge $e$ and an \ac{OGM} and return a boolean value: True, if the edge collides with an obstacle, otherwise False.
+        Table \ref{table:HoneyBeeTechSpecs} outlines the required technical specifications for the functional unit.
+        \input{chapters/chapter3/tables/HoneyBeeTechSpecs}
+
+    \subsection{Performance Specifications}
+    \label{subsection:HoneyBeePerfSpechs}
+        \todo[inline]{Performance Specifications Functional Unit}
+
+\newpage
 \section{HoneyBee}
-    The Honey Bee has long been renowned for its tireless work ethic. But people rarely give the Honey Bee credit for its remarkable navigation and collision avoidance strategies during flight. As such, it is quite appropriate that this functional unit, designed to work tirelessly, rapidly and efficiently to execute collision detection computations, is named HoneyBee.
+    The Honey Bee has long been renowned for its tireless work ethic. But people rarely give the Honey Bee credit for its remarkable navigation and collision avoidance strategies during flight. As such, it is quite appropriate that this functional unit, designed to work tirelessly, rapidly and efficiently to execute collision detection computations, is named HoneyBee. \\
+
+    \todo[inline,caption={More Iterations of HoneyBee Design}]{Note: Currently this report only shows the design/build/measurement of the first pass at designing the functional unit (Designated HoneyBee-A, or HB-A). Final report will detail further iterations.}
 
     \subsection{Design}
-        It was demonstrated in Section \ref{section:rrt_analysis_results} that the critical function of \ac{RRT} was edge collision detection.
+        \subsubsection*{HoneyBee-A Design}
+        The first design iteration, designated \ac{HB-A}, was designed to take advantage of the performance improvements associated with pipelining. Figure \ref{fig:pipeline} demonstrates how pipelineing in hardware improves latency. By default, instructions are executed in order, one at a time. Pipelining takes advantage of operations that are independent of each other to reduce the number of clock cycles required to complete a set of instructions. 
+        \input{chapters/chapter3/figures/pipeline}
+ 
+
     \subsection{Build}
+        \subsubsection*{Hardware Description Languages}
+        \todo[inline]{Introduction to Hardware Description Languages}
+
         \subsubsection*{High Level Synthesis}
+        \ac{HLS} is an automated hardware design process that takes design files (written in high-level languages, such as C, C++ or SystemC) specifying the algorithmic function of a piece of hardware, interprets those files and creates digital hardware designs that execute this function. It effectively translates programming languages into hardware description languages. Key advantages of using HLS is speed and verification. It is much faster and easier to define functionality in C than it is in a \ac{HDL} such as Verilog, and thus design iterations are faster. It is also much simpler to verify one's design, as the functional units can be put through test benches written in C. This project used Vivado HLS to build the HoneyBee Unit.
+
+        \subsubsection*{HoneyBee-A Synthesis}
+        Figure \ref{fig:HB-A-synthesis} shows the interface summary of successful synthesis of HoneyBee-A. Notice that the edge input has been split into 6 32 bit input ports. 
+        \input{chapters/chapter3/figures/HB-A-synthesis}
+    
     \subsection{Measurement and Analysis}
-        \input{chapters/chapter3/tables/hbatable}
-    \subsection{Iterations}
+        \subsubsection*{HoneyBee-A}
+            The synthesis results of HoneyBee-A are shown in Table \ref{table:HBA}. It compares the execution time in microseconds for one edge to undergo collision detection if software and then in different synthesis ``solutions''. MacOS and Ubuntu executing the function defined in honeybee.c have fairly similar results. Solution 1, which is the synthesized version of honeybee.c without any pipelining, was significantly slower. This is to be expected, as both MacOS and Ubuntu, operating on intel processors, would likely have some degree of pipelining and optimization of executing the compiled C code. However, significant improvements are observed once pipelining is implemented. Solutions 2-4 are increasing amounts of pipelining. Across the board, solutions 3 and 4 are roughly equal, but significantly faster that both solution 1 and the MacOS/Ubuntu execution times. Solution 4 shows a speedup of over 10x MacOS and Ubuntu.
+            \input{chapters/chapter3/tables/hbatable}
+
+            When HoneyBee-A is simulated in full \ac{RRT} execution, we see similarly promising results. Table \ref{table:rrt-with-hba} shows the results of simulated RRT execution with HoneyBee-A. This is also shown in Figure \ref{fig:rrt-with-hba}.
+            \input{chapters/chapter3/tables/rrt-with-hba}
+            \input{chapters/chapter3/figures/rrt-with-hba}
+
+            \todo[inline]{Expand Discussion of HoneyBee-A Results}

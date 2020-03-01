@@ -28,8 +28,8 @@
     linktoc=all,
     citecolor=black,
     linkcolor=black,
-    filecolor=magenta,      
-    urlcolor=cyan,
+    filecolor=blue,      
+    urlcolor=blue,
 }
 
 % For Managing Algorithms
@@ -40,9 +40,16 @@
 \usepackage[nottoc]{tocbibind}
 
 \usepackage{ifdraft}
-\ifdraft{\usepackage[
-	colorinlistoftodos,prependcaption]{todonotes}}{
-    \usepackage[disable]{todonotes}}
+% \ifdraft{
+    \usepackage[
+    	colorinlistoftodos,
+        prependcaption,
+        backgroundcolor=white,
+        bordercolor=red,
+        linecolor=red]{todonotes}
+% }{
+%     \usepackage[disable]{todonotes}
+% }
 \ifoptiondraft{%
     \usepackage{draftwatermark}
     \SetWatermarkText{DRAFT}
@@ -99,6 +106,9 @@
 
 % Multirow in tables
 \usepackage{multirow}
+
+% sideways figures
+\usepackage{rotating}
 
 
 

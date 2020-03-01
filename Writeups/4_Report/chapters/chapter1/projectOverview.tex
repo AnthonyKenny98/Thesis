@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 14:27:21
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-03-01 12:59:03
+% @Last Modified time: 2020-03-01 16:41:26
 
 \subsection{Proposed Solution}
     This thesis proposes a non-standard RISC-V Instruction Set Extension, supported by a functional unit embedded in a \ac{FPGA} synthesizable processor design that more rapidly computes motion planning for autonomous \ac{UAV}s. It will use the \ac{RRT} algorithm as a benchmark for performance analysis. Profiling of \ac{RRT} described in chapter \ref{chap:MotionPlanningInSoftware} found that edge collision detection was the most performance limiting function of \ac{RRT}. As such, this thesis aims to design a RISC-V extension and specific circuitry that support the faster execution of edge collision detection.
@@ -17,8 +17,16 @@
 
 \subsection{Project Specifications}
 
-    \todo[inline]{Project Specifications}
+    \todo[inline, caption={Project Specifications}]{These need significant revision from the last checkpoint}
 
 \subsection{Project Structure}
 \label{subsection:project_structure}
-    \todo[inline]{Project Structure/Timeline}
+    This report is structured to follow the timeline of this project, and is outlined below:
+    \begin{enumerate}
+        \item A benchmark motion planning algorithm, \ac{RRT}, was selected and implemented in software. Once implemented, a variety of performance analysis methods were used to profile the computational hotspots of the algorithm. It was found that edge collision detection was the critical function limiting execution time. This process is detailed in Chapter 2.
+        \item With edge collision detection having been identified as the critical function, the process of designing specialised hardware to execute this function began. The technical specifications, performance specifications, designs, build phases, measurement and analysis of this hardware unit is presented in Chapter 3.
+        \item With the aforementioned functional unit's performance verified in simulation, the next step was to implement this in a processor. First, a baseline processor was designed and built for this project to implement a base RISC-V instruction set. The performance of \ac{RRT} is again profiled on this baseline processor (as up until this point, it was profiled on x86 architecture). A non-standard extension to the RISC-V \ac{ISA} was then defined and support for this was implemented in the processor. Comparative performance analysis was then conducted. This process is described in detail in Chapter 4.
+        \item Chapter 5 is a discussion of results and future work.
+    \end{enumerate}
+
+\todo[inline,caption={Summary of Results}]{Do I need a summary of results section in the introduction? }

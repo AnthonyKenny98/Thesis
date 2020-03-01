@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-02-28 15:02:26
+% @Last Modified time: 2020-03-01 13:08:41
 
 % INTRO
 \ac{RRT} is an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the problem. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones, the focus of this thesis.
@@ -42,7 +42,9 @@
 
     The original intention was to find an existing implementation of RRT that could fulfill these requirements. Most open source implementations found online were in Python, and all those implemented in C were unsuitable\cite{RoboJackets2019}\cite{Planning2019}\cite{Sourishg2017}\cite{Vss2sn2019}, as they had extraneous \ac{GUI}s, reliance on external \ac{API}s, and other features that would distort analysis of algorithmic hot-spots.
 
-    As a result, it was necessary to build a C implementation of RRT from the ground up that satisfied the requirements in Table \ref{table:RRT_Tech_Specs}. It can be found in this project's GitHub repository. It follows Algorithm \ref{algorithm:rrt} closely. For monitoring correctness, I build in an optional \ac{GUI} that shows the tree, starting node, and obstacles. 
+    As a result, it was necessary to build a C implementation of RRT from the ground up that satisfied the requirements in Table \ref{table:RRT_Tech_Specs}. It can be found in this project's GitHub repository. It follows Algorithm \ref{algorithm:rrt} closely. For monitoring correctness, I build in an optional \ac{GUI} that shows the tree, starting node, and obstacles.
+
+    \subsubsection*{Modelling a \ac{UAV} for RRT}
 
     \subsubsection{Implementation in 2D}
     The first step was to implement RRT with a 2-Dimensional workspace. \todo[inline]{More detail}

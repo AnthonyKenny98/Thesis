@@ -1,0 +1,45 @@
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Use glossary package}{iv}{section*.6}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Use better acronym package that includes plurals}{iv}{section*.7}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ cite}{1}{section*.13}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More of an introduction to motion planning.}{2}{section*.17}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Subsubsection for Problem Overview}{2}{section*.20}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Problem Statement}{3}{section*.22}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Revise End User}{3}{section*.26}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Project Specifications}{8}{section*.44}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Summary of Results}{9}{section*.45}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Write a better introduction that more accurately defines sections and makes the POINT of this chapter clear.}{10}{section*.46}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Background on Motion Planning Algorithms.}{10}{section*.47}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Better RRT Implementation introductory sentence}{14}{section*.52}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Change this based on whether time does permit}{14}{section*.55}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve this table}{14}{section*.56}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More detail}{15}{section*.60}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Describe implementation in 3D}{16}{section*.63}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Brief introduction outlining purpose of performance analysis}{17}{section*.65}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Outline of method of analysis. Something better than the above}{17}{section*.66}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Rewrite the above}{17}{section*.68}
+\contentsline {todo}{Figure: Screenshot of VTune Top Down Analysis (Maybe)}{17}{figure.caption.69}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Provide or link to appendix of explanation of internal timing}{18}{section*.71}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Explanation of time complexity}{18}{section*.75}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Change Y axis to \% and increase text size}{21}{section*.78}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Add simulations to determine correct K}{21}{section*.80}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Edge Collision Function Description}{23}{section*.82}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Technical Specifications}{24}{section*.85}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Performance Specifications Functional Unit}{24}{section*.86}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More Iterations of HoneyBee Design}{25}{section*.87}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make my own version of this figure}{25}{section*.91}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Introduction to Hardware Description Languages}{26}{section*.93}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Turn this into a table or get image from vivado}{27}{section*.98}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make version of this chart in matplotlib for consistency and update axis}{29}{section*.103}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Expand Discussion of HoneyBee-A Results}{29}{section*.104}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ RISC ISA Background}{30}{section*.105}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ RISC Processor Design Background}{30}{section*.106}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ RV32I Background}{30}{section*.107}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Motion Planning Extension}{30}{section*.108}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Description of Baseline Philosophy V core}{31}{section*.109}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Display bigger version of processor.}{31}{section*.110}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Process of implementing honeybee into PhilV.}{31}{section*.112}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Comparative Performance Analysis of baseline and extended PhilV Core}{31}{section*.113}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Discussion of Results}{33}{section*.114}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Evaluation of Success}{33}{section*.115}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Future Work}{33}{section*.116}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Budget}{38}{section*.124}

@@ -1,10 +1,12 @@
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces List of System Components and their Descriptions\relax }}{8}{table.caption.34}
+\contentsline {table}{\numberline {1.1}{\ignorespaces List of System Components and their Descriptions\relax }}{8}{table.caption.41}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Technical Specifications for \ac {RRT} Implementation\relax }}{13}{table.caption.41}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison of Timing Methods\relax }}{16}{table.caption.52}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Technical Specifications for \ac {RRT} Implementation\relax }}{14}{table.caption.53}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison of Timing Methods\relax }}{18}{table.caption.73}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Simulated performance of HB-A in microseconds\relax }}{22}{table.caption.59}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Technical Specifications for Edge Collision Detection Unit\relax }}{24}{table.caption.84}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Simulated performance of HB-A in microseconds\relax }}{28}{table.caption.100}
+\contentsline {table}{\numberline {3.3}{\ignorespaces RRT Simulated Execution Times with HB-A (seconds)\relax }}{28}{table.caption.101}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
