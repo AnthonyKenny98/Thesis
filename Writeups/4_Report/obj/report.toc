@@ -4,7 +4,7 @@
 \contentsline {section}{List of Acronyms}{iv}{section*.5}
 \contentsline {section}{List of Algorithms}{v}{section*.8}
 \contentsline {section}{List of Figures}{vi}{section*.9}
-\contentsline {section}{List of Tables}{vii}{section*.11}
+\contentsline {section}{List of Tables}{vii}{section*.12}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem Summary}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Background}{1}{subsection.1.1.1}
@@ -37,21 +37,22 @@
 \contentsline {subsection}{\numberline {3.2.2}Build}{26}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Measurement and Analysis}{27}{subsection.3.2.3}
 \contentsline {chapter}{\numberline {4}RISC-V Processor}{30}{chapter.4}
-\contentsline {section}{\numberline {4.1}Reduced Instruction Set Computer Background}{30}{section.4.1}
+\contentsline {section}{\numberline {4.1}Introduction to the Reduced Instruction Set Computer}{30}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Instruction Set Architecture}{30}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}RISC Processor Design}{30}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}RISC-V ISA}{30}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}RV32I}{30}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Motion Planning Extension}{30}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}PhilosophyV}{31}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Baseline Implementation}{31}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Implementing HoneyBee}{31}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Performance Analysis}{31}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Discussion of Results}{33}{section.5.1}
-\contentsline {section}{\numberline {5.2}Evaluation of Success}{33}{section.5.2}
-\contentsline {section}{\numberline {5.3}Future Work}{33}{section.5.3}
-\contentsline {chapter}{Bibliography}{34}{chapter*.117}
-\contentsline {chapter}{Appendices}{36}{section*.118}
-\contentsline {chapter}{\numberline {A}Project Repository}{37}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Budget}{38}{Appendix.1.B}
+\contentsline {subsubsection}{Instruction Formats}{31}{section*.108}
+\contentsline {subsection}{\numberline {4.2.2}Motion Planning Extension}{32}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}PhilosophyV}{32}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Baseline Implementation}{32}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Implementing HoneyBee}{32}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Performance Analysis}{34}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion of Results}{35}{section.5.1}
+\contentsline {section}{\numberline {5.2}Evaluation of Success}{35}{section.5.2}
+\contentsline {section}{\numberline {5.3}Future Work}{35}{section.5.3}
+\contentsline {chapter}{Bibliography}{36}{chapter*.119}
+\contentsline {chapter}{Appendices}{38}{section*.120}
+\contentsline {chapter}{\numberline {A}Project Repository}{39}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Budget}{40}{Appendix.1.B}

@@ -1,0 +1,30 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-03-01 18:36:35
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-03-01 19:33:20
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{.15\linewidth}|p{.15\linewidth}|p{.4\linewidth}|}
+    \hline
+    \textbf{Register}   & \textbf{ABI Name}  & \textbf{Description} \\
+    \hline
+    \texttt{x0}  & \texttt{zero} & Hard-wired zero \\
+    \texttt{x1}& \texttt{ra}& Return address\\
+    \texttt{x2}& \texttt{sp} & Stack pointer\\
+    \texttt{x3}& \texttt{gp}&Global pointer\\
+    \texttt{x4}& \texttt{tp}& Thread pointer\\
+    \texttt{x5-7}& \texttt{t0-2}&Temporaries\\
+    \texttt{x8}& \texttt{s0/fp}&Saved register/Frame pointer\\
+    \texttt{x9}&\texttt{s1} &Saved register\\
+    \texttt{x10-11}&\texttt{a0-1}&Function arguments/return values\\
+    \texttt{x12-17}&\texttt{a2-7}&Function arguments\\
+    \texttt{x18-27}&\texttt{s2-11}&Saved registers\\
+    \texttt{x28-31}&\texttt{t3-6}&Temporaries\\
+    \hline
+    \texttt{pc} & \texttt{pc} & Program counter \\
+    \hline
+\end{tabular}
+\caption{Register State for RV32I Base Instruction Set}
+\label{table:rv32i_reg}
+\end{center}
+\end{table}

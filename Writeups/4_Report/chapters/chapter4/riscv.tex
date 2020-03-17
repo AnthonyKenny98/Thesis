@@ -1,0 +1,24 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-03-01 18:51:24
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-03-01 19:39:08
+\subsection{RV32I}
+
+        The following is an excerpt from the RISC-V Specification, outlining the RV32I base integer instruction set \cite{Waterman2019}
+        \begin{quote}{}
+            \small{RV32I was designed to be sufficient to form a compiler target and to support modern operating system environments. The ISA was also designed to reduce the hardware required in a minimal implementation. RV32I contains 40 unique instructions, though a simple implementation might \dots [reduce] base instruction count to 38 total. RV32I can emulate almost any other ISA extension \dots \\
+            Subsets of the base integer ISA might be useful for pedagogical purposes, but the base has been defined such that there should be little incentive to subset a real hardware implementation \dots}
+        \end{quote}
+
+        \subsubsection*{Registers}
+        RV32I defines 32 unprivileged registers, each 32 bits wide. They are designated \texttt{x0-x31}, where \texttt{x0} is a hard-wired value of $0$, and registers \texttt{x1-x31} hole values that various instructions use. RISC-V uses the load-store method, meaning that all operations perform on two registers or a register and an immediate, rather than performing operations directly on memory addresses. In addition, the 33rd unprivileged register is the program counter \texttt{pc}. Table \ref{table:rv32i_reg} shows the register state for the RV32I Base Integer Instruction Set.
+        \input{chapters/chapter4/tables/rv32i_reg}
+
+        \subsubsection{Instruction Formats}
+        Table \ref{table:rv32i_instr_format} demonstrates the format of each different instruction type. 
+        \input{chapters/chapter4/tables/rv32i_instr_format}
+
+
+
+    \subsection{Motion Planning Extension}
+        \todo[inline, caption={Motion Planning Extension}]{Full description of design of Non standard extension for motion planning. Should follow define, design, build, measure, analyse etc format.}

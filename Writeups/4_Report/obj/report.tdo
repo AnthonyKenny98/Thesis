@@ -1,10 +1,10 @@
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Use glossary package}{iv}{section*.6}
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Use better acronym package that includes plurals}{iv}{section*.7}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ cite}{1}{section*.13}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More of an introduction to motion planning.}{2}{section*.17}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Subsubsection for Problem Overview}{2}{section*.20}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Problem Statement}{3}{section*.22}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Revise End User}{3}{section*.26}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ cite}{1}{section*.14}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More of an introduction to motion planning.}{2}{section*.18}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Subsubsection for Problem Overview}{2}{section*.21}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Problem Statement}{3}{section*.23}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Revise End User}{3}{section*.27}
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Project Specifications}{8}{section*.44}
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Summary of Results}{9}{section*.45}
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Write a better introduction that more accurately defines sections and makes the POINT of this chapter clear.}{10}{section*.46}
@@ -31,15 +31,12 @@
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Turn this into a table or get image from vivado}{27}{section*.98}
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make version of this chart in matplotlib for consistency and update axis}{29}{section*.103}
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Expand Discussion of HoneyBee-A Results}{29}{section*.104}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ RISC ISA Background}{30}{section*.105}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ RISC Processor Design Background}{30}{section*.106}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ RV32I Background}{30}{section*.107}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Motion Planning Extension}{30}{section*.108}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Description of Baseline Philosophy V core}{31}{section*.109}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Display bigger version of processor.}{31}{section*.110}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Process of implementing honeybee into PhilV.}{31}{section*.112}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Comparative Performance Analysis of baseline and extended PhilV Core}{31}{section*.113}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Discussion of Results}{33}{section*.114}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Evaluation of Success}{33}{section*.115}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Future Work}{33}{section*.116}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Budget}{38}{section*.124}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Motion Planning Extension}{32}{section*.110}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Description of Baseline Philosophy V core}{32}{section*.111}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Display bigger version of processor.}{32}{section*.112}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Process of implementing honeybee into PhilV.}{32}{section*.114}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Comparative Performance Analysis of baseline and extended PhilV Core}{34}{section*.115}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Discussion of Results}{35}{section*.116}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Evaluation of Success}{35}{section*.117}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Future Work}{35}{section*.118}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Budget}{40}{section*.126}
