@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-03-30T11:58:07.461Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="l_bxGjd7C0ChW1tU2m0G" version="12.9.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-03-30T12:00:31.010Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="h7g9ta4zmZxNemoCX7TL" version="12.9.4" type="github" pages="2">
   <diagram id="g7gX6U1B5adAmnvi5vNV" name="Page-1">
     <mxGraphModel dx="1572" dy="1028" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
@@ -80,8 +80,14 @@
       <root>
         <mxCell id="3gF-1DebG7RPl5TN7LWl-0" />
         <mxCell id="3gF-1DebG7RPl5TN7LWl-1" parent="3gF-1DebG7RPl5TN7LWl-0" />
-        <mxCell id="C6c-eHWT7ZRGTu4dc1uL-0" value="Motion Planning Processor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EA4335;strokeWidth=3;fontColor=#FFFFFF;fontSize=24;fontStyle=0;fontFamily=Georgia;" vertex="1" parent="3gF-1DebG7RPl5TN7LWl-1">
-          <mxGeometry x="320" y="200" width="200" height="200" as="geometry" />
+        <mxCell id="C6c-eHWT7ZRGTu4dc1uL-0" value="Motion Planning Processor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EA4335;strokeWidth=2;fontColor=#FFFFFF;fontSize=24;fontStyle=0;fontFamily=Georgia;" vertex="1" parent="3gF-1DebG7RPl5TN7LWl-1">
+          <mxGeometry x="320" y="200" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="xUrHE4w4xV-HmPgLB5Sh-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Georgia;fontSize=18;fontColor=#FFFFFF;strokeWidth=2;" edge="1" parent="3gF-1DebG7RPl5TN7LWl-1" source="xUrHE4w4xV-HmPgLB5Sh-0" target="C6c-eHWT7ZRGTu4dc1uL-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xUrHE4w4xV-HmPgLB5Sh-0" value="Motion Planning Software" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#34A853;fontFamily=Georgia;fontSize=18;fontColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="3gF-1DebG7RPl5TN7LWl-1">
+          <mxGeometry x="340" y="110" width="160" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
