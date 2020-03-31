@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-03-31T00:43:07.571Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="GP3nwUvjKgX3hcTk9SYi" version="12.9.4" type="github">
+<mxfile host="www.draw.io" modified="2020-03-31T00:47:42.475Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="wSjTRWtz6WDqafJaeWNn" version="12.9.4" type="github">
   <diagram id="Wj-B_8XIfEEyuWWyyMXy" name="Page-1">
     <mxGraphModel dx="1544" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
@@ -8,30 +8,30 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kJNcCdDnMUkxZTXu7SaE-1" value="&lt;span&gt;Motion Planning Software&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=24;fontFamily=Computer Modern;fontStyle=0" vertex="1" parent="1">
-          <mxGeometry x="640" y="160" width="240" height="80" as="geometry" />
+          <mxGeometry x="640" y="160" width="320" height="40" as="geometry" />
         </mxCell>
         <mxCell id="kJNcCdDnMUkxZTXu7SaE-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fontFamily=Computer Modern;fontStyle=1" edge="1" parent="1" source="kJNcCdDnMUkxZTXu7SaE-2">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="760" y="680" as="targetPoint" />
+            <mxPoint x="800" y="580" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="kJNcCdDnMUkxZTXu7SaE-2" value="Processor" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=24;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=0;fontFamily=Computer Modern;" vertex="1" parent="1">
-          <mxGeometry x="690" y="500" width="140" height="140" as="geometry" />
+          <mxGeometry x="730" y="390" width="140" height="140" as="geometry" />
         </mxCell>
         <mxCell id="kJNcCdDnMUkxZTXu7SaE-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fontFamily=Computer Modern;fontStyle=1" edge="1" parent="1" source="kJNcCdDnMUkxZTXu7SaE-3" target="kJNcCdDnMUkxZTXu7SaE-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kJNcCdDnMUkxZTXu7SaE-3" value="&lt;span&gt;Compiler&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=24;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Computer Modern;fontStyle=0" vertex="1" parent="1">
-          <mxGeometry x="680" y="280" width="160" height="60" as="geometry" />
+          <mxGeometry x="720" y="230" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="kJNcCdDnMUkxZTXu7SaE-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fontFamily=Computer Modern;fontStyle=1" edge="1" parent="1" source="kJNcCdDnMUkxZTXu7SaE-7" target="kJNcCdDnMUkxZTXu7SaE-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kJNcCdDnMUkxZTXu7SaE-7" value="&lt;span&gt;Motion Planning Machine Code&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=24;fontFamily=Computer Modern;fontStyle=0" vertex="1" parent="1">
-          <mxGeometry x="640" y="380" width="240" height="80" as="geometry" />
+          <mxGeometry x="640" y="320" width="320" height="40" as="geometry" />
         </mxCell>
         <mxCell id="kJNcCdDnMUkxZTXu7SaE-16" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/innovation-technology-1/512/tech_0011-128.png;fontSize=24;fontFamily=Computer Modern;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="696" y="650" width="128" height="128" as="geometry" />
+          <mxGeometry x="736" y="540" width="128" height="128" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
