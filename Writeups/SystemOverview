@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-03-31T01:44:18.497Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="ZGDIEpM2h46qoXiA7HRI" version="12.9.4" type="github" pages="3">
+<mxfile host="www.draw.io" modified="2020-03-31T02:04:58.149Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="vY5smeMIeVE5lsqlSwZp" version="12.9.4" type="github" pages="3">
   <diagram id="Wj-B_8XIfEEyuWWyyMXy" name="Page-1">
     <mxGraphModel dx="1544" dy="902" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
@@ -74,24 +74,24 @@
     </mxGraphModel>
   </diagram>
   <diagram id="xAQBOQVh8dDdP5jjX87D" name="EdgeCollision">
-    <mxGraphModel dx="908" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
+    <mxGraphModel dx="908" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
       <root>
         <mxCell id="sEi_OwRaX3qU4MSNEIVr-0" />
         <mxCell id="sEi_OwRaX3qU4MSNEIVr-1" parent="sEi_OwRaX3qU4MSNEIVr-0" />
+        <mxCell id="UJ1F6Jp4z6VAEc-kHUEU-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Computer Modern;fontSize=24;fillColor=#FBBC05;strokeColor=#000000;" vertex="1" parent="sEi_OwRaX3qU4MSNEIVr-1">
+          <mxGeometry x="320" y="200" width="120" height="280" as="geometry" />
+        </mxCell>
         <mxCell id="UJ1F6Jp4z6VAEc-kHUEU-3" value="" style="endArrow=none;html=1;fontFamily=Computer Modern;fontSize=24;strokeColor=#4285F4;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=3;curved=1;" edge="1" parent="sEi_OwRaX3qU4MSNEIVr-1" source="UJ1F6Jp4z6VAEc-kHUEU-1" target="UJ1F6Jp4z6VAEc-kHUEU-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="250" y="230" as="sourcePoint" />
             <mxPoint x="370" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UJ1F6Jp4z6VAEc-kHUEU-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Computer Modern;fontSize=24;fillColor=#FBBC05;strokeColor=none;" vertex="1" parent="sEi_OwRaX3qU4MSNEIVr-1">
-          <mxGeometry x="320" y="200" width="120" height="280" as="geometry" />
-        </mxCell>
-        <mxCell id="UJ1F6Jp4z6VAEc-kHUEU-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#34A853;fontFamily=Computer Modern;fontSize=24;strokeColor=none;" vertex="1" parent="sEi_OwRaX3qU4MSNEIVr-1">
+        <mxCell id="UJ1F6Jp4z6VAEc-kHUEU-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#34A853;fontFamily=Computer Modern;fontSize=24;strokeColor=#000000;" vertex="1" parent="sEi_OwRaX3qU4MSNEIVr-1">
           <mxGeometry x="240" y="280" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="UJ1F6Jp4z6VAEc-kHUEU-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EA4335;fontFamily=Computer Modern;fontSize=24;strokeColor=none;" vertex="1" parent="sEi_OwRaX3qU4MSNEIVr-1">
-          <mxGeometry x="360" y="100" width="20" height="20" as="geometry" />
+        <mxCell id="UJ1F6Jp4z6VAEc-kHUEU-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EA4335;fontFamily=Computer Modern;fontSize=24;strokeColor=#000000;" vertex="1" parent="sEi_OwRaX3qU4MSNEIVr-1">
+          <mxGeometry x="400" y="140" width="20" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
