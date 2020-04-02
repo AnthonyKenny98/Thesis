@@ -1,10 +1,7 @@
 \contentsline {chapter}{Preface}{i}{Doc-Start}
 \contentsline {section}{Abstract}{i}{section*.1}
-\contentsline {section}{Table of Contents}{ii}{section*.1}
-\contentsline {section}{List of Acronyms}{iv}{section*.5}
-\contentsline {section}{List of Algorithms}{v}{section*.8}
-\contentsline {section}{List of Figures}{vi}{section*.9}
-\contentsline {section}{List of Tables}{vii}{section*.12}
+\contentsline {section}{Table of Contents}{ii}{section*.4}
+\contentsline {section}{List of Acronyms}{iv}{section*.6}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem Summary}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Background}{1}{subsection.1.1.1}
@@ -20,7 +17,7 @@
 \contentsline {section}{\numberline {2.1}Background}{10}{section.2.1}
 \contentsline {section}{\numberline {2.2}Rapidly-Exploring Random Tree}{11}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Algorithm}{11}{subsection.2.2.1}
-\contentsline {subsubsection}{Collision Detection}{13}{section*.51}
+\contentsline {subsubsection}{Collision Detection}{13}{section*.50}
 \contentsline {subsection}{\numberline {2.2.2}Implementation}{14}{subsection.2.2.2}
 \contentsline {subsubsection}{Implementation in 2D}{15}{section*.59}
 \contentsline {subsubsection}{Implementation in 3D}{16}{section*.62}

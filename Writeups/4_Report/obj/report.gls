@@ -1,0 +1,6 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{glssymbols}\relax \glsresetentrylist %
+\glossentry{API_g}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{v}}}%
+\end{theglossary}\glossarypostamble

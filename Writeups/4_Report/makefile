@@ -72,3 +72,6 @@ obj/$(PROJECT).bbl: $(BIB_FILES) | obj/$(PROJECT).aux
 
 obj/$(PROJECT).pdf: obj/$(PROJECT).aux $(if $(BIB_FILES), obj/$(PROJECT).bbl)
 	xelatex $(PDFLATEX_FLAGS) $(PROJECT)
+	makeglossaries -d$(TEXMFOUTPUT) $(PROJECT)
+	xelatex $(PDFLATEX_FLAGS) $(PROJECT)
+	xelatex $(PDFLATEX_FLAGS) $(PROJECT)
