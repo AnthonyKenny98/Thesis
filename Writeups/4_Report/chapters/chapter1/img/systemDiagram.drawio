@@ -1,10 +1,10 @@
-<mxfile host="www.draw.io" modified="2020-03-01T17:29:04.049Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36" etag="VxIU5jxCOq5EXCfxgNM7" version="12.7.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-03-30T12:01:35.338Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="-XRLmuHeRoV4Tm3bEyKn" version="12.9.4" type="github" pages="2">
   <diagram id="g7gX6U1B5adAmnvi5vNV" name="Page-1">
-    <mxGraphModel dx="1661" dy="860" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+    <mxGraphModel dx="1572" dy="1028" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="28MgqyPCqKou6GGmXQ7e-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E6E6E6;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="28MgqyPCqKou6GGmXQ7e-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E6E6E6;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="1078" y="898" width="604" height="604" as="geometry" />
         </mxCell>
         <mxCell id="egPN66_32sDSnVnQbSZV-10" value="" style="group;fontFamily=Computer Modern;" parent="1" vertex="1" connectable="0">
@@ -60,10 +60,10 @@
         <mxCell id="egPN66_32sDSnVnQbSZV-26" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/innovation-technology-1/512/tech_0011-128.png;rounded=0;shadow=0;glass=0;strokeColor=#4285F4;strokeWidth=4;fillColor=#4285F4;fontFamily=Computer Modern;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="1748" y="1032" width="376" height="376" as="geometry" />
         </mxCell>
-        <mxCell id="28MgqyPCqKou6GGmXQ7e-2" value="&lt;b&gt;&lt;font style=&quot;font-size: 27px&quot;&gt;FPGA&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;" vertex="1" parent="1">
+        <mxCell id="28MgqyPCqKou6GGmXQ7e-2" value="&lt;b&gt;&lt;font style=&quot;font-size: 27px&quot;&gt;FPGA&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;" parent="1" vertex="1">
           <mxGeometry x="1360" y="916" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="28MgqyPCqKou6GGmXQ7e-8" value="" style="endArrow=classic;html=1;fontFamily=Computer Modern;exitX=1;exitY=0.25;exitDx=0;exitDy=0;strokeWidth=6;strokeColor=#999999;" edge="1" parent="1" source="28MgqyPCqKou6GGmXQ7e-1">
+        <mxCell id="28MgqyPCqKou6GGmXQ7e-8" value="" style="endArrow=classic;html=1;fontFamily=Computer Modern;exitX=1;exitY=0.25;exitDx=0;exitDy=0;strokeWidth=6;strokeColor=#999999;" parent="1" source="28MgqyPCqKou6GGmXQ7e-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1885" y="1220" as="sourcePoint" />
             <mxPoint x="1935" y="1170" as="targetPoint" />
@@ -71,6 +71,31 @@
               <mxPoint x="1935" y="1049" />
             </Array>
           </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="vMB4jKBJT2Xh-NJgZ_F-" name="SuperSimple">
+    <mxGraphModel dx="1310" dy="857" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="3gF-1DebG7RPl5TN7LWl-0" />
+        <mxCell id="3gF-1DebG7RPl5TN7LWl-1" parent="3gF-1DebG7RPl5TN7LWl-0" />
+        <mxCell id="oEejzkpFx1I7aXAH6QdW-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=2;fontFamily=Georgia;fontSize=18;fontColor=#FFFFFF;" edge="1" parent="3gF-1DebG7RPl5TN7LWl-1" source="C6c-eHWT7ZRGTu4dc1uL-0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C6c-eHWT7ZRGTu4dc1uL-0" value="Motion Planning Processor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EA4335;strokeWidth=2;fontColor=#FFFFFF;fontSize=24;fontStyle=0;fontFamily=Georgia;" vertex="1" parent="3gF-1DebG7RPl5TN7LWl-1">
+          <mxGeometry x="320" y="200" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="xUrHE4w4xV-HmPgLB5Sh-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Georgia;fontSize=18;fontColor=#FFFFFF;strokeWidth=2;" edge="1" parent="3gF-1DebG7RPl5TN7LWl-1" source="xUrHE4w4xV-HmPgLB5Sh-0" target="C6c-eHWT7ZRGTu4dc1uL-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xUrHE4w4xV-HmPgLB5Sh-0" value="Motion Planning Software" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#34A853;fontFamily=Georgia;fontSize=18;fontColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="3gF-1DebG7RPl5TN7LWl-1">
+          <mxGeometry x="340" y="110" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="oEejzkpFx1I7aXAH6QdW-1" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/innovation-technology-1/512/tech_0011-128.png;rounded=0;shadow=0;glass=0;strokeColor=#4285F4;strokeWidth=4;fillColor=#4285F4;fontFamily=Computer Modern;fontColor=#FFFFFF;" vertex="1" parent="3gF-1DebG7RPl5TN7LWl-1">
+          <mxGeometry x="358" y="370" width="124" height="124" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
