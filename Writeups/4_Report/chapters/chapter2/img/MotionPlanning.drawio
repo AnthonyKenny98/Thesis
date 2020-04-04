@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-04-04T00:07:55.980Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="4lPcYEg99ASH5utrSgeN" version="12.9.5" type="github" pages="2">
+<mxfile host="www.draw.io" modified="2020-04-04T00:08:45.890Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="-pUZsHfuZ1Pz293MNapB" version="12.9.5" type="github" pages="2">
   <diagram id="nvIcJrDGoMgyBf4AQdr5" name="3DPointConfiguration">
     <mxGraphModel dx="1765" dy="975" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
       <root>
@@ -130,7 +130,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="3D Cube Configuration" id="qvFkaabtAtWG2TR0Nzbx">
+  <diagram name="3DCubeConfiguration" id="qvFkaabtAtWG2TR0Nzbx">
     <mxGraphModel dx="1177" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
       <root>
         <mxCell id="wTvtxUom0htXqcZkhXqR-0" />
