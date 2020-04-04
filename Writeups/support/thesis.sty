@@ -1,21 +1,22 @@
-%
-%% This program can be redistributed and/or modified under the terms
-%% of the LaTeX Project Public License Distributed from CTAN archives
-%% in directory macros/latex/base/lppl.txt.
-% 
+% SETUP
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{../support/thesis}
   [2011/01/11 v0.01 LaTeX package for my own purpose]
 
-% For Algorithms
-\usepackage[ruled,algochapter]{algorithm2e}
+% Setup Document Geometry
+\usepackage{geometry}
+    % a4paper, a5paper, letterpaper
+    \geometry{letterpaper}
+    % Activate for landscape geometry
+    %\geometry{landscape}
 
-\usepackage{geometry}                       % See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
-%\geometry{landscape}                       % Activate for rotated page geometry
-% \usepackage[parfill]{parskip}          % Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}               % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-                                % TeX will automatically convert eps --> pdf in pdflatex        
+% Activate to begin paragraphs with an empty line rather than an indent
+% \usepackage[parfill]{parskip}
+
+% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage{graphicx}
+
+% Math Related Packages
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{array}
@@ -32,24 +33,10 @@
     urlcolor=blue,
 }
 
-% For Managing Algorithms
-\usepackage[printonlyused]{acronym}
-
-% Table of Contents
-\usepackage[toc,page]{appendix}
-\usepackage[nottoc]{tocbibind}
-
+% Ability to script in things for draft mode
 \usepackage{ifdraft}
-% \ifdraft{
-    \usepackage[
-    	colorinlistoftodos,
-        prependcaption,
-        backgroundcolor=white,
-        bordercolor=red,
-        linecolor=red]{todonotes}
-% }{
-%     \usepackage[disable]{todonotes}
-% }
+
+% Setup Draft Options
 \ifoptiondraft{%
     \usepackage{draftwatermark}
     \SetWatermarkText{DRAFT}
@@ -59,13 +46,26 @@
     % nothing to be done here
 }
 
-\makeatletter
+% ToDo Package (only activate if draft)
+% \ifdraft{
+    \usepackage[
+    	colorinlistoftodos,
+        prependcaption,
+        backgroundcolor=white,
+        bordercolor=red,
+        linecolor=red]{todonotes}
+% }{
+    % \usepackage[disable]{todonotes}
+% }
 
-% Allows me to only include some things in draft mode
-% \def\ifdraft{\textcolor{red}{
-%     \ifdim\overfullrule>\z@
-%     \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi
-% }}
+% Make @ a letter - must wrap following commands
+\makeatletter
+% Table of Contents
+\usepackage[toc,page]{appendix}
+\usepackage[nottoc]{tocbibind}
+
+% For Managing Algorithms
+\usepackage[ruled,algochapter]{algorithm2e}
 
 % Makes List of Algorithms command a section not a chapter
 \renewcommand\listofalgorithms{%
@@ -94,9 +94,12 @@
         {\MakeUppercase\listfigurename}%
     \@starttoc{lof}%
 }
-\usepackage{subcaption}
-
 \makeatother
+
+% Acronyms [TO BE REMOVED]
+\usepackage[printonlyused]{acronym}
+
+\usepackage{subcaption}
 
 % Header and Footer
 \usepackage{fancyhdr}
@@ -111,9 +114,57 @@
 \usepackage{rotating}
 
 
+% Glossaries
+\usepackage[acronym,section,toc,nonumberlist]{glossaries}
+% \renewcommand{\glstextformat}[1]{\textit{#1}}
 
+\newcommand{\definenewglossaryterm}[4]{
+    % #1: Identifier and Acronym e.g. API
+    % #2: Long e.g. Application Programming Interface
+    % #3: Definition. e.g. A particular set of rules and specifications...
+
+    % If no Definition, just make acronym with no reference to glossary
+    \ifx&#3&
+    \newglossaryentry{#1}{
+        type=\acronymtype,
+        name={#1},
+        description={#2},
+        first={#2 (#1)},
+        firstplural={\glsentrylong{#1}\glspluralsuffix (\glsentryname{#1}\glspluralsuffix)},
+        plural={\glsentryname{#1}\glspluralsuffix}
+    }
+    \else
+        % Else if no Abbreviation, just make glossary term
+        \ifx&#1&
+        \newglossaryentry{#2}{
+            text={#2},
+            name={\Glsentrytext{#2}:},
+            description={#3}
+        }
+        % Else add to acronyms and link to glossary
+        \else
+        \newglossaryentry{#1_g}{
+            text={#1},
+            long={#2},
+            name={\glsentrylong{#1_g} (\glsentrytext{#1}):},
+            description={#3}
+        }
+        \newglossaryentry{#1}{
+            type=\acronymtype,
+            name={#1},
+            description={#2},
+            first={#2 (#1)\glsadd{#1_g}}, see=[Glossary:]{#1_g},
+            firstplural={\glsentrylong{#1}\glspluralsuffix (\glsentryname{#1}\glspluralsuffix)},
+            plural={\glsentryname{#1}\glspluralsuffix}
+        }
+        \fi
+    \fi   
+}
+\makeglossaries
+
+
+% Define where bib and acro doc can be found
 \newcommand\bibliographyName{../support/thesis}
-\newcommand\acronymsName{../support/acronyms}
 
 \endinput
 %%

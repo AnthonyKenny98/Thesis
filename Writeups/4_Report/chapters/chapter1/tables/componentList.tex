@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 12:32:47
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-03-01 13:59:51
+% @Last Modified time: 2020-04-03 13:33:55
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{|p{.2\linewidth}|p{.2\linewidth}|p{.5\linewidth}|}
@@ -10,17 +10,17 @@
     \hline
     \multicolumn{3}{|c|}{RISC-V Instruction Set} \\
     \hline
-    \ac{RV32I}              & Berkeley & 40 Instructions defined such that \ac{RV32I} is sufficient to form a compiler target and suport modern operating systems \cite{Waterman2019}. \\
+    \gls{RV32I}              & Berkeley & 40 Instructions defined such that \gls{RV32I} is sufficient to form a compiler target and suport modern operating systems \cite{Waterman2019}. \\
     \hline
     Extension        & \textit{New} & This is the custom extension defined by this thesis targeting motion planning instructions. It is outlined in Chapter \ref{chap:RiscvProcessor}. \\
     \hline
     \multicolumn{3}{|c|}{C-Implementation of RRT} \\
     \hline
-    RRT        & \textit{New} & Due to lack of available implementations of \ac{RRT} suitable for the purposes of this thesis, \ac{RRT} was implemented from the ground up in C. This is detailed in Chapter \ref{chap:MotionPlanningInSoftware} \\
+    RRT        & \textit{New} & Due to lack of available implementations of \gls{RRT} suitable for the purposes of this thesis, \gls{RRT} was implemented from the ground up in C. This is detailed in Chapter \ref{chap:MotionPlanningInSoftware} \\
     \hline
     \multicolumn{3}{|c|}{FPGA Synthesized Chip} \\
     \hline
-    Zynq-7000        & Xilinx & The Zynq-7000 family of \ac{SoC}s are a low cost FPGA and \ac{ARM} combined unit. \\
+    Zynq-7000        & Xilinx & The Zynq-7000 family of \gls{SoC}s are a low cost FPGA and \gls{ARM} combined unit. \\
     \hline
     PhilosophyV     & \textit{New} & The processor built for this thesis to demonstrate how the RISC-V extension and hardware unit work together. This is detailed in Chapter \ref{chap:RiscvProcessor} \\
     \hline

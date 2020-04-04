@@ -32,6 +32,15 @@ V.~I. B. U.-l. Isa, A.~Waterman, Y.~Lee, D.~Patterson, K.~Asanovi, and B.~U.-l.
 A.~Waterman, K.~Asanovic, and {SiFive Inc}, ``{The RISC-V Instruction Set
   Manual},'' vol.~Volume I:, 2019.
 
+\bibitem{Shannon1950}
+C.~E. Shannon, ``{XXII. Programming a computer for playing chess},'' {\em The
+  London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science},
+  vol.~41, pp.~256--275, mar 1950.
+
+\bibitem{Campbell2002}
+M.~Campbell, A.~J. Hoane, and F.~H. Hsu, ``{Deep Blue},'' {\em Artificial
+  Intelligence}, vol.~134, pp.~57--83, jan 2002.
+
 \bibitem{LaValle1998}
 S.~M. LaValle, ``{Rapidly-Exploring Random Trees: A New Tool for Path
   Planning},'' {\em In}, vol.~129, pp.~98--11, 1998.

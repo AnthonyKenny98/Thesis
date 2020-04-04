@@ -1,18 +1,18 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 14:27:21
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-03-01 16:41:26
+% @Last Modified time: 2020-04-03 13:33:55
 
 \subsection{Proposed Solution}
-    This thesis proposes a non-standard RISC-V Instruction Set Extension, supported by a functional unit embedded in a \ac{FPGA} synthesizable processor design that more rapidly computes motion planning for autonomous \ac{UAV}s. It will use the \ac{RRT} algorithm as a benchmark for performance analysis. Profiling of \ac{RRT} described in chapter \ref{chap:MotionPlanningInSoftware} found that edge collision detection was the most performance limiting function of \ac{RRT}. As such, this thesis aims to design a RISC-V extension and specific circuitry that support the faster execution of edge collision detection.
+    This thesis proposes a non-standard RISC-V Instruction Set Extension, supported by a functional unit embedded in a \gls{FPGA} synthesizable processor design that more rapidly computes motion planning for autonomous \gls{UAV}s. It will use the \gls{RRT} algorithm as a benchmark for performance analysis. Profiling of \gls{RRT} described in chapter \ref{chap:MotionPlanningInSoftware} found that edge collision detection was the most performance limiting function of \gls{RRT}. As such, this thesis aims to design a RISC-V extension and specific circuitry that support the faster execution of edge collision detection.
 
     \subsubsection*{System Overview}
         Figure \ref{fig:systemDiagram} shows a high level overview of the system this thesis proposes.
         \input{chapters/chapter1/figures/systemDiagram.tex}
-        The \textbf{Extended RISC-V \ac{ISA}} is made up of the \ac{RV32I} Base Instruction Set and a \ifdraft{\color{red}\textbf{currently unnamed}\color{black}} non-standard extension that this thesis will define.
-        The \textbf{PhilosophyV Processor} is a RISC-V chip built in \ac{HDL} for this thesis. It implements both the \ac{RV32I} instruction set and the non-standard extension.
+        The \textbf{Extended RISC-V \gls{ISA}} is made up of the \gls{RV32I} Base Instruction Set and a \ifdraft{\color{red}\textbf{currently unnamed}\color{black}} non-standard extension that this thesis will define.
+        The \textbf{PhilosophyV Processor} is a RISC-V chip built in \gls{HDL} for this thesis. It implements both the \gls{RV32I} instruction set and the non-standard extension.
         The PhilosphyV Core includes, along with a baseline 5-stage processor implementation, the \textbf{HoneyBee} collision detection unit.
-        A \textbf{C Implementation of RRT} is loaded into the instruction memory of the PhilosophyV processor. This processor, synthesized on an \textbf{\ac{FPGA}}, is used as the main processor, co-processor, or accelerator on an \textbf{Autonomous \ac{UAV}}. Table \ref{table:componentList} outlines the components of this system and their descriptions.
+        A \textbf{C Implementation of RRT} is loaded into the instruction memory of the PhilosophyV processor. This processor, synthesized on an \textbf{\gls{FPGA}}, is used as the main processor, co-processor, or accelerator on an \textbf{Autonomous \gls{UAV}}. Table \ref{table:componentList} outlines the components of this system and their descriptions.
         \input{chapters/chapter1/tables/componentList}
 
 \subsection{Project Specifications}
@@ -23,9 +23,9 @@
 \label{subsection:project_structure}
     This report is structured to follow the timeline of this project, and is outlined below:
     \begin{enumerate}
-        \item A benchmark motion planning algorithm, \ac{RRT}, was selected and implemented in software. Once implemented, a variety of performance analysis methods were used to profile the computational hotspots of the algorithm. It was found that edge collision detection was the critical function limiting execution time. This process is detailed in Chapter 2.
+        \item A benchmark motion planning algorithm, \gls{RRT}, was selected and implemented in software. Once implemented, a variety of performance analysis methods were used to profile the computational hotspots of the algorithm. It was found that edge collision detection was the critical function limiting execution time. This process is detailed in Chapter 2.
         \item With edge collision detection having been identified as the critical function, the process of designing specialised hardware to execute this function began. The technical specifications, performance specifications, designs, build phases, measurement and analysis of this hardware unit is presented in Chapter 3.
-        \item With the aforementioned functional unit's performance verified in simulation, the next step was to implement this in a processor. First, a baseline processor was designed and built for this project to implement a base RISC-V instruction set. The performance of \ac{RRT} is again profiled on this baseline processor (as up until this point, it was profiled on x86 architecture). A non-standard extension to the RISC-V \ac{ISA} was then defined and support for this was implemented in the processor. Comparative performance analysis was then conducted. This process is described in detail in Chapter 4.
+        \item With the aforementioned functional unit's performance verified in simulation, the next step was to implement this in a processor. First, a baseline processor was designed and built for this project to implement a base RISC-V instruction set. The performance of \gls{RRT} is again profiled on this baseline processor (as up until this point, it was profiled on x86 architecture). A non-standard extension to the RISC-V \gls{ISA} was then defined and support for this was implemented in the processor. Comparative performance analysis was then conducted. This process is described in detail in Chapter 4.
         \item Chapter 5 is a discussion of results and future work.
     \end{enumerate}
 

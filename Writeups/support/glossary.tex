@@ -1,38 +1,70 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 10:40:00
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-03-01 10:58:23
+% @Last Modified time: 2020-04-03 15:14:01
 
-\newglossaryentry{a priori}{
-    name={a priori},
-    description={relating to or denoting reasoning or knowledge which proceeds from theoretical deduction rather than from observation or experience.}
-}
+\definenewglossaryterm{API}{Application Programming Interface}{A particular set of rules and specifications that a software program can follow to access and make use of the services and resources provided by another particular software program that implements that API}
 
-\newglossaryentry{automaton}{
-    name={automaton},
-    plural={automata},
-    description={a moving mechanical device made in imitation of a human being.}
-}
 
-\newgloassaryentry{real time}{
-    name={real time},
-    description={relating to a system in which input data is processed within milliseconds so that it is available virtually immediately as feedback, e.g., in a missile guidance or airline booking system.}
-}
+\definenewglossaryterm{ARM}{Advanced RISC Machine}{A family of Reduced Instruction Set Computing architectures for computer processors, configured for various environments.}
 
-\newgloassaryentry{tethered robots}{
-    name={tethered robots},
-    description={refers to those robots that have a cable connection for power, data, communication or control.}
-}
+\definenewglossaryterm{CDC}{Collision Detection Circuit}{}
 
-\newglossaryentry{configuration}
+\definenewglossaryterm{CISC}{Complex Instruction Set Computer}{A computer in which single instructions can execute several low-level operations (such as a load from memory, an arithmetic operation, and a memory store) or are capable of multi-step operations or addressing modes within single instructions.}
 
-\newglossaryentry{probabalistically complete}
+\definenewglossaryterm{CPI}{Cycles Per Instruction}{}
 
-\newglossaryentry{configuration space}
-% And all those other terms
+\definenewglossaryterm{FPGA}{Field Programmable Gate Array}{An integrated circuit designed to be configured by a designer after manufacturing – hence the term \"field-programmable\". Its behaviour is specified in software, using a \gls{HDL}}
 
-\newglossaryentry{x86-64}
+\definenewglossaryterm{CPU}{Central Processing Unit}{The component within a computer that executes instructions, by interpreting them and controlling their flow through arithmetic and logic units. It can be thought of as the \"brain\" of a computer.}
 
-\newglossaryentry{Hardware Acceleration}
+\definenewglossaryterm{GPU}{Graphics Processing Unit}{Similar to a \gls{CPU}, a high-powered circuit designed for highly parallelized computation of images for a display device. Their highly parallel nature mean they can be utilised for other, non-graphics related, computations.}
 
-\newglossaryentry{Edge Computing}
+\definenewglossaryterm{GUI}{Graphical User Interface}{}
+
+\definenewglossaryterm{HB-A}{HoneyBee-A}{}
+
+\definenewglossaryterm{HDL}{Hardware Description Language}{A computer language used for designing computer hardware. It is used to define the behaviour of modules, simulate their performance, and synthesize them on an \gls{FPGA}}
+
+\definenewglossaryterm{HLS}{High Level Synthesis}{An automated hardware design process that takes software written in high-level languages (often C, C++) that algorithmically defines a function, and converts that into \gls{HDL} that implements that function.}
+
+\definenewglossaryterm{ISA}{Instruction Set Architecture}{An abstrct model of a computer, that defines the instructions, registers, memory behaviour, and other attributes of a computer architecture. It can be thought of as the contract between software and hardware developers, as the ISA lists the instructions that software may be implemented in, and the instructions that a processor must support.}
+
+\definenewglossaryterm{OGM}{Occupancy Grid Map}{A method of representing a \gls{2D} or \gls{3D} space by dividing it into discrete \"grids\" and marking each whole grid as \"occupied\", even if only part of it is.}
+
+\definenewglossaryterm{PRM}{Probabalistic Road Map}{A motion planning algorithm that randomly samples free space, and then connects sampled configurations with nearby configurations to build a map.}
+
+\definenewglossaryterm{RISC}{Reduced Instruction Set Computer}{A computer architecture based on a small number of instructions executed in a small number of cycles.}
+
+\definenewglossaryterm{RRT}{Rapidly-exploring Random Tree}{an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space.}
+
+\definenewglossaryterm{RRT*}{Rapidly-exploring Random Tree Star}{A motion planning algorithm that builds on \gls{RRT} by computing lowest cost edges, resulting in straighter paths.}
+
+\definenewglossaryterm{RTOS}{Real-Time Operating Systems}{A type of operating system designed to operate on inputs as they come in, without buffer delays.}
+
+\definenewglossaryterm{RV32I}{RISC-V 32-Bit Integer}{One of the four base ISAs within RISC-V. While it implements integer values only in 32-bit representations, it contains the minimal number of instructions for a fully working computer processor.}
+
+\definenewglossaryterm{SoC}{System on Chip}{A chip that includes all required components of a working computer, including one or more CPUs, memory, I/O ports, etc.}
+
+\definenewglossaryterm{UAV}{Unmanned Aerial Vehicle}{An aircraft without a human pilot on board. It may be piloted remotely completely by a human pilot, autonomously pilot itself, or a mixture of the two.}
+
+\definenewglossaryterm{2D}{2-Dimensional}{}
+
+\definenewglossaryterm{3D}{3-Dimensional}{}
+
+\definenewglossaryterm{}{a priori}{relating to or denoting reasoning or knowledge which proceeds from theoretical deduction rather than from observation or experience.}
+
+\definenewglossaryterm{}{automata}{moving mechanical devices made in imitation of human beings}
+
+\definenewglossaryterm{}{real-time}{Describes a system in which input data is processed in such a time period such that it is available almost immediately. Systems such as missle guidance or collision avoidance in cars are an example of real-time systems}
+
+\definenewglossaryterm{}{tethered robot}{Refers to robots that are limited by a cable connection for power, data transfer, communication, or control.}
+
+\definenewglossaryterm{}{configuration}{A specification of a robots location, position, and setting in a space. For example, when a robot is represented by a single point in 3D space, its configuration is merely x, y, and z coordinates. But if a robot is represented as a 3D humanoid with a head, body, arms and legs, then its configuration would be its position in 3D space, its orientation in 3D, and the position of all its joints and limbs such that the space being taken up by the robot can be exactly determined. It is obvious then that as the physical complexity of a robot increases, so too does the complexity of representing it algorithmically.}
+
+\definenewglossaryterm{}{probabilistically complete}{Describes an algorithm with a likelihood of finding a solution that approaches one as its runtime approaches infinity.}
+
+\definenewglossaryterm{}{configuration space}{The space describing all possible configurations of a robot}
+
+\definenewglossaryterm{}{hardware acceleration}{The process of speeding up the execution of a function by implementing part or whole of that function specifically in hardware.}
+

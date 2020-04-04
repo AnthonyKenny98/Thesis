@@ -1,10 +1,10 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-03-01 13:08:41
+% @Last Modified time: 2020-04-03 14:30:35
 
 % INTRO
-\ac{RRT} is an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the problem. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones, the focus of this thesis.
+\gls{RRT} is an algorithm designed to efficiently search, and thus plan a path through, a high-complexity environment by randomly sampling points and building a tree. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the problem. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones, the focus of this thesis.
 
 % ALGORITHM
 \subsection{Algorithm}
@@ -12,14 +12,14 @@
     % BASIC RRT - BUILDING THE TREE
     \subsubsection*{Building the Tree}
 
-        Put simply, \ac{RRT} builds a tree (referred to as a graph) of possible configurations, connected by edges, for a robot of some physical description. It does so by randomly sampling the configuration space and adding configurations to the graph. From this graph, a path from the initial configuration to some goal configuration can be found, given a high enough number of iterations. As such, \ac{RRT} can be considered probabalistically complete.
-        The pseudo-code for \ac{RRT} can be seen in Algorithm \ref{algorithm:rrt}
+        Put simply, \gls{RRT} builds a tree (referred to as a graph) of possible \gls{configuration}s, connected by edges, for a robot of some physical description. It does so by randomly sampling the \gls{configuration} space and adding \gls{configuration}s to the graph. From this graph, a path from the initial \gls{configuration} to some goal \gls{configuration} can be found, given a high enough number of iterations. As such, \gls{RRT} can be considered \gls{probabilistically complete}.
+        The pseudo-code for \gls{RRT} can be seen in Algorithm \ref{algorithm:rrt}
         
         % RRT Algorithm
         \input{chapters/chapter2/algorithms/rrt_alg}
 
         % Explanation of Algorithm, referencing visual step by step figure
-        Algorithm \ref{algorithm:rrt} can be visually represented in Figure \ref{fig:rrt-step-by-step}. Consider a \ac{2D} robot operating in a \ac{2D} workspace. A Graph $G$ is initialized containing an initial configuration, $q_{init}$, with constraints on the number of nodes that the graph can hold, $K$, and the maximum distance between two nodes, $\Delta q$. This is shown in Sub-figure \ref{subfig:rrt-step-by-step-A}. A random configuration for the robot, $q_{rand}$ is generated (\ref{subfig:rrt-step-by-step-B}). The nearest existing configuration in $G$, $q_{near}$, is found. (In the first iteration, $q_{near} = q_{init}$, shown in Sub-figure \ref{subfig:rrt-step-by-step-C}). The distance between $q_{near}$ and $q_{rand}$ is calculated. If this distance is less than $\Delta q$, $q_{new} = q_{rand}$. If not, $q_{new}$ is selected, typically by moving by $\Delta q$ from $q_{near}$ towards $q_{rand}$ (\ref{subfig:rrt-step-by-step-C}). $q_{new}$ is then added to $G$. This is repeated for $K$ configurations.
+        Algorithm \ref{algorithm:rrt} can be visually represented in Figure \ref{fig:rrt-step-by-step}. Consider a \gls{2D} robot operating in a \gls{2D} workspace. A Graph $G$ is initialized containing an initial \gls{configuration}, $q_{init}$, with constraints on the number of nodes that the graph can hold, $K$, and the maximum distance between two nodes, $\Delta q$. This is shown in Sub-figure \ref{subfig:rrt-step-by-step-A}. A random \gls{configuration} for the robot, $q_{rand}$ is generated (\ref{subfig:rrt-step-by-step-B}). The nearest existing \gls{configuration} in $G$, $q_{near}$, is found. (In the first iteration, $q_{near} = q_{init}$, shown in Sub-figure \ref{subfig:rrt-step-by-step-C}). The distance between $q_{near}$ and $q_{rand}$ is calculated. If this distance is less than $\Delta q$, $q_{new} = q_{rand}$. If not, $q_{new}$ is selected, typically by moving by $\Delta q$ from $q_{near}$ towards $q_{rand}$ (\ref{subfig:rrt-step-by-step-C}). $q_{new}$ is then added to $G$. This is repeated for $K$ \gls{configuration}s.
 
         % Step By Step RRT Figure
         \input{chapters/chapter2/figures/rrt-step-by-step}
@@ -27,24 +27,24 @@
     % COLLISION DETECTION
     \subsubsection{Collision Detection}
 
-        Algorithm \ref{algorithm:rrt} shows how \ac{RRT} builds a graph of possible configurations connected by edges in a free configuration space. However, in real-world applications, a robot's configuration space often contains obstacles. As such, collision detection must be included in the algorithm. The two types of collisions the algorithm must check for are \textit{configuration collisions} (those where the robot would collide with an obstacle in a given configuration) and \textit{edge collisions} (where the robot would collide when moving between two collision free configurations).
+        Algorithm \ref{algorithm:rrt} shows how \gls{RRT} builds a graph of possible \gls{configuration}s connected by edges in a free \gls{configuration} space. However, in real-world applications, a robot's \gls{configuration} space often contains obstacles. As such, collision detection must be included in the algorithm. The two types of collisions the algorithm must check for are \textit{configuration collisions} (those where the robot would collide with an obstacle in a given \gls{configuration}) and \textit{edge collisions} (where the robot would collide when moving between two collision free \gls{configuration}s).
 
-        The RRT with configuration and edge collision detection can be seen in Algorithm \ref{algorithm:rrt_collision}. The method of implementing \ac{RRT} with collision detection to model a drone in 3D space is detailed in Section \ref{section:implementation}.
+        The RRT with \gls{configuration} and edge collision detection can be seen in Algorithm \ref{algorithm:rrt_collision}. The method of implementing \gls{RRT} with collision detection to model a drone in 3D space is detailed in Section \ref{section:implementation}.
 
         \input{chapters/chapter2/algorithms/rrt_alg_collision}
 
 \newpage
 \subsection{Implementation}\label{section:implementation}
     
-    With \ac{RRT} selected as the benchmark algorithm against which to test specialised hardware, this project required an implementation of the algorithm that satisfied the following criteria.\todo{Better RRT Implementation introductory sentence}
+    With \gls{RRT} selected as the benchmark algorithm against which to test specialised hardware, this project required an implementation of the algorithm that satisfied the following criteria.\todo{Better RRT Implementation introductory sentence}
 
     \input{chapters/chapter2/tables/rrt_tech_specs}
 
-    The original intention was to find an existing implementation of RRT that could fulfill these requirements. Most open source implementations found online were in Python, and all those implemented in C were unsuitable\cite{RoboJackets2019}\cite{Planning2019}\cite{Sourishg2017}\cite{Vss2sn2019}, as they had extraneous \ac{GUI}s, reliance on external \ac{API}s, and other features that would distort analysis of algorithmic hot-spots.
+    The original intention was to find an existing implementation of RRT that could fulfill these requirements. Most open source implementations found online were in Python, and all those implemented in C were unsuitable\cite{RoboJackets2019}\cite{Planning2019}\cite{Sourishg2017}\cite{Vss2sn2019}, as they had extraneous \gls{GUI}s, reliance on external \gls{API}s, and other features that would distort analysis of algorithmic hot-spots.
 
-    As a result, it was necessary to build a C implementation of RRT from the ground up that satisfied the requirements in Table \ref{table:RRT_Tech_Specs}. It can be found in this project's GitHub repository. It follows Algorithm \ref{algorithm:rrt} closely. For monitoring correctness, I build in an optional \ac{GUI} that shows the tree, starting node, and obstacles.
+    As a result, it was necessary to build a C implementation of RRT from the ground up that satisfied the requirements in Table \ref{table:RRT_Tech_Specs}. It can be found in this project's GitHub repository. It follows Algorithm \ref{algorithm:rrt} closely. For monitoring correctness, I build in an optional \gls{GUI} that shows the tree, starting node, and obstacles.
 
-    \subsubsection*{Modelling a \ac{UAV} for RRT}
+    \subsubsection*{Modelling a \gls{UAV} for RRT}
 
     \subsubsection{Implementation in 2D}
     The first step was to implement RRT with a 2-Dimensional workspace. \todo[inline]{More detail}

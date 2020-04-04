@@ -1,18 +1,15 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:42:12
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-03-01 14:01:59
+% @Last Modified time: 2020-04-04 10:28:05
 
-This thesis aims to design hardware that executes motion planning algorithms faster than those same algorithms can execute on generic hardware. Chatper 2 introduces motion planning and details the process of implementing and analysing \ac{RRT} to identify computational hot-spots in the algorithm and thus identify the biggest opportunities for hardware optimization. \\
-Section \ref{section:motion_planning_background} provides an introduction to Motion Planning Algorithms in general. Section \ref{section:rrt} outlines the \ac{RRT} algorithm, and describes the implementation of \ac{RRT} for this project. Finally, Section \ref{section:rrt_analysis} outlines a method for performance analysis of \ac{RRT} and the results of such analysis.
-\todo[inline]{Write a better introduction that more accurately defines sections and makes the POINT of this chapter clear.}
+The first objective of this thesis is to identify a typical motion planning algorithm, profile its execution, and determine computational bottlenecks.\todo{Update once I have properly defined goals and objectives}
+
+Chapter 2 provides an introduction to motion planning and details the process of implementing and analysing \glsfirst{RRT}, a commonly used motion planning algorithm, to identify computational hot-spots and thus identify the biggest opportunities for hardware optimization of the algorithm. \\
 
 \section{Background} 
 \label{section:motion_planning_background}
-    Motion Planning Algorithms refer to the set of algorithms that find possible sequences of valid configurations for a robot in a space.
-    \newline
-    \newline
-    \todo[inline,caption={Background on Motion Planning Algorithms.}]{Need more background here. Needs more of a mathematical foundation}
+    \input{chapters/chapter2/motion_planning}
 
 \newpage
 \section{Rapidly-Exploring Random Tree}
