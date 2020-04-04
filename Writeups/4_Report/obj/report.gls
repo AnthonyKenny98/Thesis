@@ -6,7 +6,7 @@
 \glossentry{automata}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{2}}}%
 \glossentry{configuration}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{v}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{vi}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{11\delimR 15}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{20\delimR 22}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{24}\delimN 
@@ -28,6 +28,8 @@
 		\setentrycounter[]{page}\glsnumberformat{6}}}%
 \glossentry{CPU_g}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{3}}}%
+\glossentry{DOF_g}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{12}}}%
 \glossentry{FPGA_g}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{4}}}%
 \glossentry{GPU_g}{\glossaryentrynumbers{\relax 
@@ -43,7 +45,7 @@
 \glossentry{PRM_g}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{5}}}%
 \glossentry{RISC_g}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{vi}}}%
+		\setentrycounter[]{page}\glsnumberformat{vii}}}%
 \glossentry{RRT_g}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{i}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{3}\delimN 

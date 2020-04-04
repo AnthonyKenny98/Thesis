@@ -1,7 +1,7 @@
 \glossaryentry{\glsentrylong {RRT_g} (\glsentrytext {RRT}):?\glossentry{RRT_g}|setentrycounter[]{page}\glsnumberformat}{i}
 \glossaryentry{\glsentrylong {ISA_g} (\glsentrytext {ISA}):?\glossentry{ISA_g}|setentrycounter[]{page}\glsnumberformat}{i}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{v}
-\glossaryentry{\glsentrylong {RISC_g} (\glsentrytext {RISC}):?\glossentry{RISC_g}|setentrycounter[]{page}\glsnumberformat}{vi}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{vi}
+\glossaryentry{\glsentrylong {RISC_g} (\glsentrytext {RISC}):?\glossentry{RISC_g}|setentrycounter[]{page}\glsnumberformat}{vii}
 \glossaryentry{\glsentrylong {UAV_g} (\glsentrytext {UAV}):?\glossentry{UAV_g}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{\Glsentrytext {automata}:?\glossentry{automata}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{\Glsentrytext {a priori}:?\glossentry{a priori}|setentrycounter[]{page}\glsnumberformat}{2}
@@ -23,6 +23,7 @@
 \glossaryentry{\glsentrylong {ARM_g} (\glsentrytext {ARM}):?\glossentry{ARM_g}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{\glsentrylong {RRT_g} (\glsentrytext {RRT}):?\glossentry{RRT_g}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{\glsentrylong {DOF_g} (\glsentrytext {DOF}):?\glossentry{DOF_g}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{13}

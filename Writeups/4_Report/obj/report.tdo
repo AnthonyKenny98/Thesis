@@ -8,34 +8,34 @@
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Project Specifications}{9}{section*.29}
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Summary of Results}{10}{section*.30}
 \contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Update once I have properly defined goals and objectives}{11}{section*.31}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Better RRT Implementation introductory sentence}{16}{section*.37}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Change this based on whether time does permit}{16}{section*.39}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve this table}{16}{section*.40}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More detail}{17}{section*.43}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Describe implementation in 3D}{18}{section*.46}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Brief introduction outlining purpose of performance analysis}{19}{section*.48}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Outline of method of analysis. Something better than the above}{19}{section*.49}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Rewrite the above}{19}{section*.51}
-\contentsline {todo}{Figure: Screenshot of VTune Top Down Analysis (Maybe)}{19}{figure.caption.52}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Provide or link to appendix of explanation of internal timing}{20}{section*.54}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Explanation of time complexity}{20}{section*.58}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Change Y axis to \% and increase text size}{23}{section*.61}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Add simulations to determine correct K}{23}{section*.63}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Edge Collision Function Description}{25}{section*.65}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Technical Specifications}{26}{section*.67}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Performance Specifications Functional Unit}{26}{section*.68}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More Iterations of HoneyBee Design}{27}{section*.69}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make my own version of this figure}{27}{section*.72}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Introduction to Hardware Description Languages}{28}{section*.74}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Turn this into a table or get image from vivado}{29}{section*.78}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make version of this chart in matplotlib for consistency and update axis}{31}{section*.83}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Expand Discussion of HoneyBee-A Results}{31}{section*.84}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Motion Planning Extension}{34}{section*.90}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Description of Baseline Philosophy V core}{34}{section*.91}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Display bigger version of processor.}{34}{section*.92}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Process of implementing honeybee into PhilV.}{34}{section*.94}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Comparative Performance Analysis of baseline and extended PhilV Core}{36}{section*.95}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Discussion of Results}{37}{section*.96}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Evaluation of Success}{37}{section*.97}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Future Work}{37}{section*.98}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Budget}{45}{section*.108}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Better RRT Implementation introductory sentence}{16}{section*.38}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Change this based on whether time does permit}{16}{section*.40}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve this table}{16}{section*.41}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More detail}{17}{section*.44}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Describe implementation in 3D}{18}{section*.47}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Brief introduction outlining purpose of performance analysis}{19}{section*.49}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Outline of method of analysis. Something better than the above}{19}{section*.50}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Rewrite the above}{19}{section*.52}
+\contentsline {todo}{Figure: Screenshot of VTune Top Down Analysis (Maybe)}{19}{figure.caption.53}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Provide or link to appendix of explanation of internal timing}{20}{section*.55}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Explanation of time complexity}{20}{section*.59}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Change Y axis to \% and increase text size}{23}{section*.62}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Add simulations to determine correct K}{23}{section*.64}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Edge Collision Function Description}{25}{section*.66}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Technical Specifications}{26}{section*.68}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Performance Specifications Functional Unit}{26}{section*.69}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More Iterations of HoneyBee Design}{27}{section*.70}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make my own version of this figure}{27}{section*.73}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Introduction to Hardware Description Languages}{28}{section*.75}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Turn this into a table or get image from vivado}{29}{section*.79}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make version of this chart in matplotlib for consistency and update axis}{31}{section*.84}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Expand Discussion of HoneyBee-A Results}{31}{section*.85}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Motion Planning Extension}{34}{section*.91}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Description of Baseline Philosophy V core}{34}{section*.92}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Display bigger version of processor.}{34}{section*.93}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Process of implementing honeybee into PhilV.}{34}{section*.95}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Comparative Performance Analysis of baseline and extended PhilV Core}{36}{section*.96}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Discussion of Results}{37}{section*.97}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Evaluation of Success}{37}{section*.98}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Future Work}{37}{section*.99}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Budget}{45}{section*.109}

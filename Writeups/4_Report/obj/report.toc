@@ -2,9 +2,9 @@
 \contentsline {section}{Abstract}{i}{section*.1}
 \contentsline {section}{Table of Contents}{ii}{section*.2}
 \contentsline {section}{List of Acronyms}{iv}{section*.4}
-\contentsline {section}{List of Algorithms}{v}{section*.6}
-\contentsline {section}{List of Figures}{vi}{section*.7}
-\contentsline {section}{List of Tables}{vii}{section*.8}
+\contentsline {section}{List of Algorithms}{vi}{section*.6}
+\contentsline {section}{List of Figures}{vii}{section*.7}
+\contentsline {section}{List of Tables}{viii}{section*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem Summary}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Background}{1}{subsection.1.1.1}
@@ -19,13 +19,14 @@
 \contentsline {chapter}{\numberline {2}Motion Planning in Software}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}Background}{11}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Key Concepts}{12}{subsection.2.1.1}
-\contentsline {subsubsection}{Configuration}{12}{section*.32}
+\contentsline {subsubsection}{Workspace}{12}{section*.32}
+\contentsline {subsubsection}{Configuration \& Configuration Space}{12}{section*.33}
 \contentsline {section}{\numberline {2.2}Rapidly-Exploring Random Tree}{13}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Algorithm}{13}{subsection.2.2.1}
-\contentsline {subsubsection}{Collision Detection}{15}{section*.36}
+\contentsline {subsubsection}{Collision Detection}{15}{section*.37}
 \contentsline {subsection}{\numberline {2.2.2}Implementation}{16}{subsection.2.2.2}
-\contentsline {subsubsection}{Implementation in 2D}{17}{section*.42}
-\contentsline {subsubsection}{Implementation in 3D}{18}{section*.45}
+\contentsline {subsubsection}{Implementation in 2D}{17}{section*.43}
+\contentsline {subsubsection}{Implementation in 3D}{18}{section*.46}
 \contentsline {section}{\numberline {2.3}Performance Analysis}{19}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Methodology}{19}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Results}{20}{subsection.2.3.2}
@@ -44,7 +45,7 @@
 \contentsline {subsection}{\numberline {4.1.2}RISC Processor Design}{32}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}RISC-V ISA}{32}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}RV32I}{32}{subsection.4.2.1}
-\contentsline {subsubsection}{Instruction Formats}{33}{section*.88}
+\contentsline {subsubsection}{Instruction Formats}{33}{section*.89}
 \contentsline {subsection}{\numberline {4.2.2}Motion Planning Extension}{34}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}PhilosophyV}{34}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Baseline Implementation}{34}{subsection.4.3.1}
@@ -54,9 +55,9 @@
 \contentsline {section}{\numberline {5.1}Discussion of Results}{37}{section.5.1}
 \contentsline {section}{\numberline {5.2}Evaluation of Success}{37}{section.5.2}
 \contentsline {section}{\numberline {5.3}Future Work}{37}{section.5.3}
-\contentsline {chapter}{Bibliography}{38}{chapter*.99}
-\contentsline {chapter}{Glossary}{40}{section*.100}
-\contentsline {chapter}{Appendices}{43}{section*.102}
+\contentsline {chapter}{Bibliography}{38}{chapter*.100}
+\contentsline {chapter}{Glossary}{40}{section*.101}
+\contentsline {chapter}{Appendices}{43}{section*.103}
 \contentsline {chapter}{\numberline {A}Project Repository}{44}{Appendix.1.A}
 \contentsline {chapter}{\numberline {B}Budget}{45}{Appendix.1.B}
 \contentsline {chapter}{\numberline {C}RRT Supporting Documentation}{46}{Appendix.1.C}

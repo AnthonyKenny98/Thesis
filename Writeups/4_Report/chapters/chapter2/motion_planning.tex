@@ -1,15 +1,23 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-04 10:01:40
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-04 11:17:14
+% @Last Modified time: 2020-04-04 12:09:31
 
 A funny paradox in computer science is the fact that it is relatively easy to teach a computer to perform tasks that humans find very complicated, but extremely difficult to program one to execute functions that humans master during infancy. Consider, it was as early as 1949 that Claude Shannon presented his paper \textit{Programming a Computer for Playing Chess}\cite{Shannon1950}, and by 1997 the \textit{Deep Blue} computer defeated Garry Kasparov, reigning world champion, in a six game chess match.\cite{Campbell2002} Compare that with some of the most advanced autonomous humanoid robots to date displaying dexterity comparable with a toddler. The task of finding a collision free path, performed constantly without thought by a human, is an example of this paradigm. For a robot to compute a collision free path, it relies on a set of Motion Planning Algorithms.
 
 Motion Planning Algorithms refer to the set of algorithms that find possible sequences of valid \gls{configuration}s for a robot in a space. In plain English, they are algorithms that determine the movements a robot can make in a map, with the intent of eventually finding a path from one point to another. 
 
 \subsection{Key Concepts}
-
-    \subsubsection{Configuration}
+    \subsubsection{Workspace}
+    The workspace, also known as the map, is the space which the robot and obstacles occupy. 
+    
+    \subsubsection{Configuration \& Configuration Space}
+    A configuration describes the position, orientation, and pose of the robot. The complexity of a robot's configuration is therefore dependant on the dimension of the workspace, the complexity of the robot itself, and in what level of detail the robot must be represented. For example:
+    \begin{itemize}
+        \item Most simply, a robot can be represented as a point by the Cartesian coordinates $(x,y)$ \gls{2D} space and $(x,y,z)$ in \gls{3D} space.
+        \item More realistically, a robot such as a drone may be represented in \gls{3D} by an origin point $(x,y,z)$ and 3 Euler angles $(\alpha,\beta,\gamma)$ describing its orientation.
+        \item In a more complex form, a fixed base robot with $N$ \glsfirst{DOF} would require an $N$-dimensional configuration.
+    \end{itemize}
 
     \input{chapters/chapter2/figures/configuration.tex}
 

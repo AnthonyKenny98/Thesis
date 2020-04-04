@@ -4,21 +4,21 @@
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Typical Process of Adding Non-Standard Extension to RISC-V ISA\relax }}{7}{figure.caption.24}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces System Diagram of Overall Project\relax }}{8}{figure.caption.27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Configuration TODO\relax }}{12}{figure.caption.33}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Step by step demonstration of \gls {RRT} Algorithm for 2D robot in 2D space\relax }}{14}{figure.caption.35}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces 2D RRT Implementation shown by \gls {GUI}\relax }}{17}{figure.caption.44}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces 3D RRT Implementation shown by \gls {GUI}\relax }}{18}{figure.caption.47}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces VTune Amplifier TopDown Analysis Example\relax }}{19}{figure.caption.52}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces \gls {RRT} Functions as a \% of Total CPU Exectution Time\relax }}{21}{figure.caption.59}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces \gls {RRT} Functions as a \% of Total CPU Exectution Time (cont.)\relax }}{22}{figure.caption.60}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces \gls {RRT} Functions Exectution Time, with Bucket Optimization\relax }}{24}{figure.caption.64}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of 2 Robot Configurations in 3D Space for Motion Planning Purposes\relax }}{12}{figure.caption.34}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Step by step demonstration of \gls {RRT} Algorithm for 2D robot in 2D space\relax }}{14}{figure.caption.36}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces 2D RRT Implementation shown by \gls {GUI}\relax }}{17}{figure.caption.45}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces 3D RRT Implementation shown by \gls {GUI}\relax }}{18}{figure.caption.48}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces VTune Amplifier TopDown Analysis Example\relax }}{19}{figure.caption.53}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \gls {RRT} Functions as a \% of Total CPU Exectution Time\relax }}{21}{figure.caption.60}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \gls {RRT} Functions as a \% of Total CPU Exectution Time (cont.)\relax }}{22}{figure.caption.61}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces \gls {RRT} Functions Exectution Time, with Bucket Optimization\relax }}{24}{figure.caption.65}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Pipelining to Improve Latency\relax }}{27}{figure.caption.71}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Interface Summary of HoneyBee-A Synthesis in Vivado HLS\relax }}{29}{figure.caption.77}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces RRT Simulated Execution Time with HB-A (microseconds)\relax }}{31}{figure.caption.82}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Pipelining to Improve Latency\relax }}{27}{figure.caption.72}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Interface Summary of HoneyBee-A Synthesis in Vivado HLS\relax }}{29}{figure.caption.78}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces RRT Simulated Execution Time with HB-A (microseconds)\relax }}{31}{figure.caption.83}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 5-Stage \gls {RISC} Datapath\relax }}{32}{figure.caption.85}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Philosophy V Processor\relax }}{35}{figure.caption.93}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 5-Stage \gls {RISC} Datapath\relax }}{32}{figure.caption.86}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Philosophy V Processor\relax }}{35}{figure.caption.94}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
