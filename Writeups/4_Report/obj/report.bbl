@@ -63,7 +63,7 @@ Sourishg, ``rrt-simulator,'' 2017.
 
 \bibitem{Vss2sn2019}
 Vss2sn, ``{Path Planning},'' 2019.
-\newblock \\ \url{https://github.com/vss2sn/path{\_}planning}.
+\newblock \\ \url{https://github.com/vss2sn/path_planning}.
 
 \bibitem{Bialkowski2011}
 J.~Bialkowski, S.~Karaman, and E.~Frazzoli, ``{Massively parallelizing the RRT
@@ -72,5 +72,8 @@ J.~Bialkowski, S.~Karaman, and E.~Frazzoli, ``{Massively parallelizing the RRT
 
 \bibitem{Thingbits}
 Thingbits, ``{LynxMotionHQuad500 Drone}.''
+
+\bibitem{Olzhas2017}
+Olzhas, ``{RRT Toolbox},'' 2017.
 
 \end{thebibliography}

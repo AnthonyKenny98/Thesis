@@ -58,7 +58,9 @@
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{17}
-\glossaryentry{\glsentrylong {API_g} (\glsentrytext {API}):?\glossentry{API_g}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{\glsentrylong {API_g} (\glsentrytext {API}):?\glossentry{API_g}|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{23}
@@ -72,3 +74,5 @@
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{29}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{29}
 \glossaryentry{\glsentrylong {HLS_g} (\glsentrytext {HLS}):?\glossentry{HLS_g}|setentrycounter[]{page}\glsnumberformat}{31}
+\glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{50}

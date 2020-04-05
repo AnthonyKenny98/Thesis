@@ -28,6 +28,8 @@
 \glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{vii}
 \glossaryentry{RISC?\glossentry{RISC}|setentrycounter[]{page}\glsnumberformat}{vii}
 \glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{viii}
+\glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{viii}
+\glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{viii}
 \glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{1}
@@ -108,7 +110,6 @@
 \glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{18}
-\glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{3D?\glossentry{3D}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{2D?\glossentry{2D}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{18}
@@ -120,8 +121,8 @@
 \glossaryentry{3D?\glossentry{3D}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{18}
-\glossaryentry{GUI?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{18}
-\glossaryentry{API?\glossentry{API}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{GUI?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{API?\glossentry{API}|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{GUI?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{GUI?\glossentry{GUI}|setentrycounter[]{page}\glsnumberformat}{20}
@@ -155,3 +156,17 @@
 \glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{49}
 \glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{49}
 \glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{49}
+\glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{3D?\glossentry{3D}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{2D?\glossentry{2D}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{3D?\glossentry{3D}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{3D?\glossentry{3D}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{UAV?\glossentry{UAV}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{3D?\glossentry{3D}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{RRT?\glossentry{RRT}|setentrycounter[]{page}\glsnumberformat}{51}

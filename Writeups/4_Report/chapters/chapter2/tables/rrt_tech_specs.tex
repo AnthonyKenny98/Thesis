@@ -1,24 +1,33 @@
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{|p{.3\linewidth}|p{.64\linewidth}|}
+\begin{tabular}{|p{.2\linewidth}|p{.74\linewidth}|}
     \hline
-    Requirement             & Description and Justification \\
+    Requirement             & Brief Description and Justification \\
     \hline
-    C/C++ Implementation    & 
-        As outlined in Section \ref{subsection:project_structure}, the critical step in determining the design of specialized hardware to accelerate \gls{RRT} is CPU performance analysis of the algorithm to determine computational hot-spots. Implementations in C allow for the use of certain CPU profiling tools, described in Section \ref{subsubsection:vtune}, unlike higher-level languages such as Python. \\
+    Implemented in C/C++    & 
+        Implementations in C allow for more accurate analysis of computational bottlenecks, unlike higher-level languages like Python. \\
     \hline
     3D Workspace            & 
-        The computational requirements of \gls{RRT} in \gls{3D} differs somewhat to that in \gls{2D}. Since autonomous \glspl{UAV} operate in 3D space, it was neccesary to have a \gls{3D} implementation to analyse. \\
+        The computational requirements of \gls{RRT} in \gls{3D} differ somewhat to that in \gls{2D}. Since autonomous \glspl{UAV} operate in 3D space, it was neccesary to have a \gls{3D} implementation to analyse. \\
     \hline
-    \Gls{UAV} modelled in \gls{3D} as a rectangular prism  & 
-        In theory, it is possible to model a \gls{UAV} much more precisely than a rectangular prism, taking into account its shape and negative space. However, in reality, modelling a \gls{UAV} as a \gls{3D} rectangular prism, defined by coordinates $\{x, y, z\}$ and Euler angles $\{\alpha, \beta, \gamma \}$, is more than sufficient (and more efficient). See Appendix \ref{section:rrt_appendix_modelling} for justification of this. \\
+    \Gls{UAV} modelled as a \gls{3D} rectangular prism  & 
+        In theory, it is possible to model a \gls{UAV} much more precisely than a rectangular prism. However, in reality, modelling a \gls{UAV} as a \gls{3D} rectangular prism, defined by coordinates $\{x, y, z\}$ and Euler angles $\{\alpha, \beta, \gamma \}$, is more than sufficient (and more computationally efficient). See Appendix \ref{section:rrt_appendix_modelling} for justification. \\
     \hline
-    Mirrors Algorithm       & 
-        In order for the results of CPU performance analysis to be easy to understand, software implementation of \gls{RRT} should call functions that mirror the functions described in Algorithms \ref{algorithm:rrt} and \ref{algorithm:rrt_collision}. \\
+    Mathematically Complete Collision Detection & 
+        When \gls{RRT} is implemented for educational purposes, the edge collision calulations are often simplified to a sampling model which is \gls{probabilistically complete} but not \gls{mathematically complete}. In other words, it will catch most collisions by sampling a number of points along each edge, but there is always a possibility of an undetected collision. In real world applications, collisions must be calculated by method of geometric intersection to ensure all collisions are detected. \\
+    \hline
+    Highly Parameterizable      & 
+        Accurate analysis of the algorithm required the ability to vary the following parameters: 
+        \begin{itemize}
+        \item $\epsilon$ (Maximum distance between two configurations)
+        \item $K$ (Maximum number of configurations)
+        \item $DIM$ (The upper bound of each dimension for a $DIM\times DIM\times DIM$ workspace)
+        \item Goal Bias (How biased RRT is to move towards goal point)
+        \end{itemize} \\
     \hline
 \end{tabular}
-\caption{Technical Specifications for \gls{RRT} Implementation}
-\label{table:RRT_Tech_Specs}
+\caption{Abbreviated Technical Specifications for \gls{RRT} Implementation}
+\label{table:RRT_Tech_Specs_Abbrev}
 \end{center}
 \end{table}
 \todo[inline]{Improve this table}

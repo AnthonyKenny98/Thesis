@@ -1,15 +1,40 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-05 13:32:41
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 13:46:28
+% @Last Modified time: 2020-04-05 16:38:17
 
 \begin{table}[H]
 \begin{centering}
-\begin{tabular}{|p{0.2\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|}
+\begin{tabular}{|p{0.2\linewidth}|p{0.1\linewidth}|p{0.08\linewidth}|p{0.08\linewidth}|p{0.11\linewidth}|p{0.04\linewidth}|p{0.04\linewidth}|p{0.05\linewidth}|p{0.05\linewidth}|}
 \hline
-Repository  & Language  &  Workspace Dimension  & Object Model & Algorithmic Correctness \\
+    & \multicolumn{4}{c|}{\textbf{General Requirements}} & \multicolumn{4}{c|}{\textbf{Parameters}} \\
 \hline
-RoboJackets\cite{RoboJackets2019}   & \textcolor{mygreen}{C++}    &       &       & \\
+Repository  & Language  &  2D/3D  & Object Model & Collision Detect& $\epsilon$ &  $K$ &  $DIM$ & Goal Bias \\
+\hline
+RoboJackets\cite{RoboJackets2019}  & 
+    \textcolor{mygreen}{C++}    &  \textcolor{myred}{2D}    & \textcolor{myred}{Point} & \textcolor{mygreen}{Complete}&
+    \textcolor{mygreen}{Yes} & \textcolor{mygreen}{Yes}  & \textcolor{mygreen}{Yes} & \textcolor{myred}{No}
+    \\
+\hline
+Motion-Planning\cite{Planning2019} &
+    \textcolor{myred}{Python}    &  \textcolor{mygreen}{ND}    & \textcolor{myred}{Point} & \textcolor{myred}{Incomplete} &
+    \textcolor{mygreen}{Yes} & \textcolor{mygreen}{Yes}  & \textcolor{myred}{No} & \textcolor{mygreen}{Yes}
+    \\
+\hline
+Sourishg\cite{Sourishg2017} &
+    \textcolor{mygreen}{C++}    &  \textcolor{myred}{2D}    & \textcolor{myred}{Point} & \textcolor{myred}{Incomplete} &
+    \textcolor{mygreen}{Yes} & \textcolor{mygreen}{Yes}  & \textcolor{myred}{No} & \textcolor{myred}{No}
+    \\
+\hline
+Vss2sn\cite{Vss2sn2019} &
+    \textcolor{mygreen}{C++}    &  \textcolor{myred}{2D}    & \textcolor{myred}{Point} & \textcolor{mygreen}{Complete} &
+    \textcolor{mygreen}{Yes} & \textcolor{mygreen}{Yes}  & \textcolor{myred}{No} & \textcolor{myred}{No}
+    \\
+\hline
+olzhas\cite{Olzhas2017} &
+    \textcolor{myred}{Matlab}    &  \textcolor{myred}{2D}    & \textcolor{myred}{Point} & \textcolor{mygreen}{Complete} &
+    \textcolor{mygreen}{Yes} & \textcolor{mygreen}{Yes}  & \textcolor{myred}{No} & \textcolor{myred}{No}
+    \\
 \hline
 \end{tabular}
 \caption[Evaluation of Existing Open-Source Implementations of RRT]{Evaluation of Existing Open-Source Implementations of RRT. Links to Github repositories can be found in the Bibliography.}

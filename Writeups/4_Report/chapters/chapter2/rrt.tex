@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 13:31:53
+% @Last Modified time: 2020-04-05 14:07:35
 
 % INTRO
 \glsfirst{RRT} is an algorithm designed to efficiently build a tree of collision-free paths in a high-complexity environment. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the workspace. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones.
@@ -11,7 +11,7 @@
 
     % SCOPE OF ALGORITHM
     \subsubsection{Scope}
-        \gls{RRT} takes an \glsfirst{OGM} as its input. This \gls{OGM} may be built and updated using \gls{a priori} knowledge, sensor data from the robot, and other inputs. \gls{RRT} will output a tree of collision free paths toward the goal, as demonstrated in Figure \ref{fig:rrt_scope}. \textbf{It does not calculate the fastest path from that tree}; that can be accomplished using algorithms such as \Gls{dijkstra's algorithm}.
+        \gls{RRT} takes an initial configuration, a goal point, and an \glsfirst{OGM} as its input. This \gls{OGM} may be built and updated using \gls{a priori} knowledge, sensor data from the robot, and other inputs. \gls{RRT} will output a tree of collision free paths toward the goal, as demonstrated in Figure \ref{fig:rrt_scope}. \textbf{It does not calculate the fastest path from that tree}; that can be accomplished using algorithms such as \Gls{dijkstra's algorithm}.
 
         \input{chapters/chapter2/figures/rrt_scope}
 
@@ -51,7 +51,7 @@
     % TECHNICAL SPECIFICATIONS
     \subsubsection{Technical Specifications}
 
-        With \gls{RRT} selected as the benchmark algorithm against which to test specialised hardware, this project required an implementation of the algorithm that satisfied the following criteria.\todo{Better RRT Implementation introductory sentence}
+        With \gls{RRT} selected as the benchmark algorithm against which to test specialised hardware, this project required an implementation of the algorithm that satisfied the following criteria shown in Table \ref{table:RRT_Tech_Specs_Abbrev}. Appendix \ref{section:rrt_appendix_tech_specs} is a more thorough description of the technical specifications for the implementation of RRT. 
 
         % Tech Spec Table
         \input{chapters/chapter2/tables/rrt_tech_specs}
