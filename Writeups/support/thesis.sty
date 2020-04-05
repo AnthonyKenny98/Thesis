@@ -107,6 +107,10 @@
 
 % Color
 \usepackage{xcolor}
+\definecolor{myred}{HTML}{EA4335}
+\definecolor{mygreen}{HTML}{34A853}
+\definecolor{myyellow}{HTML}{FBBC05}
+\definecolor{myblue}{HTML}{4285F4}
 
 % Multirow in tables
 \usepackage{multirow}
@@ -154,8 +158,9 @@
             type=\acronymtype,
             name={#1},
             description={#2},
-            first={#2 (#1)\glsadd{#1_g}}, see=[Glossary:]{#1_g},
-            firstplural={\glsentrylong{#1}\glspluralsuffix (\glsentryname{#1}\glspluralsuffix)},
+            long={#2},
+            first={#2 (#1)\glsadd{#1_g}},see=[Glossary:]{#1_g},
+            firstplural={\glsentrylong{#1}\glspluralsuffix    (\glsentryname{#1}\glspluralsuffix)},
             plural={\glsentryname{#1}\glspluralsuffix}
         }
         \fi

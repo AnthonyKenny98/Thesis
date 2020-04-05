@@ -3,6 +3,12 @@
 \bibitem{Alexandrinus}
 H.~(Alexandrinus), {\em {De gli automati, overo machine se moventi, Volume 2}}.
 
+\bibitem{Isa2012}
+V.~I. B. U.-l. Isa, A.~Waterman, Y.~Lee, D.~Patterson, K.~Asanovi, and B.~U.-l.
+  Isa, ``{The RISC-V Instruction Set Manual v2.1},'' {\em 2012 IEEE
+  International Conference on Industrial Technology, ICIT 2012, Proceedings},
+  vol.~I, pp.~1--32, 2012.
+
 \bibitem{Atay2006}
 N.~Atay and B.~Bayazit, ``{A motion planning processor on reconfigurable
   hardware},'' in {\em Proceedings - IEEE International Conference on Robotics
@@ -21,12 +27,6 @@ G.~S. Malik, K.~Gupta, K.~M. Krishna, and S.~R. Chowdhury, ``{FPGA based
 \bibitem{Murrayb}
 S.~Murray, W.~Floyd-Jones, Y.~Qi, D.~Sorin, G.~Konidaris, and D.~Robotics,
   ``{Robot Motion Planning on a Chip},'' tech. rep.
-
-\bibitem{Isa2012}
-V.~I. B. U.-l. Isa, A.~Waterman, Y.~Lee, D.~Patterson, K.~Asanovi, and B.~U.-l.
-  Isa, ``{The RISC-V Instruction Set Manual v2.1},'' {\em 2012 IEEE
-  International Conference on Industrial Technology, ICIT 2012, Proceedings},
-  vol.~I, pp.~1--32, 2012.
 
 \bibitem{Waterman2019}
 A.~Waterman, K.~Asanovic, and {SiFive Inc}, ``{The RISC-V Instruction Set
@@ -69,5 +69,8 @@ Vss2sn, ``{Path Planning},'' 2019.
 J.~Bialkowski, S.~Karaman, and E.~Frazzoli, ``{Massively parallelizing the RRT
   and the RRT},'' in {\em IEEE International Conference on Intelligent Robots
   and Systems}, pp.~3513--3518, 2011.
+
+\bibitem{Thingbits}
+Thingbits, ``{LynxMotionHQuad500 Drone}.''
 
 \end{thebibliography}

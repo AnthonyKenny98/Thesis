@@ -1,0 +1,21 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-03-19 12:56:13
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-05 13:36:59
+
+\section{Justification of Modelling UAV as Prism}
+\label{section:rrt_appendix_modelling}
+    While it is possible for a \gls{UAV} to be modelled in precise detail, taking into account its exact shape, more often \glspl{UAV} are modelled as a 3D prism in motion planning problems, for the following reasons:
+    \begin{itemize}
+    \item It is a rare case that the negative space gained by modelling in such detail is utilised
+    \item Representation of drone's configuration is much more complex.
+    \item Computing edge collisions is much more computationally intensive.
+    \end{itemize}
+
+    \input{appendices/rrt/fig/modelling.tex}
+
+\section{Assessment of Existing RRT Implementations}
+\label{section:rrt_appendix_existing_implementations}
+    \input{appendices/rrt/tables/evaluations}
+
+\section{Justification of K:DIM Ratio}

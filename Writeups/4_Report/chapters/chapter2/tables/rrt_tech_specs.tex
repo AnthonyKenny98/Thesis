@@ -4,11 +4,17 @@
     \hline
     Requirement             & Description and Justification \\
     \hline
-    C/C++ Implementation    & As outlined in Section \ref{subsection:project_structure}, the critical step in determining the design of specialized hardware to accelerate \gls{RRT} is CPU performance analysis of the algorithm to determine computational hot-spots. Implementations in C allow for the use of certain CPU profiling tools, described in Section \ref{subsubsection:vtune}, unlike higher-level languages such as Python. \\
+    C/C++ Implementation    & 
+        As outlined in Section \ref{subsection:project_structure}, the critical step in determining the design of specialized hardware to accelerate \gls{RRT} is CPU performance analysis of the algorithm to determine computational hot-spots. Implementations in C allow for the use of certain CPU profiling tools, described in Section \ref{subsubsection:vtune}, unlike higher-level languages such as Python. \\
     \hline
-    Models Drone as Point   & In reality, implementing \gls{RRT} for a drone would model the robot as a \gls{3D} object defined by coordinates $\{x, y, z\}$ and Euler angles $\{\alpha, \beta, \gamma \}$. However, for simplicity's sake, modelling the drone as a point defined by coordinates $\{x, y, z\}$ will suffice. Time permitting, this could be revisited. \todo[inline]{Change this based on whether time does permit} \\
+    3D Workspace            & 
+        The computational requirements of \gls{RRT} in \gls{3D} differs somewhat to that in \gls{2D}. Since autonomous \glspl{UAV} operate in 3D space, it was neccesary to have a \gls{3D} implementation to analyse. \\
     \hline
-    Mirrors Algorithm       & In order for the results of CPU performance analysis to be easy to understand, software implementation of \gls{RRT} should call functions that mirror the functions described in Algorithms \ref{algorithm:rrt} and \ref{algorithm:rrt_collision}. \\
+    \Gls{UAV} modelled in \gls{3D} as a rectangular prism  & 
+        In theory, it is possible to model a \gls{UAV} much more precisely than a rectangular prism, taking into account its shape and negative space. However, in reality, modelling a \gls{UAV} as a \gls{3D} rectangular prism, defined by coordinates $\{x, y, z\}$ and Euler angles $\{\alpha, \beta, \gamma \}$, is more than sufficient (and more efficient). See Appendix \ref{section:rrt_appendix_modelling} for justification of this. \\
+    \hline
+    Mirrors Algorithm       & 
+        In order for the results of CPU performance analysis to be easy to understand, software implementation of \gls{RRT} should call functions that mirror the functions described in Algorithms \ref{algorithm:rrt} and \ref{algorithm:rrt_collision}. \\
     \hline
 \end{tabular}
 \caption{Technical Specifications for \gls{RRT} Implementation}

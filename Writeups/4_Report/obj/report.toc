@@ -1,0 +1,78 @@
+\contentsline {chapter}{Preface}{i}{Doc-Start}
+\contentsline {section}{Abstract}{i}{section*.1}
+\contentsline {section}{Table of Contents}{ii}{section*.2}
+\contentsline {section}{List of Acronyms}{iv}{section*.4}
+\contentsline {section}{List of Algorithms}{vi}{section*.6}
+\contentsline {section}{List of Figures}{vii}{section*.7}
+\contentsline {section}{List of Tables}{viii}{section*.8}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Problem Summary}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Background}{1}{subsection.1.1.1}
+\contentsline {subsubsection}{Autonomous Robotics}{2}{section*.11}
+\contentsline {subsubsection}{Motion Planning}{2}{section*.12}
+\contentsline {subsubsection}{Application Specific Processors}{2}{section*.14}
+\contentsline {subsubsection}{RISC-V}{3}{section*.16}
+\contentsline {subsection}{\numberline {1.1.2}Problem Definition}{4}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Prior Work}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Hardware Acceleration}{4}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}RISC-V}{6}{subsection.1.2.2}
+\contentsline {subsubsection}{Extending RISC-V}{6}{section*.24}
+\contentsline {subsubsection}{Accelerating RISC-V Processors}{7}{section*.26}
+\contentsline {section}{\numberline {1.3}Project Overview}{8}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Proposed Solution}{8}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Project Specifications}{9}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Project Structure}{9}{subsection.1.3.3}
+\contentsline {chapter}{\numberline {2}Motion Planning in Software}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Background}{11}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Key Concepts}{12}{subsection.2.1.1}
+\contentsline {subsubsection}{\Gls {workspace}}{12}{section*.33}
+\contentsline {subsubsection}{Configuration}{12}{section*.34}
+\contentsline {subsubsection}{Occupancy Grid Map}{13}{section*.36}
+\contentsline {subsection}{\numberline {2.1.2}Algorithms}{13}{subsection.2.1.2}
+\contentsline {subsubsection}{Scope}{13}{section*.38}
+\contentsline {section}{\numberline {2.2}Rapidly-Exploring Random Tree}{14}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Algorithm}{14}{subsection.2.2.1}
+\contentsline {subsubsection}{Scope}{14}{section*.41}
+\contentsline {subsubsection}{Building the Tree}{14}{section*.43}
+\contentsline {subsubsection}{Collision Detection}{17}{section*.47}
+\contentsline {subsection}{\numberline {2.2.2}Implementation}{18}{subsection.2.2.2}
+\contentsline {subsubsection}{Technical Specifications}{18}{section*.48}
+\contentsline {subsubsection}{Implementation in 2D}{19}{section*.53}
+\contentsline {subsubsection}{Implementation in 3D}{20}{section*.56}
+\contentsline {section}{\numberline {2.3}Performance Analysis}{22}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Methodology}{22}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Results}{23}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}Motion Planning in Hardware}{28}{chapter.3}
+\contentsline {section}{\numberline {3.1}Defining the Collision Detection Unit}{28}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Edge Collision Function}{28}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Technical Specifications}{28}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Performance Specifications}{29}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}HoneyBee}{30}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Design}{30}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Build}{31}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Measurement and Analysis}{32}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}RISC-V Processor}{35}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction to the Reduced Instruction Set Computer}{35}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Instruction Set Architecture}{35}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}RISC Processor Design}{35}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}RISC-V ISA}{35}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}RV32I}{35}{subsection.4.2.1}
+\contentsline {subsubsection}{Instruction Formats}{36}{section*.99}
+\contentsline {subsection}{\numberline {4.2.2}Motion Planning Extension}{37}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}PhilosophyV}{37}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Baseline Implementation}{37}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Implementing HoneyBee}{37}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Performance Analysis}{39}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{40}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion of Results}{40}{section.5.1}
+\contentsline {section}{\numberline {5.2}Evaluation of Success}{40}{section.5.2}
+\contentsline {section}{\numberline {5.3}Future Work}{40}{section.5.3}
+\contentsline {chapter}{Bibliography}{41}{chapter*.110}
+\contentsline {chapter}{Glossary}{43}{section*.111}
+\contentsline {chapter}{Appendices}{46}{section*.113}
+\contentsline {chapter}{\numberline {A}Project Repository}{47}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Budget}{48}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}RRT Supporting Documentation}{49}{Appendix.1.C}
+\contentsline {section}{\numberline {C.1}Justification of Modelling UAV as Prism}{49}{section.1.C.1}
+\contentsline {section}{\numberline {C.2}Assessment of Existing RRT Implementations}{50}{section.1.C.2}
+\contentsline {section}{\numberline {C.3}Justification of K:DIM Ratio}{50}{section.1.C.3}

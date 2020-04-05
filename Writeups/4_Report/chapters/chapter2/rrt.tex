@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-04 16:19:34
+% @Last Modified time: 2020-04-05 13:31:53
 
 % INTRO
 \glsfirst{RRT} is an algorithm designed to efficiently build a tree of collision-free paths in a high-complexity environment. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the workspace. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones.
@@ -9,11 +9,17 @@
 % ALGORITHM
 \subsection{Algorithm}
 
+    % SCOPE OF ALGORITHM
+    \subsubsection{Scope}
+        \gls{RRT} takes an \glsfirst{OGM} as its input. This \gls{OGM} may be built and updated using \gls{a priori} knowledge, sensor data from the robot, and other inputs. \gls{RRT} will output a tree of collision free paths toward the goal, as demonstrated in Figure \ref{fig:rrt_scope}. \textbf{It does not calculate the fastest path from that tree}; that can be accomplished using algorithms such as \Gls{dijkstra's algorithm}.
+
+        \input{chapters/chapter2/figures/rrt_scope}
+
     % BASIC RRT - BUILDING THE TREE
     \subsubsection{Building the Tree}
 
         Put simply, \gls{RRT} finds a path from start to finish by randomly exploring a workspace.
-        Put more technically, it builds a tree of possible \glspl{configuration} (also known as a graph), connected by edges, for a robot of some physical description. It does so by selecting random them to the graph. 
+        Put more technically, it builds a tree of possible \glspl{configuration} (also known as a graph), connected by edges, for a robot of some physical description. It does so by selecting random \glspl{configuration} and adding them to the graph. 
         From this graph, a path from the initial \gls{configuration} to some goal \gls{configuration} can be found, given a high enough number of iterations. As such, \gls{RRT} can be considered \gls{probabilistically complete}.
         The pseudo-code for \gls{RRT} can be seen in Algorithm \ref{algorithm:rrt}
         
@@ -26,6 +32,7 @@
 
         % Step By Step RRT Figure
         \input{chapters/chapter2/figures/rrt-step-by-step}
+        \todo{Redo this diagram}
 
     % COLLISION DETECTION
     \subsubsection{Collision Detection}
@@ -37,17 +44,21 @@
         \input{chapters/chapter2/algorithms/rrt_alg_collision}
 
 \newpage
+
+% IMPLEMENTATION OF RRT
 \subsection{Implementation}\label{section:implementation}
     
+    % TECHNICAL SPECIFICATIONS
     \subsubsection{Technical Specifications}
 
-    With \gls{RRT} selected as the benchmark algorithm against which to test specialised hardware, this project required an implementation of the algorithm that satisfied the following criteria.\todo{Better RRT Implementation introductory sentence}
+        With \gls{RRT} selected as the benchmark algorithm against which to test specialised hardware, this project required an implementation of the algorithm that satisfied the following criteria.\todo{Better RRT Implementation introductory sentence}
 
-    \input{chapters/chapter2/tables/rrt_tech_specs}
+        % Tech Spec Table
+        \input{chapters/chapter2/tables/rrt_tech_specs}
 
-    The original intention was to find an existing implementation of RRT that could fulfill these requirements. Most open source implementations found online were in Python, and all those implemented in C were unsuitable\cite{RoboJackets2019}\cite{Planning2019}\cite{Sourishg2017}\cite{Vss2sn2019}, as they had extraneous \gls{GUI}s, reliance on external \gls{API}s, and other features that would distort analysis of algorithmic hot-spots.
+        The original intention was to find an existing implementation of RRT that could fulfill these requirements. Most open source implementations found online were in Python, and all those implemented in C were unsuitable, as they had extraneous \gls{GUI}s, reliance on external \gls{API}s, and other features that would distort analysis of algorithmic hot-spots. Appendix \ref{section:rrt_appendix_existing_implementations} is shows an evaluation of existing implementations.\cite{RoboJackets2019}\cite{Planning2019}\cite{Sourishg2017}\cite{Vss2sn2019}.
 
-    As a result, it was necessary to build a C implementation of RRT from the ground up that satisfied the requirements in Table \ref{table:RRT_Tech_Specs}. It can be found in this project's GitHub repository. It follows Algorithm \ref{algorithm:rrt_collision} closely. For monitoring correctness, I build in an optional \gls{GUI} that shows the tree, starting node, and obstacles.
+        As a result, it was necessary to build a C implementation of RRT from the ground up that satisfied the requirements in Table \ref{table:RRT_Tech_Specs}. It can be found in this project's GitHub repository. It follows Algorithm \ref{algorithm:rrt_collision} closely. For monitoring correctness, I build in an optional \gls{GUI} that shows the tree, starting node, and obstacles.
 
     \subsubsection*{Modelling a \gls{UAV} for RRT}
 

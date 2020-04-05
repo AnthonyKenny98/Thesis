@@ -1,28 +1,41 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 12:45:54
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-03 15:38:29
+% @Last Modified time: 2020-04-05 08:04:35
 
 \subsection{Background}
     
     The \gls{UAV} has been utilised in military applications extensively throughout the late 20th and early 21st century. However, over the last decade, their use in non-military applications, such as commerical, scientific, agricultural, and recreational, has increased such that the number of civilian drones vastly outnumber military \gls{UAV}s. \todo{cite}Particularly in the commercial sector, such rapid growth in the number and range of applications means that autonomy is key for the profitable adoption of \gls{UAV}s. Such autonomy relies on efficient computation of motion planning algorithms. However, the implementation of these algorithms can be quite computationally expensive, and thus slow and/or detrimentally power consuming. As such, this thesis aims to design specialized hardware to more efficiently compute motion plans for autonomous drones.
 
-    \subsubsection*{Robotics}
+    \subsubsection{Autonomous Robotics}
         For well over 2000 years, the concept of robotics, albeit not always with such a term, has fascinated humans. As early as the first century A.D., the Greek mathematician and engineer, Heron of Alexandria, described more than 100 different machines and \gls{automata} in \textit{Pneumatica} and \textit{Automata} \cite{Alexandrinus}. In 1898, Nikola Tesla demonstrated the first radio-controlled vessel. Since then, the world has seen widespread application of robotics in manufacturing, mining, transport, exploration, and weaponry. For the last few decades, robots have operated in controlled, largely unchanging environments (e.g.\ an assembly line) where their environment and movements are largely known \textit{\gls{a priori}}.
 
-        However, in recent years a new generation of autonomous robots has been developed for a wide range of real-world, complex applications. The increasing trend the use of autonomous robots is shown in Figure \ref{fig:useOfAutonomousRobots}. These new robots, unlike those traditional ones described above, are required to adapt to the changing environment in which they operate. As such, they must perform motion planning in \gls{real-time}.
+        However, in recent years a new generation of autonomous robots has been developed for a wide range complex applications. These new robots are required to adapt to the changing environments in which they operate; most often, this means planning their own paths through space. As such, they must perform motion planning in \gls{real-time}.
 
-        \input{chapters/chapter1/figures/useOfAutonomousRobots.tex}
+        % \input{chapters/chapter1/figures/useOfAutonomousRobots.tex}
 
-    \subsubsection*{Motion Planning}
-        \todo[inline]{More of an introduction to motion planning.}
+    \subsubsection{Motion Planning}
         
-        Motion Planning refers to the problem of determining how a robot moves through a space to acheive a goal. Chapter \ref{chap:MotionPlanningInSoftware} provides a detailed explanation of motion planning and of \glsfirst{RRT}, a commonly used motion planning algorithm.
-        \newline
-        On the algorithmic level, motion planning has been extensively studied and many solutions exist. However, current algorithms running on regular \gls{CPU}s are too slow to execute in \gls{real-time} for robots operating in complex environments. Simply solving this problem with more raw computing power, using energy hungry \gls{GPU}s may have merit in \gls{tethered robot}s. On the other hand, untethered applications, such as autonomous drones, where limiting power consumption is a primary concern, this strategy is infeasible.
+        While most creatures in the animal kingdom find it relatively easy to navigate their surroundings, autonomous robots must be taught explicitly how to do so by their programmers. Motion Planning refers to the problem of algorithmically determining a collision-free path between two points in an obstacle-ridden space. Chapter \ref{chap:MotionPlanningInSoftware} provides a detailed explanation of motion planning and of \glsfirst{RRT}, a commonly used motion planning algorithm.
+
+        On the algorithmic and software level, motion planning has been extensively studied and optimized. Even so, current software implementations running on regular \glspl{CPU} are too slow to execute in \gls{real-time} for robots to operate in rapidly chainging, high complexity environments. More powerful, highly parallelized \glspl{GPU} can be used in tethered robot applications (e.g.\ robotic arms autonomously executing pick-and-place functions). However, such \glspl{GPU} consume far too much power to be used in autonomous drones, which are untethered and must sustain flight for useful periods of time. (A typical \gls{CPU} uses between 65-85 watts, while some \glspl{GPU} can use up to 270 watts\todo{cite}).
+
         
-    \ifdraft{\subsubsection*{Something}}
-    \todo[inline, caption={Subsubsection for Problem Overview}]{Add a subsubsection here about the current issue of slowness to transition into problem statement}
+    \subsubsection{Application Specific Processors}
+
+        Given the lacking performance in computing motion plans of a \gls{CPU}, and the untenable power consumption of a \gls{GPU}, autonomous drone developers are left with the option of developing an \gls{ASP}, optimized for motion planning.
+
+        However, designing a functional, high performance processor from scratch is no small task. It requires expertise in a variety of disciplines (compilers, digital logic, operating systems, etc), and an extradordinary amount of time and effort to develop and verify before it can be used. In short, it's an expensive process, which is why the market for computer processors is dominated by companies like Intel, AMD, and ARM. The sharing of processor designs is also not possible, as commercial designs are proprietary and competing designs are not encouraged.
+
+        Finally, even if one were to design an \gls{ASP} from scratch, or build off an existing commercial design (which means paying royalties), the \glsfirst{ISA} that the processor implements are not designed for are not designed for extendability, meaning that even a highly specialized processor is limited to a small number of instructions.
+
+        \todo[inline]{Discuss Moore's law and denard scaling}
+
+    \subsubsection{RISC-V}
+        RISC-V (pronounced ``risk-five'') is an \gls{ISA} developed by the University of California, Berkeley. It is established on the principles of a \gls{RISC}, a class of instruction sets that allow a processor to have fewer \gls{CPI} than a \gls{CISC} (x86, the \gls{ISA} on which macOS and linux operating systems run, is an example of a \gls{CISC} instruction set). 
+
+        What makes RISC-V unique is its open-source nature. RISC-V was started with the philosophy of creating a practical, open-source \gls{ISA} that was usable in any hardware or software without royalites. The first report describing the RISC-V Instruction Set was published in 2011 by Andrew Waterman, Yunsup Lee, David A. Patterson, and Krste Asanović \cite{Isa2012}.
+    
 
 \newpage
 \subsection{Problem Definition}
