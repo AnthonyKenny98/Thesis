@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2019-10-30 22:08:06
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 13:00:39
+% @Last Modified time: 2020-04-05 22:05:24
 
 % Define Document Class
 \documentclass[
@@ -42,6 +42,7 @@
 
 % Cover Page
 \maketitle
+\todo[inline]{Fix Cover Page Formatting}
 
 % PREFACE
 \pagenumbering{roman}
@@ -112,6 +113,7 @@
 \begin{appendices}
 
 \chapter{Project Repository}
+\lhead{Appendix \thechapter} 
     \label{appendix:repository}
     \input{appendices/repository.tex}
 
@@ -126,6 +128,8 @@
 \end{appendices} 
 \clearpage 
 \todo[inline]{Make all reference to "Drone" uniform to "UAV" (this will require chaniging the "a" to "an" before each occurence - wait actually, do I?.) Also maybe I should clarify this to rotary wing UAVs.}
+\todo[inline]{Spell check entire doc}
+\todo[inline]{Make all figure headings bold with subtitles.}
 \listoftodos 
 
 \end{document}

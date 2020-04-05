@@ -1,0 +1,79 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-04-05 21:30:06
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-05 22:19:46
+
+\bigskip
+\begin{algorithm}[H]
+    \caption{\texttt{getRandomConfig()} as implemented for \gls{RRT}}
+    \SetAlgoLined
+    \SetArgSty{textnormal}
+    \begin{tabular}{l l}
+    \textbf{Inputs:}    & Dimensionality $N$,\\ 
+                        & Upper Axis Bound $DIM$ \\
+    \textbf{Output:}    & Random Configuration $q$ \\
+    \end{tabular}
+
+        $q.x \leftarrow$ randomFloat($DIM$); \\
+        $q.y \leftarrow$ randomFloat($DIM$); \\
+        $q.\alpha \leftarrow$ randomFloat($2\pi$) \\
+        \If{$N == 3$}{
+            $q.z \leftarrow$ randomFloat($DIM$); \\
+            $q.\beta \leftarrow$ randomFloat($2\pi$); \\
+            $q.\gamma \leftarrow$ randomFloat($2\pi$); \\
+        }
+        \Return $q$;\\
+\end{algorithm}
+\bigskip
+Where \texttt{randomFloat(max)} returns a float between 0 and \texttt{max}.
+
+\bigskip
+\begin{algorithm}[H]
+    \caption{\texttt{findNearestConfig()} as implemented for \gls{RRT}}
+    \SetAlgoLined
+    \SetArgSty{textnormal}
+    \begin{tabular}{l l}
+    \textbf{Inputs:}    & Graph $G$, \\
+                        & New Configuration $q_{new}$ \\
+    \textbf{Output:}    & Nearest Configuration $q_{nearest}$ \\
+    \end{tabular}
+
+        $q_{nearest} \leftarrow$ $G$.$q_{init}$; \\
+        \For{$k = 0$ to $G$.existing\_nodes}{
+            \If{distance($q_{new}$, $G.q$[$k$]) < distance($q_{new}$, $q_{nearest}$)}{
+                $q_{nearest} \leftarrow$ $G.q$[$k$]; \\
+            }
+        }
+        \Return $q_{nearest}$; \\
+\end{algorithm}
+\bigskip
+Where \texttt{distance($q_1$, $q_2$)} returns the Euclidean distance between two configurations.
+
+\bigskip
+\begin{algorithm}[H]
+    \caption{\texttt{stepFromNearest()} as implemented for \gls{RRT}}
+    \SetAlgoLined
+    \SetArgSty{textnormal}
+    \begin{tabular}{l l}
+    \textbf{Inputs:}    & Configuration in Graph $q_{nearest}$,\\ 
+                        & New Configuration $q_{new}$, \\
+                        & Goal Bias $B$, \\
+                        & Maximum Step Distance $\epsilon$, \\
+                        & Graph $G$ \\
+    \textbf{Output:}    & Updated New Configuration $q_{new}$ \\
+    \end{tabular}
+
+        \If{distance($q_{nearest}$, $q_{new}$) > $\epsilon$}{
+            \If{randomFloat($1$) < $B$}{
+                $q_{new} \leftarrow $ stepTowardConfig($q_{nearest}$, $G$.$q_{goal}$); \\
+            } \Else{
+                $q_{new} \leftarrow $ stepTowardConfig($q_{nearest}$, $q_{new}$); \\
+            }
+        }
+        \Return $q_{new}$;\\
+\end{algorithm}
+\bigskip
+Where \texttt{stepTowardConfig($q_1$, $q_2$)} returns a configuration $\epsilon$ from $q_1$ in the direction of $q_2$.
+
+\todo[inline]{Point Collision Algorithm}
+\todo[inline]{Edge Collision Algorithm for 2D and 3D}

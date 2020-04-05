@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 18:38:15
+% @Last Modified time: 2020-04-05 22:23:47
 
 
 % TECHNICAL SPECIFICATIONS
@@ -16,24 +16,38 @@
 
     As a result, it was necessary to build a C implementation of RRT from the ground up to the aformentioned specifications.
 
+% IMPLEMENTATION DESIGN
 \subsection{Implementation Design}
-    
+    \todo{System Diagram Here}
     The design and implementation of \gls{RRT}, while neccessary, was significant and time consuming. Since this was not the main object of this thesis, only a brief description of key design choices has been included here. Appendix \ref{appendix:rrt_appendix} contains a more detailed account.
 
     \subsubsection{Parameterization}
         Table \ref{table:rrt_params} shows the parameters that were included in the implementation and compiled by way of a C header file.
         \input{chapters/chapter2/tables/params.tex}
 
+    \subsubsection{Dimensionality}
+        \gls{RRT} was implemented in both \gls{2D} and \gls{3D}. Not only did a \gls{2D} implementation provide a good development checkpoint, it was also interesting to see the difference in computational load between \gls{2D} and \gls{3D}, discussed in Section \ref{section:rrt_analysis}.
+
+    \subsubsection{Modelling a \gls{UAV}}
+        The \gls{UAV} was modelled as a \gls{3D} rectangular prism, with its configuration represented by the Cartesian coordinates $(x,y,z)$ and the Euler angles $(\alpha, \beta, \gamma)$.
+
     \subsubsection{Key Functions}
-        Algorithm \ref{algorithm:rrt_collision} shows that there are 5 key functions that constitute \gls{RRT}. Figure \ref{fig:rrt_functions} demonstrates each of these functions: \texttt{getRandomConfig()}, \texttt{findNearestConfig()}, \texttt{stepFromNearest()}, \texttt{(configCollisions)}, and \texttt{edgeCollisions()}.
+        Algorithm \ref{algorithm:rrt_collision} shows that there are 5 key functions that constitute \gls{RRT}. Figure \ref{fig:rrt_functions} demonstrates each of these functions: \texttt{getRandomConfig()}, \texttt{findNearestConfig()}, \texttt{stepFromNearest()}, \texttt{(configCollisions)}, and \texttt{edgeCollisions()}. Appendix \ref{section:rrt_appendix_function_impl} shows in detail how each of these functions was implemented.
         \input{chapters/chapter2/figures/rrt_functions}
 
-    \subsubsection{Dimensionality}
-
-    \subsubsection{$K$:DIM Ratio}
-
+% VISUALIZING IMPLEMENTATION
+\newpage
 \subsection{Visualizing Implementation}
-\input{chapters/chapter2/figures/rrtImplementation2D.tex}
+    With the back end functionality of \gls{RRT} designed an implemented, it was neccesary to develop a way to visualize it. Many existing implementations had the visualization interface run synchonously alongside \gls{RRT}. This would distort any performance analysis results, and so in this implementation it was left until after \gls{RRT} had finished executing and then plotted using Python.
 
-\todo[inline]{Describe implementation in 3D}
-\input{chapters/chapter2/figures/rrtImplementation3D.tex}
+    \subsubsection{Plotting Configurations and the Workspace}
+        Plotting the workspace using the ``matplotlib'' library was relatively simple in both \gls{2D} and \gls{3D}, shown in Figure \ref{fig:rrt_workspace}. It was decided that the \gls{UAV}'s' configuration would be visualized only as its origin point, rather than plotting a \gls{3D} rectangular prism at each configuration, in order to maintain simplicity. Nevertheless, the \gls{UAV} was still modelled as a 3D prism in the backend.
+        \input{chapters/chapter2/figures/workspace}
+
+    \subsubsection{Plotting Obstacles}
+        Obstacles were plotted in accordance to the input \gls{OGM}, shown in Figure \ref{fig:rrt_obstacles}
+
+    \subsubsection{Plotting RRT Graph}
+        To keep the plot simple, it was decided to not show the origin point of each configuration in the graph produced by \gls{RRT}. Instead, only the edges of the graph were plotted, seen in Figure \ref{fig:rrt_full}
+        \input{chapters/chapter2/figures/obstacles}
+        \input{chapters/chapter2/figures/rrt_full}

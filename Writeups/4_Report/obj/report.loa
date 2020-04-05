@@ -8,3 +8,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {algocf}{\numberline {C.1}{\ignorespaces \texttt {getRandomConfig()} as implemented for \gls {RRT}\relax }}{54}{algocf.C.1}
+\contentsline {algocf}{\numberline {C.2}{\ignorespaces \texttt {findNearestConfig()} as implemented for \gls {RRT}\relax }}{54}{algocf.C.2}
+\contentsline {algocf}{\numberline {C.3}{\ignorespaces \texttt {stepFromNearest()} as implemented for \gls {RRT}\relax }}{55}{algocf.C.3}

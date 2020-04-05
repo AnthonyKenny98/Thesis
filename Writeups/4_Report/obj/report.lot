@@ -1,20 +1,20 @@
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces List of System Components and their Descriptions\relax }}{9}{table.caption.29}
+\contentsline {table}{\numberline {1.1}{\ignorespaces List of System Components and their Descriptions\relax }}{9}{table.caption.30}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Abbreviated Technical Specifications for \gls {RRT} Implementation\relax }}{18}{table.caption.44}
-\contentsline {table}{\numberline {2.2}{\ignorespaces RRT Implementation Parameters\relax }}{19}{table.caption.46}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison of Timing Methods\relax }}{24}{table.caption.62}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Abbreviated Technical Specifications for \gls {RRT} Implementation\relax }}{18}{table.caption.45}
+\contentsline {table}{\numberline {2.2}{\ignorespaces RRT Implementation Parameters\relax }}{19}{table.caption.48}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison of Timing Methods\relax }}{24}{table.caption.66}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Technical Specifications for Edge Collision Detection Unit\relax }}{30}{table.caption.72}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Simulated performance of HB-A in microseconds\relax }}{34}{table.caption.86}
-\contentsline {table}{\numberline {3.3}{\ignorespaces RRT Simulated Execution Times with HB-A (seconds)\relax }}{34}{table.caption.87}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Technical Specifications for Edge Collision Detection Unit\relax }}{31}{table.caption.78}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Simulated performance of HB-A in microseconds\relax }}{35}{table.caption.92}
+\contentsline {table}{\numberline {3.3}{\ignorespaces RRT Simulated Execution Times with HB-A (seconds)\relax }}{35}{table.caption.93}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Register State for RV32I Base Instruction Set\relax }}{37}{table.caption.93}
-\contentsline {table}{\numberline {4.2}{\ignorespaces RV32I Base Instruction Formats\relax }}{38}{table.caption.95}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Register State for RV32I Base Instruction Set\relax }}{38}{table.caption.99}
+\contentsline {table}{\numberline {4.2}{\ignorespaces RV32I Base Instruction Formats\relax }}{39}{table.caption.101}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {C.1}{\ignorespaces General Technical Specifications for \gls {RRT} Implementation\relax }}{51}{table.caption.116}
-\contentsline {table}{\numberline {C.2}{\ignorespaces Requiremed Parameters for \gls {RRT} Implementation\relax }}{52}{table.caption.117}
-\contentsline {table}{\numberline {C.3}{\ignorespaces Evaluation of Existing Open-Source Implementations of RRT}}{52}{table.caption.118}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {C.1}{\ignorespaces General Technical Specifications for \gls {RRT} Implementation\relax }}{52}{table.caption.122}
+\contentsline {table}{\numberline {C.2}{\ignorespaces Requiremed Parameters for \gls {RRT} Implementation\relax }}{53}{table.caption.123}
+\contentsline {table}{\numberline {C.3}{\ignorespaces Evaluation of Existing Open-Source Implementations of RRT}}{53}{table.caption.124}

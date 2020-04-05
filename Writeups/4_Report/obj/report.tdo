@@ -1,40 +1,45 @@
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Rewrite Abstract}{i}{section*.2}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Define goal}{1}{section*.9}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ cite}{1}{section*.10}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ cite}{2}{section*.13}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Discuss Moore's law and denard scaling}{3}{section*.15}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Problem Statement}{4}{section*.18}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Revise End User}{4}{section*.20}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Project Specifications}{9}{section*.30}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Summary of Results}{10}{section*.31}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Update once I have properly defined goals and objectives}{11}{section*.32}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ This is all really ugly and should be explained better}{15}{section*.41}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Redo this diagram}{16}{section*.43}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Describe implementation in 3D}{22}{section*.52}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Brief introduction outlining purpose of performance analysis}{23}{section*.54}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Outline of method of analysis. Something better than the above}{23}{section*.55}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Rewrite the above}{23}{section*.57}
-\contentsline {todo}{Figure: Screenshot of VTune Top Down Analysis (Maybe)}{23}{figure.caption.58}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Provide or link to appendix of explanation of internal timing}{24}{section*.60}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Explanation of time complexity}{24}{section*.64}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Change Y axis to \% and increase text size}{27}{section*.67}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Add simulations to determine correct K}{27}{section*.69}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Edge Collision Function Description}{29}{section*.71}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Technical Specifications}{30}{section*.73}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Performance Specifications Functional Unit}{30}{section*.74}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More Iterations of HoneyBee Design}{31}{section*.75}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make my own version of this figure}{31}{section*.78}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Introduction to Hardware Description Languages}{32}{section*.80}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Turn this into a table or get image from vivado}{33}{section*.84}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make version of this chart in matplotlib for consistency and update axis}{35}{section*.89}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Expand Discussion of HoneyBee-A Results}{35}{section*.90}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Motion Planning Extension}{38}{section*.96}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Description of Baseline Philosophy V core}{38}{section*.97}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Display bigger version of processor.}{38}{section*.98}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Process of implementing honeybee into PhilV.}{38}{section*.100}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Comparative Performance Analysis of baseline and extended PhilV Core}{40}{section*.101}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Discussion of Results}{41}{section*.102}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Evaluation of Success}{41}{section*.103}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Future Work}{41}{section*.104}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Budget}{49}{section*.114}
-\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make all reference to "Drone" uniform to "UAV" (this will require chaniging the "a" to "an" before each occurence - wait actually, do I?.) Also maybe I should clarify this to rotary wing UAVs.}{54}{section*.119}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Fix Cover Page Formatting}{i}{section*.1}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Rewrite Abstract}{i}{section*.3}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Define goal}{1}{section*.10}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ cite}{1}{section*.11}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ cite}{2}{section*.14}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Discuss Moore's law and denard scaling}{3}{section*.16}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Problem Statement}{4}{section*.19}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Revise End User}{4}{section*.21}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Project Specifications}{9}{section*.31}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Summary of Results}{10}{section*.32}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Update once I have properly defined goals and objectives}{11}{section*.33}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ This is all really ugly and should be explained better}{15}{section*.42}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Redo this diagram}{16}{section*.44}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ System Diagram Here}{19}{section*.46}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Rewrite the above}{23}{section*.60}
+\contentsline {todo}{Figure: Screenshot of VTune Top Down Analysis (Maybe)}{23}{figure.caption.61}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Provide or link to appendix of explanation of internal timing}{23}{section*.63}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Chi Squared Test}{24}{section*.65}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Outline of method of analysis.}{24}{section*.67}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Explanation of time complexity}{25}{section*.70}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Change Y axis to \% and increase text size}{28}{section*.73}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Add simulations to determine correct K}{28}{section*.75}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Edge Collision Function Description}{30}{section*.77}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Improve Technical Specifications}{31}{section*.79}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Performance Specifications Functional Unit}{31}{section*.80}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ More Iterations of HoneyBee Design}{32}{section*.81}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make my own version of this figure}{32}{section*.84}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Introduction to Hardware Description Languages}{33}{section*.86}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Turn this into a table or get image from vivado}{34}{section*.90}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make version of this chart in matplotlib for consistency and update axis}{36}{section*.95}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Expand Discussion of HoneyBee-A Results}{36}{section*.96}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Motion Planning Extension}{39}{section*.102}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Description of Baseline Philosophy V core}{39}{section*.103}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Display bigger version of processor.}{39}{section*.104}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Process of implementing honeybee into PhilV.}{39}{section*.106}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Comparative Performance Analysis of baseline and extended PhilV Core}{41}{section*.107}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Discussion of Results}{42}{section*.108}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Evaluation of Success}{42}{section*.109}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Future Work}{42}{section*.110}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Budget}{50}{section*.120}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Point Collision Algorithm}{55}{section*.125}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Edge Collision Algorithm for 2D and 3D}{55}{section*.126}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make all reference to "Drone" uniform to "UAV" (this will require chaniging the "a" to "an" before each occurence - wait actually, do I?.) Also maybe I should clarify this to rotary wing UAVs.}{57}{section*.127}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Spell check entire doc}{57}{section*.128}
+\contentsline {todo}{\color@fb@x {}{red}{}{white}{\leavevmode {\color {white}o}}\ Make all figure headings bold with subtitles.}{57}{section*.129}

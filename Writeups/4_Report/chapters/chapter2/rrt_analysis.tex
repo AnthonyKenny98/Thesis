@@ -1,13 +1,11 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-28 15:02:19
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-03 14:56:06
+% @Last Modified time: 2020-04-05 22:30:46
 
-\todo[inline]{Brief introduction outlining purpose of performance analysis}
+Having implemented a functioning version of \gls{RRT} that adhered to the specifications set out in Table \ref{table:RRT_Tech_Specs_Abbrev}, analysis of its computational profile could begin. The purpose of this analysis is to identify the biggest bottleneck of \gls{RRT} and therefore the best opportunity for hardware acceleration.{}
 
-\subsection{Methodology}
-    To restate, the aim of this thesis is to design a computer processor with reduced execution time of motion planning algorithms, such as \gls{RRT}. As such, it is important to understand the elements of the algorithm that have the highest percentage of CPU execution time. To determine this, it was necessary to implement my own, naive but typical, \gls{RRT} in C. This program could then be compiled and analysed using a software performance profiling tool. With this, I could design experiments to determine the critical RRT functions (those occupying a majority of CPU time) and see how this varies given different parameters.
-    \todo[inline]{Outline of method of analysis. Something better than the above}
+\subsection{Measuring Performance}
 
     \subsubsection*{VTune Profiler}
     \label{subsubsection:vtune}
@@ -23,7 +21,17 @@
     \subsubsection*{Comparison}
         Before proceeding to use either of these methods to profile the software implementation of \gls{RRT}, it was important to verify that the two methods yielded similar results for the same program. Table \ref{table:timing_calibration} summarizes the results of analysis of a simple C executable. The program calls 5 functions, $\{A, B, C, D, E\}$, each a simple iteration in which a integer is incremented. Since the Internal Timing method returned similar results to the (trusted) VTune Profiler, it was considered to be a reliable method. While it was encouraging to see both methods returned similar results for absolute execution time, the more important metric was the similarity in percentage of total execution time.
 
+        \todo[inline]{Chi Squared Test}
+
         \input{chapters/chapter2/tables/timing_calibration}
+
+\subsection{Experimental Methodology}
+    \todo[inline]{Outline of method of analysis.}
+
+
+    \subsubsection{Optimal Parameters}
+        Extensive testing was undertaken to determine the 
+
 
     \subsubsection*{Experimental Design}
         In profiling \gls{RRT} in software, the goal was to find the critical task across different values of $K$ and sizes of \gls{configuration} space. Multiple tests were run, varying these two constraints, to find this critical function. The results of this analysis can be found in Section \ref{section:rrt_analysis_results}.

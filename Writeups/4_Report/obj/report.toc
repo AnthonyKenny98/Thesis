@@ -1,23 +1,23 @@
-\contentsline {chapter}{Preface}{i}{Doc-Start}
-\contentsline {section}{Abstract}{i}{section*.1}
-\contentsline {section}{Table of Contents}{ii}{section*.2}
-\contentsline {section}{List of Acronyms}{v}{section*.4}
-\contentsline {section}{List of Algorithms}{vii}{section*.6}
-\contentsline {section}{List of Figures}{viii}{section*.7}
-\contentsline {section}{List of Tables}{ix}{section*.8}
+\contentsline {chapter}{Preface}{i}{section*.1}
+\contentsline {section}{Abstract}{i}{section*.2}
+\contentsline {section}{Table of Contents}{ii}{section*.3}
+\contentsline {section}{List of Acronyms}{v}{section*.5}
+\contentsline {section}{List of Algorithms}{vii}{section*.7}
+\contentsline {section}{List of Figures}{viii}{section*.8}
+\contentsline {section}{List of Tables}{ix}{section*.9}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem Summary}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Background}{1}{subsection.1.1.1}
-\contentsline {subsubsection}{Autonomous Robotics}{2}{section*.11}
-\contentsline {subsubsection}{Motion Planning}{2}{section*.12}
-\contentsline {subsubsection}{Application Specific Processors}{2}{section*.14}
-\contentsline {subsubsection}{RISC-V}{3}{section*.16}
+\contentsline {subsubsection}{Autonomous Robotics}{2}{section*.12}
+\contentsline {subsubsection}{Motion Planning}{2}{section*.13}
+\contentsline {subsubsection}{Application Specific Processors}{2}{section*.15}
+\contentsline {subsubsection}{RISC-V}{3}{section*.17}
 \contentsline {subsection}{\numberline {1.1.2}Problem Definition}{4}{subsection.1.1.2}
 \contentsline {section}{\numberline {1.2}Prior Work}{4}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Hardware Acceleration}{4}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}RISC-V}{6}{subsection.1.2.2}
-\contentsline {subsubsection}{Extending RISC-V}{6}{section*.24}
-\contentsline {subsubsection}{Accelerating RISC-V Processors}{7}{section*.26}
+\contentsline {subsubsection}{Extending RISC-V}{6}{section*.25}
+\contentsline {subsubsection}{Accelerating RISC-V Processors}{7}{section*.27}
 \contentsline {section}{\numberline {1.3}Project Overview}{8}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Proposed Solution}{8}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Project Specifications}{9}{subsection.1.3.2}
@@ -25,55 +25,61 @@
 \contentsline {chapter}{\numberline {2}Motion Planning in Software}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}Motion Planning Background}{11}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Key Concepts}{12}{subsection.2.1.1}
-\contentsline {subsubsection}{\Gls {workspace}}{12}{section*.33}
-\contentsline {subsubsection}{Configuration}{12}{section*.34}
-\contentsline {subsubsection}{Occupancy Grid Map}{13}{section*.36}
+\contentsline {subsubsection}{\Gls {workspace}}{12}{section*.34}
+\contentsline {subsubsection}{Configuration}{12}{section*.35}
+\contentsline {subsubsection}{Occupancy Grid Map}{13}{section*.37}
 \contentsline {subsection}{\numberline {2.1.2}Rapidly-exploring Random Tree}{13}{subsection.2.1.2}
-\contentsline {subsubsection}{Scope}{13}{section*.38}
-\contentsline {subsubsection}{Algorithm}{14}{section*.40}
+\contentsline {subsubsection}{Scope}{13}{section*.39}
+\contentsline {subsubsection}{Algorithm}{14}{section*.41}
 \contentsline {section}{\numberline {2.2}Implementation of RRT}{18}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Technical Specifications}{18}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Implementation Design}{19}{subsection.2.2.2}
-\contentsline {subsubsection}{Parameterization}{19}{section*.45}
-\contentsline {subsubsection}{Key Functions}{19}{section*.47}
-\contentsline {subsubsection}{Dimensionality}{21}{section*.49}
-\contentsline {subsubsection}{$K$:DIM Ratio}{21}{section*.50}
-\contentsline {subsection}{\numberline {2.2.3}Visualizing Implementation}{21}{subsection.2.2.3}
+\contentsline {subsubsection}{Parameterization}{19}{section*.47}
+\contentsline {subsubsection}{Dimensionality}{19}{section*.49}
+\contentsline {subsubsection}{Modelling a \gls {UAV}}{19}{section*.50}
+\contentsline {subsubsection}{Key Functions}{19}{section*.51}
+\contentsline {subsection}{\numberline {2.2.3}Visualizing Implementation}{20}{subsection.2.2.3}
+\contentsline {subsubsection}{Plotting Configurations and the Workspace}{21}{section*.53}
+\contentsline {subsubsection}{Plotting Obstacles}{21}{section*.55}
+\contentsline {subsubsection}{Plotting RRT Graph}{21}{section*.56}
 \contentsline {section}{\numberline {2.3}Analysis of RRT}{23}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Methodology}{23}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Results}{24}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Motion Planning in Hardware}{29}{chapter.3}
-\contentsline {section}{\numberline {3.1}Defining the Collision Detection Unit}{29}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Edge Collision Function}{29}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Technical Specifications}{29}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Performance Specifications}{30}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}HoneyBee}{31}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Design}{31}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Build}{32}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Measurement and Analysis}{33}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}RISC-V Processor}{36}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction to the Reduced Instruction Set Computer}{36}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Instruction Set Architecture}{36}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}RISC Processor Design}{36}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}RISC-V ISA}{36}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}RV32I}{36}{subsection.4.2.1}
-\contentsline {subsubsection}{Instruction Formats}{37}{section*.94}
-\contentsline {subsection}{\numberline {4.2.2}Motion Planning Extension}{38}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}PhilosophyV}{38}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Baseline Implementation}{38}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Implementing HoneyBee}{38}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Performance Analysis}{40}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{41}{chapter.5}
-\contentsline {section}{\numberline {5.1}Discussion of Results}{41}{section.5.1}
-\contentsline {section}{\numberline {5.2}Evaluation of Success}{41}{section.5.2}
-\contentsline {section}{\numberline {5.3}Future Work}{41}{section.5.3}
-\contentsline {chapter}{Bibliography}{42}{chapter*.105}
-\contentsline {chapter}{Glossary}{44}{section*.106}
-\contentsline {chapter}{Appendices}{47}{section*.108}
-\contentsline {chapter}{\numberline {A}Project Repository}{48}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Budget}{49}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}RRT Supporting Documentation}{50}{Appendix.1.C}
-\contentsline {section}{\numberline {C.1}Justification of Modelling UAV as Prism}{50}{section.1.C.1}
-\contentsline {section}{\numberline {C.2}Full Technical Specifications for RRT Implementation}{51}{section.1.C.2}
-\contentsline {section}{\numberline {C.3}Assessment of Existing RRT Implementations}{52}{section.1.C.3}
-\contentsline {section}{\numberline {C.4}Justification of K:DIM Ratio}{53}{section.1.C.4}
+\contentsline {subsection}{\numberline {2.3.1}Measuring Performance}{23}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Experimental Methodology}{24}{subsection.2.3.2}
+\contentsline {subsubsection}{Optimal Parameters}{24}{section*.68}
+\contentsline {subsection}{\numberline {2.3.3}Results}{24}{subsection.2.3.3}
+\contentsline {chapter}{\numberline {3}Motion Planning in Hardware}{30}{chapter.3}
+\contentsline {section}{\numberline {3.1}Defining the Collision Detection Unit}{30}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Edge Collision Function}{30}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Technical Specifications}{30}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Performance Specifications}{31}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}HoneyBee}{32}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Design}{32}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Build}{33}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Measurement and Analysis}{34}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}RISC-V Processor}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction to the Reduced Instruction Set Computer}{37}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Instruction Set Architecture}{37}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}RISC Processor Design}{37}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}RISC-V ISA}{37}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}RV32I}{37}{subsection.4.2.1}
+\contentsline {subsubsection}{Instruction Formats}{38}{section*.100}
+\contentsline {subsection}{\numberline {4.2.2}Motion Planning Extension}{39}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}PhilosophyV}{39}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Baseline Implementation}{39}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Implementing HoneyBee}{39}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Performance Analysis}{41}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{42}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion of Results}{42}{section.5.1}
+\contentsline {section}{\numberline {5.2}Evaluation of Success}{42}{section.5.2}
+\contentsline {section}{\numberline {5.3}Future Work}{42}{section.5.3}
+\contentsline {chapter}{Bibliography}{43}{chapter*.111}
+\contentsline {chapter}{Glossary}{45}{section*.112}
+\contentsline {chapter}{Appendices}{48}{section*.114}
+\contentsline {chapter}{\numberline {A}Project Repository}{49}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Budget}{50}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}RRT Supporting Documentation}{51}{Appendix.1.C}
+\contentsline {section}{\numberline {C.1}Justification of Modelling UAV as Prism}{51}{section.1.C.1}
+\contentsline {section}{\numberline {C.2}Full Technical Specifications for RRT Implementation}{52}{section.1.C.2}
+\contentsline {section}{\numberline {C.3}Assessment of Existing RRT Implementations}{53}{section.1.C.3}
+\contentsline {section}{\numberline {C.4}Implementation of Key RRT Functions}{54}{section.1.C.4}
+\contentsline {section}{\numberline {C.5}Justification of K:DIM Ratio}{56}{section.1.C.5}
