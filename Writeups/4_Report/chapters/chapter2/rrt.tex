@@ -1,71 +1,39 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 14:07:35
+% @Last Modified time: 2020-04-05 18:38:15
 
-% INTRO
-\glsfirst{RRT} is an algorithm designed to efficiently build a tree of collision-free paths in a high-complexity environment. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the workspace. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones.
 
-% ALGORITHM
-\subsection{Algorithm}
+% TECHNICAL SPECIFICATIONS
+\subsection{Technical Specifications}
 
-    % SCOPE OF ALGORITHM
-    \subsubsection{Scope}
-        \gls{RRT} takes an initial configuration, a goal point, and an \glsfirst{OGM} as its input. This \gls{OGM} may be built and updated using \gls{a priori} knowledge, sensor data from the robot, and other inputs. \gls{RRT} will output a tree of collision free paths toward the goal, as demonstrated in Figure \ref{fig:rrt_scope}. \textbf{It does not calculate the fastest path from that tree}; that can be accomplished using algorithms such as \Gls{dijkstra's algorithm}.
+    With \gls{RRT} selected as the benchmark algorithm against which to test specialised hardware, this project required an implementation of the algorithm that satisfied the following criteria shown in Table \ref{table:RRT_Tech_Specs_Abbrev}. Appendix \ref{section:rrt_appendix_tech_specs} is a more thorough description of the technical specifications for the implementation of RRT. 
 
-        \input{chapters/chapter2/figures/rrt_scope}
+    % Tech Spec Table
+    \input{chapters/chapter2/tables/rrt_tech_specs}
 
-    % BASIC RRT - BUILDING THE TREE
-    \subsubsection{Building the Tree}
+    The original intention was to find an existing implementation of RRT that could fulfill these requirements. However, no open-source implementations were suitable. Appendix \ref{section:rrt_appendix_existing_implementations} shows an evaluation of existing implementations.
 
-        Put simply, \gls{RRT} finds a path from start to finish by randomly exploring a workspace.
-        Put more technically, it builds a tree of possible \glspl{configuration} (also known as a graph), connected by edges, for a robot of some physical description. It does so by selecting random \glspl{configuration} and adding them to the graph. 
-        From this graph, a path from the initial \gls{configuration} to some goal \gls{configuration} can be found, given a high enough number of iterations. As such, \gls{RRT} can be considered \gls{probabilistically complete}.
-        The pseudo-code for \gls{RRT} can be seen in Algorithm \ref{algorithm:rrt}
-        
-        % RRT Algorithm
-        \input{chapters/chapter2/algorithms/rrt_alg}
+    As a result, it was necessary to build a C implementation of RRT from the ground up to the aformentioned specifications.
 
-        % Explanation of Algorithm, referencing visual step by step figure
-        Algorithm \ref{algorithm:rrt} can be visually represented in Figure \ref{fig:rrt-step-by-step}. Consider a \gls{2D} robot operating in a \gls{2D} workspace. A Graph $G$ is initialized containing an initial \gls{configuration}, $q_{init}$, with constraints on the number of nodes that the graph can hold, $K$, and the maximum distance between two nodes, $\Delta q$. This is shown in Sub-figure \ref{subfig:rrt-step-by-step-A}. A random \gls{configuration} for the robot, $q_{rand}$ is generated (\ref{subfig:rrt-step-by-step-B}). The nearest existing \gls{configuration} in $G$, $q_{near}$, is found. (In the first iteration, $q_{near} = q_{init}$, shown in Sub-figure \ref{subfig:rrt-step-by-step-C}). The distance between $q_{near}$ and $q_{rand}$ is calculated. If this distance is less than $\Delta q$, $q_{new} = q_{rand}$. If not, $q_{new}$ is selected, typically by moving by $\Delta q$ from $q_{near}$ towards $q_{rand}$ (\ref{subfig:rrt-step-by-step-C}). $q_{new}$ is then added to $G$. This is repeated for $K$ \gls{configuration}s.
-        \todo[inline]{This is all really ugly and should be explained better}
-
-        % Step By Step RRT Figure
-        \input{chapters/chapter2/figures/rrt-step-by-step}
-        \todo{Redo this diagram}
-
-    % COLLISION DETECTION
-    \subsubsection{Collision Detection}
-
-        Algorithm \ref{algorithm:rrt} shows how \gls{RRT} builds a graph of possible \gls{configuration}s connected by edges in a completely free \gls{configuration} space. However, in real-world applications, a robot's \gls{workspace} space often contains obstacles. As such, collision detection must be included in the algorithm. The two types of collisions the algorithm must check for are \textit{configuration collisions} (those where the robot would collide with an obstacle in a given \gls{configuration}) and \textit{edge collisions} (where the robot would collide when moving between two collision free \gls{configuration}s).
-
-        The RRT with \gls{configuration} and edge collision detection can be seen in Algorithm \ref{algorithm:rrt_collision}. The method of implementing \gls{RRT} with collision detection to model a drone in 3D space is detailed in Section \ref{section:implementation}.
-
-        \input{chapters/chapter2/algorithms/rrt_alg_collision}
-
-\newpage
-
-% IMPLEMENTATION OF RRT
-\subsection{Implementation}\label{section:implementation}
+\subsection{Implementation Design}
     
-    % TECHNICAL SPECIFICATIONS
-    \subsubsection{Technical Specifications}
+    The design and implementation of \gls{RRT}, while neccessary, was significant and time consuming. Since this was not the main object of this thesis, only a brief description of key design choices has been included here. Appendix \ref{appendix:rrt_appendix} contains a more detailed account.
 
-        With \gls{RRT} selected as the benchmark algorithm against which to test specialised hardware, this project required an implementation of the algorithm that satisfied the following criteria shown in Table \ref{table:RRT_Tech_Specs_Abbrev}. Appendix \ref{section:rrt_appendix_tech_specs} is a more thorough description of the technical specifications for the implementation of RRT. 
+    \subsubsection{Parameterization}
+        Table \ref{table:rrt_params} shows the parameters that were included in the implementation and compiled by way of a C header file.
+        \input{chapters/chapter2/tables/params.tex}
 
-        % Tech Spec Table
-        \input{chapters/chapter2/tables/rrt_tech_specs}
+    \subsubsection{Key Functions}
+        Algorithm \ref{algorithm:rrt_collision} shows that there are 5 key functions that constitute \gls{RRT}. Figure \ref{fig:rrt_functions} demonstrates each of these functions: \texttt{getRandomConfig()}, \texttt{findNearestConfig()}, \texttt{stepFromNearest()}, \texttt{(configCollisions)}, and \texttt{edgeCollisions()}.
+        \input{chapters/chapter2/figures/rrt_functions}
 
-        The original intention was to find an existing implementation of RRT that could fulfill these requirements. Most open source implementations found online were in Python, and all those implemented in C were unsuitable, as they had extraneous \gls{GUI}s, reliance on external \gls{API}s, and other features that would distort analysis of algorithmic hot-spots. Appendix \ref{section:rrt_appendix_existing_implementations} is shows an evaluation of existing implementations.\cite{RoboJackets2019}\cite{Planning2019}\cite{Sourishg2017}\cite{Vss2sn2019}.
+    \subsubsection{Dimensionality}
 
-        As a result, it was necessary to build a C implementation of RRT from the ground up that satisfied the requirements in Table \ref{table:RRT_Tech_Specs}. It can be found in this project's GitHub repository. It follows Algorithm \ref{algorithm:rrt_collision} closely. For monitoring correctness, I build in an optional \gls{GUI} that shows the tree, starting node, and obstacles.
+    \subsubsection{$K$:DIM Ratio}
 
-    \subsubsection*{Modelling a \gls{UAV} for RRT}
+\subsection{Visualizing Implementation}
+\input{chapters/chapter2/figures/rrtImplementation2D.tex}
 
-    \subsubsection{Implementation in 2D}
-    The first step was to implement RRT with a 2-Dimensional workspace. \todo[inline]{More detail}
-    \input{chapters/chapter2/figures/rrtImplementation2D.tex}
-
-    \subsubsection{Implementation in 3D}
-    \todo[inline]{Describe implementation in 3D}
-    \input{chapters/chapter2/figures/rrtImplementation3D.tex}
+\todo[inline]{Describe implementation in 3D}
+\input{chapters/chapter2/figures/rrtImplementation3D.tex}

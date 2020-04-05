@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-04 10:01:40
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 10:56:20
+% @Last Modified time: 2020-04-05 17:17:17
 
 A funny paradox in computer science is the fact that it is relatively easy to teach a computer to perform tasks that humans find very complicated, but extremely difficult to program one to execute functions that humans master during infancy. Consider, it was as early as 1949 that Claude Shannon presented his paper \textit{Programming a Computer for Playing Chess}\cite{Shannon1950}, and by 1997 the \textit{Deep Blue} computer defeated Garry Kasparov, reigning world champion, in a six game chess match.\cite{Campbell2002} Compare that with some of the most advanced autonomous humanoid robots to date displaying dexterity only comparable with that of a toddler. The task of finding a collision free path, performed constantly without thought by a human, is an example of this paradigm. For a robot to compute a collision free path, it relies on a set of Motion Planning Algorithms.
 
@@ -26,9 +26,40 @@ Motion Planning Algorithms refer to the set of algorithms that find possible seq
 
     \input{chapters/chapter2/figures/ogm}
 
-\subsection{Algorithms}
+\subsection{Rapidly-exploring Random Tree}
     
-    \subsubsection{Scope}
-    \todo[inline,caption=Finish Scope]{Part of the problem, it is not about sensing obstacles, building map, or finding shortest path. It is merely about exploring the space and building a tree of possible paths}
+    % INTRO
+    \glsfirst{RRT} is an algorithm designed to efficiently build a tree of collision-free paths in a high-complexity environment. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the workspace. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones.
 
-\todo[inline]{Finish this Section, should describe why I chose RRT}
+    % SCOPE OF ALGORITHM
+    \subsubsection{Scope}
+        \gls{RRT} takes an initial configuration, a goal point, and an \glsfirst{OGM} as its input. This \gls{OGM} may be built and updated using \gls{a priori} knowledge, sensor data from the robot, and other inputs. \gls{RRT} will output a tree of collision free paths toward the goal, as demonstrated in Figure \ref{fig:rrt_scope}. \textbf{It does not calculate the fastest path from that tree}; that can be accomplished using algorithms such as \Gls{dijkstra's algorithm}.
+
+        \input{chapters/chapter2/figures/rrt_scope}
+
+    % ALGORITHM
+    \subsubsection{Algorithm}
+
+        Put simply, \gls{RRT} finds a path from start to finish by randomly exploring a workspace.
+        Put more technically, it builds a tree of possible \glspl{configuration} (also known as a graph), connected by edges, for a robot of some physical description. It does so by selecting random \glspl{configuration} and adding them to the graph. 
+        From this graph, a path from the initial \gls{configuration} to some goal \gls{configuration} can be found, given a high enough number of iterations. As such, \gls{RRT} can be considered \gls{probabilistically complete}.
+        The pseudo-code for \gls{RRT} can be seen in Algorithm \ref{algorithm:rrt}
+        
+        % RRT Algorithm
+        \input{chapters/chapter2/algorithms/rrt_alg}
+
+        % Explanation of Algorithm, referencing visual step by step figure
+        Algorithm \ref{algorithm:rrt} can be visually represented in Figure \ref{fig:rrt-step-by-step}. Consider a \gls{2D} robot operating in a \gls{2D} workspace. A Graph $G$ is initialized containing an initial \gls{configuration}, $q_{init}$, with constraints on the number of nodes that the graph can hold, $K$, and the maximum distance between two nodes, $\Delta q$. This is shown in Sub-figure \ref{subfig:rrt-step-by-step-A}. A random \gls{configuration} for the robot, $q_{rand}$ is generated (\ref{subfig:rrt-step-by-step-B}). The nearest existing \gls{configuration} in $G$, $q_{near}$, is found. (In the first iteration, $q_{near} = q_{init}$, shown in Sub-figure \ref{subfig:rrt-step-by-step-C}). The distance between $q_{near}$ and $q_{rand}$ is calculated. If this distance is less than $\Delta q$, $q_{new} = q_{rand}$. If not, $q_{new}$ is selected, typically by moving by $\Delta q$ from $q_{near}$ towards $q_{rand}$ (\ref{subfig:rrt-step-by-step-C}). $q_{new}$ is then added to $G$. This is repeated for $K$ \gls{configuration}s.
+        \todo[inline]{This is all really ugly and should be explained better}
+
+        % Step By Step RRT Figure
+        \input{chapters/chapter2/figures/rrt-step-by-step}
+        \todo{Redo this diagram}
+
+        % COLLISION DETECTION
+
+        Algorithm \ref{algorithm:rrt} shows how \gls{RRT} builds a graph of possible \gls{configuration}s connected by edges in a completely free \gls{configuration} space. However, in real-world applications, a robot's \gls{workspace} space often contains obstacles. As such, collision detection must be included in the algorithm. The two types of collisions the algorithm must check for are \textit{configuration collisions} (those where the robot would collide with an obstacle in a given \gls{configuration}) and \textit{edge collisions} (where the robot would collide when moving between two collision free \gls{configuration}s).
+
+        The RRT with \gls{configuration} and edge collision detection can be seen in Algorithm \ref{algorithm:rrt_collision}. The method of implementing \gls{RRT} with collision detection to model a drone in 3D space is detailed in Section \ref{section:rrt}.
+
+        \input{chapters/chapter2/algorithms/rrt_alg_collision}

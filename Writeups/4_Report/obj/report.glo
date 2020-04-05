@@ -1,7 +1,7 @@
 \glossaryentry{\glsentrylong {RRT_g} (\glsentrytext {RRT}):?\glossentry{RRT_g}|setentrycounter[]{page}\glsnumberformat}{i}
 \glossaryentry{\glsentrylong {ISA_g} (\glsentrytext {ISA}):?\glossentry{ISA_g}|setentrycounter[]{page}\glsnumberformat}{i}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{vi}
-\glossaryentry{\glsentrylong {RISC_g} (\glsentrytext {RISC}):?\glossentry{RISC_g}|setentrycounter[]{page}\glsnumberformat}{vii}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{vii}
+\glossaryentry{\glsentrylong {RISC_g} (\glsentrytext {RISC}):?\glossentry{RISC_g}|setentrycounter[]{page}\glsnumberformat}{viii}
 \glossaryentry{\glsentrylong {UAV_g} (\glsentrytext {UAV}):?\glossentry{UAV_g}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{\Glsentrytext {automata}:?\glossentry{automata}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{\Glsentrytext {a priori}:?\glossentry{a priori}|setentrycounter[]{page}\glsnumberformat}{2}
@@ -32,26 +32,26 @@
 \glossaryentry{\Glsentrytext {workspace}:?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{\glsentrylong {OGM_g} (\glsentrytext {OGM}):?\glossentry{OGM_g}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{\Glsentrytext {workspace}:?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{13}
-\glossaryentry{\glsentrylong {RRT_g} (\glsentrytext {RRT}):?\glossentry{RRT_g}|setentrycounter[]{page}\glsnumberformat}{14}
-\glossaryentry{\glsentrylong {OGM_g} (\glsentrytext {OGM}):?\glossentry{OGM_g}|setentrycounter[]{page}\glsnumberformat}{14}
-\glossaryentry{\Glsentrytext {a priori}:?\glossentry{a priori}|setentrycounter[]{page}\glsnumberformat}{14}
+\glossaryentry{\glsentrylong {RRT_g} (\glsentrytext {RRT}):?\glossentry{RRT_g}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\glsentrylong {OGM_g} (\glsentrytext {OGM}):?\glossentry{OGM_g}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{\Glsentrytext {a priori}:?\glossentry{a priori}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{\Glsentrytext {dijkstra's algorithm}:?\glossentry{dijkstra's algorithm}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{14}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{15}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{15}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{15}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{14}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{14}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{15}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{15}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{15}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{15}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{16}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{17}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{17}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{16}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{\Glsentrytext {workspace}:?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{17}
@@ -60,19 +60,18 @@
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{18}
-\glossaryentry{\glsentrylong {API_g} (\glsentrytext {API}):?\glossentry{API_g}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{23}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{23}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{23}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{23}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{24}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{25}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{27}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{27}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{29}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{29}
-\glossaryentry{\glsentrylong {HLS_g} (\glsentrytext {HLS}):?\glossentry{HLS_g}|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{50}
-\glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{26}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{26}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{30}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{30}
+\glossaryentry{\glsentrylong {HLS_g} (\glsentrytext {HLS}):?\glossentry{HLS_g}|setentrycounter[]{page}\glsnumberformat}{32}
+\glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{51}
+\glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{51}

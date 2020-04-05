@@ -5,23 +5,24 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Example of 2 Robot Configurations in 3D Space for Motion Planning Purposes\relax }}{12}{figure.caption.35}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Occupancy Grid Maps for $(16\times 16)$ Workspace of Different Resolutions}}{13}{figure.caption.37}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Scope of the RRT Algorithm}}{14}{figure.caption.42}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Step by step demonstration of \gls {RRT} Algorithm for 2D robot in 2D space\relax }}{16}{figure.caption.45}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces 2D RRT Implementation shown by \gls {GUI}\relax }}{20}{figure.caption.54}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces 3D RRT Implementation shown by \gls {GUI}\relax }}{21}{figure.caption.57}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces VTune Amplifier TopDown Analysis Example\relax }}{22}{figure.caption.62}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces \gls {RRT} Functions as a \% of Total CPU Exectution Time\relax }}{24}{figure.caption.69}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces \gls {RRT} Functions as a \% of Total CPU Exectution Time (cont.)\relax }}{25}{figure.caption.70}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces \gls {RRT} Functions Exectution Time, with Bucket Optimization\relax }}{27}{figure.caption.74}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Scope of the RRT Algorithm}}{14}{figure.caption.39}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Step by step demonstration of \gls {RRT} Algorithm for 2D robot in 2D space\relax }}{16}{figure.caption.42}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \relax }}{20}{figure.caption.48}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces 2D RRT Implementation shown by \gls {GUI}\relax }}{21}{figure.caption.51}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces 3D RRT Implementation shown by \gls {GUI}\relax }}{22}{figure.caption.53}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces VTune Amplifier TopDown Analysis Example\relax }}{23}{figure.caption.58}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \gls {RRT} Functions as a \% of Total CPU Exectution Time\relax }}{25}{figure.caption.65}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \gls {RRT} Functions as a \% of Total CPU Exectution Time (cont.)\relax }}{26}{figure.caption.66}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces \gls {RRT} Functions Exectution Time, with Bucket Optimization\relax }}{28}{figure.caption.70}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Pipelining to Improve Latency\relax }}{30}{figure.caption.81}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Interface Summary of HoneyBee-A Synthesis in Vivado HLS\relax }}{32}{figure.caption.87}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces RRT Simulated Execution Time with HB-A (microseconds)\relax }}{34}{figure.caption.92}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Pipelining to Improve Latency\relax }}{31}{figure.caption.77}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Interface Summary of HoneyBee-A Synthesis in Vivado HLS\relax }}{33}{figure.caption.83}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces RRT Simulated Execution Time with HB-A (microseconds)\relax }}{35}{figure.caption.88}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 5-Stage \gls {RISC} Datapath\relax }}{35}{figure.caption.95}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Philosophy V Processor\relax }}{38}{figure.caption.103}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 5-Stage \gls {RISC} Datapath\relax }}{36}{figure.caption.91}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Philosophy V Processor\relax }}{39}{figure.caption.99}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Modelling a UAV as a Rectangular Prism}}{49}{figure.caption.119}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Modelling a UAV as a Rectangular Prism}}{50}{figure.caption.115}
