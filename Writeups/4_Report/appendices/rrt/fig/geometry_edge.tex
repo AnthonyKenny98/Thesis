@@ -1,8 +1,8 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-06 09:45:02
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-06 11:28:04
-The method of edge collision detection in this project's implementation of \gls{RRT} relies on detecting segment-plane intersections. The planes are always set up to be parallel with either the $x-y$ plane, the $x-z$ plane, or the $y-z$ plane. Figure \ref{fig:parallelPlanes} demonstrates this point.
+% @Last Modified time: 2020-04-06 15:27:15
+The method of edge collision detection in this project's implementation of \gls{RRT} relies on detecting segment-plane intersections. The planes are always set up to be parallel with either the $xy$ plane, the $xz$ plane, or the $yz$ plane. Figure \ref{fig:parallelPlanes} demonstrates this point.
 
 \begin{figure}[H]
 \begin{centering}
@@ -12,7 +12,7 @@ The method of edge collision detection in this project's implementation of \gls{
 \end{centering}
 \end{figure}
 
-A plane can be defined by 3 points, $P_a$, $P_b$, and $P_c$. In practice, the points defining a plane parallel to the x-y plane would have the following points:
+A plane can be defined by 3 points, $P_a$, $P_b$, and $P_c$. In practice, the points defining a plane parallel to the $xy$ plane would have the following points:
 
     $$P_a = (x,y,z)$$
     $$P_b = (x+\Delta x,y,z)$$

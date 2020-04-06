@@ -1,26 +1,26 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-27 10:55:29
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-03 14:28:32
+% @Last Modified time: 2020-04-06 15:15:36
 \bigskip
 \begin{algorithm}[H]
-    \caption{Rapidly-Exploring Random Tree in Free \gls{configuration} Space}
+    \caption{Rapidly-Exploring Random Tree in Free \Gls{configuration} Space}
     \SetAlgoLined
     \SetArgSty{textnormal}
     \begin{tabular}{l l}
     \textbf{Inputs:}    & Initial \gls{configuration} $q_{init}$,\\ 
                         & Number of nodes in graph $K$, \\
-                        & Incremental Distance $\Delta q$ \\
+                        & Incremental Distance $\epsilon$ \\
     \textbf{Output:}    & RRT Graph $G$ with $K$ \gls{configuration}s $[q]$ \& edges $[e]$ \\
     \end{tabular}
 
-        $G$.init()\;
+        $G$.init()
         \For{$k = 1$ to $K$}{
-            $q_{rand} \leftarrow $ randomConfiguration(); \\
-            $q_{near} \leftarrow $ nearestVertex($q_{rand}$, $G$); \\
-            $q_{new} \leftarrow $ newVertex($q_{near}$, $q_{rand}$, $\Delta q$); \\
-            $G$.addVertex($q_{new}$); \\  
-            $G$.addEdge($q_{near}$, $q_{new}$);
+            $q_{rand} \leftarrow $ randomConfiguration() \\
+            $q_{near} \leftarrow $ findNearestConfiguration($q_{rand}$, $G$) \\
+            $q_{new} \leftarrow $ stepFromNearest($q_{near}$, $q_{rand}$, $\Delta q$) \\
+            $G$.addVertex($q_{new}$) \\  
+            $G$.addEdge($q_{near}$, $q_{new}$)
         }
 \label{algorithm:rrt}
 \end{algorithm}

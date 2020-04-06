@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-27 18:27:36
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-03 14:28:31
+% @Last Modified time: 2020-04-06 15:18:42
 \bigskip
 \begin{algorithm}[H]
     \caption{Rapidly-Exploring Random Tree with Collision Detection}
@@ -10,17 +10,17 @@
     \begin{tabular}{l l}
     \textbf{Inputs:}    & Initial \gls{configuration} $q_{init}$,\\ 
                         & Number of nodes in graph $K$, \\
-                        & Incremental Distance $\Delta q$, \\
+                        & Incremental Distance $\epsilon$, \\
                         & Space $S$ containing obstacles \\
     \textbf{Output:}    & RRT Graph $G$ with $K$ \gls{configuration}s $[q]$ \& edges $[e]$ \\
     \end{tabular}
 
         $G$.init()\;
         \For{$k = 1$ to $K$}{
-            \While { !\text{pointCollision}($q_{new}$) } {
+            \While { !\text{configCollision}($q_{new}$) } {
                 $q_{rand} \leftarrow $ randomConfiguration(); \\
-                $q_{near} \leftarrow $ nearestVertex($q_{rand}$, $G$); \\
-                $q_{new} \leftarrow $ newVertex($q_{near}$, $q_{rand}$, $\Delta q$); \\
+                $q_{near} \leftarrow $ findNearestConfig($q_{rand}$, $G$); \\
+                $q_{new} \leftarrow $ stepFromNearest($q_{near}$, $q_{rand}$, $\Delta q$); \\
             }
             $e_{new} \leftarrow $ newEdge($q_{near}, q_{new}$) \\
             \eIf{\text{!edgeCollision($e_{new}$)}} {

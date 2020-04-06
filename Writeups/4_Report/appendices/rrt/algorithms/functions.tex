@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-05 21:30:06
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-06 09:41:29
+% @Last Modified time: 2020-04-06 16:48:45
 
 \bigskip
 \begin{algorithm}[H]
@@ -95,9 +95,9 @@ Where \texttt{stepTowardConfig($q_1$, $q_2$)} returns a configuration $\epsilon$
         }
 \end{algorithm}
 \bigskip
-Where $O$ is a $N$-Dimensional array of booleans, with True representing an occupied grid and false representing an unoccupied one. \texttt{gridLookup()} is a function that maps a floating point coordinate to the correct integer of the grid in which it resides. For a map resolution of one, this is as simple as rounding a float down to an integer.
+Where $O$ is a $N$-Dimensional array of booleans, with True representing an occupied grid and false representing an unoccupied one. \texttt{gridLookup()} is a function that maps a floating point coordinate to the correct integer of the grid in which it resides. For a map resolution of one, this is as simple as rounding a float down to an integer. \\
 
-\begin{algorithm}[t!]
+\begin{algorithm}[ht!]
     \caption{\texttt{configCollision()} as implemented for \gls{RRT} for 3D}
     \SetAlgoLined
     \SetArgSty{textnormal}

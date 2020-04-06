@@ -1,13 +1,13 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 22:23:47
+% @Last Modified time: 2020-04-06 15:20:39
 
 
 % TECHNICAL SPECIFICATIONS
 \subsection{Technical Specifications}
 
-    With \gls{RRT} selected as the benchmark algorithm against which to test specialised hardware, this project required an implementation of the algorithm that satisfied the following criteria shown in Table \ref{table:RRT_Tech_Specs_Abbrev}. Appendix \ref{section:rrt_appendix_tech_specs} is a more thorough description of the technical specifications for the implementation of RRT. 
+    With \gls{RRT} selected as the benchmark algorithm against which to test specialized hardware, this project required an implementation of the algorithm that satisfied the following criteria shown in Table \ref{table:RRT_Tech_Specs_Abbrev}. Appendix \ref{section:rrt_appendix_tech_specs} is a more thorough description of the technical specifications for the implementation of RRT. 
 
     % Tech Spec Table
     \input{chapters/chapter2/tables/rrt_tech_specs}
@@ -26,10 +26,10 @@
         \input{chapters/chapter2/tables/params.tex}
 
     \subsubsection{Dimensionality}
-        \gls{RRT} was implemented in both \gls{2D} and \gls{3D}. Not only did a \gls{2D} implementation provide a good development checkpoint, it was also interesting to see the difference in computational load between \gls{2D} and \gls{3D}, discussed in Section \ref{section:rrt_analysis}.
+        \gls{RRT} was implemented in both \gls{2D} and \gls{3D}. Not only did a \gls{2D} implementation provide a good development checkpoint, it was also interesting to see the difference in computational load between \gls{2D} and \gls{3D}, shown in Section \ref{section:rrt_analysis}.
 
     \subsubsection{Modelling a \gls{UAV}}
-        The \gls{UAV} was modelled as a \gls{3D} rectangular prism, with its configuration represented by the Cartesian coordinates $(x,y,z)$ and the Euler angles $(\alpha, \beta, \gamma)$.
+        The \gls{UAV} was modelled as a \gls{3D} rectangular prism, with its configuration represented by Cartesian coordinates $(x,y,z)$ and Euler angles $(\alpha, \beta, \gamma)$.
 
     \subsubsection{Key Functions}
         Algorithm \ref{algorithm:rrt_collision} shows that there are 5 key functions that constitute \gls{RRT}. Figure \ref{fig:rrt_functions} demonstrates each of these functions: \texttt{getRandomConfig()}, \texttt{findNearestConfig()}, \texttt{stepFromNearest()}, \texttt{(configCollisions)}, and \texttt{edgeCollisions()}. Appendix \ref{section:rrt_appendix_function_impl} shows in detail how each of these functions was implemented.
@@ -37,8 +37,8 @@
 
 % VISUALIZING IMPLEMENTATION
 \newpage
-\subsection{Visualizing Implementation}
-    With the back end functionality of \gls{RRT} designed an implemented, it was neccesary to develop a way to visualize it. Many existing implementations had the visualization interface run synchonously alongside \gls{RRT}. This would distort any performance analysis results, and so in this implementation it was left until after \gls{RRT} had finished executing and then plotted using Python.
+\subsection{Implementation Visualization}
+    With the back end functionality of \gls{RRT} designed and implemented, it was neccesary to develop a way to visualize it. Many existing implementations had the visualization interface run synchonously alongside \gls{RRT}. This would distort any performance analysis results, and so in this implementation it was left until after \gls{RRT} had finished executing and then plotted using Python.
 
     \subsubsection{Plotting Configurations and the Workspace}
         Plotting the workspace using the ``matplotlib'' library was relatively simple in both \gls{2D} and \gls{3D}, shown in Figure \ref{fig:rrt_workspace}. It was decided that the \gls{UAV}'s' configuration would be visualized only as its origin point, rather than plotting a \gls{3D} rectangular prism at each configuration, in order to maintain simplicity. Nevertheless, the \gls{UAV} was still modelled as a 3D prism in the backend.

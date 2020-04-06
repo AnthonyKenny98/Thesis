@@ -1,6 +1,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {algocf}{\numberline {2.1}{\ignorespaces Rapidly-Exploring Random Tree in Free \gls {configuration} Space\relax }}{14}{algocf.2.1}
+\contentsline {algocf}{\numberline {2.1}{\ignorespaces Rapidly-Exploring Random Tree in Free \Gls {configuration} Space\relax }}{15}{algocf.2.1}
 \contentsline {algocf}{\numberline {2.2}{\ignorespaces Rapidly-Exploring Random Tree with Collision Detection\relax }}{17}{algocf.2.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -8,8 +8,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {algocf}{\numberline {C.1}{\ignorespaces \texttt {getRandomConfig()} as implemented for \gls {RRT}\relax }}{51}{algocf.C.1}
-\contentsline {algocf}{\numberline {C.2}{\ignorespaces \texttt {findNearestConfig()} as implemented for \gls {RRT}\relax }}{51}{algocf.C.2}
-\contentsline {algocf}{\numberline {C.3}{\ignorespaces \texttt {stepFromNearest()} as implemented for \gls {RRT}\relax }}{52}{algocf.C.3}
-\contentsline {algocf}{\numberline {C.4}{\ignorespaces \texttt {configCollision()} as implemented for \gls {RRT}\relax }}{52}{algocf.C.4}
-\contentsline {algocf}{\numberline {C.5}{\ignorespaces \texttt {configCollision()} as implemented for \gls {RRT} for 3D\relax }}{53}{algocf.C.5}
+\contentsline {algocf}{\numberline {C.1}{\ignorespaces \texttt {getRandomConfig()} as implemented for \gls {RRT}\relax }}{52}{algocf.C.1}
+\contentsline {algocf}{\numberline {C.2}{\ignorespaces \texttt {findNearestConfig()} as implemented for \gls {RRT}\relax }}{52}{algocf.C.2}
+\contentsline {algocf}{\numberline {C.3}{\ignorespaces \texttt {stepFromNearest()} as implemented for \gls {RRT}\relax }}{53}{algocf.C.3}
+\contentsline {algocf}{\numberline {C.4}{\ignorespaces \texttt {configCollision()} as implemented for \gls {RRT}\relax }}{53}{algocf.C.4}
+\contentsline {algocf}{\numberline {C.5}{\ignorespaces \texttt {configCollision()} as implemented for \gls {RRT} for 3D\relax }}{54}{algocf.C.5}

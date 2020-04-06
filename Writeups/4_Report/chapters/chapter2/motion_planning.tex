@@ -1,11 +1,11 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-04 10:01:40
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 17:17:17
+% @Last Modified time: 2020-04-06 15:18:44
 
-A funny paradox in computer science is the fact that it is relatively easy to teach a computer to perform tasks that humans find very complicated, but extremely difficult to program one to execute functions that humans master during infancy. Consider, it was as early as 1949 that Claude Shannon presented his paper \textit{Programming a Computer for Playing Chess}\cite{Shannon1950}, and by 1997 the \textit{Deep Blue} computer defeated Garry Kasparov, reigning world champion, in a six game chess match.\cite{Campbell2002} Compare that with some of the most advanced autonomous humanoid robots to date displaying dexterity only comparable with that of a toddler. The task of finding a collision free path, performed constantly without thought by a human, is an example of this paradigm. For a robot to compute a collision free path, it relies on a set of Motion Planning Algorithms.
+A funny paradox in computer science is the fact that it is relatively easy to teach a computer to perform tasks that humans find very complicated, but extremely difficult to program one to execute functions that humans master during infancy. Consider, it was as early as 1949 that Claude Shannon presented his paper \textit{Programming a Computer for Playing Chess}\cite{Shannon1950}, and by 1997 the \textit{Deep Blue} computer defeated Garry Kasparov, the reigning world champion, in a six game chess match.\cite{Campbell2002} Compare that with some of the most advanced autonomous humanoid robots to date displaying dexterity only comparable with that of a toddler. The task of finding a collision free path, performed constantly without thought by a human, is an example of this paradigm. For a robot to plan its own paths, it relies on a set of Motion Planning Algorithms.
 
-Motion Planning Algorithms refer to the set of algorithms that find possible sequences of valid \gls{configuration}s for a robot in a space. In plain English, they are algorithms that determine the movements a robot can make in a map, with the intent of eventually finding a path from one point to another. 
+Motion Planning Algorithms refer to the set of algorithms that find possible sequences of valid \gls{configuration}s for a robot in a space. In more simple terms, they are algorithms that determine the movements a robot can make in a map, with the intent of eventually finding a path from one point to another.
 
 \subsection{Key Concepts}
     \subsubsection{\Gls{workspace}}
@@ -14,26 +14,26 @@ Motion Planning Algorithms refer to the set of algorithms that find possible seq
     \subsubsection{Configuration}
     A configuration describes the position, orientation, and pose of the robot. The complexity of a robot's configuration is therefore dependant on the dimension of the \gls{workspace}, the complexity of the robot itself, and in what level of detail the robot must be represented. For example:
     \begin{itemize}
-        \item Most simply, a robot can be represented as a point by the Cartesian coordinates $(x,y)$ \gls{2D} space and $(x,y,z)$ in \gls{3D} space.
-        \item More realistically, a robot such as a drone may be represented in \gls{3D} by an origin point $(x,y,z)$ and 3 Euler angles $(\alpha,\beta,\gamma)$ describing its orientation.
-        \item In a more complex form, a fixed base robot with $N$ \glsfirst{DOF} would require an $N$-dimensional configuration.
+        \item Most simply, a robot can be represented as a point; by the Cartesian coordinates $(x,y)$ in \gls{2D} space and $(x,y,z)$ in \gls{3D} space.
+        \item More realistically, a robot such as a drone may be represented in \gls{3D} as a 3D rectangular prism; by an origin point $(x,y,z)$ and 3 Euler angles $(\alpha,\beta,\gamma)$ describing its orientation.
+        \item In a more complex form, a fixed-base, $N$ \glsfirst{DOF} robot would require an $N$-dimensional configuration.
     \end{itemize}
 
     \input{chapters/chapter2/figures/configuration.tex}
 
     \subsubsection{Occupancy Grid Map}
-    An \glsfirst{OGM} is a method of representing the obstacles present in a \gls{workspace}. Obstacles are often irregularly shaped and computing collisions with such obstacles is near impossible. Therefore, the \gls{workspace} is discretized into grids and grids containing any part of the obstacle are markes as occupied, even if only a small part of the grid is occupied. An \gls{OGM} will more accurately represent a \gls{workspace} with a higher resolution, shown in Figure \ref{fig:OGM}.
+    An \glsfirst{OGM} is a method of representing the obstacles present in a \gls{workspace}. Obstacles are often irregularly shaped and computing collisions with such obstacles is near impossible. Therefore, the \gls{workspace} is discretized into grids, with grids that contain any part of the obstacle marked as occupied, even if only a small part of the grid is occupied. An \gls{OGM} will more accurately represent a \gls{workspace} with a higher resolution, shown in Figure \ref{fig:OGM}.
 
     \input{chapters/chapter2/figures/ogm}
 
 \subsection{Rapidly-exploring Random Tree}
     
     % INTRO
-    \glsfirst{RRT} is an algorithm designed to efficiently build a tree of collision-free paths in a high-complexity environment. The algorithm randomly samples points, draws an edge from the nearest currently existing node in the tree, to grow the tree in the space. It is inherently biased to grow towards large unsearched areas of the workspace. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is used in autonomous robotic motion planning problems such as autonomous drones.
+    \glsfirst{RRT} is an algorithm designed to efficiently build a tree of collision-free paths in a high-complexity environment. The algorithm grows the tree by randomly sampling points and connecting them to the nearest existing node in the tree. It is inherently biased to grow towards large unsearched areas of the workspace. RRT was developed by S. LaVelle\cite{LaValle1998} and J. Kuffner\cite{LaValle2001}. It is frequently used in autonomous robotic motion planning problems such as autonomous drones.
 
     % SCOPE OF ALGORITHM
     \subsubsection{Scope}
-        \gls{RRT} takes an initial configuration, a goal point, and an \glsfirst{OGM} as its input. This \gls{OGM} may be built and updated using \gls{a priori} knowledge, sensor data from the robot, and other inputs. \gls{RRT} will output a tree of collision free paths toward the goal, as demonstrated in Figure \ref{fig:rrt_scope}. \textbf{It does not calculate the fastest path from that tree}; that can be accomplished using algorithms such as \Gls{dijkstra's algorithm}.
+        \gls{RRT} takes an initial configuration, a goal point, and an \glsfirst{OGM} as its input. This \gls{OGM} may be built and updated using \textit{\gls{a priori}} knowledge, sensor data from the robot, and other inputs. The algorithm will output a tree of collision free paths toward the goal, as demonstrated in Figure \ref{fig:rrt_scope}. \textbf{It does not calculate the fastest path from that tree}; that can be accomplished using algorithms such as \Gls{dijkstra's algorithm}.
 
         \input{chapters/chapter2/figures/rrt_scope}
 
@@ -49,17 +49,15 @@ Motion Planning Algorithms refer to the set of algorithms that find possible seq
         \input{chapters/chapter2/algorithms/rrt_alg}
 
         % Explanation of Algorithm, referencing visual step by step figure
-        Algorithm \ref{algorithm:rrt} can be visually represented in Figure \ref{fig:rrt-step-by-step}. Consider a \gls{2D} robot operating in a \gls{2D} workspace. A Graph $G$ is initialized containing an initial \gls{configuration}, $q_{init}$, with constraints on the number of nodes that the graph can hold, $K$, and the maximum distance between two nodes, $\Delta q$. This is shown in Sub-figure \ref{subfig:rrt-step-by-step-A}. A random \gls{configuration} for the robot, $q_{rand}$ is generated (\ref{subfig:rrt-step-by-step-B}). The nearest existing \gls{configuration} in $G$, $q_{near}$, is found. (In the first iteration, $q_{near} = q_{init}$, shown in Sub-figure \ref{subfig:rrt-step-by-step-C}). The distance between $q_{near}$ and $q_{rand}$ is calculated. If this distance is less than $\Delta q$, $q_{new} = q_{rand}$. If not, $q_{new}$ is selected, typically by moving by $\Delta q$ from $q_{near}$ towards $q_{rand}$ (\ref{subfig:rrt-step-by-step-C}). $q_{new}$ is then added to $G$. This is repeated for $K$ \gls{configuration}s.
-        \todo[inline]{This is all really ugly and should be explained better}
+        Algorithm \ref{algorithm:rrt} can be visually represented in Figure \ref{fig:rrt-step-by-step}, with the example showing a \gls{2D} robot operating in a \gls{2D} workspace.
 
         % Step By Step RRT Figure
         \input{chapters/chapter2/figures/rrt-step-by-step}
-        \todo{Redo this diagram}
 
         % COLLISION DETECTION
 
-        Algorithm \ref{algorithm:rrt} shows how \gls{RRT} builds a graph of possible \gls{configuration}s connected by edges in a completely free \gls{configuration} space. However, in real-world applications, a robot's \gls{workspace} space often contains obstacles. As such, collision detection must be included in the algorithm. The two types of collisions the algorithm must check for are \textit{configuration collisions} (those where the robot would collide with an obstacle in a given \gls{configuration}) and \textit{edge collisions} (where the robot would collide when moving between two collision free \gls{configuration}s).
+        Algorithm \ref{algorithm:rrt} shows how \gls{RRT} builds a graph of possible \gls{configuration}s connected by edges in a completely free \gls{configuration} space. However, in real-world applications, a robot's \gls{workspace} space will contain obstacles. As such, collision detection must be included in the algorithm. The two types of collisions the algorithm must check for are \textit{configuration collisions} (those where the robot would collide with an obstacle in a given \gls{configuration}) and \textit{edge collisions} (where the robot would collide when moving between two collision free \gls{configuration}s).
 
-        The RRT with \gls{configuration} and edge collision detection can be seen in Algorithm \ref{algorithm:rrt_collision}. The method of implementing \gls{RRT} with collision detection to model a drone in 3D space is detailed in Section \ref{section:rrt}.
+        \gls{RRT} with \gls{configuration} and edge collision detection can be seen in Algorithm \ref{algorithm:rrt_collision}. The method of implementing \gls{RRT} with collision detection to model a drone in 3D space is detailed in Section \ref{section:rrt}.
 
         \input{chapters/chapter2/algorithms/rrt_alg_collision}
