@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-04-06T03:49:36.754Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="pTOpn0q9vaaomxKOFNPk" version="12.9.7" type="github" pages="7">
+<mxfile host="www.draw.io" modified="2020-04-06T03:50:50.727Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="afFbd00R-__YaEliz3P7" version="12.9.7" type="github" pages="7">
   <diagram id="QYDGk-V72FldWnktagho" name="Page-1">
     <mxGraphModel dx="1544" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1000" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
@@ -73,6 +73,56 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="76mG4lgnANxHGwK9NYwa-8" value="&lt;font color=&quot;#ffffff&quot;&gt;&lt;b&gt;Random Config&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4285F4;strokeColor=#000000;rotation=-25;align=center;fontSize=30;fontFamily=Computer Modern;" vertex="1" parent="76mG4lgnANxHGwK9NYwa-1">
+          <mxGeometry x="300" y="320" width="200" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Copy of Copy of Copy of Page-1" id="zhf7LWvD2noAlcLW-Yz8">
+    <mxGraphModel dx="1103" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1000" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+      <root>
+        <mxCell id="PNUwHadK3woV_2Xainw9-0" />
+        <mxCell id="PNUwHadK3woV_2Xainw9-1" parent="PNUwHadK3woV_2Xainw9-0" />
+        <mxCell id="r926kdztX8l7WFg1njqz-0" value="" style="endArrow=none;html=1;strokeColor=#EA4335;strokeWidth=6;fontFamily=Computer Modern;fontSize=80;fontColor=#FBBC05;exitX=0.505;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="PNUwHadK3woV_2Xainw9-1" source="PNUwHadK3woV_2Xainw9-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="600" as="sourcePoint" />
+            <mxPoint x="310" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNUwHadK3woV_2Xainw9-2" value="&lt;font color=&quot;#ffffff&quot; style=&quot;font-size: 30px;&quot;&gt;&lt;b style=&quot;font-size: 30px;&quot;&gt;Initial &lt;br style=&quot;font-size: 30px;&quot;&gt;Config&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#34A853;strokeColor=#000000;rotation=0;align=center;fontSize=30;fontFamily=Computer Modern;" vertex="1" parent="PNUwHadK3woV_2Xainw9-1">
+          <mxGeometry x="120" y="700" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="PNUwHadK3woV_2Xainw9-3" value="&lt;font style=&quot;font-size: 58px;&quot; color=&quot;#ffffff&quot;&gt;Goal&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#000000;fillColor=#EA4335;fontFamily=Computer Modern;FType=g;fontSize=58;" vertex="1" parent="PNUwHadK3woV_2Xainw9-1">
+          <mxGeometry x="680" y="160" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="PNUwHadK3woV_2Xainw9-4" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=6;fontColor=#FFFFFF;fontFamily=Computer Modern;" edge="1" parent="PNUwHadK3woV_2Xainw9-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="960" as="sourcePoint" />
+            <mxPoint x="40" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNUwHadK3woV_2Xainw9-5" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=6;fontColor=#FFFFFF;fontFamily=Computer Modern;" edge="1" parent="PNUwHadK3woV_2Xainw9-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="960" y="960" as="sourcePoint" />
+            <mxPoint x="960" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNUwHadK3woV_2Xainw9-6" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=6;fontColor=#FFFFFF;fontFamily=Computer Modern;" edge="1" parent="PNUwHadK3woV_2Xainw9-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="960" as="sourcePoint" />
+            <mxPoint x="960" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNUwHadK3woV_2Xainw9-7" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=6;fontColor=#FFFFFF;fontFamily=Computer Modern;" edge="1" parent="PNUwHadK3woV_2Xainw9-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="40" as="sourcePoint" />
+            <mxPoint x="960" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PNUwHadK3woV_2Xainw9-9" value="&lt;font color=&quot;#ffffff&quot;&gt;&lt;b&gt;New&lt;br&gt;Config&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4285F4;strokeColor=#000000;rotation=-25;align=center;fontSize=30;fontFamily=Computer Modern;" vertex="1" parent="PNUwHadK3woV_2Xainw9-1">
+          <mxGeometry x="210" y="500" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="frEJHEPvDyDk0eQ61P8P-0" value="&lt;font color=&quot;#ffffff&quot;&gt;&lt;b&gt;Random Config&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#000000;rotation=-25;align=center;fontSize=30;fontFamily=Computer Modern;" vertex="1" parent="PNUwHadK3woV_2Xainw9-1">
           <mxGeometry x="300" y="320" width="200" height="100" as="geometry" />
         </mxCell>
       </root>
@@ -175,47 +225,6 @@
         </mxCell>
         <mxCell id="3Axvdb4ZnlNxERFfCfOT-11" value="&lt;font color=&quot;#ffffff&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4285F4;strokeColor=#000000;rotation=30;align=center;fontSize=30;fontFamily=Computer Modern;" vertex="1" parent="Pf7Wr0SnzcLk5Ec8hKG--1">
           <mxGeometry x="490" y="150" width="200" height="100" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="Copy of Copy of Copy of Page-1" id="zhf7LWvD2noAlcLW-Yz8">
-    <mxGraphModel dx="2206" dy="1429" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1000" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
-      <root>
-        <mxCell id="PNUwHadK3woV_2Xainw9-0" />
-        <mxCell id="PNUwHadK3woV_2Xainw9-1" parent="PNUwHadK3woV_2Xainw9-0" />
-        <mxCell id="PNUwHadK3woV_2Xainw9-2" value="&lt;font color=&quot;#ffffff&quot; style=&quot;font-size: 30px;&quot;&gt;&lt;b style=&quot;font-size: 30px;&quot;&gt;Initial &lt;br style=&quot;font-size: 30px;&quot;&gt;Config&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#34A853;strokeColor=#000000;rotation=0;align=center;fontSize=30;fontFamily=Computer Modern;" vertex="1" parent="PNUwHadK3woV_2Xainw9-1">
-          <mxGeometry x="120" y="700" width="200" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="PNUwHadK3woV_2Xainw9-3" value="&lt;font style=&quot;font-size: 58px;&quot; color=&quot;#ffffff&quot;&gt;Goal&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#000000;fillColor=#EA4335;fontFamily=Computer Modern;FType=g;fontSize=58;" vertex="1" parent="PNUwHadK3woV_2Xainw9-1">
-          <mxGeometry x="680" y="160" width="160" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="PNUwHadK3woV_2Xainw9-4" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=6;fontColor=#FFFFFF;fontFamily=Computer Modern;" edge="1" parent="PNUwHadK3woV_2Xainw9-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="40" y="960" as="sourcePoint" />
-            <mxPoint x="40" y="40" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="PNUwHadK3woV_2Xainw9-5" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=6;fontColor=#FFFFFF;fontFamily=Computer Modern;" edge="1" parent="PNUwHadK3woV_2Xainw9-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="960" y="960" as="sourcePoint" />
-            <mxPoint x="960" y="40" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="PNUwHadK3woV_2Xainw9-6" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=6;fontColor=#FFFFFF;fontFamily=Computer Modern;" edge="1" parent="PNUwHadK3woV_2Xainw9-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="40" y="960" as="sourcePoint" />
-            <mxPoint x="960" y="960" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="PNUwHadK3woV_2Xainw9-7" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=6;fontColor=#FFFFFF;fontFamily=Computer Modern;" edge="1" parent="PNUwHadK3woV_2Xainw9-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="40" y="40" as="sourcePoint" />
-            <mxPoint x="960" y="40" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="PNUwHadK3woV_2Xainw9-9" value="&lt;font color=&quot;#ffffff&quot;&gt;&lt;b&gt;New&lt;br&gt;Config&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4285F4;strokeColor=#000000;rotation=-25;align=center;fontSize=30;fontFamily=Computer Modern;" vertex="1" parent="PNUwHadK3woV_2Xainw9-1">
-          <mxGeometry x="210" y="500" width="200" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
