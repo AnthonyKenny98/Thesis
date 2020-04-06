@@ -15,15 +15,16 @@
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Profile of Computational Load of \gls {RRT} in 2D}}{26}{figure.caption.62}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Profile of Computational Load of \gls {RRT} in 3D}}{27}{figure.caption.64}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Pipelining to Improve Latency\relax }}{30}{figure.caption.71}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Interface Summary of HoneyBee-A Synthesis in Vivado HLS\relax }}{32}{figure.caption.77}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces RRT Simulated Execution Time with HB-A (microseconds)\relax }}{34}{figure.caption.82}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Megalong Park Honey Bee Pollinating a Weeping Cherry Blossom}}{30}{figure.caption.70}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Pipelining to Improve Latency\relax }}{31}{figure.caption.73}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Interface Summary of HoneyBee-A Synthesis in Vivado HLS\relax }}{32}{figure.caption.79}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces RRT Simulated Execution Time with HB-A (microseconds)\relax }}{34}{figure.caption.84}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 5-Stage \gls {RISC} Datapath\relax }}{35}{figure.caption.85}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Philosophy V Processor\relax }}{38}{figure.caption.93}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 5-Stage \gls {RISC} Datapath\relax }}{35}{figure.caption.87}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Philosophy V Processor\relax }}{38}{figure.caption.95}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Modelling a UAV as a Rectangular Prism}}{49}{figure.caption.109}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Using Parallel Planes to determine Edge Collisions with Grids\relax }}{55}{figure.caption.115}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Modelling a UAV as a Rectangular Prism}}{49}{figure.caption.111}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Using Parallel Planes to determine Edge Collisions with Grids\relax }}{55}{figure.caption.117}

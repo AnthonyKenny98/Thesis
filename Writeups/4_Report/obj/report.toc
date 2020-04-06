@@ -64,7 +64,7 @@
 \contentsline {subsection}{\numberline {4.1.2}RISC Processor Design}{35}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}RISC-V ISA}{35}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}RV32I}{35}{subsection.4.2.1}
-\contentsline {subsubsection}{Instruction Formats}{36}{section*.88}
+\contentsline {subsubsection}{Instruction Formats}{36}{section*.90}
 \contentsline {subsection}{\numberline {4.2.2}Motion Planning Extension}{37}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}PhilosophyV}{37}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Baseline Implementation}{37}{subsection.4.3.1}
@@ -74,9 +74,9 @@
 \contentsline {section}{\numberline {5.1}Discussion of Results}{40}{section.5.1}
 \contentsline {section}{\numberline {5.2}Evaluation of Success}{40}{section.5.2}
 \contentsline {section}{\numberline {5.3}Future Work}{40}{section.5.3}
-\contentsline {chapter}{Bibliography}{41}{chapter*.99}
-\contentsline {chapter}{Glossary}{43}{section*.100}
-\contentsline {chapter}{Appendices}{46}{section*.102}
+\contentsline {chapter}{Bibliography}{41}{chapter*.101}
+\contentsline {chapter}{Glossary}{43}{section*.102}
+\contentsline {chapter}{Appendices}{46}{section*.104}
 \contentsline {chapter}{\numberline {A}Project Repository}{47}{Appendix.1.A}
 \contentsline {chapter}{\numberline {B}Budget}{48}{Appendix.1.B}
 \contentsline {chapter}{\numberline {C}RRT Supporting Documentation}{49}{Appendix.1.C}
@@ -86,4 +86,4 @@
 \contentsline {section}{\numberline {C.4}Implementation of Key RRT Functions}{52}{section.1.C.4}
 \contentsline {section}{\numberline {C.5}Geometrically Determining Segment-Plane Intersection}{55}{section.1.C.5}
 \contentsline {section}{\numberline {C.6}Timing Methodology of RRT Analysis}{56}{section.1.C.6}
-\contentsline {subsubsection}{Internal Timing}{57}{section*.117}
+\contentsline {subsubsection}{Internal Timing}{57}{section*.119}

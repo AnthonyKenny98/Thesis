@@ -1,15 +1,18 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-26 08:22:07
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-03 13:33:25
+% @Last Modified time: 2020-04-06 17:53:24
+
+The second objective of this thesis was to design and implement a functional hardware unit that accelerates the execution of \gls{RRT}. With the bottleneck function having been identified in Chapter 2 as edge collision detection, Chapter 3 details the specification, design, implementation, and analysis of a hardware unit the implements the edge collision function.
 
 \section{Defining the Collision Detection Unit}
-
-    It was demonstrated in Section \ref{section:rrt_analysis_results} that the critical function of \gls{RRT} was edge collision detection. As such, the thesis proposes designing a functional unit that takes advantage of pipelining and parallelization to speed up the detection of edge collisions. Section \ref{subsection:HoneyBeeTechSpechs} outlines the technical specifications for the functional unit. Section \ref{subsection:HoneyBeePerfSpechs} outlines the performance specifications.
+\todo[inline]{Needs new title.}
 
     \subsection{Edge Collision Function}
     \label{subsection:EdgeCollisionFunction}
-        \todo[inline, caption={Edge Collision Function Description}]{Edge collision function and algorithm, perhaps both for normal and parallelized?}
+        To briefly examine the edge collision detection function in general terms; Given an edge $e$, \gls{RRT} finds where $e$ intersects with grids in the \glslong{OGM}. If any of the grids it intersects with are ``occupied'', a collision is returned. 
+
+        \input{chapters/chapter3/fig/edge_collision_process}
    
     \subsection{Technical Specifications}
     \label{subsection:HoneyBeeTechSpechs}
@@ -22,15 +25,19 @@
         \todo[inline]{Performance Specifications Functional Unit}
 
 \newpage
+
 \section{HoneyBee}
-    The Honey Bee has long been renowned for its tireless work ethic. But people rarely give the Honey Bee credit for its remarkable navigation and collision avoidance strategies during flight. As such, it is quite appropriate that this functional unit, designed to work tirelessly, rapidly and efficiently to execute collision detection computations, is named HoneyBee. \\
+
+    \input{chapters/chapter3/fig/megalong_park_bee}
+
+    The honey bee, \textit{Apis mellifera}, has long been renowned for its tireless work ethic. However, the honey bee is rarely given credit for its remarkable navigation and collision avoidance strategies during flight. Recent research\cite{Menzel2005} suggests that honey bees, interestingly enough, explore their workspace randomly in order to find paths from their hive to sources of pollen. Sound familiar? As such, it is quite appropriate that this functional unit, designed to work tirelessly, rapidly and efficiently to execute collision detection computations for robot motion planning, was named \textbf{HoneyBee}. \\
 
     \todo[inline,caption={More Iterations of HoneyBee Design}]{Note: Currently this report only shows the design/build/measurement of the first pass at designing the functional unit (Designated HoneyBee-A, or HB-A). Final report will detail further iterations.}
 
     \subsection{Design}
         \subsubsection*{HoneyBee-A Design}
         The first design iteration, designated \gls{HB-A}, was designed to take advantage of the performance improvements associated with pipelining. Figure \ref{fig:pipeline} demonstrates how pipelineing in hardware improves latency. By default, instructions are executed in order, one at a time. Pipelining takes advantage of operations that are independent of each other to reduce the number of clock cycles required to complete a set of instructions. 
-        \input{chapters/chapter3/figures/pipeline}
+        \input{chapters/chapter3/fig/pipeline}
  
 
     \subsection{Build}
@@ -42,7 +49,7 @@
 
         \subsubsection*{HoneyBee-A Synthesis}
         Figure \ref{fig:HB-A-synthesis} shows the interface summary of successful synthesis of HoneyBee-A. Notice that the edge input has been split into 6 32 bit input ports. 
-        \input{chapters/chapter3/figures/HB-A-synthesis}
+        \input{chapters/chapter3/fig/HB-A-synthesis}
     
     \subsection{Measurement and Analysis}
         \subsubsection*{HoneyBee-A}
@@ -51,6 +58,6 @@
 
             When HoneyBee-A is simulated in full \gls{RRT} execution, we see similarly promising results. Table \ref{table:rrt-with-hba} shows the results of simulated RRT execution with HoneyBee-A. This is also shown in Figure \ref{fig:rrt-with-hba}.
             \input{chapters/chapter3/tables/rrt-with-hba}
-            \input{chapters/chapter3/figures/rrt-with-hba}
+            \input{chapters/chapter3/fig/rrt-with-hba}
 
             \todo[inline]{Expand Discussion of HoneyBee-A Results}

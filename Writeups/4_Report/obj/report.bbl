@@ -52,6 +52,14 @@ S.~M. LaValle and J.~J. Kuffner, ``{Randomized kinodynamic planning},'' {\em
 \bibitem{Intel2019}
 Intel, ``{VTune Profiler},'' 2019.
 
+\bibitem{Menzel2005}
+R.~Menzel, U.~Greggers, A.~Smith, S.~Berger, R.~Brandt, S.~Brunke, G.~Bundrock,
+  S.~H{\"{u}}lse, T.~Pl{\"{u}}mpe, F.~Schaupp, E.~Sch{\"{u}}ttler, S.~Stach,
+  J.~Stindt, N.~Stollhoff, and S.~Watzl, ``{Honey bees navigate according to a
+  map-like spatial memory},'' {\em Proceedings of the National Academy of
+  Sciences of the United States of America}, vol.~102, pp.~3040--3045, feb
+  2005.
+
 \bibitem{Thingbits}
 Thingbits, ``{LynxMotionHQuad500 Drone}.''
 
