@@ -1,0 +1,35 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-04-06 08:00:17
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-06 08:42:21
+
+\subsubsection*{VTune Profiler}
+    VTune Profiler performance profiler is an application for software performance analysis. It provides functionality to examine hot-spots for CPU execution time through a top down analysis. The top down analysis tool shows the percentage of CPU time taken up by each function. It was used to initially profile the algorithm's performance.
+
+    \subsubsection{Internal Timing}
+        There are several limitations to using VTune Profiler. First, it can only profile software running on Intel processors, which implement the x86 \gls{ISA}. In anticipation of potentially needing to run performance analysis on a \gls{RISC-V} processor, another method would have been required. Secondly, VTune Profiler takes a long time to run, as it needs to conduct much analysis that is extraneous to the purpose of this thesis. This became prohibitive when it came to conducting hundreds of tests for different parameterization, with each test running \gls{RRT} a minimum of 100 times. Finally, it was not customizable to ignore certain parts of the implementation which were necessary for logging. While the implementation was designed in such a way that these should not intefere, it led to a lot of irrelevant data. A simple and effective alternative for measuring execution performance wass to insert timing functionality into the software itself.
+
+        Internal timing was implemented based on the inbuilt C \texttt{clock()} function and \\ \texttt{CLOCKS\_PER\_CYCLE} macro, and wrapping each function of interest in a performance tracking struct. This can be seen in the project's \gls{RRT} sub-repository under \texttt{performance.h}.
+
+    \subsubsection*{Comparison}
+        Before proceeding to use the internal timing method to profile the software implementation of \gls{RRT}, it was important to verify that the two methods yielded similar results for the same program. Table \ref{table:timing_calibration} summarizes the results of analysis of a simple C executable. The program calls 5 functions, $\{A, B, C, D, E\}$, each a simple iteration in which a integer is incremented. Since the Internal Timing method returned similar results to the (trusted) VTune Profiler, it was considered to be a reliable method. While it was encouraging to see both methods returned similar results for absolute execution time, the more important metric was the similarity in percentage of total execution time. For good measure, a $\chi^2$ test of hypothesis was conducted and for one degree of freedom showed more that acceptable results.
+
+        \begin{table}[H]
+        \begin{center}
+        \begin{tabular}{|m{0.09\linewidth}|m{0.16\linewidth}|m{0.16\linewidth}|m{0.16\linewidth}|m{0.16\linewidth}|m{0.09\linewidth}|}
+        \hline
+        \multirow{2}{*}{function} & \multicolumn{2}{c|}{Vtune Profiler} & \multicolumn{2}{c|}{Internal Timing}  & \multirow{2}{*}{$\chi^2$}\\
+        \cline{2-5}
+                    & time (s)  & time (\% total) & time (s) & time (\% total)  &   \\
+        \hline
+        A       & 0.488     & 57.4\%        & 0.497 & 57.6\%  &  0.00016       \\
+        B       & 0.2       & 23.5\%        & 0.198 & 23.1\%  &  0.00002       \\
+        C       & 0.102     & 12.0\%        & 0.099 & 11.5\%  &  0.00009       \\
+        D       & 0.048     & 5.7\%         & 0.049 & 5.6\%   &  0.00002       \\
+        E       & 0.012     & 1.4\%         & 0.019 & 2.2\%   &  0.00408       \\
+        \hline
+        \end{tabular}
+        \end{center}
+        \caption{Comparison of Timing Methods}
+        \label{table:timing_calibration}
+        \end{table}

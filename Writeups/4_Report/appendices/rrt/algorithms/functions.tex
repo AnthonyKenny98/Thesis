@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-05 21:30:06
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 22:19:46
+% @Last Modified time: 2020-04-06 09:41:29
 
 \bigskip
 \begin{algorithm}[H]
@@ -14,13 +14,13 @@
     \textbf{Output:}    & Random Configuration $q$ \\
     \end{tabular}
 
-        $q.x \leftarrow$ randomFloat($DIM$); \\
-        $q.y \leftarrow$ randomFloat($DIM$); \\
+        $q.x \leftarrow$ randomFloat($DIM$) \\
+        $q.y \leftarrow$ randomFloat($DIM$) \\
         $q.\alpha \leftarrow$ randomFloat($2\pi$) \\
         \If{$N == 3$}{
-            $q.z \leftarrow$ randomFloat($DIM$); \\
-            $q.\beta \leftarrow$ randomFloat($2\pi$); \\
-            $q.\gamma \leftarrow$ randomFloat($2\pi$); \\
+            $q.z \leftarrow$ randomFloat($DIM$) \\
+            $q.\beta \leftarrow$ randomFloat($2\pi$) \\
+            $q.\gamma \leftarrow$ randomFloat($2\pi$) \\
         }
         \Return $q$;\\
 \end{algorithm}
@@ -38,13 +38,13 @@ Where \texttt{randomFloat(max)} returns a float between 0 and \texttt{max}.
     \textbf{Output:}    & Nearest Configuration $q_{nearest}$ \\
     \end{tabular}
 
-        $q_{nearest} \leftarrow$ $G$.$q_{init}$; \\
+        $q_{nearest} \leftarrow$ $G$.$q_{init}$ \\
         \For{$k = 0$ to $G$.existing\_nodes}{
             \If{distance($q_{new}$, $G.q$[$k$]) < distance($q_{new}$, $q_{nearest}$)}{
-                $q_{nearest} \leftarrow$ $G.q$[$k$]; \\
+                $q_{nearest} \leftarrow$ $G.q$[$k$] \\
             }
         }
-        \Return $q_{nearest}$; \\
+        \Return $q_{nearest}$ \\
 \end{algorithm}
 \bigskip
 Where \texttt{distance($q_1$, $q_2$)} returns the Euclidean distance between two configurations.
@@ -65,9 +65,9 @@ Where \texttt{distance($q_1$, $q_2$)} returns the Euclidean distance between two
 
         \If{distance($q_{nearest}$, $q_{new}$) > $\epsilon$}{
             \If{randomFloat($1$) < $B$}{
-                $q_{new} \leftarrow $ stepTowardConfig($q_{nearest}$, $G$.$q_{goal}$); \\
+                $q_{new} \leftarrow $ stepTowardConfig($q_{nearest}$, $G$.$q_{goal}$) \\
             } \Else{
-                $q_{new} \leftarrow $ stepTowardConfig($q_{nearest}$, $q_{new}$); \\
+                $q_{new} \leftarrow $ stepTowardConfig($q_{nearest}$, $q_{new}$) \\
             }
         }
         \Return $q_{new}$;\\
@@ -75,5 +75,59 @@ Where \texttt{distance($q_1$, $q_2$)} returns the Euclidean distance between two
 \bigskip
 Where \texttt{stepTowardConfig($q_1$, $q_2$)} returns a configuration $\epsilon$ from $q_1$ in the direction of $q_2$.
 
-\todo[inline]{Point Collision Algorithm}
-\todo[inline]{Edge Collision Algorithm for 2D and 3D}
+\bigskip
+\begin{algorithm}
+    \caption{\texttt{configCollision()} as implemented for \gls{RRT}}
+    \SetAlgoLined
+    \SetArgSty{textnormal}
+    \begin{tabular}{l l}
+    \textbf{Inputs:}    & Dimensionality $N$,\\ 
+                        & Occupancy Grid Map ($N$-Dimensional Array) $O$,\\ 
+                        & Configuration $q$ \\
+    \textbf{Output:}    & Boolean \\
+    \end{tabular}
+
+        \If{$N$ == 2 }{
+            \Return $O$[gridLookup($q.x$)][gridLookup($q.y$)]
+        }
+        \Else{
+            \Return $O$[gridLookup($q.x$)][gridLookup($q.y$)][gridLookup($q.z$)]
+        }
+\end{algorithm}
+\bigskip
+Where $O$ is a $N$-Dimensional array of booleans, with True representing an occupied grid and false representing an unoccupied one. \texttt{gridLookup()} is a function that maps a floating point coordinate to the correct integer of the grid in which it resides. For a map resolution of one, this is as simple as rounding a float down to an integer.
+
+\begin{algorithm}[t!]
+    \caption{\texttt{configCollision()} as implemented for \gls{RRT} for 3D}
+    \SetAlgoLined
+    \SetArgSty{textnormal}
+    \begin{tabular}{l l}
+    \textbf{Inputs:}    & Edge $e$,\\ 
+                        & Occupancy Grid Map (3-Dimensional Array) $O$,\\ 
+                        & Maximum Step Distance $\epsilon$ \\
+    \textbf{Output:}    & Boolean \\
+    \end{tabular}
+    
+        $q_{min} \leftarrow $ minConfig($e.q_1$, $e.q_2$) \\
+        \For{($x=  q_{min}.x$ to $q_{min}.x + \epsilon$)}{
+            $q_{intersection} \leftarrow$ = edgeIntersectsPlane($e$, $x$) \\
+            \If{$O$[$q_{intersection}.x$][$q_{intersection}.y$][$q_{intersection}.z$]}{
+                \Return true
+            }
+        }
+        \For{($y=  q_{min}.y$ to $q_{min}.y + \epsilon$)}{
+            $q_{intersection} \leftarrow$ = edgeIntersectsPlane($e$, $y$) \\
+            \If{$O$[$q_{intersection}.x$][$q_{intersection}.y$][$q_{intersection}.z$]}{
+                \Return true
+            }
+        }
+        \For{($z=  q_{min}.z$ to $q_{min}.z + \epsilon$)}{
+            $q_{intersection} \leftarrow$ = edgeIntersectsPlane($e$, $z$) \\
+            \If{$O$[$q_{intersection}.x$][$q_{intersection}.y$][$q_{intersection}.z$]}{
+                \Return true
+            }
+        }
+        \Return false
+\end{algorithm}
+
+While seemingly complex, the above algorithm merely steps through the mathematical process of checking the relevant $x$, $y$, and $z$ planes for a point of intersection with the edge $e$. It then looks up the \gls{OGM} $O$ to see if the grid corresponding with the point of intersection is occupied. If so, then it reports a collision be returning false. The function \texttt{edgeIntersectsPlane} follows the geometrical process of detecting a segment-plane intersection outlined in Appendix \ref{section:rrt_appendix_line_plane_intersection}. $q_{min}$ is calculated to be the origin point of the grid closest to the origin. In other words, the algorithm does not check for intersections throughout the entire map, only the maximum number of grids that could possible be intersected by the edge $e$, given the location of the two points of the edge, $e.p_1$ and $e.p_2$, and the maximum edge length $\epsilon$. The algorithm for \texttt{edgeCollision} in \gls{2D} can be inferred from the above, instead checking segment-line intersections for $x$ and $y$ lines.

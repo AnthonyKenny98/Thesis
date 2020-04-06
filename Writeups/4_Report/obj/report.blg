@@ -13,43 +13,43 @@ Warning--empty journal in Waterman2019
 Warning--empty journal in Vss2sn2019
 You've used 18 entries,
             1876 wiz_defined-function locations,
-            588 strings with 6053 characters,
-and the built_in function-call counts, 3917 in all, are:
-= -- 369
-> -- 153
+            585 strings with 5883 characters,
+and the built_in function-call counts, 3641 in all, are:
+= -- 338
+> -- 146
 < -- 0
-+ -- 60
-- -- 42
-* -- 266
-:= -- 566
++ -- 58
+- -- 40
+* -- 245
+:= -- 536
 add.period$ -- 21
 call.type$ -- 18
 change.case$ -- 19
 chr.to.int$ -- 0
 cite$ -- 26
-duplicate$ -- 189
-empty$ -- 402
-format.name$ -- 42
-if$ -- 938
+duplicate$ -- 170
+empty$ -- 380
+format.name$ -- 40
+if$ -- 869
 int.to.chr$ -- 0
 int.to.str$ -- 18
-missing$ -- 12
+missing$ -- 11
 newline$ -- 61
 num.names$ -- 18
 pop$ -- 86
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 124
+skip$ -- 110
 stack$ -- 0
-substring$ -- 203
-swap$ -- 59
+substring$ -- 163
+swap$ -- 48
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 8
-while$ -- 39
+while$ -- 36
 width$ -- 20
-write$ -- 157
+write$ -- 155
 (There were 8 warnings)

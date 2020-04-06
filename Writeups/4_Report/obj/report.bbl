@@ -49,10 +49,8 @@ S.~M. LaValle, ``{Rapidly-Exploring Random Trees: A New Tool for Path
 S.~M. LaValle and J.~J. Kuffner, ``{Randomized kinodynamic planning},'' {\em
   International Journal of Robotics Research}, vol.~20, pp.~378--400, may 2001.
 
-\bibitem{Bialkowski2011}
-J.~Bialkowski, S.~Karaman, and E.~Frazzoli, ``{Massively parallelizing the RRT
-  and the RRT},'' in {\em IEEE International Conference on Intelligent Robots
-  and Systems}, pp.~3513--3518, 2011.
+\bibitem{Intel2019}
+Intel, ``{VTune Profiler},'' 2019.
 
 \bibitem{Thingbits}
 Thingbits, ``{LynxMotionHQuad500 Drone}.''

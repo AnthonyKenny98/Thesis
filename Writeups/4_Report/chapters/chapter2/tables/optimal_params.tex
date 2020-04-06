@@ -1,0 +1,42 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-04-06 10:56:43
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-06 11:12:10
+
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$DIM$ & $K$ & $\epsilon$ & Goal Bias (\%) & Success Rate (\%) \\
+\hline
+\hline
+\multicolumn{5}{|c|}{2D} \\
+\hline
+$4\times 4$ & 75 & 1 & 10 & 100 \\
+\hline
+$8\times 8$ & 100 & 2 & 25 & 98 \\
+\hline
+$16\times 16$ & 125 & 4 & 25 & 99 \\
+\hline
+$32\times 32$ & 250 & 8 & 10 & 100 \\
+\hline
+$64\times 64$ & 500 & 16 & 25 & 100 \\
+\hline
+\hline
+\multicolumn{5}{|c|}{3D} \\
+\hline
+$4\times 4 \times 4$ & 75 & 1 & 10 & 99 \\
+\hline
+$8\times 8 \times 8$ & 100 & 2 & 25 & 100 \\
+\hline
+$16\times 16 \times 16$ & 100 & 4 & 25 & 100 \\
+\hline
+$32\times 32 \times 32$ & 250 & 8 & 10 & 99 \\
+\hline
+$64\times 64 \times 64$ & 500 & 16 & 25 & 100 \\
+\hline
+\end{tabular}
+\caption[Optimal RRT Parameters for each Map Size]{\textbf{Optimal RRT Parameters for each Map Size}, shows the optimal set of parameters after extensive testing, alongside their respective success rates over 100 executions of \gls{RRT} for different \glspl{OGM}.}
+\label{table:optimal_params}
+\end{centering}
+\end{table}
