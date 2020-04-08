@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-04-08T03:45:01.761Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="kYN4DBmXMfx_1c3mgQRs" version="12.9.8" type="github" pages="7">
+<mxfile host="www.draw.io" modified="2020-04-08T03:46:58.510Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="l4WFgW05MNW6g1UCGbHz" version="12.9.8" type="github" pages="7">
   <diagram id="tLRsJGVEqHHKasmLKiZ0" name="HoneyBee">
     <mxGraphModel dx="1147" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
@@ -2487,7 +2487,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="bAGcw-2sW2K2rLdHtcdg" name="Page-7">
-    <mxGraphModel dx="803" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
+    <mxGraphModel dx="803" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="zLoZ7eUUtIY4s26fe8aT-0" />
         <mxCell id="zLoZ7eUUtIY4s26fe8aT-1" parent="zLoZ7eUUtIY4s26fe8aT-0" />
@@ -2505,6 +2505,24 @@
         </mxCell>
         <mxCell id="zLoZ7eUUtIY4s26fe8aT-2" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/software-engineering-and-video-gaming/512/77_hacker_user_gammer_programmer-128.png;strokeColor=#000000;strokeWidth=2;fillColor=#FBBC05;fontFamily=Computer Modern;fontSize=30;fontColor=#EA4335;align=left;" vertex="1" parent="zLoZ7eUUtIY4s26fe8aT-1">
           <mxGeometry x="100" y="120" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="hhRhqFX4Ydp998q7CWJh-1" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/electronics-17/24/electronics-01-128.png;strokeColor=#000000;strokeWidth=2;fillColor=#FFFFFF;fontFamily=Courier New;fontSize=16;fontColor=#4285F4;align=left;" vertex="1" parent="zLoZ7eUUtIY4s26fe8aT-1">
+          <mxGeometry x="710" y="140" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="hhRhqFX4Ydp998q7CWJh-2" value="" style="endArrow=classic;html=1;labelBackgroundColor=none;strokeColor=#EA4335;strokeWidth=3;fillColor=#FBBC05;fontFamily=Courier New;fontSize=16;fontColor=#4285F4;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="zLoZ7eUUtIY4s26fe8aT-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="214.5" as="sourcePoint" />
+            <mxPoint x="710" y="214.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hhRhqFX4Ydp998q7CWJh-3" value="Hardware Programmer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;fontSize=16;fontColor=#EA4335;fontStyle=4" vertex="1" parent="zLoZ7eUUtIY4s26fe8aT-1">
+          <mxGeometry x="110" y="100" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hhRhqFX4Ydp998q7CWJh-4" value="Hardware Description Language" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;fontSize=16;fontColor=#EA4335;fontStyle=4" vertex="1" parent="zLoZ7eUUtIY4s26fe8aT-1">
+          <mxGeometry x="350" y="100" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hhRhqFX4Ydp998q7CWJh-5" value="FPGA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;fontSize=16;fontColor=#EA4335;fontStyle=4" vertex="1" parent="zLoZ7eUUtIY4s26fe8aT-1">
+          <mxGeometry x="730" y="100" width="100" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
