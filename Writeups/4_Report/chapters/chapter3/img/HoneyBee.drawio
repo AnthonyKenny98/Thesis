@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-04-08T05:16:22.182Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="leBLvCXtJC7yTwV_yAEN" version="12.9.8" type="github" pages="7">
+<mxfile host="www.draw.io" modified="2020-04-08T08:30:09.377Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="9GIsPnNxVE-FbpqTeSIy" version="12.9.8" type="github" pages="7">
   <diagram id="tLRsJGVEqHHKasmLKiZ0" name="HoneyBee">
     <mxGraphModel dx="1147" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
@@ -208,7 +208,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uxAaTCyHR5zjSE7AZ_86" name="Timing">
-    <mxGraphModel dx="803" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+    <mxGraphModel dx="1043" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-0" />
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-1" parent="MPpw_sk_U3eVS9YFa5iW-0" />
@@ -229,7 +229,7 @@
             <mxPoint x="440" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MPpw_sk_U3eVS9YFa5iW-17" value="Check_Plane(X)" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
+        <mxCell id="MPpw_sk_U3eVS9YFa5iW-17" value="Check_Planes(xy)" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
           <mxGeometry x="85" y="120" width="115" height="40" as="geometry" />
         </mxCell>
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-78" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Computer Modern;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="MPpw_sk_U3eVS9YFa5iW-1" source="MPpw_sk_U3eVS9YFa5iW-21" target="MPpw_sk_U3eVS9YFa5iW-75" edge="1">
@@ -240,10 +240,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="MPpw_sk_U3eVS9YFa5iW-22" value="Check_Plane(Y)" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
+        <mxCell id="MPpw_sk_U3eVS9YFa5iW-22" value="Check_Planes(xz)" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
           <mxGeometry x="84" y="160" width="116" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MPpw_sk_U3eVS9YFa5iW-24" value="Check_Plane(Z)" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
+        <mxCell id="MPpw_sk_U3eVS9YFa5iW-24" value="Check_Planes(yz)" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
           <mxGeometry x="88" y="200" width="112" height="40" as="geometry" />
         </mxCell>
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-41" value="Total Collisions (OR operation)" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
@@ -263,7 +263,7 @@
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-54" value="Read Inputs" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
           <mxGeometry x="131" y="320" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MPpw_sk_U3eVS9YFa5iW-55" value="Check_Plane_X" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;fontColor=#34A853;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
+        <mxCell id="MPpw_sk_U3eVS9YFa5iW-55" value="Check_Planes_XY" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;fontColor=#34A853;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
           <mxGeometry x="86" y="360" width="115" height="40" as="geometry" />
         </mxCell>
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-56" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Computer Modern;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="MPpw_sk_U3eVS9YFa5iW-1" source="MPpw_sk_U3eVS9YFa5iW-57" target="MPpw_sk_U3eVS9YFa5iW-65" edge="1">
@@ -282,7 +282,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="MPpw_sk_U3eVS9YFa5iW-60" value="Check_Plane_Y" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;fontColor=#EA4335;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
+        <mxCell id="MPpw_sk_U3eVS9YFa5iW-60" value="Check_Plane_XZ" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;fontColor=#EA4335;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
           <mxGeometry x="85" y="400" width="116" height="40" as="geometry" />
         </mxCell>
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-61" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Computer Modern;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="MPpw_sk_U3eVS9YFa5iW-1" source="MPpw_sk_U3eVS9YFa5iW-62" target="MPpw_sk_U3eVS9YFa5iW-65" edge="1">
@@ -293,7 +293,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="MPpw_sk_U3eVS9YFa5iW-63" value="Check_Plane_Z" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;fontColor=#4285F4;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
+        <mxCell id="MPpw_sk_U3eVS9YFa5iW-63" value="Check_Plane_YZ" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;fontColor=#4285F4;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
           <mxGeometry x="89" y="440" width="112" height="40" as="geometry" />
         </mxCell>
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-64" value="Total Collisions (OR operation)" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontFamily=Computer Modern;" parent="MPpw_sk_U3eVS9YFa5iW-1" vertex="1">
@@ -583,7 +583,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Copy of Timing" id="e2flOT0_X1pU6UrpdGr9">
-    <mxGraphModel dx="803" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+    <mxGraphModel dx="1043" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="2oo7fKAP9iWN7UhUma5u-0" />
         <mxCell id="2oo7fKAP9iWN7UhUma5u-1" parent="2oo7fKAP9iWN7UhUma5u-0" />
@@ -2487,7 +2487,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="bAGcw-2sW2K2rLdHtcdg" name="Page-7">
-    <mxGraphModel dx="803" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+    <mxGraphModel dx="1606" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="zLoZ7eUUtIY4s26fe8aT-0" />
         <mxCell id="zLoZ7eUUtIY4s26fe8aT-1" parent="zLoZ7eUUtIY4s26fe8aT-0" />
