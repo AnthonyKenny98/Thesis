@@ -1,6 +1,6 @@
-<mxfile host="www.draw.io" modified="2020-04-08T00:39:52.021Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="lGybfA3P_Wkqn3r5w8OJ" version="12.9.8" type="github" pages="5">
+<mxfile host="www.draw.io" modified="2020-04-08T01:22:35.528Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="Dumkt-3NDwjeB1pN4hK7" version="12.9.8" type="github" pages="5">
   <diagram id="tLRsJGVEqHHKasmLKiZ0" name="HoneyBee">
-    <mxGraphModel dx="1834" dy="902" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+    <mxGraphModel dx="524" dy="258" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="yucTcaGxGMNIJf8wDbqY-0" />
         <mxCell id="yucTcaGxGMNIJf8wDbqY-1" parent="yucTcaGxGMNIJf8wDbqY-0" />
@@ -15,8 +15,8 @@
         <mxCell id="uqWX5sFfroWvKUeDKfwF-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 28px&quot;&gt;HoneyBee&lt;/font&gt;&lt;br&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;comic=0;fontSize=22;fontColor=#000000;fontFamily=Computer Modern;" parent="yucTcaGxGMNIJf8wDbqY-1" vertex="1">
           <mxGeometry x="360" y="250" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uqWX5sFfroWvKUeDKfwF-6" value="&lt;span style=&quot;font-size: 18px&quot;&gt;collisions&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;" parent="yucTcaGxGMNIJf8wDbqY-1" vertex="1">
-          <mxGeometry x="600" y="245" width="100" height="30" as="geometry" />
+        <mxCell id="uqWX5sFfroWvKUeDKfwF-6" value="&lt;span style=&quot;font-size: 18px&quot;&gt;Collisions&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;" parent="yucTcaGxGMNIJf8wDbqY-1" vertex="1">
+          <mxGeometry x="600" y="245" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uqWX5sFfroWvKUeDKfwF-16" value="" style="endArrow=none;html=1;strokeWidth=1;fontFamily=Computer Modern;fontSize=8;" parent="yucTcaGxGMNIJf8wDbqY-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -144,10 +144,10 @@
             <mxPoint x="539.9999999999999" y="250" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uqWX5sFfroWvKUeDKfwF-50" value="&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;i&gt;64&lt;/i&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;fontSize=14;" parent="yucTcaGxGMNIJf8wDbqY-1" vertex="1">
-          <mxGeometry x="540" y="240" width="20" height="20" as="geometry" />
+        <mxCell id="uqWX5sFfroWvKUeDKfwF-50" value="&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; line-height: normal ; font-family: &amp;#34;times&amp;#34;&quot;&gt;&lt;i&gt;&lt;font style=&quot;font-size: 30px&quot;&gt;ε&lt;/font&gt;&lt;sup&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;3&lt;/font&gt;&lt;/sup&gt;&lt;/i&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;fontSize=14;" parent="yucTcaGxGMNIJf8wDbqY-1" vertex="1">
+          <mxGeometry x="540" y="230" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uqWX5sFfroWvKUeDKfwF-51" value="&lt;span style=&quot;font-size: 18px&quot;&gt;&lt;font color=&quot;#ea4335&quot;&gt;1&lt;/font&gt;00&lt;font color=&quot;#ea4335&quot;&gt;1&lt;/font&gt; 0000 0&lt;font color=&quot;#ea4335&quot;&gt;111 1&lt;/font&gt;00&lt;font color=&quot;#ea4335&quot;&gt;1&lt;/font&gt; &lt;font color=&quot;#ea4335&quot;&gt;1111&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;" parent="yucTcaGxGMNIJf8wDbqY-1" vertex="1">
+        <mxCell id="uqWX5sFfroWvKUeDKfwF-51" value="&lt;span style=&quot;font-size: 18px&quot;&gt;&lt;font color=&quot;#ea4335&quot;&gt;1&lt;/font&gt;00&lt;font color=&quot;#ea4335&quot;&gt;1&lt;/font&gt; 0000 0&lt;font color=&quot;#ea4335&quot;&gt;111 1&lt;/font&gt;00&lt;font color=&quot;#ea4335&quot;&gt;1&lt;/font&gt; &lt;font color=&quot;#ea4335&quot;&gt;1111&lt;/font&gt;...&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;" parent="yucTcaGxGMNIJf8wDbqY-1" vertex="1">
           <mxGeometry x="480" y="280" width="240" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uqWX5sFfroWvKUeDKfwF-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=none;endFill=0;strokeWidth=1;fontFamily=Computer Modern;fontSize=14;entryX=0.085;entryY=0.005;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="yucTcaGxGMNIJf8wDbqY-1" source="uqWX5sFfroWvKUeDKfwF-54" target="uqWX5sFfroWvKUeDKfwF-0" edge="1">
