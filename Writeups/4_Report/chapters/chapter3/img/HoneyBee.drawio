@@ -1,6 +1,6 @@
-<mxfile host="www.draw.io" modified="2020-04-08T01:43:08.688Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="kopTrkKoetsXRZkkhAZn" version="12.9.8" type="github" pages="6">
+<mxfile host="www.draw.io" modified="2020-04-08T03:45:01.761Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="kYN4DBmXMfx_1c3mgQRs" version="12.9.8" type="github" pages="7">
   <diagram id="tLRsJGVEqHHKasmLKiZ0" name="HoneyBee">
-    <mxGraphModel dx="1310" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+    <mxGraphModel dx="1147" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="yucTcaGxGMNIJf8wDbqY-0" />
         <mxCell id="yucTcaGxGMNIJf8wDbqY-1" parent="yucTcaGxGMNIJf8wDbqY-0" />
@@ -208,7 +208,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uxAaTCyHR5zjSE7AZ_86" name="Timing">
-    <mxGraphModel dx="917" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+    <mxGraphModel dx="803" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-0" />
         <mxCell id="MPpw_sk_U3eVS9YFa5iW-1" parent="MPpw_sk_U3eVS9YFa5iW-0" />
@@ -583,7 +583,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Copy of Timing" id="e2flOT0_X1pU6UrpdGr9">
-    <mxGraphModel dx="917" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+    <mxGraphModel dx="803" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="2oo7fKAP9iWN7UhUma5u-0" />
         <mxCell id="2oo7fKAP9iWN7UhUma5u-1" parent="2oo7fKAP9iWN7UhUma5u-0" />
@@ -994,7 +994,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="FR5DDIXs6lLKufctyFYQ" name="Edge Collision">
-    <mxGraphModel dx="2293" dy="1128" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
+    <mxGraphModel dx="2008" dy="1250" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
       <root>
         <mxCell id="wEtGg_RZ93yMnzrgPgLD-0" />
         <mxCell id="wEtGg_RZ93yMnzrgPgLD-1" parent="wEtGg_RZ93yMnzrgPgLD-0" />
@@ -1899,7 +1899,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="eKTOnuwvZI6Qi9aqHgD1" name="Page-5">
-    <mxGraphModel dx="2293" dy="1128" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
+    <mxGraphModel dx="2008" dy="1250" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0" extFonts="Computer Modern^https://fonts.googleapis.com/css?family=Computer+Modern">
       <root>
         <mxCell id="CO-_M08FjH-IJA-1aRg9-0" />
         <mxCell id="CO-_M08FjH-IJA-1aRg9-1" parent="CO-_M08FjH-IJA-1aRg9-0" />
@@ -2131,7 +2131,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="qPwXojELP2eNqKrzadtk" name="Page-6">
-    <mxGraphModel dx="917" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
+    <mxGraphModel dx="803" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
       <root>
         <mxCell id="hUjRz7_8x4WOlQ47RSp4-0" />
         <mxCell id="hUjRz7_8x4WOlQ47RSp4-1" parent="hUjRz7_8x4WOlQ47RSp4-0" />
@@ -2482,6 +2482,29 @@
         </mxCell>
         <mxCell id="dYolmMCuP4LEaTeJUjHY-57" value="4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Computer Modern;fontSize=30;fontColor=#EA4335;" vertex="1" parent="hUjRz7_8x4WOlQ47RSp4-1">
           <mxGeometry x="640" y="230" width="40" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="bAGcw-2sW2K2rLdHtcdg" name="Page-7">
+    <mxGraphModel dx="803" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
+      <root>
+        <mxCell id="zLoZ7eUUtIY4s26fe8aT-0" />
+        <mxCell id="zLoZ7eUUtIY4s26fe8aT-1" parent="zLoZ7eUUtIY4s26fe8aT-0" />
+        <mxCell id="zLoZ7eUUtIY4s26fe8aT-3" value="" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;strokeColor=#000000;strokeWidth=2;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=30;fontColor=#EA4335;align=left;" vertex="1" parent="zLoZ7eUUtIY4s26fe8aT-1">
+          <mxGeometry x="300" y="140" width="340" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="zLoZ7eUUtIY4s26fe8aT-4" value="module &lt;font color=&quot;#34a853&quot;&gt;honeybee&lt;/font&gt;&lt;font color=&quot;#000000&quot;&gt;(clk, rst) {&lt;br&gt;&amp;nbsp; &amp;nbsp; &lt;/font&gt;&lt;i style=&quot;color: rgb(66 , 133 , 244)&quot;&gt;input wire &lt;/i&gt;&lt;font color=&quot;#000000&quot;&gt;clk, rst;&lt;br&gt;&lt;/font&gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; &lt;i style=&quot;color: rgb(66 , 133 , 244)&quot;&gt;control &lt;/i&gt;&lt;font color=&quot;#34a853&quot;&gt;MAIN_CONTROLLER&lt;/font&gt;&lt;font color=&quot;#000000&quot;&gt;(&lt;br&gt;&lt;/font&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;font color=&quot;#000000&quot;&gt;.&lt;/font&gt;&lt;font color=&quot;#4285f4&quot;&gt;clk&lt;/font&gt;&lt;font color=&quot;#000000&quot;&gt;(clk),&lt;/font&gt; &lt;font color=&quot;#000000&quot;&gt;.&lt;/font&gt;rst&lt;font color=&quot;#000000&quot;&gt;(rst)&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#000000&quot;&gt;&amp;nbsp; &amp;nbsp; );&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Courier New;fontSize=16;fontColor=#EA4335;fontStyle=1" vertex="1" parent="zLoZ7eUUtIY4s26fe8aT-1">
+          <mxGeometry x="321" y="160" width="319" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="hhRhqFX4Ydp998q7CWJh-0" value="" style="endArrow=classic;html=1;labelBackgroundColor=none;strokeColor=#EA4335;strokeWidth=3;fillColor=#FBBC05;fontFamily=Courier New;fontSize=16;fontColor=#4285F4;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="zLoZ7eUUtIY4s26fe8aT-1" target="zLoZ7eUUtIY4s26fe8aT-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="215" as="sourcePoint" />
+            <mxPoint x="280" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zLoZ7eUUtIY4s26fe8aT-2" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/software-engineering-and-video-gaming/512/77_hacker_user_gammer_programmer-128.png;strokeColor=#000000;strokeWidth=2;fillColor=#FBBC05;fontFamily=Computer Modern;fontSize=30;fontColor=#EA4335;align=left;" vertex="1" parent="zLoZ7eUUtIY4s26fe8aT-1">
+          <mxGeometry x="100" y="120" width="180" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
