@@ -60,6 +60,15 @@ R.~Menzel, U.~Greggers, A.~Smith, S.~Berger, R.~Brandt, S.~Brunke, G.~Bundrock,
   Sciences of the United States of America}, vol.~102, pp.~3040--3045, feb
   2005.
 
+\bibitem{ChoiceReviews2006}
+``{The man who knew too much: Alan Turing and the invention of the computer},''
+  {\em Choice Reviews Online}, 2006.
+
+\bibitem{Elsabbagh2019}
+F.~Elsabbagh, B.~Asgari, H.~Kim, and S.~Yalamanchili, ``{Vortex RISC-V GPGPU
+  System: Extending the ISA, Synthesizing the Microarchitecture, and Modeling
+  the Sooware Stack},'' tech. rep., 2019.
+
 \bibitem{Thingbits}
 Thingbits, ``{LynxMotionHQuad500 Drone}.''
 
@@ -81,5 +90,9 @@ Vss2sn, ``{Path Planning},'' 2019.
 
 \bibitem{Olzhas2017}
 Olzhas, ``{RRT Toolbox},'' 2017.
+
+\bibitem{Xilinx2014}
+Xilinx, ``{Vivado Design Suite User Guide for High-Level Synthesis},'' tech.
+  rep., 2014.
 
 \end{thebibliography}

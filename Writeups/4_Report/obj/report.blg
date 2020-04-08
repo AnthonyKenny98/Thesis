@@ -10,46 +10,49 @@ Warning--empty year in Murray
 Warning--empty institution in Murrayb
 Warning--empty year in Murrayb
 Warning--empty journal in Waterman2019
+Warning--empty author in ChoiceReviews2006
+Warning--empty institution in Elsabbagh2019
 Warning--empty journal in Vss2sn2019
-You've used 19 entries,
+Warning--empty institution in Xilinx2014
+You've used 22 entries,
             1876 wiz_defined-function locations,
-            594 strings with 6357 characters,
-and the built_in function-call counts, 4172 in all, are:
-= -- 380
-> -- 193
+            607 strings with 6792 characters,
+and the built_in function-call counts, 4568 in all, are:
+= -- 413
+> -- 212
 < -- 0
-+ -- 74
-- -- 55
-* -- 297
-:= -- 620
-add.period$ -- 22
-call.type$ -- 19
-change.case$ -- 20
++ -- 82
+- -- 60
+* -- 329
+:= -- 687
+add.period$ -- 25
+call.type$ -- 22
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 188
-empty$ -- 411
-format.name$ -- 55
-if$ -- 985
+cite$ -- 33
+duplicate$ -- 209
+empty$ -- 452
+format.name$ -- 60
+if$ -- 1072
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 12
-newline$ -- 64
-num.names$ -- 19
-pop$ -- 87
+int.to.str$ -- 22
+missing$ -- 13
+newline$ -- 73
+num.names$ -- 21
+pop$ -- 98
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 128
+skip$ -- 131
 stack$ -- 0
 substring$ -- 203
-swap$ -- 59
+swap$ -- 60
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 8
-while$ -- 40
-width$ -- 21
-write$ -- 165
-(There were 8 warnings)
+warning$ -- 11
+while$ -- 42
+width$ -- 24
+write$ -- 188
+(There were 11 warnings)

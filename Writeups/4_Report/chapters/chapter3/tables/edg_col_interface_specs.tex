@@ -1,0 +1,31 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-03-01 14:11:33
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-07 14:09:51
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{.2\linewidth}|p{.74\linewidth}|}
+    \hline
+    \textbf{Element}             & \textbf{Description/Justification} \\
+    \hline
+    \multicolumn{2}{|c|}{Constraints} \\
+    \hline
+    Length $\epsilon$  & $\epsilon$ defines the max edge length. The space being checked and the output sequence has the dimensions $\epsilon\times\epsilon\times\epsilon$ \\
+    \hline
+    \multicolumn{2}{|c|}{Inputs} \\
+    \hline
+    Edge $e$  & An Edge $e$ defined for a \gls{3D} \gls{configuration} space by two points $\{p1, p2\}$, each defined by a set of \gls{3D} coordinates $\{x,y,z\}$.\\
+    \hline
+    Control Inputs & The functional unit must have ports for control signals: clock, reset, start. These are required for adding the unit to a processor. \\
+    \hline
+    \multicolumn{2}{|c|}{Outputs} \\ 
+    \hline
+    Return Value & $\epsilon^3$ bit sequence: 1 if collides with grid at that index, 0 otherwise.\\
+    \hline
+    Control Outputs & Output ports for control signals: idle, done, ready. These are required for adding the unit to a processor. \\
+    \hline
+\end{tabular}
+\mycaption{Interface Specifications for Edge Collision Detection Unit}{}
+\label{table:edg_col_interface_specs}
+\end{center}
+\end{table}

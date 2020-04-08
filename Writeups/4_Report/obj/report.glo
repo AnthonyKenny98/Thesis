@@ -54,9 +54,25 @@
 \glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{18}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{29}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{29}
-\glossaryentry{\glsentrylong {HLS_g} (\glsentrytext {HLS}):?\glossentry{HLS_g}|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{50}
-\glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{50}
-\glossaryentry{\Glsentrytext {RISC-V}:?\glossentry{RISC-V}|setentrycounter[]{page}\glsnumberformat}{57}
+\glossaryentry{\Glsentrytext {axis-oriented plane}:?\glossentry{axis-oriented plane}|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{\Glsentrytext {time complexity}:?\glossentry{time complexity}|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{\Glsentrytext {axis-oriented plane}:?\glossentry{axis-oriented plane}|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{\Glsentrytext {axis-oriented plane}:?\glossentry{axis-oriented plane}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{\glsentrylong {LUT_g} (\glsentrytext {LUT}):?\glossentry{LUT_g}|setentrycounter[]{page}\glsnumberformat}{31}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{31}
+\glossaryentry{\Glsentrytext {bit}:?\glossentry{bit}|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{\Glsentrytext {bit-width}:?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{\glsentrylong {IEEE754_g} (\glsentrytext {IEEE754}):?\glossentry{IEEE754_g}|setentrycounter[]{page}\glsnumberformat}{34}
+\glossaryentry{\Glsentrytext {bit-width}:?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{34}
+\glossaryentry{\Glsentrytext {bit-width}:?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{34}
+\glossaryentry{\Glsentrytext {bit-width}:?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{34}
+\glossaryentry{\Glsentrytext {bit-width}:?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{35}
+\glossaryentry{\glsentrylong {HDL_g} (\glsentrytext {HDL}):?\glossentry{HDL_g}|setentrycounter[]{page}\glsnumberformat}{35}
+\glossaryentry{\glsentrylong {FPGA_g} (\glsentrytext {FPGA}):?\glossentry{FPGA_g}|setentrycounter[]{page}\glsnumberformat}{36}
+\glossaryentry{\glsentrylong {HLS_g} (\glsentrytext {HLS}):?\glossentry{HLS_g}|setentrycounter[]{page}\glsnumberformat}{37}
+\glossaryentry{\Glsentrytext {pragma}:?\glossentry{pragma}|setentrycounter[]{page}\glsnumberformat}{39}
+\glossaryentry{\Glsentrytext {pragma}:?\glossentry{pragma}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{60}
+\glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{60}
+\glossaryentry{\Glsentrytext {RISC-V}:?\glossentry{RISC-V}|setentrycounter[]{page}\glsnumberformat}{67}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{69}

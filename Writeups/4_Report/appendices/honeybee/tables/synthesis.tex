@@ -1,0 +1,40 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-04-08 15:51:15
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-08 15:58:54
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{RTL Ports}  & \textbf{Direction}    & \textbf{Bits} & \textbf{Protocol} & \textbf{C Type} \\
+\hline
+ap\_clk  & in & 1 & ap\_ctrl\_hs & return value \\
+\hline
+ap\_rst  & in & 1 & ap\_ctrl\_hs & return value \\
+\hline
+ap\_start  & in & 1 & ap\_ctrl\_hs & return value \\
+\hline
+ap\_done  & out & 1 & ap\_ctrl\_hs & return value \\
+\hline
+ap\_idle  & out & 1 & ap\_ctrl\_hs & return value \\
+\hline
+ap\_ready  & out & 1 & ap\_ctrl\_hs & return value \\
+\hline
+ap\_return  & out & 64 & ap\_ctrl\_hs & return value \\
+\hline
+edge\_p1\_x   & in & 32 & ap\_none & scalar \\
+\hline
+edge\_p1\_y   & in & 32 & ap\_none & scalar \\
+\hline
+edge\_p1\_z   & in & 32 & ap\_none & scalar \\
+\hline
+edge\_p2\_x   & in & 32 & ap\_none & scalar \\
+\hline
+edge\_p2\_y   & in & 32 & ap\_none & scalar \\
+\hline
+edge\_p2\_z   & in & 32 & ap\_none & scalar \\
+\hline
+\end{tabular}
+\mycaption{HoneyBee Interface Synthesis Report}{ for $\epsilon = 4$. Results taken from Vivado HLS synthesis report.}
+\end{centering}
+\end{table}

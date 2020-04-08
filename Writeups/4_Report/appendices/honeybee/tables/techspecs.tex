@@ -1,0 +1,42 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-04-07 14:16:46
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-08 15:45:55
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{.19\linewidth}|p{.22 \linewidth}|p{.50\linewidth}|}
+    \hline
+    \textbf{Element}             & \textbf{Requirement} & \textbf{Description/Justification} \\
+    \hline
+    \multicolumn{3}{c}{\textbf{Performance}} \\
+    \hline
+    Latency ($\mu$seconds/edge)  &   0.9  & 3 times faster than benchmark CPU latency. \\
+    \hline
+    Throughput (edges/second)  &   1,111,111 & follows from latency. \\
+    \hline
+    \multicolumn{3}{c}{\textbf{Area}} \\
+    \hline
+    FPGA Area & 274,080 \glspl{LUT} & Maximum number of \glspl{LUT} on a Kintex-7 Low Voltage \gls{FPGA} \\
+    \hline
+    \multicolumn{3}{c}{\textbf{Interface}} \\
+    \hline
+    \multicolumn{3}{|c|}{Constraints} \\
+    \hline
+    Length $\epsilon$ & 4  & $\epsilon$ defines the max edge length. The space being checked and the output sequence has the dimensions $\epsilon\times\epsilon\times\epsilon$ 4 was chosen after determining what was feasible for given area. \\
+    \hline
+    \multicolumn{3}{|c|}{Inputs} \\
+    \hline
+    Edge $e$  & $\{(x_1,y_1,z_1)$, $(x_2,y_2,z_2)\}$& An Edge $e$ defined for a \gls{3D} \gls{configuration} space by two points $\{p1, p2\}$, each defined by a set of \gls{3D} coordinates $\{x,y,z\}$.\\
+    \hline
+    Control Inputs & \texttt{clk, rst, start} & The functional unit must have ports for control signals: clock, reset, start. These are required for adding the unit to a processor. \\
+    \hline
+    \multicolumn{3}{|c|}{Outputs} \\ 
+    \hline
+    Return Value & $\epsilon^3$ bit sequence & Grids are represented by their index in the sequence. 1 if collides with grid at that index, 0 otherwise.\\
+    \hline
+    Control Outputs & \texttt{done, idle, ready} &Output ports for control signals: idle, done, ready. These are required for adding the unit to a processor. These ouput signals are part of the ``handshake'' interface protocol. \\
+    \hline
+\end{tabular}
+\mycaption{Full Technical Specifications for Edge Collision Detection Unit}{}
+\end{center}
+\end{table}

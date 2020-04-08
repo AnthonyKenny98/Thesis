@@ -1,0 +1,26 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-04-08 12:12:17
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-08 12:26:20
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|p{0.2\linewidth}|p{0.7\linewidth}|}
+\hline
+\textbf{Port}   & \textbf{Description} \\
+\hline
+\texttt{start}  &
+    This signal controls the block execution and must be asserted to logic 1 for the design to begin operation. It should be held at logic 1 until the associated output handshake \texttt{ready} is asserted. When \texttt{ready} goes high, the decision can be made on whether to keep \texttt{start} asserted and perform another transaction or set \texttt{start} to logic 0 and allow the design to halt at the end of the current transaction. If \texttt{start} is asserted low before \texttt{ready} is high, the design might not have read all input ports and might stall operation on the next input read. \\
+\hline
+\texttt{ready}  &
+    This output signal indicates when the design is ready for new inputs. The \texttt{ready} signal is set to logic 1 when the design is ready to accept new inputs, indicating that all input reads for this transaction have been completed. If the design has no pipelined operations, new reads are not performed until the next transaction starts. This signal is used to make a decision on when to apply new values to the inputs ports and whether to start a new transaction should using the \texttt{start} input signal. If the \texttt{start} signal is not asserted high, this signal goes low when the design completes all operations in the current transaction. \\
+\hline
+\texttt{done}   &
+    This signal indicates when the design has completed all operations in the current transaction. A logic 1 on this output indicates the design has completed all operations in this transaction. Because this is the end of the transaction, a logic 1 on this signal also indicates the data on the \texttt{return} port is valid. Not all functions have a function return argument and hence not all RTL designs have an \texttt{return} port. \\
+\hline
+\texttt{idle}   & 
+    This signal indicates if the design is operating or idle (no operation). The idle state is indicated by logic 1 on this output port. This signal is asserted low once the design starts operating. This signal is asserted high when the design completes operation and no further operations are performed. \\
+\hline
+\end{tabular}
+\mycaption{Description of the ports associated with the handshake protocol for HoneyBee}{. Adapted from Vivado HLS User Guide\cite{Xilinx2014}}
+\end{centering}
+\end{table}
