@@ -1,30 +1,22 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-26 09:00:23
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-08 11:18:59
+% @Last Modified time: 2020-04-09 13:40:11
 
-\todo[inline]{Talk about determining honeybee output}
-Table \ref{table:edg_col_interface_specs} specifies that the edge collision unit takes an edge $e$ with a maximum length of $\epsilon$. When implementing HoneyBee, it was necessary to determine a fixed value for $\epsilon$. 
+% INTRO
+To recap, the bottleneck function of a common motion planning algorithm, \gls{RRT}, was identified as edge collision detection. The functional hardware unit, HoneyBee, successfully accelerated this function by almost 5 times. The last two objectives of this thesis were:
+    \begin{itemize}
+    \item To define a RISC-V Extension Instruction Set for the purposes of accelerating motion planning.
+    \item To verify the RISC-V Extension and the functional hardware unit in a complete RISC-V Processor.
+    \end{itemize}
 
-\section{Introduction to the Reduced Instruction Set Computer}
-    \input{chapters/chapter4/risc_background}
+\section{Computer Architecture Background}
+    \input{chapters/chapter4/architecture_background}
 
-\section{RISC-V ISA}
-    \input{chapters/chapter4/riscv.tex}
+\newpage
+\section{RISC-V Instruction Set}
+    \input{chapters/chapter4/riscv}
 
+\newpage
 \section{PhilosophyV}
-    \textit{Philosophy IV}, written in 1903 by Mr. Owen Wister of the Class of 1882, recounts the antics of two Harvard students and their last minute attempts to study (or avoid studying) for an exam for which they are hopelessly unprepared. Similarly, this section details the process of my attempt to build a RISC-V processor, by far the most complex part of this Thesis, and a task for which I am unsure of my preparedness. As such, this processor is named Philosphy V; both in reference to the RISC-V ISA for which it is designed, and to the fact that my current situation seems much like a sequel to Mr. Wister's novel.
-
-    \subsection{Baseline Implementation}
-        \todo[inline]{Description of Baseline Philosophy V core}
-        Figure \ref{fig:philv-core} provides a schematic of the PhilosophyV processor.
-        \todo[inline]{Display bigger version of processor.}
-        % \newpage
-        % \thispagestyle{empty}
-        \input{chapters/chapter4/figures/philv-core} 
-
-    \subsection{Implementing HoneyBee}
-        \todo[inline]{Process of implementing honeybee into PhilV.}
-
-\section{Performance Analysis}
-    \todo[inline]{Comparative Performance Analysis of baseline and extended PhilV Core}
+    \input{chapters/chapter4/philv}

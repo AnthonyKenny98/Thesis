@@ -1,19 +1,61 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-07 14:14:38
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-08 19:09:49
+% @Last Modified time: 2020-04-09 08:45:54
 
 \newpage
-\section{Full Technical Specifications for Edge Collision Detection Unit}
+\section{Technical Specifications for Edge Collision Unit}
     \input{appendices/honeybee/tables/techspecs}
 
+\newpage
 \section{IEEE Standard for Floating-Point Arithmetic}
 \label{section:honeybee_appendix_ieee}
-    \todo[inline]{IEEE Standard for Floating-Point Arithmetic}
+    Integers can be represented in binary very easily. The \gls{LSB} carries the value of $2^0$, the next, $2^1$, and so on. Examples shown below for a 32-bit integer:\\
 
+    \begin{centering}
+    \begin{tabular}{c c}
+    $00000000 00000000 00000000 00000001$ = & $1$ \\
+    $00000000 00000000 00000000 00000100$ = & $4$ \\
+    $00000000 00000000 00000000 00010101$ = & $21$ \\
+    \end{tabular}
+    \end{centering}
+
+    Representing a floating-point fractional number in binary is also simple. Consider the fractional number 1.75. It can be represented in point binary as 1.11. This is converted back into decimal using the same logic as above:
+    $$2^0 + 2^{-1} + 2^{-2} = 1.75 $$
+
+    However, in computers, there is no way to represent the decimal point. All that is available is a (32-bit, for example) sequence of 1s or 0s. How does a processor know where to put the decimal point? \gls{IEEE754} is a technical standard for representing floating-point numbers and conducting floating-point arithmetic.
+    A 32-bit floating-point number is represented by a 1-bit sign, an 8-bit exponent, and a 23-bit fraction, or ``mantissa''. The sign is simple; 0 for a positive number, 1 for a negative number. Now consider the fractional binary number 1111.11 (= 15.75). Similarly to regular scientific notation, this can be represented with an exponent:
+
+    $$1111.11 = 1.11111 \times 2^3$$
+
+    Since we are working with binary values, we use base 10. To prove this: 
+
+    $$1.11111 \rightarrow  \Big(2^0 + 2^{-1} + 2^{-2} + 2^{-3} + 2^{-4} + 2^{-5}\Big) \times 2^3   = 1.96875 \times 2^3 = 15.75$$
+
+    In this same way, the mantissa is multiplied by 2 to the power of the exponent and the sign is added. The mantissa has an implied leading 1, so the 23 bits shown are those to the right of the decimal point. Examples are included below: \\
+    \begin{table}[H]
+    \begin{centering}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{sign} & \textbf{exponent} & \textbf{mantissa} & \textbf{Decimal}\\
+    \hline
+    0 & 01111111 & 1100000 00000000 00000000 & 1.75 \\
+    \hline
+    1 & 01111111 & 1100000 00000000 00000000 & -1.75 \\
+    \hline
+    0 & 01111111 & 0000000 00000000 00000000 & 1 \\
+    \hline
+    0 & 10000001 & 0110000 00000000 00000000 & 5.5 \\
+    \hline
+    \end{tabular}
+    \mycaption{IEEE-754 Floating Point Examples}{}
+    \end{centering}
+    \end{table}
+
+\newpage 
 \section{Mapping HoneyBee's Output Sequence to a Grid-Map}
 \label{section:honeybee_appendix_mapping}
-    \todo[inline]{Mapping HoneyBee's Output Sequence to a Grid-Map}
+    \input{appendices/honeybee/fig/mapping}
 
 \section{HoneyBee Handshake Control Protocol}
 \label{section:honeybee_appendix_handshake}
@@ -23,10 +65,22 @@
 \label{section:honeybee_appendix_synthesis_report}
     \input{appendices/honeybee/tables/synthesis}
 
-\section{HoneyBee Timing Reports}
-\label{section:honeybee_appendix_timing_reports}
-    \todo[inline]{HoneyBee Timing Reports}
-
 \section{HoneyBee-B Variants}
 \label{section:honeybee_appendix_hbb_variants}
-    \todo[inline]{HoneyBee-B Variants}
+    \subsubsection{HoneyBee-A}
+    Calling each Line Intersects plane from within the honeybee() function. 
+    max latency = 6.66 us and no overlap between checking each plane.
+    No Pragmas used, one instance of the \texttt{Check\_Planes} module, computing collisions for $xy$, $xz$, and $yz$ oriented planes sequentially.
+
+    \subsubsection{HoneyBee-B1}
+    By tweaking the way the C Code was laid out, 3 different instances of the same \texttt{Check\_Planes} module were instantiated, executing in parallel.
+
+    \subsubsection{HoneyBee-B2}
+    Added HLS PRAGMA ``function\_instantiate'' to minimise control logic depending on inputs. Instantiate an instance of 3 slightly different modules: \texttt{Check\_Planes\_XY}, \texttt{Check\_Planes\_XZ}, and \texttt{Check\_Planes\_YZ}
+    Marginally faster but significantly smaller.
+
+    \subsubsection{HoneyBee-B3, B4, B5}
+    HB-4, HB-5, and HB-6 were all attempts at using the HLS UNROLL Pragma to unroll the $\epsilon$ deep loop for checking a set of planes, to not much avail. This failed to result in much of a speedup because the loop writes to the collision variable. 
+
+    \subsubsection{HoneyBee-C}
+    Use HLS PRAGMA ``PIPELINE'' to execute the $\epsilon$ iterations in parallel.

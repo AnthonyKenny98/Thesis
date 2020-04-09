@@ -1,24 +1,55 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 18:51:24
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-03-01 19:39:08
+% @Last Modified time: 2020-04-09 13:50:46
+\subsection{RISC-V}
+
+    \glsdesc{RISC-V} (pronounced ``risk-five'') was developed at the University of California, Berkeley. It is established on the principles of RISC as an open-source and extendable \gls{ISA} for research and education. It was designed with application specific processors in mind, as they developed a highly flexible and extendable base \gls{ISA} around which research and acceleration efforts could be based.
+
+    The motiviation behind designing RISC-V was largely due to the disadvantages of commercially popular \glspl{ISA}.\cite{Isa2012} (Following list adapted from RISC-V ISA Manual).
+    \begin{itemize}
+    \item \textbf{Commercial ISAs are proprietary.} Owners of commercial ISAs carefully guard their intellectual property and will not share implementations. 
+    \item \textbf{Commercial ISAs come and go.} Many once-popular commercial ISAs have since fallen out of fashion or are not even in production any more. Lingering intellectual property issues interefere with the ability of third-parties to continue supporting the ISA. While an open source \gls{ISA} may also lose popularity, interested parties can continue to use and support the ISA without interference.
+    \item \textbf{Popular commercial ISAs were not designed for extendibility.} There exist almost no ISAs that support extendibility for general purpose computing systems, allowing for no application specific optimizations at the instruction set level.
+    \end{itemize}
+
+    The overall design of RISC-V can be broken down into 3 characteristics that address the aforementioned limitations of commercial \glspl{ISA}: Open-source, extendibility, and modularity.
+
+    \subsubsection{Open-Source}
+        Open-source refers to software of which the owner has granted permission for anybody to study, alter, and distribute the software for any purpose. Often, this means projects are developed in a collaborative public manner. What this means for and ISA is that the RISC-V implementations are often publically available and improved on by developers for their own purposes. Building a high-performance processor from scratch is an arduous, expensive project. Open-source implementations allow for developers to build off existing implementations without all the legwork of implementing a processor from scratch.
+
+    \subsubsection{Extendability}
+        RISC-V is designed to be extendable. This means that developers can add their own instructions to the Instruction Set and implement those new instructions in a processor. This processor should still be able to run all other RISC-V compiled programs, along with a set of programs for which it is specially optimized. This level of backwards compatibility means that an extended ISA is not just a new ISA. 
+
+    \subsubsection{Modularity}
+        Finally, RISC-V was designed to be relatively easy to implement. It is broken down into small ``base'' \glspl{ISA} which can then have any number of standard and custom extensions added to them. These base ISAs are not designed in such a way to overarchitect for a certain type of microarchitecure. This modularity and flexibility is part of what makes it such an attractive proposition for specialized computer architecture. Figure \ref{fig:modules} demonstrates this modularity.
+
+        \input{chapters/chapter4/fig/modules}
+
 \subsection{RV32I}
+    The RV32I (Short for RISC-V 32-Bit Integer) base \gls{ISA} is a small \gls{ISA} of only 40 unique instructions, but sufficient to support modern operating systems. It has 32 registers, \texttt{x0-x32}, each 32-bits wide. \texttt{x0} is a hard-wired 0, and there is also another register dedicated for the program count. 
 
-        The following is an excerpt from the RISC-V Specification, outlining the RV32I base integer instruction set \cite{Waterman2019}
-        \begin{quote}{}
-            \small{RV32I was designed to be sufficient to form a compiler target and to support modern operating system environments. The ISA was also designed to reduce the hardware required in a minimal implementation. RV32I contains 40 unique instructions, though a simple implementation might \dots [reduce] base instruction count to 38 total. RV32I can emulate almost any other ISA extension \dots \\
-            Subsets of the base integer ISA might be useful for pedagogical purposes, but the base has been defined such that there should be little incentive to subset a real hardware implementation \dots}
-        \end{quote}
+    \todo[inline]{Move some of this to appendix. This bit needs work}
 
-        \subsubsection*{Registers}
+    The following is an excerpt from the RISC-V Specification, outlining the RV32I base integer instruction set \cite{Waterman2019}
+    \begin{quote}{}
+        \small{RV32I was designed to be sufficient to form a compiler target and to support modern operating system environments. The ISA was also designed to reduce the hardware required in a minimal implementation. RV32I contains 40 unique instructions, though a simple implementation might \dots [reduce] base instruction count to 38 total. RV32I can emulate almost any other ISA extension \dots \\
+        Subsets of the base integer ISA might be useful for pedagogical purposes, but the base has been defined such that there should be little incentive to subset a real hardware implementation \dots}
+    \end{quote}
+
+    \subsubsection*{Registers}
         RV32I defines 32 unprivileged registers, each 32 bits wide. They are designated \texttt{x0-x31}, where \texttt{x0} is a hard-wired value of $0$, and registers \texttt{x1-x31} hole values that various instructions use. RISC-V uses the load-store method, meaning that all operations perform on two registers or a register and an immediate, rather than performing operations directly on memory addresses. In addition, the 33rd unprivileged register is the program counter \texttt{pc}. Table \ref{table:rv32i_reg} shows the register state for the RV32I Base Integer Instruction Set.
         \input{chapters/chapter4/tables/rv32i_reg}
 
-        \subsubsection{Instruction Formats}
+    \subsubsection{Instruction Formats}
         Table \ref{table:rv32i_instr_format} demonstrates the format of each different instruction type. 
         \input{chapters/chapter4/tables/rv32i_instr_format}
 
+\subsection{Defining a RISC-V Custom Extension}
 
+\subsubsection{Extension Specifications}
 
-    \subsection{Motion Planning Extension}
-        \todo[inline, caption={Motion Planning Extension}]{Full description of design of Non standard extension for motion planning. Should follow define, design, build, measure, analyse etc format.}
+    \todo[inline]{Talk about determining honeybee output}
+    Table \ref{table:edg_col_interface_specs} specifies that the edge collision unit takes an edge $e$ with a maximum length of $\epsilon$. When implementing HoneyBee, it was necessary to determine a fixed value for $\epsilon$.
+
+\subsubsection{Defining Extension}
