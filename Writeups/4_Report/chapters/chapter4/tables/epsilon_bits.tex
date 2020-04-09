@@ -1,0 +1,25 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-04-09 19:26:20
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-09 20:07:12
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{$\epsilon$} & \textbf{Bits} & \textbf{Registers} \\
+\hline
+1 & 1 & 1/32 bits\\
+\hline
+2 & 8 & 8/32 bits \\
+\hline
+4 & 64 & 2 \\
+\hline
+6 & 216 & 6.75 \\
+\hline
+8 & 512 & 16 \\
+\hline
+\end{tabular}
+\mycaption{Required Bits to Represent Output Collisions For Different Values of Epsilon}{. $\epsilon$ values of 1 and 2 underutilise both the register space available and the benefits of more parallelization that would come from larger values. Values larger than 4 would use up far too many of the available registers. $\epsilon = 4$ completely utilizes only two registers.}
+\label{table:epsilon_bits}
+\end{center}
+\end{table}

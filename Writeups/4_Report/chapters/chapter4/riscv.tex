@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 18:51:24
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 13:50:46
+% @Last Modified time: 2020-04-09 20:46:46
 \subsection{RISC-V}
 
     \glsdesc{RISC-V} (pronounced ``risk-five'') was developed at the University of California, Berkeley. It is established on the principles of RISC as an open-source and extendable \gls{ISA} for research and education. It was designed with application specific processors in mind, as they developed a highly flexible and extendable base \gls{ISA} around which research and acceleration efforts could be based.
@@ -29,7 +29,6 @@
 \subsection{RV32I}
     The RV32I (Short for RISC-V 32-Bit Integer) base \gls{ISA} is a small \gls{ISA} of only 40 unique instructions, but sufficient to support modern operating systems. It has 32 registers, \texttt{x0-x32}, each 32-bits wide. \texttt{x0} is a hard-wired 0, and there is also another register dedicated for the program count. 
 
-    \todo[inline]{Move some of this to appendix. This bit needs work}
 
     The following is an excerpt from the RISC-V Specification, outlining the RV32I base integer instruction set \cite{Waterman2019}
     \begin{quote}{}
@@ -37,19 +36,54 @@
         Subsets of the base integer ISA might be useful for pedagogical purposes, but the base has been defined such that there should be little incentive to subset a real hardware implementation \dots}
     \end{quote}
 
-    \subsubsection*{Registers}
-        RV32I defines 32 unprivileged registers, each 32 bits wide. They are designated \texttt{x0-x31}, where \texttt{x0} is a hard-wired value of $0$, and registers \texttt{x1-x31} hole values that various instructions use. RISC-V uses the load-store method, meaning that all operations perform on two registers or a register and an immediate, rather than performing operations directly on memory addresses. In addition, the 33rd unprivileged register is the program counter \texttt{pc}. Table \ref{table:rv32i_reg} shows the register state for the RV32I Base Integer Instruction Set.
-        \input{chapters/chapter4/tables/rv32i_reg}
+    % \subsubsection*{Registers}
+    %     RV32I defines 32 unprivileged registers, each 32 bits wide. They are designated \texttt{x0-x31}, where \texttt{x0} is a hard-wired value of $0$, and registers \texttt{x1-x31} hold values that various instructions use. RISC-V uses the load-store method, meaning that all operations perform on two registers or a register and an immediate, rather than performing operations directly on memory addresses. In addition, a 33rd unprivileged register is a program counter \texttt{pc}. 
+        % Table \ref{table:rv32i_reg} shows the register state for the RV32I Base Integer Instruction Set.
+        % \input{chapters/chapter4/tables/rv32i_reg}
 
-    \subsubsection{Instruction Formats}
-        Table \ref{table:rv32i_instr_format} demonstrates the format of each different instruction type. 
-        \input{chapters/chapter4/tables/rv32i_instr_format}
+    % \subsubsection{Instructions}
+    %     RV32I defines 40 instructions that together are sufficient to run most modern operating systems.
+    %     Table \ref{table:rv32i_instr_format} demonstrates the format of each different instruction type. 
+    %     \input{chapters/chapter4/tables/rv32i_instr_format}
 
 \subsection{Defining a RISC-V Custom Extension}
 
-\subsubsection{Extension Specifications}
+    The goal of defining a custom extension in this context is to reduce the number of instructions neccesary to compute collisions for a given edge. According to RISC-V convention, the extension is designated \textbf{``Xedgcol''} (X for non standard, edgcol as an abbreviation for its purpose). When it is implemented along with RV32I, the processor can be said to implement the rv32i\_Xedgcol ISA.
 
-    \todo[inline]{Talk about determining honeybee output}
-    Table \ref{table:edg_col_interface_specs} specifies that the edge collision unit takes an edge $e$ with a maximum length of $\epsilon$. When implementing HoneyBee, it was necessary to determine a fixed value for $\epsilon$.
+    \subsubsection{Fixing Epsilon}
+    Recall that the HoneyBee unit was parameterized for different values of $\epsilon$, and that this would influence the number of bits in its output sequence. When defining an instruction, this value has to be constant. You may have also noticed that the results presented for HoneyBee in Chapter 3 were all for $\epsilon = 4$. This value was chosen as $4^3 = 64$. Table \ref{table:epsilon_bits} lists the number of output bits required for each value of $\epsilon$ and how many 32-bit registers would be needed to store this result. From this, it is fairly obvious why 4 was chosen for the value of $\epsilon$.
 
-\subsubsection{Defining Extension}
+    \input{chapters/chapter4/tables/epsilon_bits}
+
+
+    \subsubsection{Edge Collision Instruction}
+    The following instruction was defined:
+
+    \begin{center}
+    \texttt{ecol rd1, rd2}
+    \end{center}
+
+    It takes two destination registers and stores result of the edge collision computation in them. The 32 \gls{LSB} are stored in \texttt{rd1} and the 32 \gls{MSB} in \texttt{rd2}.
+    The instruction is formatted in the following way (For more detail, the full Xedgcol specification can be found in Appendix \ref{appendix:xedgcol_appendix}).
+
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{c}
+        \begin{tabular}{|m{0.2\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|}
+        \hline
+        \hspace*{0.5cm}000000000000 & \hspace*{0.5cm}rd2  & \hspace*{0.5cm}000  & \hspace*{0.5cm}rd1  & \hspace*{0.5cm}0000  & \hspace*{0.5cm}001  \\
+        \hline
+        \end{tabular} \\
+        \begin{tabular}{m{0.2\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}}
+        \hspace*{1.5cm}12 & \hspace*{0.5cm}5  & \hspace*{0.5cm}3  & \hspace*{0.5cm}5  & \hspace*{0.5cm}4  & \hspace*{0.5cm}3  \\
+        \hspace*{1.3cm}null &  \hspace*{0.5cm}\textit{dest2} & \hspace*{0.5cm}null  & \hspace*{0.5cm}\textit{dest1}  &  \hspace*{0.5cm}null & \hspace*{0.25cm}ECOL  \\
+        \end{tabular}
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+    Conspicuously, the instruction specifies two destination registers, but no source registers. In other words, how does the processor know the coordinates of the edge? Also conspicuous is the fact that much of the instruction is null (meaningless zeros). Why not use this space to specify the coordinates of the edge?
+
+    Consider, an edge must be represented by 6 32-bit numbers. This information, 192 bits in total, can not all fit in a single 32-bit instruction as 6 immediate values (obviously). Could those 32-bit values be stored in existing registers and the address of these registers referenced in the instruction? Since there are 32 general purpose registers in RISC-V, their addresses are 5-bits long each. 6 5-bit addresses is 30 bits in total, which, by itself could fit in an instruction. While this couldn't be combined with the edge collision instruction, perhaps a second instruction could be defined that contained the addresses of all 6, or even 3, of the registers containing the edge's coordinates. This was decided against for a few reasons, but mainly because \textbf{storing floating-point numbers in integer registers}, while theoretically possible, is extremely bad practice. To store floating point values in registers, a new register set would need to be defined.
+
+    \subsubsection{Edge Registers}

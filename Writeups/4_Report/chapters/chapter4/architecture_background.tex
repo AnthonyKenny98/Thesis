@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 19:39:42
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 18:28:53
+% @Last Modified time: 2020-04-09 18:42:38
 
 % Intro
 Computer Architecture encompasses the design of the Instruction Set Architecture and Microarchitecture of a computer. The Instruction Set defines an abstract model of a computer, i.e. how it behaves. Microarchitecture is the implementation of this abstract model, i.e. desiging a CPU to execute the behavious specified in the instruction set.
@@ -14,11 +14,7 @@ Computer Architecture encompasses the design of the Instruction Set Architecture
 
     \input{chapters/chapter4/fig/contract}
 
-    The two most important things an \gls{ISA} defines are a computers \textbf{registers} and \textbf{instructions}. Instructions are the operations the computer can execute. Consider the \texttt{add} instruction: 
-
-    \begin{centering}
-    \texttt{add rd, rs1, rs2}
-    \end{centering}
+    The two most important things an \gls{ISA} defines are a computers \textbf{registers} and \textbf{instructions}. Instructions are the operations the computer can execute. Consider the \texttt{add} instruction: \texttt{add rd, rs1, rs2}
 
     This instruction computes \texttt{rs1} $+$ \texttt{rs2} and stores the result in \texttt{rd}.  \texttt{rd}, \texttt{rs1}, and \texttt{rs2} are all \textbf{registers}.
     
@@ -28,7 +24,6 @@ Computer Architecture encompasses the design of the Instruction Set Architecture
     \input{chapters/chapter4/tables/CISCvRISC}
 
 \subsection{RISC Microarchitecture}
-    \todo[inline]{Intstructions and Registers}
     
     Figure \ref{fig:RISC-Datapath} shows the most simple layout of a 5-stage RISC Datapath. In the \textbf{Instruction Fetch} stage, the processor gets the next instruction from memory for it to be decoded in the \textbf{Instruction Decode} stage. Here, the instruction is split into its constituent parts and has certain minor operations performed that are neccesary for the next stage. The \textbf{Execution} stage is where most computation occurs. This is where the \glsfirst{ALU} resides, and the result of this computation goes to the \textbf{Memory} stage. This is where values are stored into or loaded from the processor's memory, these values, or the values from the Execution stage, are saved to one of the processor's registers in the \textbf{Writeback} stage. 
     \input{chapters/chapter4/fig/RISC-Datapath}

@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-09 10:26:50
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 18:04:57
+% @Last Modified time: 2020-04-09 20:30:13
 
 This chapter describes version 1.0 of the Xedgcol Non-Standard ISA Extension for RISC-V.
 
@@ -14,7 +14,7 @@ Specifically, it is designed for the invocation of logic to compute the intersec
 The Xedgcol extension defines 6 new 32-bit floating-point registers, \texttt{e0-e5}. The term XELEN is used to desrive the width of these floating-point registers in the RISC-V ISA, and XELEN=32 for this extension.
 Table \ref{tabe:Xedgcol_registers} shows the additional register state defined by Xedgcol. 
 \begin{table}[H]
-\begin{centering}
+\begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Register} & \textbf{ABI Name} & \textbf{Description} \\
@@ -32,7 +32,7 @@ Table \ref{tabe:Xedgcol_registers} shows the additional register state defined b
 \texttt{e5}     & \texttt{pz1}      & Z coordinate of edge's second point \\
 \hline
 \end{tabular}
-\end{centering}
+\end{center}
 \end{table}
 
 \section{Referencing Xedgcol Registers}
@@ -42,7 +42,7 @@ Since only 6 registers are defined and they are only referenced by the instructi
 The Load Immediate Edge (LI.e) Instruction allows for a floating point number to be loaded directly into the register \textit{rd}. LI.e loads a single-precision value into the specified register.
 
 \begin{table}[H]
-\begin{centering}
+\begin{center}
 \begin{tabular}{c}
     \begin{tabular}{|m{0.6\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|}
     \hline
@@ -55,7 +55,7 @@ The Load Immediate Edge (LI.e) Instruction allows for a floating point number to
     \hspace*{2.7cm}  Floating-Point Immediate &  \hspace*{0.4cm}\textit{dest} &  \hspace*{0.4cm}LI.e \\
     \end{tabular}
 \end{tabular}
-\end{centering}
+\end{center}
 \end{table}
 
 \begin{quote}{}
@@ -66,7 +66,7 @@ The Load Immediate Edge (LI.e) Instruction allows for a floating point number to
 The Edge Collision Instruction computes the grids with which the edge defined by registers \texttt{e0-e5} collides. The result is a 64-bit sequence of collision bits that can be saved in two 32-bit destination registers.
 
 \begin{table}[H]
-\begin{centering}
+\begin{center}
 \begin{tabular}{c}
     \begin{tabular}{|m{0.2\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|}
     \hline
@@ -74,11 +74,11 @@ The Edge Collision Instruction computes the grids with which the edge defined by
     \hline
     \end{tabular} \\
     \begin{tabular}{m{0.2\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}}
-    \hspace*{1.5cm}12 & \hspace*{0.5cm}3  & \hspace*{0.5cm}3  & \hspace*{0.5cm}3  & \hspace*{0.5cm}4  & \hspace*{0.5cm}3  \\
+    \hspace*{1.5cm}12 & \hspace*{0.5cm}5  & \hspace*{0.5cm}3  & \hspace*{0.5cm}5  & \hspace*{0.5cm}4  & \hspace*{0.5cm}3  \\
     \hspace*{1.3cm}null &  \hspace*{0.5cm}\textit{dest2} & \hspace*{0.5cm}null  & \hspace*{0.5cm}\textit{dest1}  &  \hspace*{0.5cm}null & \hspace*{0.25cm}ECOL  \\
     \end{tabular}
 \end{tabular}
-\end{centering}
+\end{center}
 \end{table}
 
 \begin{quote}{}
