@@ -1,4 +1,86 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-09 10:26:50
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 10:26:50
+% @Last Modified time: 2020-04-09 18:04:57
+
+This chapter describes version 1.0 of the Xedgcol Non-Standard ISA Extension for RISC-V.
+
+The Xedgcol extension is designed to be implementable alongside any base ISA without reliance on any other extensions. For example, the Xedgcol instruction set requires support for floating point registers, which are not provided in the RV32I ISA. As such, it defines 6 new registers specifically for use with this ISA.
+
+Xedgcol is a \textit{highly} specialized ISA extension, designed explicitly for accelerating motion planning.
+Specifically, it is designed for the invocation of logic to compute the intersections of an edge with a grid space. The maximum length of the edge is 4 times the length of a single grid. This is relevant as a $4x4x4$ gridspace can be saved to two 32-bit x-registers.
+
+\section{Xedgcol Register State}
+The Xedgcol extension defines 6 new 32-bit floating-point registers, \texttt{e0-e5}. The term XELEN is used to desrive the width of these floating-point registers in the RISC-V ISA, and XELEN=32 for this extension.
+Table \ref{tabe:Xedgcol_registers} shows the additional register state defined by Xedgcol. 
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Register} & \textbf{ABI Name} & \textbf{Description} \\
+\hline
+\texttt{e0}     & \texttt{px0}      & X coordinate of edge's first point \\
+\hline
+\texttt{e1}     & \texttt{py0}      & Y coordinate of edge's first point \\
+\hline
+\texttt{e2}     & \texttt{pz0}      & Z coordinate of edge's first point \\
+\hline
+\texttt{e3}     & \texttt{px1}      & X coordinate of edge's second point \\
+\hline
+\texttt{e4}     & \texttt{py1}      & Y coordinate of edge's second point \\
+\hline
+\texttt{e5}     & \texttt{pz1}      & Z coordinate of edge's second point \\
+\hline
+\end{tabular}
+\end{centering}
+\end{table}
+
+\section{Referencing Xedgcol Registers}
+Since only 6 registers are defined and they are only referenced by the instructions defined in this ISA, it is possible for them to be referenced using only 3-bit values. This allows for more bits in the instructions to be used for immediate values.
+
+\section{Load Immediate Edge Instruction}
+The Load Immediate Edge (LI.e) Instruction allows for a floating point number to be loaded directly into the register \textit{rd}. LI.e loads a single-precision value into the specified register.
+
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{c}
+    \begin{tabular}{|m{0.6\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|}
+    \hline
+    \hspace*{3.5cm} imm[31:6]  &  \hspace*{0.5cm}rd &  \hspace*{0.5cm}000 \\
+    \hline
+    \end{tabular} \\
+
+    \begin{tabular}{m{0.6\linewidth}m{0.1\linewidth}m{0.1\linewidth}}
+    \hspace*{3.85cm}  26 &  \hspace*{0.5cm} 3 &  \hspace*{0.5cm} 3 \\
+    \hspace*{2.7cm}  Floating-Point Immediate &  \hspace*{0.4cm}\textit{dest} &  \hspace*{0.4cm}LI.e \\
+    \end{tabular}
+\end{tabular}
+\end{centering}
+\end{table}
+
+\begin{quote}{}
+    Only the 26 \gls{MSB} of the floating-point immediate are stored in the instruction. This should then be extended in the instruction decode stage for storage in the destination register.
+\end{quote}
+
+\section{Edge Collision Instruction}
+The Edge Collision Instruction computes the grids with which the edge defined by registers \texttt{e0-e5} collides. The result is a 64-bit sequence of collision bits that can be saved in two 32-bit destination registers.
+
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{c}
+    \begin{tabular}{|m{0.2\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|}
+    \hline
+    \hspace*{0.5cm}000000000000 & \hspace*{0.5cm}rd2  & \hspace*{0.5cm}000  & \hspace*{0.5cm}rd1  & \hspace*{0.5cm}0000  & \hspace*{0.5cm}001  \\
+    \hline
+    \end{tabular} \\
+    \begin{tabular}{m{0.2\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}}
+    \hspace*{1.5cm}12 & \hspace*{0.5cm}3  & \hspace*{0.5cm}3  & \hspace*{0.5cm}3  & \hspace*{0.5cm}4  & \hspace*{0.5cm}3  \\
+    \hspace*{1.3cm}null &  \hspace*{0.5cm}\textit{dest2} & \hspace*{0.5cm}null  & \hspace*{0.5cm}\textit{dest1}  &  \hspace*{0.5cm}null & \hspace*{0.25cm}ECOL  \\
+    \end{tabular}
+\end{tabular}
+\end{centering}
+\end{table}
+
+\begin{quote}{}
+    The ECOL instruction was structured the way it was in order to simplify instruction decoding in a processor. The 32 \gls{LSB} are stored in rd1. The way the instruction is structured means that this can occur in the normal writeback stage of a processor with minimal extra logic. Similarly, only minimal extra instruction decoding and control logic needs to be implemented to facilitate saving the 32 \gls{MSB} to rd2.
+\end{quote}
