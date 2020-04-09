@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-04-09T00:44:04.235Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="AcEfOXSmcW-XbUe66P-u" version="12.9.9" type="github">
+<mxfile host="www.draw.io" modified="2020-04-09T02:50:48.456Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="OU713NtDuyabYFpRzWDX" version="12.9.9" type="github" pages="2">
   <diagram id="bGT5yoZTOYIX3sjsN-3l" name="Page-1">
     <mxGraphModel dx="1287" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
       <root>
@@ -25,6 +25,76 @@
         </mxCell>
         <mxCell id="l6PCjs-nnXIVArNzH7kG-11" value="&lt;span style=&quot;font-size: 33px&quot;&gt;Micro-&lt;br&gt;Architecture&lt;br&gt;&lt;/span&gt;&lt;i style=&quot;font-size: 21px&quot;&gt;Implements the model of the computer&lt;/i&gt;&lt;span style=&quot;font-size: 33px&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;strokeColor=#34A853;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=29;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="480" y="240" width="280" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="jxwnchd21t4ZzrmeAWbc" name="Page-2">
+    <mxGraphModel dx="772" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="2400" math="0" shadow="0">
+      <root>
+        <mxCell id="KMPiizJDNiYROnHK667t-0" />
+        <mxCell id="KMPiizJDNiYROnHK667t-1" parent="KMPiizJDNiYROnHK667t-0" />
+        <mxCell id="KMPiizJDNiYROnHK667t-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;strokeWidth=2;fontFamily=Computer Modern;fontSize=29;fontColor=#000000;" edge="1" parent="KMPiizJDNiYROnHK667t-1" source="KMPiizJDNiYROnHK667t-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-2" value="RISC-V Instruction Set" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=29;fontColor=#000000;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="160" y="40" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeWidth=2;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;" edge="1" parent="KMPiizJDNiYROnHK667t-1" source="KMPiizJDNiYROnHK667t-4" target="KMPiizJDNiYROnHK667t-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeWidth=2;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;" edge="1" parent="KMPiizJDNiYROnHK667t-1" source="KMPiizJDNiYROnHK667t-4" target="KMPiizJDNiYROnHK667t-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-4" value="&lt;u&gt;&lt;font style=&quot;font-size: 25px&quot;&gt;Base Instruction Sets&lt;/font&gt;&lt;/u&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=29;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="160" y="110" width="600" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-5" value="RV32I" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#EA4335;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="170" y="160" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-7" value="RV32E" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#EA4335;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="320" y="160" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-8" value="RV64I" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#EA4335;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="470" y="160" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-9" value="RV128I" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#EA4335;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="620" y="160" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-10" value="&lt;u&gt;Standard Extensions&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/u&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="160" y="240" width="280" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-11" value="M(ultiply)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#34A853;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="170" y="290" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-12" value="A(tomic)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#34A853;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="310" y="290" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-13" value="F(loat)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#34A853;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="170" y="340" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-14" value="D(ouble)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#34A853;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="310" y="340" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-15" value="Q(uad)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#34A853;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="170" y="390" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-16" value="C(ompress)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#34A853;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="310" y="390" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-18" value="&lt;u&gt;Non-Standard Extensions&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/u&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="480" y="240" width="280" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-20" value="Xmno" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#4285F4;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="490" y="290" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-21" value="Xhwacha" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#4285F4;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="490" y="340" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KMPiizJDNiYROnHK667t-22" value="Xhwacha" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FBBC05;strokeWidth=3;fillColor=#FFFFFF;fontFamily=Computer Modern;fontSize=24;fontColor=#000000;verticalAlign=top;" vertex="1" parent="KMPiizJDNiYROnHK667t-1">
+          <mxGeometry x="490" y="390" width="260" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
