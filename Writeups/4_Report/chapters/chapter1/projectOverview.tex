@@ -1,9 +1,10 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 14:27:21
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-03 13:33:55
+% @Last Modified time: 2020-04-09 22:21:45
 
 \subsection{Proposed Solution}
+\todo[inline]{Revise and Rewrite}
     This thesis proposes a non-standard RISC-V Instruction Set Extension, supported by a functional unit embedded in a \gls{FPGA} synthesizable processor design that more rapidly computes motion planning for autonomous \gls{UAV}s. It will use the \gls{RRT} algorithm as a benchmark for performance analysis. Profiling of \gls{RRT} described in chapter \ref{chap:MotionPlanningInSoftware} found that edge collision detection was the most performance limiting function of \gls{RRT}. As such, this thesis aims to design a RISC-V extension and specific circuitry that support the faster execution of edge collision detection.
 
     \subsubsection*{System Overview}
@@ -15,9 +16,11 @@
         A \textbf{C Implementation of RRT} is loaded into the instruction memory of the PhilosophyV processor. This processor, synthesized on an \textbf{\gls{FPGA}}, is used as the main processor, co-processor, or accelerator on an \textbf{Autonomous \gls{UAV}}. Table \ref{table:componentList} outlines the components of this system and their descriptions.
         \input{chapters/chapter1/tables/componentList}
 
+    \todo[inline]{Update Above Table}
+
 \subsection{Project Specifications}
 
-    \todo[inline, caption={Project Specifications}]{These need significant revision from the last checkpoint}
+    \todo[inline, caption={Project Specifications}]{This can just be the stuff from the start. Objective and 4 goals}
 
 \subsection{Project Structure}
 \label{subsection:project_structure}

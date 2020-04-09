@@ -1,48 +1,53 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Simple Visualization of Computer Implementation Hierarchy\relax }}{5}{figure.caption.22}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Typical Process of Adding Non-Standard Extension to RISC-V ISA\relax }}{7}{figure.caption.25}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces System Diagram of Overall Project\relax }}{8}{figure.caption.28}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Simple Visualization of Computer Implementation Hierarchy\relax }}{5}{figure.caption.24}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Typical Process of Adding Non-Standard Extension to RISC-V ISA\relax }}{7}{figure.caption.27}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces System Diagram of Overall Project\relax }}{8}{figure.caption.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of 2 Robot Configurations in 3D Space for Motion Planning Purposes}}{13}{figure.caption.35}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Occupancy Grid Maps for a (16$\times $16) Workspace of Different Resolutions}}{14}{figure.caption.37}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Scope of the RRT Algorithm}}{15}{figure.caption.39}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Demonstration of \gls {RRT} Algorithm for 2D robot in 2D space.}}{16}{figure.caption.41}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Demonstration of the 5 Key Functions that Constitute RRT}}{20}{figure.caption.49}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Visualization of Workspace in 2D and 3D}}{21}{figure.caption.51}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Visualization of Obstacles in 2D and 3D}}{22}{figure.caption.54}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Complete Visualization of RRT in 2D and 3D}}{22}{figure.caption.55}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Increasing Total Execution Time of RRT with Map Size}}{25}{figure.caption.59}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Profile of Computational Load of \gls {RRT} in 2D}}{26}{figure.caption.61}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Profile of Computational Load of \gls {RRT} in 3D}}{27}{figure.caption.63}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of 2 Robot Configurations in 3D Space for Motion Planning Purposes}}{13}{figure.caption.39}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Occupancy Grid Maps for a (16$\times $16) Workspace of Different Resolutions}}{14}{figure.caption.41}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Scope of the RRT Algorithm}}{15}{figure.caption.43}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Demonstration of \gls {RRT} Algorithm for 2D robot in 2D space.}}{16}{figure.caption.45}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Demonstration of the 5 Key Functions that Constitute RRT}}{20}{figure.caption.53}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Visualization of Workspace in 2D and 3D}}{21}{figure.caption.55}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Visualization of Obstacles in 2D and 3D}}{22}{figure.caption.58}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Complete Visualization of RRT in 2D and 3D}}{22}{figure.caption.59}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Increasing Total Execution Time of RRT with Map Size}}{25}{figure.caption.63}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Profile of Computational Load of \gls {RRT} in 2D}}{26}{figure.caption.65}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Profile of Computational Load of \gls {RRT} in 3D}}{27}{figure.caption.67}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Detecting Grid Intersections by Finding Intersections with Axis Oriented Planes}}{29}{figure.caption.66}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Edge Collision Computation Process}}{30}{figure.caption.67}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Megalong Park Honey Bee Pollinating a Weeping Cherry Blossom}}{32}{figure.caption.73}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces HoneyBee in a Motion Planning Processor\relax }}{33}{figure.caption.74}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces General Overview of HoneyBee Interface}}{33}{figure.caption.75}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Port Diagram of HoneyBee Interface}}{34}{figure.caption.76}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces The Impact of $\epsilon $ on the Length of the Bit-Collision Sequence}}{35}{figure.caption.79}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces The Harvard Mark I Computer}}{36}{figure.caption.82}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces The Hardware Development Process}}{36}{figure.caption.83}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Hardware Optimization Process}}{38}{figure.caption.85}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces HB-A Performance Against Benchmark CPU}}{39}{figure.caption.89}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Timing Diagrams Showing Parallelization in HoneyBee-B}}{40}{figure.caption.91}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces HB-B Performance Against Benchmark CPU}}{42}{figure.caption.93}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Timing Diagrams Showing Parallelization in HoneyBee-C}}{43}{figure.caption.95}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Detecting Grid Intersections by Finding Intersections with Axis Oriented Planes}}{29}{figure.caption.70}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Edge Collision Computation Process}}{30}{figure.caption.71}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Megalong Park Honey Bee Pollinating a Weeping Cherry Blossom}}{32}{figure.caption.77}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces HoneyBee in a Motion Planning Processor\relax }}{33}{figure.caption.78}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces General Overview of HoneyBee Interface}}{33}{figure.caption.79}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Port Diagram of HoneyBee Interface}}{34}{figure.caption.80}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The Impact of $\epsilon $ on the Length of the Bit-Collision Sequence}}{35}{figure.caption.83}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The Harvard Mark I Computer}}{36}{figure.caption.86}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The Hardware Development Process}}{36}{figure.caption.87}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Hardware Optimization Process}}{38}{figure.caption.89}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces HB-A Performance Against Benchmark CPU}}{39}{figure.caption.93}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Timing Diagrams Showing Parallelization in HoneyBee-B}}{40}{figure.caption.95}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces HB-B Performance Against Benchmark CPU}}{42}{figure.caption.97}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Timing Diagrams Showing Parallelization in HoneyBee-C}}{43}{figure.caption.99}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Overview of the Field of Computer Architecture}}{45}{figure.caption.98}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces ISA as a Contract Between Software and Hardware Developers}}{46}{figure.caption.99}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 5-Stage \gls {RISC} Datapath}}{47}{figure.caption.101}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces RISC-V ISA Modularity}}{49}{figure.caption.105}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Simplified schematic of the Philosophy V Core that implements the RV32I ISA}}{53}{figure.caption.111}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Modelling a UAV as a Rectangular Prism}}{64}{figure.caption.127}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Using Parallel Planes to determine Edge Collisions with Grids\relax }}{70}{figure.caption.133}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Bit Sequence Mapping for a $2\times 2\times 2$ Grid Space}}{76}{figure.caption.140}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Overview of the Field of Computer Architecture}}{45}{figure.caption.102}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces ISA as a Contract Between Software and Hardware Developers}}{46}{figure.caption.103}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 5-Stage \gls {RISC} Datapath}}{47}{figure.caption.105}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Typical Process of Adding Non-Standard Extension to RISC-V ISA\relax }}{49}{figure.caption.106}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces RISC-V ISA Modularity}}{50}{figure.caption.110}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Simplified Schematic of the RV32I PhilosophyV Core}}{53}{figure.caption.117}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Simplified Schematic of the RV32I\_Xedgcol PhilosophyV Core}}{54}{figure.caption.118}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces PhilosophyV Register Files}}{55}{figure.caption.119}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Implementation of HoneyBee in RV32I\_Xedgcol PhilosophyV}}{56}{figure.caption.120}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {F.1}{\ignorespaces Philosophy V Processor}}{83}{figure.caption.151}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Modelling a UAV as a Rectangular Prism}}{68}{figure.caption.134}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Using Parallel Planes to determine Edge Collisions with Grids\relax }}{74}{figure.caption.140}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Bit Sequence Mapping for a $2\times 2\times 2$ Grid Space}}{80}{figure.caption.147}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {F.1}{\ignorespaces RV32I PhilosophyV Schematic}}{87}{figure.caption.160}
+\contentsline {figure}{\numberline {F.2}{\ignorespaces RV32I\_Xedgcol PhilosophyV Schematic}}{88}{figure.caption.161}

@@ -14,36 +14,36 @@ Warning--empty author in ChoiceReviews2006
 Warning--empty institution in Elsabbagh2019
 Warning--empty journal in Vss2sn2019
 Warning--empty institution in Xilinx2014
-You've used 22 entries,
+You've used 23 entries,
             1876 wiz_defined-function locations,
-            607 strings with 6792 characters,
-and the built_in function-call counts, 4568 in all, are:
-= -- 413
-> -- 212
+            612 strings with 6859 characters,
+and the built_in function-call counts, 4689 in all, are:
+= -- 423
+> -- 216
 < -- 0
-+ -- 82
-- -- 60
-* -- 329
-:= -- 687
-add.period$ -- 25
-call.type$ -- 22
-change.case$ -- 25
++ -- 84
+- -- 61
+* -- 333
+:= -- 704
+add.period$ -- 26
+call.type$ -- 23
+change.case$ -- 26
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 209
-empty$ -- 452
-format.name$ -- 60
-if$ -- 1072
+cite$ -- 34
+duplicate$ -- 213
+empty$ -- 470
+format.name$ -- 61
+if$ -- 1103
 int.to.chr$ -- 0
-int.to.str$ -- 22
+int.to.str$ -- 23
 missing$ -- 13
-newline$ -- 73
-num.names$ -- 21
-pop$ -- 98
+newline$ -- 76
+num.names$ -- 22
+pop$ -- 105
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 131
+skip$ -- 135
 stack$ -- 0
 substring$ -- 203
 swap$ -- 60
@@ -52,7 +52,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 11
-while$ -- 42
-width$ -- 24
-write$ -- 188
+while$ -- 43
+width$ -- 25
+write$ -- 195
 (There were 11 warnings)

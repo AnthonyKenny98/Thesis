@@ -69,6 +69,9 @@ F.~Elsabbagh, B.~Asgari, H.~Kim, and S.~Yalamanchili, ``{Vortex RISC-V GPGPU
   System: Extending the ISA, Synthesizing the Microarchitecture, and Modeling
   the Sooware Stack},'' tech. rep., 2019.
 
+\bibitem{ChipsAlliance2020}
+{Chips Alliance}, ``{Rocket Chip},'' 2020.
+
 \bibitem{Thingbits}
 Thingbits, ``{LynxMotionHQuad500 Drone}.''
 

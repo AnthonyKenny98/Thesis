@@ -14,7 +14,7 @@
 \glossaryentry{\glsentrylong {FPGA_g} (\glsentrytext {FPGA}):?\glossentry{FPGA_g}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{\glsentrylong {RTOS_g} (\glsentrytext {RTOS}):?\glossentry{RTOS_g}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{\Glsentrytext {hardware acceleration}:?\glossentry{hardware acceleration}|setentrycounter[]{page}\glsnumberformat}{4}
-\glossaryentry{\glsentrylong {PRM_g} (\glsentrytext {PRM}):?\glossentry{PRM_g}|setentrycounter[]{page}\glsnumberformat}{5}
+\glossaryentry{\glsentrylong {PRM_g} (\glsentrytext {PRM}):?\glossentry{PRM_g}|setentrycounter[]{page}\glsnumberformat}{6}
 \glossaryentry{\Glsentrytext {hardware acceleration}:?\glossentry{hardware acceleration}|setentrycounter[]{page}\glsnumberformat}{6}
 \glossaryentry{\glsentrylong {RV32I_g} (\glsentrytext {RV32I}):?\glossentry{RV32I_g}|setentrycounter[]{page}\glsnumberformat}{8}
 \glossaryentry{\glsentrylong {HDL_g} (\glsentrytext {HDL}):?\glossentry{HDL_g}|setentrycounter[]{page}\glsnumberformat}{8}
@@ -77,7 +77,8 @@
 \glossaryentry{\glsentrylong {RISC_g} (\glsentrytext {RISC}):?\glossentry{RISC_g}|setentrycounter[]{page}\glsnumberformat}{46}
 \glossaryentry{\glsentrylong {ALU_g} (\glsentrytext {ALU}):?\glossentry{ALU_g}|setentrycounter[]{page}\glsnumberformat}{47}
 \glossaryentry{\Glsentrytext {RISC-V}:?\glossentry{RISC-V}|setentrycounter[]{page}\glsnumberformat}{48}
-\glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{65}
-\glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{65}
-\glossaryentry{\Glsentrytext {RISC-V}:?\glossentry{RISC-V}|setentrycounter[]{page}\glsnumberformat}{72}
-\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{74}
+\glossaryentry{\Glsentrytext {hardware acceleration}:?\glossentry{hardware acceleration}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{\Glsentrytext {probabilistically complete}:?\glossentry{probabilistically complete}|setentrycounter[]{page}\glsnumberformat}{69}
+\glossaryentry{\Glsentrytext {mathematically complete}:?\glossentry{mathematically complete}|setentrycounter[]{page}\glsnumberformat}{69}
+\glossaryentry{\Glsentrytext {RISC-V}:?\glossentry{RISC-V}|setentrycounter[]{page}\glsnumberformat}{76}
+\glossaryentry{\Glsentrytext {configuration}:?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{78}

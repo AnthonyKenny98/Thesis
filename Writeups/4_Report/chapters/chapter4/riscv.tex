@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 18:51:24
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 20:46:46
+% @Last Modified time: 2020-04-10 06:28:06
 \subsection{RISC-V}
 
     \glsdesc{RISC-V} (pronounced ``risk-five'') was developed at the University of California, Berkeley. It is established on the principles of RISC as an open-source and extendable \gls{ISA} for research and education. It was designed with application specific processors in mind, as they developed a highly flexible and extendable base \gls{ISA} around which research and acceleration efforts could be based.
@@ -12,6 +12,10 @@
     \item \textbf{Commercial ISAs come and go.} Many once-popular commercial ISAs have since fallen out of fashion or are not even in production any more. Lingering intellectual property issues interefere with the ability of third-parties to continue supporting the ISA. While an open source \gls{ISA} may also lose popularity, interested parties can continue to use and support the ISA without interference.
     \item \textbf{Popular commercial ISAs were not designed for extendibility.} There exist almost no ISAs that support extendibility for general purpose computing systems, allowing for no application specific optimizations at the instruction set level.
     \end{itemize}
+
+    RISC-V is designed cleverly in a modular way, with a set of base instruction sets and a set of standard extensions. As a result, processors can be designed to only implement the instruction groups it requires, saving time, space and power on instructions that won't be used. In addition, another goal of RISC-V is to provide a basis for more specialized instruction-set extensions or more customized accelerators. This is described in the most recent \textit{RISC-V Instruction Set Manual} \cite{Waterman2019}. This is a powerful feature, as it does not break any software compatability, but allows for designers to easily follow the steps outlined in Figure \ref{fig:extendingRISCV}. From a \gls{hardware acceleration} point of view, this is particularly useful as it allows the designer to directly invoke whatever functional unit or accelerator they implement from assembly code.
+    
+    \input{chapters/chapter1/figures/extendingRISCV}
 
     The overall design of RISC-V can be broken down into 3 characteristics that address the aforementioned limitations of commercial \glspl{ISA}: Open-source, extendibility, and modularity.
 
@@ -47,6 +51,7 @@
     %     \input{chapters/chapter4/tables/rv32i_instr_format}
 
 \subsection{Defining a RISC-V Custom Extension}
+    \todo{I might need to make this its own section? At any rate, I need more background on what an instruction looks like etc}
 
     The goal of defining a custom extension in this context is to reduce the number of instructions neccesary to compute collisions for a given edge. According to RISC-V convention, the extension is designated \textbf{``Xedgcol''} (X for non standard, edgcol as an abbreviation for its purpose). When it is implemented along with RV32I, the processor can be said to implement the rv32i\_Xedgcol ISA.
 

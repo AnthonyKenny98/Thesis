@@ -1,20 +1,46 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-09 10:22:31
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 21:02:37
-\textit{Philosophy 4}, written in 1903 by Mr. Owen Wister of the Class of 1882 (founder of the Western literary genre), recounts the antics of two Harvard students and their last minute attempts to study (or avoid studying) for a Philosophy exam for which they are hopelessly unprepared. Similarly, this section details the process of building a RISC-V processor, by far the most intricate engineering challenge of this Thesis, and a task for which I was unsure of my preparedness. As such, this processor was named \textbf{Philosophy V}; both in reference to the RISC-V ISA for which it was designed, and to the fact that the process of its implementation at times seemed very much like a sequel to Mr. Wister's novel.
-    
+% @Last Modified time: 2020-04-10 07:24:42
+\textit{Philosophy 4}, written in 1903 by Mr. Owen Wister of the Class of 1882 (founder of the Western literary genre), recounts the antics of two Harvard students and their last minute attempts to study (or avoid studying) for a Philosophy exam for which they are hopelessly unprepared. Similarly, this section details the process of building a RISC-V processor, by far the most intricate engineering challenge of this Thesis, and a task for which I was unsure of my preparedness. As such, this processor was named \textbf{PhilosophyV}; both in reference to the RISC-V ISA for which it was designed, and to the fact that the process of its implementation at times seemed very much like a sequel to Mr. Wister's novel. \\
+
+The purpose of implementing a functional RISC-V processor was to verify that the design of the Xedgcol extension was viable. Initially, the hope was to find an existing open-source implementation, of which there are many, that I could build on. A significant period of time was spent trying to become familiar with the Rocket Core\cite{ChipsAlliance2020}, a large open-source RISC-V implementation. However, the project was so sophisticated that learning its infrastructure and the neccesary tool-chains became a massive project in itself. This was the case for many open-source projects. Those that lacked such sohpisticated code bases also lacked proper documentation and were not verified to be correct. As a result, it ended up being faster and simpler to implement a lightweight RISC-V processor from scratch. 
 
     \subsection{RV32I Implementation}
-        Figure \ref{fig:philv_rv32i} 
-
         \input{chapters/chapter4/fig/philv_rv32i}
+        The first step was implementing a simple (a relative term) processor that implemented the RV32I Base ISA. Figure \ref{fig:philv_rv32i} shows a highly simplified schematic of the RV32I PhilosophyV Core. Appendix \ref{section:philv_appendix_rv32i_core} provides a detailed schematic.
 
-        Appendix \ref{section:philv_appendix_rv32i_core} provides a detailed schematic of the PhilosophyV processor.
-        
+        The design was that of a simple 5-stage non-pipelined processor with no branch-prediction or other optimizations. In other words, it's awful. Running the original \gls{RRT} program on this processor would take an inordinate amount of time (luckily, this was never tested). However, this is irrelevant. The improved performance of implementing the edge collision detection function in hardware has already been verified against an Intel processor that was designed by some of the leading minds in computer architecture. To restate, the purpose of implementing this processor was simply to prove the validity of the Xedgcol ISA extension.
+
+        The processor was implemented in Verilog (an \gls{HDL}). Simulations were carried out in Vivado Design Suite. The processor's  correctness was verified at the module level and at the core level. Module testing was fulfilled by Verilog test benches that checked the functional correctness of each module (e.g. the ALU). The overall core was tested by running different complex assembly programs through the processor and comparing the states of its memory and register file at the end of the programs execution to their expected states.
 
     \subsection{RV32I\_Xedgcol Implementation}
-        \todo[inline]{Process of implementing honeybee into PhilV.}
+        \input{chapters/chapter4/fig/philv_rv32iXedgcol}
+
+        Implementing the Xedgcol extension was relatively simple. First, a \textbf{new register file} had to be implemented to support the new registers \texttt{e0-e5}. The register file was implemented slightly differently to normal; It was implemented with a write address port, a write data port, and then 6 data read ports that always output the value of the 6 registers. This is shown in Figure \ref{fig:refiles}.
+
+        \input{chapters/chapter4/fig/regfiles}
+        
+        The \texttt{LI.e} instruction writes to this register file. In the instruction, the float immediate is only in fact the 26 most significant bits, as room must be left in the instruction for the 3 bit register address and the 3 bit opcode. As such, this float is extended with zeros in the least significant bit range before being wired to the wrData port of the register file. 
+        
+        Secondly, to implement the \texttt{ecol} instruction, the HoneyBee unit was added. Its 6 input ports defining the coordinates of the edge were wired directly to the output ports of the Xedgcol register file. Its 64 output bits were split to be writted to the two destination registers. The 32 \glspl{MSB} are written to rd2 in the memory stage, and the 32 \glspl{LSB} are written to rd1 in the writeback stage. Its control interface was wired to the main controller and the main controller's logic was updated. In this unoptimised processor design (to keep things simple) the processor stalls while it waits for the HoneyBee unit to complete execution.
+
+        \input{chapters/chapter4/fig/honeybee_impl}
+
 
     \subsection{Verification and Analysis}
-        \todo[inline]{Comparative Performance Analysis of baseline and extended PhilV Core}
+        With the PhilosphyV core implementing the RV32I\_Xedgcol ISA, assembly tests were written to verify the viability of the Xedgcol extension. Consider an edge that is defined by the points $(0.5, 0.75, 0.25)$ and $(1.75, 1.25, 1.5)$. The assembly instructions to execute the edge collision functionality are as follows:
+
+        \begin{verbatim}
+        # Load immediate coordinate values
+        LI.e px0 0.5
+        LI.e py0 0.75
+        LI.e pz0 0.25
+        LI.e px1 1.75
+        LI.e py1 1.25
+        LI.e pz1 1.5
+        # Execute edge collision function
+        ECOL x6, x7
+        \end{verbatim}
+
+        The collision bit sequence stored in registers \texttt{x6} and \texttt{x7} can be compared against an occupancy grid map. 
