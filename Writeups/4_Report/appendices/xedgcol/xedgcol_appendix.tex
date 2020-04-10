@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-09 10:26:50
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 20:59:04
+% @Last Modified time: 2020-04-11 01:47:38
 
 This chapter describes version 1.0 of the Xedgcol Non-Standard ISA Extension for RISC-V.
 
@@ -12,7 +12,7 @@ Specifically, it is designed for the invocation of logic to compute the intersec
 
 \section{Xedgcol Register State}
 The Xedgcol extension defines 6 new 32-bit floating-point registers, \texttt{e0-e5}. The term XELEN is used to desrive the width of these floating-point registers in the RISC-V ISA, and XELEN=32 for this extension.
-Table \ref{tabe:Xedgcol_registers} shows the additional register state defined by Xedgcol. 
+Table \ref{table:Xedgcol_registers} shows the additional register state defined by Xedgcol. 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{|c|c|c|}
@@ -32,6 +32,8 @@ Table \ref{tabe:Xedgcol_registers} shows the additional register state defined b
 \texttt{e5}     & \texttt{pz1}      & Z coordinate of edge's second point \\
 \hline
 \end{tabular}
+\mycaption{Xedgcol Register State}{}
+\label{table:Xedgcol_registers}
 \end{center}
 \end{table}
 

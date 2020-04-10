@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 18:51:24
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 18:50:17
+% @Last Modified time: 2020-04-11 01:27:28
 \subsection{RISC-V}
 
     \gls{RISC-V} (pronounced ``risk-five'') was developed at the University of California, Berkeley. It is established on the principles of RISC as an open-source and extendable \gls{ISA} for research and education. It was designed with application specific processors in mind, as they developed a highly flexible and extendable base \gls{ISA} around which research and acceleration efforts could be based.
@@ -20,13 +20,13 @@
     The overall design of RISC-V can be broken down into 3 characteristics that address the aforementioned limitations of commercial \glspl{ISA}: Open-source, extendibility, and modularity.
 
     \subsubsection{Open-Source}
-        Open-source refers to software of which the owner has granted permission for anybody to study, alter, or distribute the software for any purpose. Often, this means projects are developed in a collaborative public manner. What this means for an ISA is that the RISC-V implementations are often publicly available and improved upon by developers for their own purposes. Building a high-performance processor from scratch is an arduous, expensive project. Open-source implementations allow developers to build off existing implementations without all the legwork of implementing a processor from scratch.
+        Open-source refers to software that the owner of which has granted permission for anybody to study, alter, or distribute the software for any purpose. Often, this means projects are developed in a collaborative public manner. What this means for an ISA is that RISC-V implementations are often publicly available and improved upon by developers for their own purposes. Building a high-performance processor from scratch is an arduous, expensive project. Open-source implementations allow developers to build upon existing implementations without the legwork of implementing a processor from scratch.
 
     \subsubsection{Extendability}
-        RISC-V is designed to be extendable. This means that developers can add their own instructions to the Instruction Set and implement those new instructions in a processor. This processor should still be able to run all other RISC-V compiled programs, along with a set of programs for which it is specifically optimized. This level of backwards compatibility means that an extended ISA is not just a new ISA. 
+        RISC-V is designed to be extendable. This means that developers can add their own instructions to the Instruction Set and implement those new instructions in a processor. This processor should still be able to run all other RISC-V compiled programs, along with a set of programs for which it is specifically optimized. This backwards compatibility means that an extended ISA is not just a new ISA. 
 
     \subsubsection{Modularity}
-        Finally, RISC-V was designed to be relatively easy to implement. It is broken down into small ``base'' \glspl{ISA} which can then have any number of standard and non-standard extensions added to them. These base ISAs are not designed in such a way to overarchitect for a certain type of microarchitecure. \textbf{Standard extensions} are those that are generally useful and that are designed to not conflict with any other standard extensions. \textbf{Non-standard extensions} are those that may be highly specialized and may conflict with other standard or non-standard extensions. One way to think about it is that standard extensions would improve any computer and are endorsed by the RISC-V organization, whereas non-standard extensions are developed for very specific purposes, such as motion planning acceleration. This modularity and flexibility is part of what makes it such an attractive proposition for specialized computer architecture. Figure \ref{fig:modules} demonstrates this modularity.
+        Finally, RISC-V was designed to be relatively easy to implement. It is broken down into small ``base'' \glspl{ISA} which can then have any number of standard and non-standard extensions added to them. These base ISAs are not designed in such a way to overarchitect for a certain type of microarchitecure. \textbf{Standard extensions} are those that are generally useful and that are designed to not conflict with any other standard extensions. \textbf{Non-standard extensions} are those that may be highly specialized and may conflict with other standard or non-standard extensions. One way to think about it is that standard extensions would improve any computer and are endorsed by the RISC-V organization, whereas non-standard extensions are developed for very specific purposes, such as motion planning acceleration. This modularity and flexibility is part of what makes RISC-V such an attractive proposition for specialized computer architecture. Figure \ref{fig:modules} demonstrates this modularity.
 
         \input{chapters/chapter4/fig/modules}
 
@@ -40,7 +40,7 @@
         Subsets of the base integer ISA might be useful for pedagogical purposes, but the base has been defined such that there should be little incentive to subset a real hardware implementation \dots}
     \end{quote}
 
-    RV32I was chosen as the base ISA for this project. The edge collision custom extension would be defined primarily extend the RV32I base ISA. Figure \ref{fig:systemDiagramUpdated} is an updated system overview of the overall project.
+    RV32I was chosen as the base ISA for this project. The edge collision custom extension would be defined primarily extend the RV32I base ISA. Figure \ref{fig:systemOverviewUpdated} is an updated system diagram of the overall project.
 
     \input{chapters/chapter4/fig/systemOverviewUpdated}
 

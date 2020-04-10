@@ -144,7 +144,8 @@
         \newglossaryentry{#2}{
             text={#2},
             name={\Glsentrytext{#2}:},
-            description={#3}
+            description={#3},
+            sort={#2}
         }
         % Else add to acronyms and link to glossary
         \else
@@ -152,7 +153,8 @@
             text={#1},
             long={#2},
             name={\glsentrylong{#1_g} (\glsentrytext{#1}):},
-            description={#3}
+            description={#3},
+            sort={#2}
         }
         \newglossaryentry{#1}{
             type=\acronymtype,
@@ -181,6 +183,8 @@
 \usepackage{setspace}
 
 \usepackage{tabularx}
+
+\usepackage{pdfpages}
 
 \endinput
 %%

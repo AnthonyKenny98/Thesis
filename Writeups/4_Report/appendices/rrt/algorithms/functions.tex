@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-05 21:30:06
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-06 16:48:45
+% @Last Modified time: 2020-04-11 03:04:30
 
 \bigskip
 \begin{algorithm}[H]
@@ -76,7 +76,7 @@ Where \texttt{distance($q_1$, $q_2$)} returns the Euclidean distance between two
 Where \texttt{stepTowardConfig($q_1$, $q_2$)} returns a configuration $\epsilon$ from $q_1$ in the direction of $q_2$.
 
 \bigskip
-\begin{algorithm}
+\begin{algorithm}[H]
     \caption{\texttt{configCollision()} as implemented for \gls{RRT}}
     \SetAlgoLined
     \SetArgSty{textnormal}
@@ -130,4 +130,4 @@ Where $O$ is a $N$-Dimensional array of booleans, with True representing an occu
         \Return false
 \end{algorithm}
 
-While seemingly complex, the above algorithm merely steps through the mathematical process of checking the relevant $x$, $y$, and $z$ planes for a point of intersection with the edge $e$. It then looks up the \gls{OGM} $O$ to see if the grid corresponding with the point of intersection is occupied. If so, then it reports a collision be returning false. The function \texttt{edgeIntersectsPlane} follows the geometrical process of detecting a segment-plane intersection outlined in Appendix \ref{section:rrt_appendix_line_plane_intersection}. $q_{min}$ is calculated to be the origin point of the grid closest to the origin. In other words, the algorithm does not check for intersections throughout the entire map, only the maximum number of grids that could possible be intersected by the edge $e$, given the location of the two points of the edge, $e.p_1$ and $e.p_2$, and the maximum edge length $\epsilon$. The algorithm for \texttt{edgeCollision} in \gls{2D} can be inferred from the above, instead checking segment-line intersections for $x$ and $y$ lines.
+While seemingly complex, the above algorithm merely steps through the mathematical process of checking the relevant $x$, $y$, and $z$ planes for a point of intersection with the edge $e$. It then looks up the \gls{OGM} $O$ to see if the grid corresponding with the point of intersection is occupied. If so, then it reports a collision by returning True. The function \texttt{edgeIntersectsPlane} follows the geometrical process of detecting a segment-plane intersection outlined in Appendix \ref{section:rrt_appendix_line_plane_intersection}. $q_{min}$ is calculated to be the origin point of the grid closest to the origin. In other words, the algorithm does not check for intersections throughout the entire map, only the maximum number of grids that could possible be intersected by the edge $e$, given the location of the two points of the edge, $e.p_1$ and $e.p_2$, and the maximum edge length $\epsilon$. The algorithm for \texttt{edgeCollision()} in \gls{2D} can be inferred from the above, checking segment-line intersections for $x$ and $y$ lines.

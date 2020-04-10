@@ -1,17 +1,17 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-10 17:57:36
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 21:41:55
+% @Last Modified time: 2020-04-11 01:54:39
 
 The goal of defining a custom extension in this context is to reduce the number of instructions necessary to compute collisions for a given edge. According to RISC-V convention, the extension is designated \textbf{``Xedgcol''} (X for non standard, edgcol as an abbreviation for its purpose). When it is implemented along with RV32I, the processor can be said to implement the RV32I\_Xedgcol ISA.
 
 \subsection{Xedgcol Specifications}
-    Table \ref{table:xedgcol_specs} outlines the general specifications for the Xedgcol extension. The specifications listed below reflect what was determined before the process of formally defining Xedgcol begun. As such, it the specifications in the table are relatively vague. The rest of this section details the design decisions and the exact definition of each instruction and register.
+    Table \ref{table:xedgcol_specs} outlines the general specifications for the Xedgcol extension. The specifications listed below reflect what was determined before the process of formally defining Xedgcol begun. As such, the specifications in the table are relatively vague. The rest of this section details the design decisions and the exact definition of each instruction and register.
 
     \input{chapters/chapter4/tables/Xedgcol_specs}
 
     \subsubsection{Fixing Epsilon}
-        Recall that the HoneyBee unit was parameterized for different values of $\epsilon$, and that this would influence the number of bits in its output sequence. When defining an instruction, this value has to be constant. You may have also noticed that the results presented for HoneyBee in Chapter 3 were all for $\epsilon = 4$. This value was chosen as 4, because $4^3 = 64$, which can be stored in 2 32-bit registers.. Table \ref{table:epsilon_bits} lists the number of output bits required for each value of $\epsilon$ and how many 32-bit registers would be needed to store this result. Therefore, 4 was the obvious choice for the value of $\epsilon$.
+        Recall that the HoneyBee unit was parameterized for different values of $\epsilon$, and that this would influence the number of bits in its output sequence. When defining an instruction, this value has to be constant. You may have also noticed that the results presented for HoneyBee in Chapter 3 were all for $\epsilon = 4$. This value was chosen because $4^3 = 64$. This can be stored in 2 32-bit registers. Table \ref{table:epsilon_bits} lists the number of output bits required for each value of $\epsilon$ and how many 32-bit registers would be needed to store this result. No other values were suitable, so 4 was the obvious choice for the value of $\epsilon$.
 
     \input{chapters/chapter4/tables/epsilon_bits}
 
@@ -19,7 +19,6 @@ The goal of defining a custom extension in this context is to reduce the number 
     %     \input{chapters/chapter4/instr_anatomy}
 
 \subsection{Defining Xedgcol}
-    The formal Xedgcol definition can be found in Appendix \ref{appendix:xedgcol_appendix}. The extension has been documented following RISC-V conventions.
 
     \subsubsection{Edge Collision Instruction}
     The following instruction was defined:
@@ -28,7 +27,7 @@ The goal of defining a custom extension in this context is to reduce the number 
     \texttt{ECOL rd1, rd2}
     \end{center}
 
-    \texttt{ECOL} runs the edge-collision detection function and stores the result in two destination registers . The 32 \gls{LSB} are stored in \texttt{rd1} and the 32 \gls{MSB} in \texttt{rd2}. The above assembly instruction is (somewhat) human readable, but in the processor, every instruction is represented as a 32-bit sequence of binary values. Consider an empty 32-bit instruction, shown in Figure \ref{fig:instr_blank}
+    \texttt{ECOL} runs the edge-collision detection function and stores the result in two destination registers . The 32 Least Significant Bits (LSBs) are stored in \texttt{rd1} and the 32 Most Significant Bits (MSBs) in \texttt{rd2}. The above assembly instruction is (somewhat) human readable, but in the processor, every instruction is represented as a 32-bit sequence of binary values. Consider an empty 32-bit instruction, shown in Figure \ref{fig:instr_blank}
 
     \begin{figure}[H]
     \begin{center}
@@ -85,7 +84,7 @@ The goal of defining a custom extension in this context is to reduce the number 
     \texttt{e5}     & \texttt{pz1}      & Z coordinate of edge's second point \\
     \hline
     \end{tabular}
-    \caption{Edge Coordinate Registers}{ as defined in the Xedgcol ISA extension}
+    \mycaption{Edge Coordinate Registers}{ as defined in the Xedgcol ISA extension}
     \label{table:edge_registers}
     \end{center}
     \end{table}
@@ -107,7 +106,9 @@ The goal of defining a custom extension in this context is to reduce the number 
     \begin{figure}[H]
     \begin{center}
     \includegraphics[width=0.85\linewidth]{chapters/chapter4/img/lie.png} 
-    \mycaption{}{}
+    \mycaption{Load Immediate Edge Instruction Format}{}
     \label{fig:lie}
     \end{center}
     \end{figure}
+
+    The formal Xedgcol definition decoument can be found in Appendix \ref{appendix:xedgcol_appendix}. The extension has been documented following RISC-V conventions.

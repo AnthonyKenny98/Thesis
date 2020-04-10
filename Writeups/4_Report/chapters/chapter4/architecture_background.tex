@@ -1,10 +1,10 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 19:39:42
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 17:17:19
+% @Last Modified time: 2020-04-11 01:24:35
 
 % Intro
-Recall the computer implementation hierarchy in Figure \ref{fig:computerHierarchy}, made up of user-level applications, programming languages, the instruction set architecture, and the processor. Computer Architecture encompasses the two lower levels of this hierarchy. It comprises the design of the Instruction Set Architecture and Microarchitecture of a computer. Earlier, the Instruction Set was described as the ``translator'' between software and the processor. The \textbf{Instruction Set} is in reality a document defining the behaviour of a computer. The \textbf{Microarchitecture} is the implementation the \gls{ISA}; the physical computer processor that behaves in the way defined by the \gls{ISA}.
+Recall the computer implementation hierarchy in Figure \ref{fig:computerHierarchy}, made up of user-level applications, programming languages, the instruction set architecture, and the processor. Computer Architecture encompasses the two lower levels of this hierarchy. It comprises the design of the Instruction Set Architecture and Microarchitecture of a computer. Earlier, the Instruction Set was described as the ``translator'' between software and the processor. The \textbf{Instruction Set} is in reality a document defining the behaviour of a computer. The \textbf{Microarchitecture} is the implementation of the \gls{ISA}; the physical computer processor that behaves in the way the \gls{ISA}defines.
 
 \input{chapters/chapter4/fig/architecture}
 
@@ -15,7 +15,7 @@ Recall the computer implementation hierarchy in Figure \ref{fig:computerHierarch
     \input{chapters/chapter4/fig/contract}
 
     The two most important things that an \gls{ISA} defines are a computer's \textbf{instructions} and \textbf{registers}.
-    Instructions are the operations the computer can execute. Registers can be thought of as slots in which the processor can store values, such as in Figure \ref{fig:regfile}. 
+    Instructions are the operations that the computer can execute. Registers can be thought of as slots in which the processor can store values, such as in Figure \ref{fig:regfile}. 
 
     \input{chapters/chapter4/fig/regfile}
 
@@ -24,14 +24,14 @@ Recall the computer implementation hierarchy in Figure \ref{fig:computerHierarch
     add rd, rs1, rs2
     \end{verbatim}
 
-    \noindent\texttt{rs1} and \texttt{rs2} stand for Source Register 1 and Source Register 2. \texttt{rd} stands for Destination Register. This instruction computes \texttt{rs1} $+$ \texttt{rs2} and stores the result in \texttt{rd}. For example, consider an assembly program with the following three instructions and the register file from Figure \ref{regfile} (note that r0 is initialized to the value of 0 and r1 to the value of 1.)
+    \noindent\texttt{rs1} and \texttt{rs2} stand for Source Register 1 and Source Register 2. \texttt{rd} stands for Destination Register. This instruction computes \texttt{rs1} $+$ \texttt{rs2} and stores the result in \texttt{rd}. For example, consider an assembly program with the following three instructions and the register file from Figure \ref{fig:regfile} (note that r0 is initialized to the value of 0 and r1 to the value of 1.)
 
     \begin{verbatim}
     add r2, r1, r1
     add r3, r1, r2
     add r4, r2, r2
     \end{verbatim}
-    The first instruction computes \texttt{r1} + \texttt{r1} and stores the result in \texttt{r2}. Since \texttt{r1} is initialized to 1, this results in the value of 2 being stored in \texttt{r2}. The second instruction stores \texttt{r1} + \texttt{r2} in \texttt{r3}. Finally, the last instruction stores \texttt{r2} + \texttt{r2} in \texttt{r4}. When the program finishes executing, registers 2, 3, and 4 have all been updated, as shown in Figure \ref{fig:regfileupdated}. I.e. new values have been stored in the computers slots.
+    The first instruction computes \texttt{r1} + \texttt{r1} and stores the result in \texttt{r2}. Since \texttt{r1} is initialized to 1, this results in the value of 2 being stored in \texttt{r2}. The second instruction stores \texttt{r1} + \texttt{r2} in \texttt{r3}. Finally, the last instruction stores \texttt{r2} + \texttt{r2} in \texttt{r4}. When the program finishes executing, registers 2, 3, and 4 have all been updated, as shown in Figure \ref{fig:regfileupdated}. I.e. new values have been stored in the computer's slots.
 
     \input{chapters/chapter4/fig/regfileupdated}
 
@@ -42,4 +42,4 @@ Recall the computer implementation hierarchy in Figure \ref{fig:computerHierarch
     \input{chapters/chapter4/fig/RISC-Datapath}
 
     Microarchitecture refers to the actual implementation of the behaviour defined in the \gls{ISA}. It is the design of the actual computer processor. Processors are typically implemented in stages, where each instruction goes through a certain number of stages to complete execution.
-    Figure \ref{fig:RISC-Datapath} shows the most simple layout of a 5-stage \gls{RISC} Datapath (\gls{RISC} is the computing principle on which RISC-V was founded. Appendix \ref{section:philv_appendix_RISC} gives a background on RISC). In the \textbf{Instruction Fetch} stage, the processor gets the next instruction from memory for it to be decoded in the \textbf{Instruction Decode} stage. Here, the instruction is split into its constituent parts and has certain minor operations performed that are neccesary for the next stage. The \textbf{Execution} stage is where most computation occurs. This is where the \glsfirst{ALU} resides, and the result of this computation goes to the \textbf{Memory} stage. This is where values are stored into or loaded from the processor's memory, these values, or the values from the Execution stage, are saved to one of the processor's registers in the \textbf{Writeback} stage. 
+    Figure \ref{fig:RISC-Datapath} shows the most simple layout of a 5-stage \gls{RISC} Datapath (\gls{RISC} is the computing principle on which RISC-V was founded. Appendix \ref{section:philv_appendix_RISC} gives a background on RISC). In the \textbf{Instruction Fetch} stage, the processor gets the next instruction from memory for it to be decoded in the \textbf{Instruction Decode} stage. Here, the instruction is split into its constituent parts and has certain minor operations performed that are neccesary for the next stage. The \textbf{Execution} stage is where most computation occurs. This is where the \glsfirst{ALU} resides, and the result of this computation goes to the \textbf{Memory} stage. This is where values are stored into or loaded from the processor's memory. The values from memory or from the Execution stage are saved to one of the processor's registers in the \textbf{Writeback} stage. 

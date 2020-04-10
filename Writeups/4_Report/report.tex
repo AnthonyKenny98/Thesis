@@ -1,13 +1,13 @@
 % @Author: AnthonyKenny98
 % @Date:   2019-10-30 22:08:06
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-11 00:44:05
+% @Last Modified time: 2020-04-11 02:58:48
 
 % Define Document Class
 \documentclass[
     11pt,           % Font Size
     letterpaper,    % Page Size
-    % draft,          % Draft Mode - error checking and no image rendering
+    draft,          % Draft Mode - error checking and no image rendering
     oneside         % Single Sided
 ]{report}           % Report Mode
 
@@ -35,8 +35,8 @@
         Faculty Advisor: Vijay Janapa Reddi \\ \\
         Harvard University School of Engineering and Applied Sciences \\
         \small{Cambridge, MA}}
-\date{March 1st, 2020 \\ 
-    \small{Version: 4.2}}}
+\date{April 10th, 2020 \\ 
+    \small{Version: 5.0}}}
 
 \begin{document}
 
@@ -117,9 +117,6 @@
     \label{appendix:repository}
     \input{appendices/repository.tex}
 
-\chapter{Budget}
-    \todo[inline]{Budget}
-
 \chapter{RRT Supporting Documentation}
     \label{appendix:rrt_appendix}
     \input{appendices/rrt/rrt_appendix}
@@ -142,10 +139,11 @@
 \bibliographystyle{ieeetr}
 
 \clearpage 
+\newpage
 
-\todo[inline]{Make all reference to "Drone" uniform to "UAV" (this will require chaniging the "a" to "an" before each occurence - wait actually, do I?.) Also maybe I should clarify this to rotary wing UAVs.}
+\includepdf{budget}
+
 \todo[inline]{Spell check entire doc}
-\todo[inline]{Make all figure headings bold with subtitles.}
 \listoftodos 
 
 \end{document}

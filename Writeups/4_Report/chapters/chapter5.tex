@@ -1,9 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-10 23:01:04
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-11 00:33:26
-
-\todo[inline]{Overall Sentence}
+% @Last Modified time: 2020-04-11 02:39:34
 
 \section{Summary of Results}
     \subsubsection{Motion Planning in Software}
@@ -13,7 +11,7 @@
         The HoneyBee unit was designed to implement the computation of edge intersections. High levels of hardware parallelization were utilized to reduce the latency of computing one edge from 6.66 $\mu$seconds to 0.53 $\mu$seconds. This translated to an improved throughput of 1,886,792 edges/second from (150,150 edges/second). Moreover, this was achieved in an acceptable area-on-FPGA.
 
     \subsubsection{Motion Planning Architecture}
-        The Xedgcol non-standard RISC-V extension was defined. This ISA extension introduces two new instructions (\texttt{ECOL} and \texttt{LI.e}), along 6 new floating-point registers. This extension reduces the number of instructions required to compute collisions for one edge from tens of thousands to only one (if you include the 6 LI.e calls to load the edge, then it requires seven). Philosophy V, a RISC-V processor, was implemented from the ground up to verify the extension. HoneyBee was implemented into PhilosophyV and tests of the Xedgcol extension conducted. The extension performed as expected.
+        The Xedgcol non-standard RISC-V extension was defined. This ISA extension introduces two new instructions (\texttt{ECOL} and \texttt{LI.e}), along 6 new floating-point registers \texttt{e0-e5}. This extension reduces the number of instructions required to compute collisions for one edge from tens of thousands to only one (if you include the 6 LI.e calls to load the coordinate, then it requires seven). Philosophy V, a RISC-V processor, was implemented from the ground up to verify the extension. HoneyBee was implemented into PhilosophyV and tests of the Xedgcol extension conducted. The extension performed as defined.
 
     \begin{table}[H]
     \begin{center}
@@ -41,17 +39,17 @@
     }} \\
     \end{center}
 
-    The first objective was achieved. \gls{RRT} was implemented from scratch, which may cast doubt as to how accurately its performance reflects real world implementations. Consider though that the edge collision function was in fact implemented very realistically. The \gls{UAV} was represented as a 3D rectangular prisim and edges collision detection was based on solid geometric principles. \\
-    If anything, more time was spend making sure the edge collision function was as fast as possible in software, rather than on the other 4 key functions. The function that finds the nearest node in the graph was the second most computationally intense. There are many proven algorithmic optimizations for this function that were not applied in this implementation. Therefore, any uncertainty in the results of \gls{RRT} analysis would in fact \textit{under-represent} the computational load of edge collision detection. \\
+    The first objective was achieved. \gls{RRT} was implemented from scratch, which may cast doubt as to how accurately its performance reflects real world implementations. The edge collision function was in fact implemented very realistically. The \gls{UAV} was represented as a 3D rectangular prisim and edge collision detection was based on solid geometric principles. \\
+    If anything, more time was spent making sure that the edge collision function was as fast as possible in software, rather than on the other 4 key functions. The function that finds the nearest node in the graph was the second most computationally intense. There are many proven algorithmic optimizations for this function that were not applied in this implementation. Therefore, any uncertainty in the results of \gls{RRT} analysis would in fact \textit{under-represent} the computational load of edge collision detection. \\
 
     The second objective was also succesfuly completed. HoneyBee acheived a reduction in latency that was greater than its specification. HB-C could compute edge collisions 5 times faster than a professionally developed multi-core processor from Intel. Admittedly, once this performance was achieved, no further development was attempted. There still exists the opportunity for slight area optimizations and potentially even greater reductions in latency, though they would most likely be marginal. \\
 
     Of most significance to the overall goal of this thesis is the third objective. Successfully defining a RISC-V extension is the most compelling evidence for the future application of RISC-V in developing motion planning specific processors. \\
-    The Xedgcol extension is simple and effective. This thesis took the approach of defining an instruction that would execute an entire function of RRT (edge collision). Since edge collision detection is required in most motion planning algorithms, the Xedcol extension is somewhat widely applicable. Another benefit of the Xedgcol design is how easy it is to implement into a processor. The instructions were formatted in such a way that reduced the the extra logic required for instruction decoding. Furthermore, designing a hardware unit like HoneyBee, while somewhat challenging, is made quite easy with tools such as \gls{HLS}. \\
-    To cite some disadvantages of its design, it is perhaps not very elegant. It condenses an entire function into one instruction, which, while simple, does not afford an assembly programmer much flexibility. It also ``overarchitects'' for a certain implementation. There isn't really any other way to implement this particular extension other than implementing a hardware unit similar to HoneyBee. \\
+    The Xedgcol extension is simple and effective. This thesis took the approach of defining an instruction that would execute an entire function of RRT (edge collision). Since edge collision detection is required in most motion planning algorithms, the Xedgcol extension is widely applicable in the space. Another benefit of the Xedgcol design is how easy it is to implement in microarchitecture. The instructions were formatted in a way that reduced the the extra logic required for instruction decoding. Furthermore, designing a hardware unit like HoneyBee, while somewhat challenging, is made quite easy with tools such as \gls{HLS}. \\
+    To cite some disadvantages of its design, it is perhaps not very elegant. It condenses an entire function into one instruction, which, while simple, does not afford an assembly programmer much flexibility. It also ``overarchitects'' for a certain implementation. There isn't really any other way to implement this particular extension other than implementing a hardware unit similar to HoneyBee (this does show, however, just how specific custom extensions can be).\\
     That being said, it does serve its purpose. It follows RISC-V convention and it correctly, simply, and effectively defines instruction set architecture for motion planning purposes.
 
-    Finally, the fourth objective of desiging a processor. It was alluded in Chapter 4 that this was not a fast processor. This is true; however, it was designed with simplicity in mind, for the purpose of verification, not performance. It correctly implements the RV32I\_Xedgcol instruction set, and verifies that the Xedgcol extension is compatible with the RV32I base intruction set. For the scope of this thesis, this was a success.
+    The fourth objective was to  desiging a RISC-V motion plannning processor. It was alluded to in Chapter 4 that this was not a fast processor. This is true; however, it was designed with simplicity in mind, for the purpose of verification, not performance. It correctly implements the RV32I\_Xedgcol instruction set, and verifies that the Xedgcol extension is compatible with the RV32I base intruction set. For the scope of this thesis, this was a success.
 
 \section{Future Work}
     The overall mission of this thesis was:
@@ -66,6 +64,18 @@
         }
     } \\
     \end{center}
-    The driving motivation for this is that RISC-V has not yet been embraced by computer architects looking to improve computation of motion planning. Autonomous robots, and in particular, autonomous \glspl{UAV}, have the potential to change the world in which we live. Imagine warehouses filled with swarms of autonomous \glspl{UAV}, picking and packing orders without a human in sight. Imagine operations being carried out in dangerous, complex environments by drones with full autonomy. For this to be realised, however, motion planning specific processors need to be developed. Commercial \glspl{ISA} present many barriers for doing this; RISC-V is all but designed for it. But at the time of writing, there have been no attempts at developing a RISC-V motion planning processor. It is hoped that this thesis may encourage efforts to be made in this space.
+    The driving motivation for this mission is that RISC-V has not yet been embraced by computer architects looking to improve computation of motion planning. Autonomous robots, and in particular, autonomous \glspl{UAV}, have the potential to change the world in which we live. Imagine warehouses filled with swarms of autonomous \glspl{UAV}, picking and packing orders without a human in sight. Imagine operations being carried out in dangerous, complex environments by drones with full autonomy. For this to be realised, however, motion planning specific processors need to be developed. Whereas commercial \glspl{ISA} present many barriers for doing this; RISC-V is all but designed for it. Suprisingly though, at the time of writing, there has been no published work on the application of RISC-V for developing motion planning specific processors. It is hoped that this thesis may encourage efforts to be made in this space, perhaps in one of the following areas.
 
-    \todo[inline]{Want to say something about how other extensions can be defined, better honeybee versions, better philosophyV core} 
+    \subsubsection{Edge Collision Hardware}
+    As mentioned above, the optimization of HoneyBee stopped once performance specifications for this project were met. It is feasible that there is a non-trivial amount of latency reduction still available with further optimization. Alternatively, perhaps there are other approaches to accelerating edge collision in hardware. Even if not within the RISC-V ecosystem, achieving faster motion planning will at some level depend on reducing the computational load of edge collision detection.
+
+    \subsubsection{Production Quality RV32I\_Xedgcol Processor}
+    It was well beyond the scope of this thesis to implement a production quality processor. It would be an interesting experiment to run comparison tests of RRT execution time between a general purpose Intel CPU and a professionally developed, multi-core RISC-V processor that implements the Xedgcol extension.
+
+    \subsubsection{Better Motion Planning Extensions}
+    The Xedgcol extension has some drawbacks that were highlighted above. As a proof of concept, it was very successful, but the biggest opportunity for future work lies in the development of better motion planning extensions. As more computer architects work on these extensions and better extensions are defined, the more of a developer following they get. This developer community builds, shares, and improves the extension and the toolchains for implementing that extension. For example, there is no compiler support for the Xedgcol extension - using it has to be done manually in assembly code, rather than high level languages. Compiler support may be implemented for a very popular non-standard extension. Of all potential future work to come from this thesis, it is hoped that the active development of RISC-V motion planning extensions occurs.
+
+    \bigskip
+
+
+    \noindent To conclude with a call to arms: This thesis provides a proof-of-concept for developing application specific processors for RISC-V with relative ease. Instruction Set Architecture is the most important interface of a computer, and RISC-V is the first commerically viable opportunity to open up this interface to the wider developer community. It is not an opporunity to be neglected. If this humble prototype can be a convincing argument for this, then it will be considered a success by its author. 
