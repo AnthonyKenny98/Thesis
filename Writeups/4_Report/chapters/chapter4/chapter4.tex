@@ -1,10 +1,10 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-26 09:00:23
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 13:40:11
+% @Last Modified time: 2020-04-10 17:58:06
 
 % INTRO
-To recap, the bottleneck function of a common motion planning algorithm, \gls{RRT}, was identified as edge collision detection. The functional hardware unit, HoneyBee, successfully accelerated this function by almost 5 times. The last two objectives of this thesis were:
+To recap, the bottleneck function of a common motion planning algorithm, \gls{RRT}, was identified as edge collision detection. The functional hardware unit, HoneyBee, successfully accelerated this function by almost 5 times. The remaining two objectives of this thesis were:
     \begin{itemize}
     \item To define a RISC-V Extension Instruction Set for the purposes of accelerating motion planning.
     \item To verify the RISC-V Extension and the functional hardware unit in a complete RISC-V Processor.
@@ -16,6 +16,10 @@ To recap, the bottleneck function of a common motion planning algorithm, \gls{RR
 \newpage
 \section{RISC-V Instruction Set}
     \input{chapters/chapter4/riscv}
+
+\newpage
+\section{Defining a RISC-V Custom Extension}
+    \input{chapters/chapter4/extending.tex}
 
 \newpage
 \section{PhilosophyV}

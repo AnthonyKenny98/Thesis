@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2019-10-30 22:08:06
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 12:20:37
+% @Last Modified time: 2020-04-11 00:44:05
 
 % Define Document Class
 \documentclass[
@@ -27,7 +27,7 @@
 \cfoot{\thepage}
 
 % DEFINE COVER PAGE
-\title{\textsc{\Huge{if goingToCrash: dont}\ \\ \Large{RISC-V Architecture for Motion Planning Algorithms in Autonomous UAVs}} \\ 
+\title{\textsc{\Huge{if goingToCrash: don't}\ \\ \Large{RISC-V Architecture for Motion Planning Algorithms in Autonomous UAVs}} \\ 
     \bigskip
     \small{A senior design project submitted in partial fulfillment of the requirements for the degree of Bachelor of Science at Harvard University} \\
 \author{Anthony J.W. Kenny \\
@@ -50,9 +50,10 @@
     % ABSTRACT
     \addcontentsline{toc}{section}{Abstract}
     \input{abstract}
-    \todo[inline]{Abstract still needs some work}
-    \todo[inline]{Dedication}
     \clearpage
+
+    \addcontentsline{toc}{section}{Dedication}
+    \input{dedication}
 
     % ACKNOWLEDGEMENTS
     \section*{Acknowledgments}
@@ -60,6 +61,7 @@
     \input{acknowledgement}
 
     % TABLE OF CONTENTS
+    \clearpage
     \addcontentsline{toc}{section}{Table of Contents}
     \tableofcontents
     \clearpage
@@ -89,66 +91,61 @@
     \lhead{Chapter \thechapter}                 % Include Chapter name on subsequent headers
 
 
-% % Chapter 2
-% \chapter{Motion Planning in Software}
-%     \label{chap:MotionPlanningInSoftware}
-%     \input{chapters/chapter2/chapter2}
+% Chapter 2
+\chapter{Motion Planning in Software}
+    \label{chap:MotionPlanningInSoftware}
+    \input{chapters/chapter2/chapter2}
 
-% % Chapter 3
-% \chapter{Motion Planning in Hardware}
-%     \label{chap:MotionPlanningInHardware}
-%     \input{chapters/chapter3/chapter3}
+% Chapter 3
+\chapter{Motion Planning in Hardware}
+    \label{chap:MotionPlanningInHardware}
+    \input{chapters/chapter3/chapter3}
 
-% % Chapter 4
-% \chapter{Motion Planning Architecture}
-%     \label{chap:MotionPlaningArchitecture}
-%     \input{chapters/chapter4/chapter4}
+% Chapter 4
+\chapter{Motion Planning Architecture}
+    \label{chap:MotionPlaningArchitecture}
+    \input{chapters/chapter4/chapter4}
 
-% % Conclusion
-% \chapter{Conclusion}
-%     \section{Discussion of Results}
-%         \todo[inline]{Discussion of Results}
-%     \section{Evaluation of Success}
-%         \todo[inline]{Evaluation of Success}
-%     \section{Future Work}
-%         \todo[inline]{Future Work}
+% Conclusion
+\chapter{Conclusion}
+    \input{chapters/chapter5}
 
-% \begin{appendices}
+\begin{appendices}
 
-% \chapter{Project Repository}
-% \lhead{Appendix \thechapter} 
-%     \label{appendix:repository}
-%     \input{appendices/repository.tex}
+\chapter{Project Repository}
+\lhead{Appendix \thechapter} 
+    \label{appendix:repository}
+    \input{appendices/repository.tex}
 
-% \chapter{Budget}
-%     \todo[inline]{Budget}
+\chapter{Budget}
+    \todo[inline]{Budget}
 
-% \chapter{RRT Supporting Documentation}
-%     \label{appendix:rrt_appendix}
-%     \input{appendices/rrt/rrt_appendix}
+\chapter{RRT Supporting Documentation}
+    \label{appendix:rrt_appendix}
+    \input{appendices/rrt/rrt_appendix}
 
-% \chapter{HoneyBee Supporting Documentation}
-%     \label{appendix:honeybee_appendix}
-%     \input{appendices/honeybee/honeybee_appendix}
+\chapter{HoneyBee Supporting Documentation}
+    \label{appendix:honeybee_appendix}
+    \input{appendices/honeybee/honeybee_appendix}
 
-% \chapter{Xedgcol Non-Standard Extension for Edge Collision Detection}
-%     \label{appendix:xedgcol_appendix}
-%     \input{appendices/xedgcol/xedgcol_appendix}
+\chapter{Xedgcol Non-Standard Extension for Edge Collision Detection}
+    \label{appendix:xedgcol_appendix}
+    \input{appendices/xedgcol/xedgcol_appendix}
 
-% \chapter{PhilosophyV Supporting Documentation}
-%     \label{appendix:philv_appendix}
-%     \input{appendices/philv/philv_appendix}
+\chapter{PhilosophyV Supporting Documentation}
+    \label{appendix:philv_appendix}
+    \input{appendices/philv/philv_appendix}
 
-% \end{appendices} 
+\end{appendices} 
 
-% \bibliography{\bibliographyName}
-% \bibliographystyle{ieeetr}
+\bibliography{\bibliographyName}
+\bibliographystyle{ieeetr}
 
-% \clearpage 
+\clearpage 
 
-% \todo[inline]{Make all reference to "Drone" uniform to "UAV" (this will require chaniging the "a" to "an" before each occurence - wait actually, do I?.) Also maybe I should clarify this to rotary wing UAVs.}
-% \todo[inline]{Spell check entire doc}
-% \todo[inline]{Make all figure headings bold with subtitles.}
-% \listoftodos 
+\todo[inline]{Make all reference to "Drone" uniform to "UAV" (this will require chaniging the "a" to "an" before each occurence - wait actually, do I?.) Also maybe I should clarify this to rotary wing UAVs.}
+\todo[inline]{Spell check entire doc}
+\todo[inline]{Make all figure headings bold with subtitles.}
+\listoftodos 
 
 \end{document}

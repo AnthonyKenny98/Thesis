@@ -1,47 +1,58 @@
 This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: obj/report.aux
-I found no \bibdata command---while reading file obj/report.aux
-I found no \bibstyle command---while reading file obj/report.aux
-You've used 3 entries,
-            0 wiz_defined-function locations,
-            89 strings with 556 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
+The style file: ieeetr.bst
+Database file #1: ../support/thesis.bib
+Warning--empty publisher in Alexandrinus
+Warning--empty year in Alexandrinus
+Warning--empty journal in Waterman2019
+Warning--empty author in ChoiceReviews2006
+Warning--empty institution in Elsabbagh2019
+Warning--empty journal in Vss2sn2019
+Warning--empty institution in Murray
+Warning--empty year in Murray
+Warning--empty institution in Murrayb
+Warning--empty year in Murrayb
+Warning--empty institution in Xilinx2014
+You've used 23 entries,
+            1876 wiz_defined-function locations,
+            612 strings with 6859 characters,
+and the built_in function-call counts, 4689 in all, are:
+= -- 423
+> -- 216
 < -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 84
+- -- 61
+* -- 333
+:= -- 704
+add.period$ -- 26
+call.type$ -- 23
+change.case$ -- 26
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 34
+duplicate$ -- 213
+empty$ -- 470
+format.name$ -- 61
+if$ -- 1103
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
+int.to.str$ -- 23
+missing$ -- 13
+newline$ -- 76
+num.names$ -- 22
+pop$ -- 105
+preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 0
+skip$ -- 135
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 203
+swap$ -- 60
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+warning$ -- 11
+while$ -- 43
+width$ -- 25
+write$ -- 195
+(There were 11 warnings)

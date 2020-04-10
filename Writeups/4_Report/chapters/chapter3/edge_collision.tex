@@ -1,19 +1,18 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-08 09:52:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-08 09:53:43
+% @Last Modified time: 2020-04-10 15:07:12
 \subsection{Edge Collision Function}
 \label{subsection:EdgeCollisionFunction}
-    To briefly examine the edge collision detection function in general terms; Given an edge $e$, \gls{RRT} finds where $e$ intersects with grids in the \gls{OGM}. If any of the grids it intersects with are ``occupied'', a collision is returned. This is shown in Figure \ref{fig:edge_collision_process} on Page \pageref{fig:edge_collision_process}. 
+    To briefly examine the edge collision detection function in general terms; Given an edge $e$, \gls{RRT} finds where $e$ intersects with grids in the \gls{OGM}. If any of the grids intersected are ``occupied'', a collision is returned. This is shown in Figure \ref{fig:edge_collision_process} on Page \pageref{fig:edge_collision_process}. 
 
-    To see why it is so computationally intense to calculate intersections between a segment and grids, it must be understood that it is a fairly involved geometric process. Figure \ref{fig:edge_collision_planes} on Page \pageref{fig:edge_collision_planes} shows how grid intersections are detected by computing the where the segment intersects certain \textbf{\glspl{axis-oriented plane}}.  
+    Calculating intersections between a segment and grids is very computationally intense. This is because it is a fairly involved geometric process. Figure \ref{fig:edge_collision_planes} on Page \pageref{fig:edge_collision_planes} shows how grid intersections are detected by computing the point at which the segment intersects certain \textbf{\glspl{axis-oriented plane}}.  
 
     \subsubsection{Time Complexity}
-        With the steps of the edge collision algorithm understood, (explained graphically in Figure \ref{fig:edge_collision_planes}, algorithm included in Appendix \ref{section:rrt_appendix_function_impl}, its \Gls{time complexity} may be quantified. 
+        With the steps of the edge collision algorithm understood (explained graphically in Figure \ref{fig:edge_collision_planes}, algorithm included in Appendix \ref{section:rrt_appendix_function_impl}), its \gls{time complexity} may be quantified. 
         For an edge $e$ of maximum length $\epsilon$, it must check for intersections with $\epsilon \times \epsilon \times \epsilon$ grids. (i.e the only grids that are checked are the ones that the $e$ could possibly intersect with). 
         It first iterates through the three dimensions of \glspl{axis-oriented plane} ($xy$, $xz$, and $yz$). This is a constant of 3. 
         Within each of these dimensions, it must iterate through $\epsilon$ planes. This makes its time complexity $O(3\epsilon)$. 
-        \todo{Appendix Reference?}% (Appendix C.[TODO] shows an $O(\epsilon^2)$ method upon which this is an improvement). 
 
         \input{chapters/chapter3/fig/edge_collision_planes}
 
@@ -23,19 +22,19 @@
 \label{subsection:HoneyBeeSpecs}
 
     \subsubsection{Performance Specifications}
-        When accelerating motion planning algorithms, it is often difficult to quantify a goal for how much faster one would like the function to run - the answer is usually ``as fast as possible!'' For this thesis, the performance specification was set to be the edge collision function to run fast enough such that it was no longer the bottleneck function. This translated to a desired speedup of about 3 times (when compared to benchmark performance of a typical CPU). Table \ref{table:edg_col_performance_specs} quantifies this in terms of latency and throughput.
+        When accelerating motion planning algorithms, it is often difficult to quantify a goal for how much faster one would like the function to run - the answer is usually ``as fast as possible!'' For this thesis, the performance specification was set that the edge collision function run fast enough that it was no longer the bottleneck function. This translated to a desired speedup of about 3 times (when compared to benchmark performance of a typical CPU). Table \ref{table:edg_col_performance_specs} quantifies this in terms of latency and throughput.
 
         \input{chapters/chapter3/tables/edg_col_perf_specs}
 
 \newpage
 
 \subsubsection{Area Specifications}
-    Generally, an inverse relationship exists between latency and area. While it may be possible to make the unit much faster than the latency specification, this may become prohibitive with regards to the amount of area on chip it would occupy. It was decided to limit the area to that which would fit on an \gls{FPGA} typical in drone applications (those of the Kintex-7 Low Voltage family were chosen, but there are many possible options.) 
+    Generally, an inverse relationship exists between latency and area. While it may be possible to make the unit much faster than the latency specification, this may become prohibitive with regards to the amount of area on chip it would occupy. It was decided to limit the area to that which would fit on an \gls{FPGA} typical in drone applications (those of the Kintex-7 Low Voltage family were chosen, but there are many possible options). 
 
     Logic area on an FPGA is largely determined by \glspl{LUT}. \glsdesc{LUT_g} As such, the upper bound on area was set at 274,080 \glspl{LUT}.
 
-    \subsubsection{Interface Specifications}
-    \label{subsection:HoneyBeeTechSpechs}
-        As shown in Figure \ref{fig:edge_collision_process}, the computationally intensive part of the process of edge collision detection is finding points of intersection between an edge and the grids of the map. Comparing this result to an \gls{OGM} is simple and fast. Therefore, it was decided that the hardware unit would simply take an edge and determine the grids with which it intersects. Whether the edge intersects a given grid can be represented as a binary $\{0,1\}$, and thus a the intersections found in a $\epsilon \times \epsilon\times\epsilon$ gridspace can be represented as an $\epsilon^3$ sequence of binary values.
-        Table \ref{table:edg_col_interface_specs} outlines the required interface specifications for the functional unit.
-        \input{chapters/chapter3/tables/edg_col_interface_specs}
+\subsubsection{Interface Specifications}
+\label{subsection:HoneyBeeTechSpechs}
+    As shown in Figure \ref{fig:edge_collision_process}, the computationally intensive part of the process of edge collision detection is finding points of intersection between an edge and the grids of the map. Comparing this result to an \gls{OGM} is simple and fast. Therefore, it was decided that the hardware unit would simply take an edge and determine the grids with which it intersects. Whether the edge intersects a given grid can be represented as a binary $\{0,1\}$, and thus the intersections found in a $\epsilon \times \epsilon\times\epsilon$ gridspace can be represented as an $\epsilon^3$ sequence of binary values.
+    Table \ref{table:edg_col_interface_specs} outlines the required interface specifications for the functional unit.
+    \input{chapters/chapter3/tables/edg_col_interface_specs}

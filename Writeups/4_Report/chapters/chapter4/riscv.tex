@@ -1,12 +1,12 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 18:51:24
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 08:05:57
+% @Last Modified time: 2020-04-10 18:50:17
 \subsection{RISC-V}
 
-    \glsdesc{RISC-V} (pronounced ``risk-five'') was developed at the University of California, Berkeley. It is established on the principles of RISC as an open-source and extendable \gls{ISA} for research and education. It was designed with application specific processors in mind, as they developed a highly flexible and extendable base \gls{ISA} around which research and acceleration efforts could be based.
+    \gls{RISC-V} (pronounced ``risk-five'') was developed at the University of California, Berkeley. It is established on the principles of RISC as an open-source and extendable \gls{ISA} for research and education. It was designed with application specific processors in mind, as they developed a highly flexible and extendable base \gls{ISA} around which research and acceleration efforts could be based.
 
-    The motiviation behind designing RISC-V was largely due to the disadvantages of commercially popular \glspl{ISA}.\cite{Isa2012} (Following list adapted from RISC-V ISA Manual).
+    The motiviation behind designing RISC-V was largely due to the following disadvantages of commercially popular \glspl{ISA}.\cite{Isa2012}.
     \begin{itemize}
     \item \textbf{Commercial ISAs are proprietary.} Owners of commercial ISAs carefully guard their intellectual property and will not share implementations. 
     \item \textbf{Commercial ISAs come and go.} Many once-popular commercial ISAs have since fallen out of fashion or are not even in production any more. Lingering intellectual property issues interefere with the ability of third-parties to continue supporting the ISA. While an open source \gls{ISA} may also lose popularity, interested parties can continue to use and support the ISA without interference.
@@ -20,13 +20,13 @@
     The overall design of RISC-V can be broken down into 3 characteristics that address the aforementioned limitations of commercial \glspl{ISA}: Open-source, extendibility, and modularity.
 
     \subsubsection{Open-Source}
-        Open-source refers to software of which the owner has granted permission for anybody to study, alter, and distribute the software for any purpose. Often, this means projects are developed in a collaborative public manner. What this means for and ISA is that the RISC-V implementations are often publically available and improved on by developers for their own purposes. Building a high-performance processor from scratch is an arduous, expensive project. Open-source implementations allow for developers to build off existing implementations without all the legwork of implementing a processor from scratch.
+        Open-source refers to software of which the owner has granted permission for anybody to study, alter, or distribute the software for any purpose. Often, this means projects are developed in a collaborative public manner. What this means for an ISA is that the RISC-V implementations are often publicly available and improved upon by developers for their own purposes. Building a high-performance processor from scratch is an arduous, expensive project. Open-source implementations allow developers to build off existing implementations without all the legwork of implementing a processor from scratch.
 
     \subsubsection{Extendability}
-        RISC-V is designed to be extendable. This means that developers can add their own instructions to the Instruction Set and implement those new instructions in a processor. This processor should still be able to run all other RISC-V compiled programs, along with a set of programs for which it is specially optimized. This level of backwards compatibility means that an extended ISA is not just a new ISA. 
+        RISC-V is designed to be extendable. This means that developers can add their own instructions to the Instruction Set and implement those new instructions in a processor. This processor should still be able to run all other RISC-V compiled programs, along with a set of programs for which it is specifically optimized. This level of backwards compatibility means that an extended ISA is not just a new ISA. 
 
     \subsubsection{Modularity}
-        Finally, RISC-V was designed to be relatively easy to implement. It is broken down into small ``base'' \glspl{ISA} which can then have any number of standard and custom extensions added to them. These base ISAs are not designed in such a way to overarchitect for a certain type of microarchitecure. This modularity and flexibility is part of what makes it such an attractive proposition for specialized computer architecture. Figure \ref{fig:modules} demonstrates this modularity.
+        Finally, RISC-V was designed to be relatively easy to implement. It is broken down into small ``base'' \glspl{ISA} which can then have any number of standard and non-standard extensions added to them. These base ISAs are not designed in such a way to overarchitect for a certain type of microarchitecure. \textbf{Standard extensions} are those that are generally useful and that are designed to not conflict with any other standard extensions. \textbf{Non-standard extensions} are those that may be highly specialized and may conflict with other standard or non-standard extensions. One way to think about it is that standard extensions would improve any computer and are endorsed by the RISC-V organization, whereas non-standard extensions are developed for very specific purposes, such as motion planning acceleration. This modularity and flexibility is part of what makes it such an attractive proposition for specialized computer architecture. Figure \ref{fig:modules} demonstrates this modularity.
 
         \input{chapters/chapter4/fig/modules}
 
@@ -40,6 +40,10 @@
         Subsets of the base integer ISA might be useful for pedagogical purposes, but the base has been defined such that there should be little incentive to subset a real hardware implementation \dots}
     \end{quote}
 
+    RV32I was chosen as the base ISA for this project. The edge collision custom extension would be defined primarily extend the RV32I base ISA. Figure \ref{fig:systemDiagramUpdated} is an updated system overview of the overall project.
+
+    \input{chapters/chapter4/fig/systemOverviewUpdated}
+
     % \subsubsection*{Registers}
     %     RV32I defines 32 unprivileged registers, each 32 bits wide. They are designated \texttt{x0-x31}, where \texttt{x0} is a hard-wired value of $0$, and registers \texttt{x1-x31} hold values that various instructions use. RISC-V uses the load-store method, meaning that all operations perform on two registers or a register and an immediate, rather than performing operations directly on memory addresses. In addition, a 33rd unprivileged register is a program counter \texttt{pc}. 
         % Table \ref{table:rv32i_reg} shows the register state for the RV32I Base Integer Instruction Set.
@@ -50,73 +54,4 @@
     %     Table \ref{table:rv32i_instr_format} demonstrates the format of each different instruction type. 
     %     \input{chapters/chapter4/tables/rv32i_instr_format}
 
-\subsection{Defining a RISC-V Custom Extension}
-    \todo{I might need to make this its own section? At any rate, I need more background on what an instruction looks like etc}
 
-    The goal of defining a custom extension in this context is to reduce the number of instructions neccesary to compute collisions for a given edge. According to RISC-V convention, the extension is designated \textbf{``Xedgcol''} (X for non standard, edgcol as an abbreviation for its purpose). When it is implemented along with RV32I, the processor can be said to implement the rv32i\_Xedgcol ISA.
-
-    \subsubsection{Fixing Epsilon}
-    Recall that the HoneyBee unit was parameterized for different values of $\epsilon$, and that this would influence the number of bits in its output sequence. When defining an instruction, this value has to be constant. You may have also noticed that the results presented for HoneyBee in Chapter 3 were all for $\epsilon = 4$. This value was chosen as $4^3 = 64$. Table \ref{table:epsilon_bits} lists the number of output bits required for each value of $\epsilon$ and how many 32-bit registers would be needed to store this result. From this, it is fairly obvious why 4 was chosen for the value of $\epsilon$.
-
-    \input{chapters/chapter4/tables/epsilon_bits}
-
-
-    \subsubsection{Edge Collision Instruction}
-    The following instruction was defined:
-
-    \begin{center}
-    \texttt{ecol rd1, rd2}
-    \end{center}
-
-    It takes two destination registers and stores result of the edge collision computation in them. The 32 \gls{LSB} are stored in \texttt{rd1} and the 32 \gls{MSB} in \texttt{rd2}.
-    The instruction is formatted in the following way (For more detail, the full Xedgcol specification can be found in Appendix \ref{appendix:xedgcol_appendix}).
-
-    \begin{table}[H]
-    \begin{center}
-    \begin{tabular}{c}
-        \begin{tabular}{|m{0.2\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|}
-        \hline
-        \hspace*{0.5cm}000000000000 & \hspace*{0.5cm}rd2  & \hspace*{0.5cm}000  & \hspace*{0.5cm}rd1  & \hspace*{0.5cm}0000  & \hspace*{0.5cm}001  \\
-        \hline
-        \end{tabular} \\
-        \begin{tabular}{m{0.2\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}m{0.1\linewidth}}
-        \hspace*{1.5cm}12 & \hspace*{0.5cm}5  & \hspace*{0.5cm}3  & \hspace*{0.5cm}5  & \hspace*{0.5cm}4  & \hspace*{0.5cm}3  \\
-        \hspace*{1.3cm}null &  \hspace*{0.5cm}\textit{dest2} & \hspace*{0.5cm}null  & \hspace*{0.5cm}\textit{dest1}  &  \hspace*{0.5cm}null & \hspace*{0.25cm}ECOL  \\
-        \end{tabular}
-    \end{tabular}
-    \end{center}
-    \end{table}
-
-    Conspicuously, the instruction specifies two destination registers, but no source registers. In other words, how does the processor know the coordinates of the edge? Also conspicuous is the fact that much of the instruction is null (meaningless zeros). Why not use this space to specify the coordinates of the edge?
-
-    Consider, an edge must be represented by 6 32-bit numbers. This information, 192 bits in total, can not all fit in a single 32-bit instruction as 6 immediate values (obviously). Could those 32-bit values be stored in existing registers and the address of these registers referenced in the instruction? Since there are 32 general purpose registers in RISC-V, their addresses are 5-bits long each. 6 5-bit addresses is 30 bits in total, which, by itself could fit in an instruction. While this couldn't be combined with the edge collision instruction, perhaps a second instruction could be defined that contained the addresses of all 6, or even 3, of the registers containing the edge's coordinates. This was decided against for a few reasons, but mainly because \textbf{storing floating-point numbers in integer registers}, while theoretically possible, is extremely bad practice. To store floating point values in registers, a new register set would need to be defined.
-
-    \subsubsection{Edge Registers}
-    6 floating point registers were defined for the Xedgcol extension. These registers are specifically for the purpose of holding the coordinates of the edge for which intersections will be calculated. Table \ref{table:edge_registers} lists these registers.
-
-    \begin{table}
-    \begin{center}
-    \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Register} & \textbf{ABI Name} & \textbf{Description} \\
-    \hline
-    \texttt{e0}     & \texttt{px0}      & X coordinate of edge's first point \\
-    \hline
-    \texttt{e1}     & \texttt{py0}      & Y coordinate of edge's first point \\
-    \hline
-    \texttt{e2}     & \texttt{pz0}      & Z coordinate of edge's first point \\
-    \hline
-    \texttt{e3}     & \texttt{px1}      & X coordinate of edge's second point \\
-    \hline
-    \texttt{e4}     & \texttt{py1}      & Y coordinate of edge's second point \\
-    \hline
-    \texttt{e5}     & \texttt{pz1}      & Z coordinate of edge's second point \\
-    \hline
-    \end{tabular}
-    \caption{Edge Coordinate Registers}{ as defined in the Xedgcol ISA extension}
-    \label{table:edge_registers}
-    \end{center}
-    \end{table}
-
-    \subsubsection{Load Immediate Edge Instruction}
-    Since Xedgcol was designed to be implemented alongside only RV32I (which does not support floating-point binary representation), a new instruction was defined to load an immediate float value into one of the 6 edge registers. Defining a new instruction also allowed for more space in the instruction for the immediate value. To build this instruction, an opcode and a destination register is required. Xedgcol has an opcode width of 3, and since there are only 6 edge registers, they are addressable by a 3 bit address. This leaves 26 bits remaining instruction for the immediate. A floating point immediate is 32 bits, so the 6 \glspl{LSB} are truncated in the instruction. The implementation then must extend this floating point number with zeros in the \glspl{LSB}.

@@ -1,0 +1,55 @@
+% @Author: AnthonyKenny98
+% @Date:   2020-04-10 19:44:03
+% @Last Modified by:   AnthonyKenny98
+% @Last Modified time: 2020-04-10 20:15:03
+Every instruction, is represented in ``assembly language'' as something like ``\texttt{addi rd, rs, 10}''. This is a (somewhat) human readable representation of the instruction. \texttt{addi} computes \texttt{rs + 10} and stores the result in \texttt{rd}. However, this instruction is represented in the processor as a 32-bit sequence of binary values. Imagine an empty 32-bit instruction, such as in Figure \ref{fig:instr_blank}.
+
+        \begin{figure}[H]
+        \begin{center}
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{c}
+            \begin{small}
+            \begin{tabular}{llllllllllllllllllllllllllllllll}
+                31&&&&&&&& 23&&&&&&&& 15&&&&&&&&7 &&&&&&&0 \\
+            \end{tabular}
+            \end{small} \\
+        
+            \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+                \hline
+                &&&&&&&& &&&&&&&& &&&&&&&& &&&&&&& \\
+                \hline
+            \end{tabular} \\
+            
+            \begin{small}
+            \begin{tabular}{llllllllllllllllllllllllllllllll}
+                &&&&&&&& &&&&&&&& &&&&&&&& &&&&&&& \\
+            \end{tabular}
+            \end{small} \\
+
+        \end{tabular}}
+        \mycaption{Empty 32-Bit Instruction}{. Reads \gls{MSB} to \gls{LSB}}
+        \label{fig:instr_blank}
+        \end{center}
+        \end{figure}
+
+The first piece of information to put in the instruction is the \textbf{opcode}. Opcode (short for operation code) is the instructions identity. It tells the processor which operation to execute. Continuing with the \texttt{add} instruction as an example, its opcode is the 7-bit sequence \texttt{0010011}. In RV32I, the opcode is stored in the 7 \glspl{LSB} of the instruction, as shown in Figure \ref{fig:instr_op}
+
+    % \begin{figure}[H]
+    % \begin{center}
+    % \includegraphics[options]{name}
+    % \mycaption{32-Bit Instruction Containing Opcode}{}
+    % \label{fig:instr_op}
+    % \end{center}
+    % \end{figure}
+        
+The next information to add to the instruction are the \textbf{source and destination registers}. RV32I registers are addressed by 5-bit values. For the \texttt{addi} instruction, they formatted in the instruction as shown in Figure \ref{fig:instr_rs}
+
+    % \begin{figure}[H]
+    % \begin{center}
+    % \includegraphics[options]{name}
+    % \mycaption{32-Bit Instruction Containing Opcode}{}
+    % \label{fig:instr_op}
+    % \end{center}
+    % \end{figure}
+
+Finally, the last piece of information to include is what is known as the \textbf{immediate}. An immediate is just a number \- in this example it is the number 10. In RV32I, numbers are represented with 32 bits, but there aren't 32 bits left in the instruction. As such, the \glspl{MSB} of the immediate are cut off and the \glspl{LSB} added to the instruction.

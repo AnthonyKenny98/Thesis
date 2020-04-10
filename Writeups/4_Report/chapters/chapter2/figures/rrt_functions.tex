@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-05 18:33:38
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 19:45:01
+% @Last Modified time: 2020-04-10 14:37:09
 \begin{figure}[t!]
 \begin{centering}
 \begin{tabular}{ccc}
@@ -43,7 +43,7 @@
     \end{subfigure} \\
 
 \end{tabular}
-\caption[Demonstration of the 5 Key Functions that Constitute RRT]{\textbf{Demonstration of the 5 Key Functions that Constitute RRT}, where configuration is a node in a 2D workspace. A new node is generated in (a) with \texttt{getRandomConfig()}, and the closest existing node is found with \texttt{findNearestConfig()} in (b). In this case, the new node is further that $\epsilon$ from the nearest node, and so a new node is generated with \texttt{stepFromNearest()} in (c). \texttt{configCollision} determines that the new node is not in an occupied grid (d) and draws an edge between the two nodes. \texttt{edgeCollision()} determines that, in this case, there is a collision (e) and the new node is discarded (f).}
+\caption[Demonstration of the 5 Key Functions that Constitute RRT]{\textbf{Demonstration of the 5 Key Functions that Constitute RRT}, where configuration is a node in a 2D workspace. A new node is generated in (a) with \texttt{getRandomConfig()}, and the closest existing node is found with \texttt{findNearestConfig()} in (b). In this case, the new node is further than $\epsilon$ from the nearest node, and so a new node is generated with \texttt{stepFromNearest()} in (c). \texttt{configCollision()} determines that the new node is not in an occupied grid (d) and draws an edge between the two nodes. \texttt{edgeCollision()} determines that, in this case, there is a collision (e) and the new node is discarded (f).}
 \label{fig:rrt_functions}
 \end{centering}
 \end{figure}

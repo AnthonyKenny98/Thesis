@@ -1,33 +1,31 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 12:32:47
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-03 13:33:55
-\begin{table}[H]
+% @Last Modified time: 2020-04-11 00:49:38
+\begin{table}[t!]
 \begin{center}
 \begin{tabular}{|p{.2\linewidth}|p{.2\linewidth}|p{.5\linewidth}|}
     \hline
     \textbf{Component}          & \textbf{Source}   & \textbf{Description} \\
     \hline
-    \multicolumn{3}{|c|}{RISC-V Instruction Set} \\
-    \hline
-    \gls{RV32I}              & Berkeley & 40 Instructions defined such that \gls{RV32I} is sufficient to form a compiler target and suport modern operating systems \cite{Waterman2019}. \\
-    \hline
-    Extension        & \textit{New} & This is the custom extension defined by this thesis targeting motion planning instructions. It is outlined in Chapter \ref{chap:RiscvProcessor}. \\
-    \hline
     \multicolumn{3}{|c|}{C-Implementation of RRT} \\
     \hline
-    RRT        & \textit{New} & Due to lack of available implementations of \gls{RRT} suitable for the purposes of this thesis, \gls{RRT} was implemented from the ground up in C. This is detailed in Chapter \ref{chap:MotionPlanningInSoftware} \\
+    Rapidly-exploring Random Tree        & \textit{A.J.W. Kenny} & Due to lack of available implementations of \gls{RRT} suitable for the purposes of this thesis, \gls{RRT} was implemented from the ground up in C. This is detailed in Chapter \ref{chap:MotionPlanningInSoftware} \\
     \hline
-    \multicolumn{3}{|c|}{FPGA Synthesized Chip} \\
+    \multicolumn{3}{|c|}{RISC-V Instruction Set} \\
     \hline
-    Zynq-7000        & Xilinx & The Zynq-7000 family of \gls{SoC}s are a low cost FPGA and \gls{ARM} combined unit. \\
+    \gls{RV32I}              & Berkeley & 40 Instructions defined such that \gls{RV32I} is sufficient to support modern operating systems \cite{Waterman2019}. \\
     \hline
-    PhilosophyV     & \textit{New} & The processor built for this thesis to demonstrate how the RISC-V extension and hardware unit work together. This is detailed in Chapter \ref{chap:RiscvProcessor} \\
+    Motion Planning Extension        & \textit{A.J.W. Kenny} & This is the custom extension defined by this thesis targeting motion planning instructions. It is outlined in Chapter \ref{chap:MotionPlaningArchitecture}. \\
     \hline
-    HoneyBee        & \textit{New} & The functional unit designed specifically for faster execution of edge collision detection computations. Outlined in Chapter \ref{chap:MotionPlanningInHardware} \\
+    \multicolumn{3}{|c|}{Motion Planning Specific Processor} \\
+    \hline
+    PhilosophyV     & \textit{A.J.W. Kenny} & The processor built for this thesis to demonstrate how the RISC-V extension and hardware unit work together. This is detailed in Chapter \ref{chap:MotionPlaningArchitecture} \\
+    \hline
+    HoneyBee        & \textit{A.J.W. Kenny} & The functional unit designed specifically for faster execution of edge collision detection computations. Outlined in Chapter \ref{chap:MotionPlanningInHardware} \\
     \hline
 \end{tabular}
-\caption{List of System Components and their Descriptions}
+\mycaption{List of System Components and their Descriptions}{}
 \label{table:componentList}
 \end{center}
 \end{table}

@@ -1,9 +1,11 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 14:27:21
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 12:58:15
+% @Last Modified time: 2020-04-11 00:47:46
 
 \subsection{Project Goals}
+This is not the first project to attempt to accelerate motion planning algorithms using hardware; motion planning optimization has been studied extensively in hardware and in software. But the problem persists that, due to the nature of conventional \glspl{ISA}, there are significant barriers to implementing motion planning specific processors. \\
+
 RISC-V was released 9 years ago. While it is starting to gain some traction in the commercial space, RISC-V has not yet been used to develop a motion planning specific processor. As such, the overall mission of this thesis is as follows:
 
 \begin{center}
@@ -17,7 +19,7 @@ RISC-V was released 9 years ago. While it is starting to gain some traction in t
 } \\
 \end{center}
 
-\noindent To achieve this, the following objectives will need to be acheived:
+\noindent To achieve this, the following 4 objectives must be accomplished:
 
 \begin{center}
 \bigskip\noindent\fbox{
@@ -35,44 +37,32 @@ RISC-V was released 9 years ago. While it is starting to gain some traction in t
 } \\
 \end{center}
 
-\subsection{Project Structure}
-    Chapter 2 details how \glsfirst{RRT}, a commonly used motion planning algorithm, is implemented and analysed. From this analysis, it is determined that the computational bottleneck is edge collision detection. Chapter 3 outlines a process for implementing this bottleneck function in a hardware module, achieving a $5 \times$ speedup. Chapter 4 defines the RISC-V  motion planning extension and describes the build of a RISC-V processor that implements this extension and the Honeybee unit.
-
     \newpage
     \subsubsection{Computer Implementation Hierarchy}
         To briefly frame the space in which this thesis operates, consider the hierarchy of computer implementation, demonstrated in Figure \ref{fig:computerHierarchy}. \textbf{User level applications}, such as Microsoft Word, Google Chrome, and Apple's iTunes, sit at the top of the hierarchy. These applications are implemented in \textbf{High/Mid Level Languages}, such as C/, C++, Python, Java, etc. 
-        This software is eventually executed on a \textbf{Processor}, otherwise known as a \gls{CPU}. A processor does not understand Python, or any other programming language for that matter. The only thing it can understand is binary values (a one or a zero). Every computer program gets translated into ones and zeros (called machine code) for execution on a processor. But how are languages like C translated into machine code? The layer between programming languages and the processor is the \textbf{Instruction Set Arcitecture (ISA)}. Chapter 4 goes into detail about \gls{ISA}s and how they work. For now, if unfamiliar with the topic, it is sufficient to think of an \gls{ISA} as a translator between programming languages and machine code. This thesis operates across the lower three levels of this hierarchy.
+        This software is eventually executed on a \textbf{Processor}, otherwise known as a \gls{CPU}. A processor does not understand Python, or any other programming language for that matter. The only thing it can understand is binary values (a one or a zero). Every computer program gets translated into ones and zeros (called machine code) for execution on a processor. But how are languages like C translated into machine code? The layer between programming languages and the processor is the \textbf{Instruction Set Architecture (ISA)}. Chapter 4 goes into detail about \gls{ISA}s and how they work. For now, if unfamiliar with the topic, it is sufficient to think of an \gls{ISA} as a translator between programming languages and machine code. This thesis operates across the lower three levels of this hierarchy.
         
         \input{chapters/chapter1/figures/computerHierarchy}
+
+
+
+\subsection{Project Structure}
+\label{subsection:project_structure}
+
+    Chapter 2 details how \glsfirst{RRT}, a commonly used motion planning algorithm, is implemented and analysed. From this analysis, it was determined that the computational bottleneck is edge collision detection. Chapter 3 outlines a process for implementing this bottleneck function in a hardware module, achieving a $5 \times$ speedup. Chapter 4 defines the RISC-V motion planning extension and describes the build of a RISC-V processor that implements this extension and the Honeybee unit.
 
 
     \subsubsection{System Overview}
         Figure \ref{fig:systemDiagram} shows a high level overview of the system this thesis proposes.
         \input{chapters/chapter1/figures/systemDiagram.tex}
-        The \textbf{Extended RISC-V \gls{ISA}} is made up of the \gls{RV32I} Base Instruction Set and a \ifdraft{\color{red}\textbf{currently unnamed}\color{black}} non-standard extension that this thesis will define.
-        The \textbf{PhilosophyV Processor} is a RISC-V chip built in \gls{HDL} for this thesis. It implements both the \gls{RV32I} instruction set and the non-standard extension.
-        The PhilosphyV Core includes, along with a baseline 5-stage processor implementation, the \textbf{HoneyBee} collision detection unit.
-        A \textbf{C Implementation of RRT} is loaded into the instruction memory of the PhilosophyV processor. This processor, synthesized on an \textbf{\gls{FPGA}}, is used as the main processor, co-processor, or accelerator on an \textbf{Autonomous \gls{UAV}}. Table \ref{table:componentList} outlines the components of this system and their descriptions.
+
+        Table \ref{table:componentList} on Page \pageref{table:componentList} outlines the components of this system and their descriptions.
         \input{chapters/chapter1/tables/componentList}
 
-    \todo[inline]{Update Above Table}
-
-\subsection{Project Specifications}
-
-    \todo[inline, caption={Project Specifications}]{This can just be the stuff from the start. Objective and 4 goals}
-
-\subsection{Project Structure}
-\label{subsection:project_structure}
-    This report is structured to follow the timeline of this project, and is outlined below:
-    \begin{enumerate}
-        \item A benchmark motion planning algorithm, \gls{RRT}, was selected and implemented in software. Once implemented, a variety of performance analysis methods were used to profile the computational hotspots of the algorithm. It was found that edge collision detection was the critical function limiting execution time. This process is detailed in Chapter 2.
-        \item With edge collision detection having been identified as the critical function, the process of designing specialised hardware to execute this function began. The technical specifications, performance specifications, designs, build phases, measurement and analysis of this hardware unit is presented in Chapter 3.
-        \item With the aforementioned functional unit's performance verified in simulation, the next step was to implement this in a processor. First, a baseline processor was designed and built for this project to implement a base RISC-V instruction set. The performance of \gls{RRT} is again profiled on this baseline processor (as up until this point, it was profiled on x86 architecture). A non-standard extension to the RISC-V \gls{ISA} was then defined and support for this was implemented in the processor. Comparative performance analysis was then conducted. This process is described in detail in Chapter 4.
-        \item Chapter 5 is a discussion of results and future work.
-    \end{enumerate}
-
-\subsubsection{extending riscv}
- RISC-V is designed cleverly in a modular way, with a set of base instruction sets and a set of standard extensions. As a result, processors can be designed to only implement the instruction groups it requires, saving time, space and power on instructions that won't be used. In addition, another goal of RISC-V is to provide a basis for more specialized instruction-set extensions or more customized accelerators. This is described in the most recent \textit{RISC-V Instruction Set Manual} \cite{Waterman2019}. This is a powerful feature, as it does not break any software compatability, but allows for designers to easily follow the steps outlined in Figure \ref{fig:extendingRISCV}. From a \gls{hardware acceleration} point of view, this is particularly useful as it allows the designer to directly invoke whatever functional unit or accelerator they implement from assembly code.
-    \input{chapters/chapter1/figures/extendingRISCV}
-
-\todo[inline,caption={Summary of Results}]{Do I need a summary of results section in the introduction? }
+    \subsubsection{Measure of Success}
+        This thesis will be considered a success if it can present a compelling argument for the merits of designing motion planning specific processors \textbf{with the RISC-V ISA}. This will require:
+        \begin{itemize}
+        \item Demonstrating a clear performance limiting bottleneck function of motion planning algorithms.
+        \item Achieving significant performance improvements by implementing the identified bottleneck function in hardware.
+        \item Proving that a custom RISC-V extension can be easily defined and clearly reduces the complexity of executing the bottleneck function.
+        \end{itemize}

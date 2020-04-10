@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-08 09:56:57
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 07:02:40
+% @Last Modified time: 2020-04-10 15:24:37
 
 \input{chapters/chapter3/fig/megalong_park_bee}
 
@@ -13,7 +13,7 @@ HoneyBee is a hardware unit that will eventually be incorporated into a processo
 \input{chapters/chapter3/fig/honeybee_in_processor}
 
 \subsection{HoneyBee Interface Design}
-    The interface for the HoneyBee functional unit, following on from the interface specifications outlines in Section \ref{subsection:HoneyBeeTechSpechs} can be simply represented by Figure \ref{fig:honeybee_interface_simple}.
+    The interface for the HoneyBee functional unit, following on from the interface specifications outlined in Section \ref{subsection:HoneyBeeTechSpechs} can be simply represented by Figure \ref{fig:honeybee_interface_simple}.
 
     \input{chapters/chapter3/fig/honeybee_interface_simple}
     
@@ -22,12 +22,12 @@ HoneyBee is a hardware unit that will eventually be incorporated into a processo
     \input{chapters/chapter3/fig/honeybee_interface_detail}
 
     \subsubsection{Inputs}
-        The inputs to HoneyBee collectively describe a single edge. This is done with 6 32-bit floating point numbers. How floating points (non-integer numbers) are represented in binary determined by the \gls{IEEE754}. How this is actually represented is not neccesary to understand, but is explained in Appendix \ref{section:honeybee_appendix_ieee}. The important point is that the input edge determined by 6 32-bit coordinate points.
+        The inputs to HoneyBee collectively describe a single edge. This is done with 6 32-bit floating point numbers. How floating points (non-integer numbers) are represented in binary is defined by the \gls{IEEE754}. How this is actually represented is not neccesary to understand, but is explained in Appendix \ref{section:honeybee_appendix_ieee}. The important point is that the input edge is determined by 6 32-bit coordinate points.
 
     \subsubsection{Output}
-        HoneyBee outputs a sequence of ``collision-bits,'' with each bit in the sequence representing if the input edge collides with its corresponding bit. How this sequence of bits is mapped to a \gls{3D} grid-map is explained in Appendix \ref{section:honeybee_appendix_mapping}. It is important to note that in the design and implementation of HoneyBee, the length of this sequence was parameterized to be variable, corresponding to a variable value of $\epsilon$. Recall that the optimal edge collision algorithm only checked $\epsilon^3$ grids. HoneyBee, as well, only checks the grids with which the edge could possible intersect.
+        HoneyBee outputs a sequence of ``collision-bits,'' with each bit in the sequence representing any collisions between the input edge with its corresponding grid. How this sequence of bits is mapped to a \gls{3D} grid-map is explained in Appendix \ref{section:honeybee_appendix_mapping}. It is important to note that in the design and implementation of HoneyBee, the length of this sequence was parameterized to be variable, corresponding to a variable value of $\epsilon$. Recall that the optimal edge collision algorithm only checked $\epsilon^3$ grids. HoneyBee, as well, only checks the grids with which the edge could possibly intersect.
 
-        Since the number of grids being checked is parameterized, so must the number of collision-bits be. This is demonstrated in Figure \ref{section:honeybee_epsilon_grids}.
+        Since the number of grids being checked is parameterized, so must the number of collision-bits. This is demonstrated in Figure \ref{fig:honeybee_epsilon_grids}.
         \input{chapters/chapter3/fig/honeybee_epsilon_grids}
 
         \textbf{Note:} The output \gls{bit-width} is \textit{parameterized} not \textit{variable}. Upon synthesis (building) of HoneyBee, the output \gls{bit-width} is set at a constant value. Different syntheses may have different output \glspl{bit-width}. When the time comes to add HoneyBee to a processor, it is synthesized with a certain \gls{bit-width}.
@@ -43,7 +43,7 @@ HoneyBee is a hardware unit that will eventually be incorporated into a processo
         
         \input{chapters/chapter3/fig/mark1}
 
-        Computers nowadays measure in the order of millimeters rather than meters. What's more, they are now ``built'' in software, using a \glsfirst{HDL}. \glspl{HDL} is a family of computer programming languages that are used to specify the function of electronic circuits. Tools allow for simulation of such circuits to verify design correctness and performance. Modules defined in \glspl{HDL} may then be synthesized for a type of integrated circuit called a \glsfirst{FPGA}. This \gls{FPGA}, ``programmed'' in \gls{HDL} code to behave in a certain way, can then serve the purpose of a processor or other functional processing unit. Figure \ref{fig:hdl_to_fpga} demonstrates this process.
+        Computers nowadays measure in the order of millimeters rather than meters. What's more, they are now ``built'' in software, using a \glsfirst{HDL}. \glspl{HDL} are a family of computer programming languages that are used to specify the function of electronic circuits. Tools allow for simulation of such circuits to verify design correctness and performance. Modules defined in \glspl{HDL} may then be synthesized for a type of integrated circuit called a \glsfirst{FPGA}. This \gls{FPGA}, ``programmed'' in \gls{HDL} code to behave in a certain way, can then serve the purpose of a processor or other functional processing unit. Figure \ref{fig:hdl_to_fpga} demonstrates this process.
 
         \input{chapters/chapter3/fig/hdl_to_fpga}
 
@@ -52,12 +52,12 @@ HoneyBee is a hardware unit that will eventually be incorporated into a processo
     \subsubsection{High Level Synthesis}
         \gls{HLS} is an automated hardware design process that takes design files (written in high-level languages, such as C, C++ or SystemC) specifying the algorithmic function of a piece of hardware, interprets those files, and creates digital hardware designs that execute this function. In short, it effectively translates programming languages into hardware description languages. Some key advantages of using HLS are speed and verification. It is much faster and easier to define functionality in C than it is in a \gls{HDL} such as Verilog, and thus design iterations are faster. It is also much simpler to verify one's design, as the functional units can be put through test benches written in C. \\
 
-        The most important benefit of using \gls{HLS}, however, is the ability to use ``pragmas.'' These are simply directives given to the \gls{HLS} tool that tell it what optimizations to use when translating C code into an \gls{HDL}. This allows the same funtionality to be synthesized in many different ways, optimizing the synthesis for speed, area, memory, etc. As such, the hardware development process now allows developers to experiment quickly with different ways to implement the same functionality. This is demonstrated graphically by Figure \ref{fig:hls_to_fpga} on Page \pageref{fig:hls_to_fpga}.
+        The most important benefit of using \gls{HLS}, however, is the ability to use ``pragmas.'' These are directives given to the \gls{HLS} tool that tell it what optimizations to use when translating C code into an \gls{HDL}. This allows the same funtionality to be synthesized in many different ways, optimizing the synthesis for speed, area, memory, etc. As such, this hardware development process allows developers to experiment quickly with different ways to implement the same functionality. This is demonstrated graphically by Figure \ref{fig:hls_to_fpga} on Page \pageref{fig:hls_to_fpga}.
 
         \input{chapters/chapter3/fig/hls_to_fpga}
 
     \subsubsection{HoneyBee-A Synthesis}
-        With the functionality of HoneyBee implemented in C, the first optimization iteration (designated \gls{HB-A}) was synthesized. \gls{HB-A} had no pragmas, and was merely a basic hardware implementation of the defined functionality. \gls{HB-A} and all subsequent iterations) synthesized correctly to the interface specifications (See Appendix \ref{section:honeybee_appendix_synthesis_report} for technical interface report of synthesis). Table \ref{table:HBA_results} shows the result of \gls{HB-A}'s synthesis compared with its performance and area specifications. Obviously, the synthesis is well below the area limit, but nowhere near the specifed performance metrics. This is where the beauty of High-Level Synthesis optimization came in.
+        With the functionality of HoneyBee implemented in C, the first optimization iteration (designated \gls{HB-A}) was synthesized. \gls{HB-A} had no pragmas, and was merely a basic hardware implementation of the defined functionality. \gls{HB-A} (and all subsequent iterations) synthesized correctly and satisfied the interface specifications (See Appendix \ref{section:honeybee_appendix_synthesis_report} for technical interface report of synthesis). Table \ref{table:HBA_results} shows the result of \gls{HB-A}'s synthesis compared with its performance and area specifications. Obviously, the synthesis is well below the area limit, but nowhere near the specifed performance metrics. This is where the beauty of High-Level Synthesis optimization comes in.
 
         \input{chapters/chapter3/tables/hba}
 
@@ -77,7 +77,7 @@ HoneyBee is a hardware unit that will eventually be incorporated into a processo
 
         \input{chapters/chapter3/fig/hbb_timing}
 
-        The timing diagram does not only show the use of parallelism. It also shows how this is actually implemented in hardware. In \gls{HB-A} (Figure \ref{fig:hbb_timing_a}), there is a single module named \texttt{Check\_Plane}. Since there is only one of them, it must calculate intersections with each set of planes sequentially. On the other hand, in \gls{HB-B} (Figure \ref{fig:hbb_timing_b}), there are three seperate instances of this module (\texttt{Check\_Planes\_XY}, \texttt{Check\_Planes\_XZ}, and \texttt{Check\_Planes\_YZ}), allowing HoneyBee to execute computation on all three sets of planes in parallel. 
+        The timing diagram does not only show the use of parallelism, it also shows how this is actually implemented in hardware. In \gls{HB-A} (Figure \ref{fig:hbb_timing_a}), there is a single module named \texttt{Check\_Plane}. Since there is only one of them, it must calculate intersections with each set of planes sequentially. On the other hand, in \gls{HB-B} (Figure \ref{fig:hbb_timing_b}), there are three separate instances of this module (\texttt{Check\_Planes\_XY}, \texttt{Check\_Planes\_XZ}, and \texttt{Check\_Planes\_YZ}), allowing HoneyBee to execute computation on all three sets of planes in parallel. 
 
         Moreover, notice that in \gls{HB-B}, execution time of each of these three instances is shorter than that of the single instance in \gls{HB-A}. When a single module instance is used for different purposes (in this case, checking the $xy$, $xz$, and $yz$ oriented planes), it has some variability. To control this variability, it must execute a certain amount of control logic at the beginning of the function. On the other hand, when there are seperate instances of the module, what was once variable can now be made constant. As a result, each instance can be slightly specialized and the control logic eliminated. In this case, a general \texttt{Check\_Planes} module was replaced with the three specialized \texttt{Check\_Planes\_XY}, \texttt{Check\_Planes\_XZ}, and \texttt{Check\_Planes\_YZ}. Each of these has less variability, thus less control logic, and therefore a slightly faster overall latency. Figure \ref{fig:hbb_timing} shows how theoretically, this should result in a reduction in overall latency of more than 3 times.\\
 
@@ -93,7 +93,7 @@ HoneyBee is a hardware unit that will eventually be incorporated into a processo
 
         \input{chapters/chapter3/fig/hbc_timing}
 
-        Just focussing on the computation of the $xy$-oriented planes, Figure \ref{fig:hbc_timing} shows how \gls{HB-B} than having one instance of the module execute 4 times sequentially. \gls{HB-C} implements greater parallelism by instantiating 4 module instances to execute sequentially. \gls{HB-C}, as a result, exceeded the performance benchmark and was of an acceptable area, as shown in Table \ref{table:HBC_results} and Figure \ref{fig:benchmark_3}
+        Just focussing on the computation of the $xy$-oriented planes, Figure \ref{fig:hbc_timing} shows how \gls{HB-B} has only one instance of the module execute 4 times sequentially. \gls{HB-C}, on the other hand, implements greater parallelism by instantiating 4 module instances to execute sequentially. \gls{HB-C}, as a result, exceeded the performance benchmark and was of an acceptable area, as shown in Table \ref{table:HBC_results} and Figure \ref{fig:benchmark_3}.
 
         \input{chapters/chapter3/tables/hbc}
 

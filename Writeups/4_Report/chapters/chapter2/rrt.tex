@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-22 15:53:59
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-06 15:20:39
+% @Last Modified time: 2020-04-10 14:40:37
 
 
 % TECHNICAL SPECIFICATIONS
@@ -18,7 +18,6 @@
 
 % IMPLEMENTATION DESIGN
 \subsection{Implementation Design}
-    \todo{System Diagram Here}
     The design and implementation of \gls{RRT}, while neccessary, was significant and time consuming. Since this was not the main object of this thesis, only a brief description of key design choices has been included here. Appendix \ref{appendix:rrt_appendix} contains a more detailed account.
 
     \subsubsection{Parameterization}
@@ -32,7 +31,8 @@
         The \gls{UAV} was modelled as a \gls{3D} rectangular prism, with its configuration represented by Cartesian coordinates $(x,y,z)$ and Euler angles $(\alpha, \beta, \gamma)$.
 
     \subsubsection{Key Functions}
-        Algorithm \ref{algorithm:rrt_collision} shows that there are 5 key functions that constitute \gls{RRT}. Figure \ref{fig:rrt_functions} demonstrates each of these functions: \texttt{getRandomConfig()}, \texttt{findNearestConfig()}, \texttt{stepFromNearest()}, \texttt{(configCollisions)}, and \texttt{edgeCollisions()}. Appendix \ref{section:rrt_appendix_function_impl} shows in detail how each of these functions was implemented.
+        Algorithm \ref{algorithm:rrt_collision} shows that there are 5 key functions that constitute \gls{RRT}. Figure \ref{fig:rrt_functions} demonstrates each of these functions: \texttt{getRandomConfig()}, \texttt{findNearestConfig()}, \\
+        \texttt{stepFromNearest()}, \texttt{configCollisions()}, and \texttt{edgeCollisions()}. Appendix \ref{section:rrt_appendix_function_impl} shows in detail how each of these functions was implemented.
         \input{chapters/chapter2/figures/rrt_functions}
 
 % VISUALIZING IMPLEMENTATION
@@ -41,7 +41,7 @@
     With the back end functionality of \gls{RRT} designed and implemented, it was neccesary to develop a way to visualize it. Many existing implementations had the visualization interface run synchonously alongside \gls{RRT}. This would distort any performance analysis results, and so in this implementation it was left until after \gls{RRT} had finished executing and then plotted using Python.
 
     \subsubsection{Plotting Configurations and the Workspace}
-        Plotting the workspace using the ``matplotlib'' library was relatively simple in both \gls{2D} and \gls{3D}, shown in Figure \ref{fig:rrt_workspace}. It was decided that the \gls{UAV}'s' configuration would be visualized only as its origin point, rather than plotting a \gls{3D} rectangular prism at each configuration, in order to maintain simplicity. Nevertheless, the \gls{UAV} was still modelled as a 3D prism in the backend.
+        Plotting the workspace using the ``matplotlib'' library was relatively simple in both \gls{2D} and \gls{3D}, shown in Figure \ref{fig:rrt_workspace}. It was decided that the \gls{UAV}'s' configuration would be visualized only as its origin point, rather than plotting a \gls{3D} rectangular prism at each configuration, in order to maintain simplicity. Nevertheless, the \gls{UAV} was still modelled as a 3D prism in the backend. \textbf{Note:} The 2D space and 3D space have different start and end points and different \glspl{OGM} to better demonstrate how \gls{RRT} functions.
         \input{chapters/chapter2/figures/workspace}
 
     \subsubsection{Plotting Obstacles}

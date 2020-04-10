@@ -1,0 +1,32 @@
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces List of System Components and their Descriptions}}{8}{table.caption.24}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Abbreviated Technical Specifications for \gls {RRT} Implementation}}{16}{table.caption.35}
+\contentsline {table}{\numberline {2.2}{\ignorespaces RRT Implementation Parameters\relax }}{17}{table.caption.37}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Optimal RRT Parameters for each Map Size}}{22}{table.caption.50}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Performance Specifications for Edge Collision Detection Unit}}{27}{table.caption.59}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Interface Specifications for Edge Collision Detection Unit}}{28}{table.caption.62}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Synthesis Results for HB-A with $\epsilon = 4$}}{34}{table.caption.77}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Synthesis Results for HB-B3 with $\epsilon = 4$}}{38}{table.caption.82}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Synthesis Results for HB-C with $\epsilon = 4$}}{41}{table.caption.86}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces General Specifications for Xedcol RISC-V Extension}}{50}{table.caption.98}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Required Bits to Represent Output Collisions For Different Values of Epsilon}}{51}{table.caption.100}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Edge Coordinate Registers\relax }}{53}{table.caption.106}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {C.1}{\ignorespaces General Technical Specifications for \gls {RRT} Implementation}}{67}{table.caption.128}
+\contentsline {table}{\numberline {C.2}{\ignorespaces Required Parameters for \gls {RRT} Implementation}}{68}{table.caption.129}
+\contentsline {table}{\numberline {C.3}{\ignorespaces Evaluation of Existing Open-Source Implementations of RRT}}{68}{table.caption.130}
+\contentsline {table}{\numberline {C.4}{\ignorespaces Comparison of Timing Methods\relax }}{74}{table.caption.137}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {D.1}{\ignorespaces Full Technical Specifications for Edge Collision Detection Unit}}{79}{table.caption.141}
+\contentsline {table}{\numberline {D.2}{\ignorespaces IEEE-754 Floating Point Examples}}{80}{table.caption.142}
+\contentsline {table}{\numberline {D.3}{\ignorespaces Description of the ports associated with the handshake protocol for HoneyBee}}{82}{table.caption.144}
+\contentsline {table}{\numberline {D.4}{\ignorespaces HoneyBee Interface Synthesis Report}}{83}{table.caption.145}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {F.1}{\ignorespaces Comparison of CISC and RISC ISAs.}}{87}{table.caption.154}
