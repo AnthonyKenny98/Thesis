@@ -1,13 +1,52 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 14:27:21
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 22:21:45
+% @Last Modified time: 2020-04-10 12:58:15
 
-\subsection{Proposed Solution}
-\todo[inline]{Revise and Rewrite}
-    This thesis proposes a non-standard RISC-V Instruction Set Extension, supported by a functional unit embedded in a \gls{FPGA} synthesizable processor design that more rapidly computes motion planning for autonomous \gls{UAV}s. It will use the \gls{RRT} algorithm as a benchmark for performance analysis. Profiling of \gls{RRT} described in chapter \ref{chap:MotionPlanningInSoftware} found that edge collision detection was the most performance limiting function of \gls{RRT}. As such, this thesis aims to design a RISC-V extension and specific circuitry that support the faster execution of edge collision detection.
+\subsection{Project Goals}
+RISC-V was released 9 years ago. While it is starting to gain some traction in the commercial space, RISC-V has not yet been used to develop a motion planning specific processor. As such, the overall mission of this thesis is as follows:
 
-    \subsubsection*{System Overview}
+\begin{center}
+\bigskip\noindent\fbox{
+    \parbox{0.8\textwidth}{
+    \begin{center}
+        \textbf{Mission} \\
+        To present a proof-of-concept for extending and implementing RISC-V to develop motion planning specific processors.
+    \end{center}
+    }
+} \\
+\end{center}
+
+\noindent To achieve this, the following objectives will need to be acheived:
+
+\begin{center}
+\bigskip\noindent\fbox{
+    \parbox{0.9\textwidth}{
+        \begin{center}        
+        \textbf{Project Objectives} \\
+        \end{center}
+        \begin{enumerate}
+            \item Determine the computational bottleneck of a commonly used motion planning algorithm.
+            \item Implement a functional hardware module to replace the bottleneck function.
+            \item Define a motion planning extension to the RISC-V ISA 
+            \item Build a fully functional motion-planning processor that implements the extended RISC-V ISA
+        \end{enumerate}
+    }
+} \\
+\end{center}
+
+\subsection{Project Structure}
+    Chapter 2 details how \glsfirst{RRT}, a commonly used motion planning algorithm, is implemented and analysed. From this analysis, it is determined that the computational bottleneck is edge collision detection. Chapter 3 outlines a process for implementing this bottleneck function in a hardware module, achieving a $5 \times$ speedup. Chapter 4 defines the RISC-V  motion planning extension and describes the build of a RISC-V processor that implements this extension and the Honeybee unit.
+
+    \newpage
+    \subsubsection{Computer Implementation Hierarchy}
+        To briefly frame the space in which this thesis operates, consider the hierarchy of computer implementation, demonstrated in Figure \ref{fig:computerHierarchy}. \textbf{User level applications}, such as Microsoft Word, Google Chrome, and Apple's iTunes, sit at the top of the hierarchy. These applications are implemented in \textbf{High/Mid Level Languages}, such as C/, C++, Python, Java, etc. 
+        This software is eventually executed on a \textbf{Processor}, otherwise known as a \gls{CPU}. A processor does not understand Python, or any other programming language for that matter. The only thing it can understand is binary values (a one or a zero). Every computer program gets translated into ones and zeros (called machine code) for execution on a processor. But how are languages like C translated into machine code? The layer between programming languages and the processor is the \textbf{Instruction Set Arcitecture (ISA)}. Chapter 4 goes into detail about \gls{ISA}s and how they work. For now, if unfamiliar with the topic, it is sufficient to think of an \gls{ISA} as a translator between programming languages and machine code. This thesis operates across the lower three levels of this hierarchy.
+        
+        \input{chapters/chapter1/figures/computerHierarchy}
+
+
+    \subsubsection{System Overview}
         Figure \ref{fig:systemDiagram} shows a high level overview of the system this thesis proposes.
         \input{chapters/chapter1/figures/systemDiagram.tex}
         The \textbf{Extended RISC-V \gls{ISA}} is made up of the \gls{RV32I} Base Instruction Set and a \ifdraft{\color{red}\textbf{currently unnamed}\color{black}} non-standard extension that this thesis will define.
@@ -31,5 +70,9 @@
         \item With the aforementioned functional unit's performance verified in simulation, the next step was to implement this in a processor. First, a baseline processor was designed and built for this project to implement a base RISC-V instruction set. The performance of \gls{RRT} is again profiled on this baseline processor (as up until this point, it was profiled on x86 architecture). A non-standard extension to the RISC-V \gls{ISA} was then defined and support for this was implemented in the processor. Comparative performance analysis was then conducted. This process is described in detail in Chapter 4.
         \item Chapter 5 is a discussion of results and future work.
     \end{enumerate}
+
+\subsubsection{extending riscv}
+ RISC-V is designed cleverly in a modular way, with a set of base instruction sets and a set of standard extensions. As a result, processors can be designed to only implement the instruction groups it requires, saving time, space and power on instructions that won't be used. In addition, another goal of RISC-V is to provide a basis for more specialized instruction-set extensions or more customized accelerators. This is described in the most recent \textit{RISC-V Instruction Set Manual} \cite{Waterman2019}. This is a powerful feature, as it does not break any software compatability, but allows for designers to easily follow the steps outlined in Figure \ref{fig:extendingRISCV}. From a \gls{hardware acceleration} point of view, this is particularly useful as it allows the designer to directly invoke whatever functional unit or accelerator they implement from assembly code.
+    \input{chapters/chapter1/figures/extendingRISCV}
 
 \todo[inline,caption={Summary of Results}]{Do I need a summary of results section in the introduction? }

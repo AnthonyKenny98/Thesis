@@ -1,5 +1,10 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-03 15:24:10
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-03 15:24:44
-\abstract{This thesis describes a process for accelerating motion planning in autonomous robots through the design of specialised microarchitecture and instruction set architecture. First, it shows the analysis of computational performance of \gls{RRT}, a sampling-based motion planning algorithm commonly used in autonomous drones. Having identified collision detection as the biggest area of opportunity for improved performance, it describes the process of designing specialized hardware, taking advantage of parallelization, that quickly detects collisions. Finally, it presents how this specialized functional unit can be implemented in a processor, and a RISC-V \gls{ISA} extension designed to massively reduce the execution time of collision detection.}
+% @Last Modified time: 2020-04-10 11:33:34
+\begin{abstract}
+\doublespacing
+This thesis presents an extension for the RISC-V Instruction Set Architecture (ISA) for the purpose of faster motion planning in autonomous Unmanned Aerial Vehicles (UAVs). Fully autonomous UAVs have the potential to change the world in which we live, but they are currently unable to pilot themselves in high-complexity, obstacle-dense environments; The processors that they employ cannot execute motion planning software quickly enough. RISC-V is a relatively new ISA that is founded on the principles of open-source and extendibility, making it an excellent ecosystem for designing application specific processors. However, as of April 2020, no attempts had been made to develop motion planning architecture within the RISC-V ecosystem. \\
+This thesis serves as a proof-of-concept for accelerating motion planning with RISC-V architecture. It presents the implementation of microarchitecture that can compute collision detection over 3 times faster than a general-purpose Intel CPU. More significantly, it defines a motion planning extension for RISC-V that simplifies the number of instructions required to detect and edge collision from hundreds of thousands to only one. These promising results demonstrate the viability of the approach, and should encourage developers to embrace RISC-V in the development of motion planning processors for autonomous drones.
+
+\end{abstract}

@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-09 10:22:31
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 07:24:42
+% @Last Modified time: 2020-04-10 08:08:13
 \textit{Philosophy 4}, written in 1903 by Mr. Owen Wister of the Class of 1882 (founder of the Western literary genre), recounts the antics of two Harvard students and their last minute attempts to study (or avoid studying) for a Philosophy exam for which they are hopelessly unprepared. Similarly, this section details the process of building a RISC-V processor, by far the most intricate engineering challenge of this Thesis, and a task for which I was unsure of my preparedness. As such, this processor was named \textbf{PhilosophyV}; both in reference to the RISC-V ISA for which it was designed, and to the fact that the process of its implementation at times seemed very much like a sequel to Mr. Wister's novel. \\
 
 The purpose of implementing a functional RISC-V processor was to verify that the design of the Xedgcol extension was viable. Initially, the hope was to find an existing open-source implementation, of which there are many, that I could build on. A significant period of time was spent trying to become familiar with the Rocket Core\cite{ChipsAlliance2020}, a large open-source RISC-V implementation. However, the project was so sophisticated that learning its infrastructure and the neccesary tool-chains became a massive project in itself. This was the case for many open-source projects. Those that lacked such sohpisticated code bases also lacked proper documentation and were not verified to be correct. As a result, it ended up being faster and simpler to implement a lightweight RISC-V processor from scratch. 
@@ -28,7 +28,7 @@ The purpose of implementing a functional RISC-V processor was to verify that the
         \input{chapters/chapter4/fig/honeybee_impl}
 
 
-    \subsection{Verification and Analysis}
+    \subsection{Verification}
         With the PhilosphyV core implementing the RV32I\_Xedgcol ISA, assembly tests were written to verify the viability of the Xedgcol extension. Consider an edge that is defined by the points $(0.5, 0.75, 0.25)$ and $(1.75, 1.25, 1.5)$. The assembly instructions to execute the edge collision functionality are as follows:
 
         \begin{verbatim}
@@ -43,4 +43,4 @@ The purpose of implementing a functional RISC-V processor was to verify that the
         ECOL x6, x7
         \end{verbatim}
 
-        The collision bit sequence stored in registers \texttt{x6} and \texttt{x7} can be compared against an occupancy grid map. 
+        The collision bit sequence stored in registers \texttt{x6} and \texttt{x7} can be compared against an occupancy grid map. Over multiple tests, the correct collision bits were stored in the correct registers. It was concluded from these tests that the Xedgcol extension was a viable solution.

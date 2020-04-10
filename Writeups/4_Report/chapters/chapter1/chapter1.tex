@@ -1,29 +1,26 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-20 00:00:23
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-09 22:20:04
+% @Last Modified time: 2020-04-10 12:15:28
 
-\todo[inline,caption={Define goal}]{
-Somewhere here I need to define very clearly the following \\
-\begin{enumerate}
-    \item Overall Goal: \~\~ Deliver an example of how RISC-V can be leveraged to design a custom processor for motion planning 
-    \item 4 Objectives:
-    \begin{itemize}
-        \item Profile a standard motion planning algorithm to determine the bottleneck function
-        \item Design a functional hardware unit that eliminates that bottleneck
-        \item Define a non standard extension
-        \item Implement Processor and verify all above
-    \end{itemize}
-\end{enumerate}
-    }
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{chapters/chapter1/img/ifgoingtocrash.png}\\
+\includegraphics[width=0.8\linewidth]{chapters/chapter1/img/ifgoingtocrashcode.png} \\
+% \small{Source: reddit.com/r/ProgrammerHumour}
+\end{center}
+\end{figure}
+
+\textbf{If only it were that simple...} The above image is an exchange posted on the subreddit ``Programmer Humour'', satirizing the gross oversimplification of the deep complexity of fully autonomous drone flight. This thesis studies the ``coding and algorithms'' of the topic extensively, from the micro-implementation of specialized motion planning processors to the high-level software that could, theoretically, allow a programmer to write: 
+
+    \begin{center}
+    \texttt{if goingToCrash: dont();}
+    \end{center}
 
 \section{Problem Summary}
     \input{chapters/chapter1/problemSummary.tex}
-    
-\section{Prior Work}
-    \todo[inline]{Distribute All this to other parts of the report}
-    \input{chapters/chapter1/priorWork.tex}
 
+\newpage
 \section{Project Overview}
 \label{section:projectOverview}
     \input{chapters/chapter1/projectOverview.tex}

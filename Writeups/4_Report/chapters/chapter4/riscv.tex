@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-03-01 18:51:24
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 06:28:06
+% @Last Modified time: 2020-04-10 08:05:57
 \subsection{RISC-V}
 
     \glsdesc{RISC-V} (pronounced ``risk-five'') was developed at the University of California, Berkeley. It is established on the principles of RISC as an open-source and extendable \gls{ISA} for research and education. It was designed with application specific processors in mind, as they developed a highly flexible and extendable base \gls{ISA} around which research and acceleration efforts could be based.
@@ -13,9 +13,9 @@
     \item \textbf{Popular commercial ISAs were not designed for extendibility.} There exist almost no ISAs that support extendibility for general purpose computing systems, allowing for no application specific optimizations at the instruction set level.
     \end{itemize}
 
-    RISC-V is designed cleverly in a modular way, with a set of base instruction sets and a set of standard extensions. As a result, processors can be designed to only implement the instruction groups it requires, saving time, space and power on instructions that won't be used. In addition, another goal of RISC-V is to provide a basis for more specialized instruction-set extensions or more customized accelerators. This is described in the most recent \textit{RISC-V Instruction Set Manual} \cite{Waterman2019}. This is a powerful feature, as it does not break any software compatability, but allows for designers to easily follow the steps outlined in Figure \ref{fig:extendingRISCV}. From a \gls{hardware acceleration} point of view, this is particularly useful as it allows the designer to directly invoke whatever functional unit or accelerator they implement from assembly code.
+    % RISC-V is designed cleverly in a modular way, with a set of base instruction sets and a set of standard extensions. As a result, processors can be designed to only implement the instruction groups it requires, saving time, space and power on instructions that won't be used. In addition, another goal of RISC-V is to provide a basis for more specialized instruction-set extensions or more customized accelerators. This is described in the most recent \textit{RISC-V Instruction Set Manual} \cite{Waterman2019}. This is a powerful feature, as it does not break any software compatability, but allows for designers to easily follow the steps outlined in Figure \ref{fig:extendingRISCV}. From a \gls{hardware acceleration} point of view, this is particularly useful as it allows the designer to directly invoke whatever functional unit or accelerator they implement from assembly code.
     
-    \input{chapters/chapter1/figures/extendingRISCV}
+    % \input{chapters/chapter1/figures/extendingRISCV}
 
     The overall design of RISC-V can be broken down into 3 characteristics that address the aforementioned limitations of commercial \glspl{ISA}: Open-source, extendibility, and modularity.
 
@@ -34,7 +34,7 @@
     The RV32I (Short for RISC-V 32-Bit Integer) base \gls{ISA} is a small \gls{ISA} of only 40 unique instructions, but sufficient to support modern operating systems. It has 32 registers, \texttt{x0-x32}, each 32-bits wide. \texttt{x0} is a hard-wired 0, and there is also another register dedicated for the program count. 
 
 
-    The following is an excerpt from the RISC-V Specification, outlining the RV32I base integer instruction set \cite{Waterman2019}
+    The following is an excerpt from the RISC-V Specification, outlining the RV32I base integer instruction set \cite{Waterman2019}:
     \begin{quote}{}
         \small{RV32I was designed to be sufficient to form a compiler target and to support modern operating system environments. The ISA was also designed to reduce the hardware required in a minimal implementation. RV32I contains 40 unique instructions, though a simple implementation might \dots [reduce] base instruction count to 38 total. RV32I can emulate almost any other ISA extension \dots \\
         Subsets of the base integer ISA might be useful for pedagogical purposes, but the base has been defined such that there should be little incentive to subset a real hardware implementation \dots}
@@ -92,3 +92,31 @@
     Consider, an edge must be represented by 6 32-bit numbers. This information, 192 bits in total, can not all fit in a single 32-bit instruction as 6 immediate values (obviously). Could those 32-bit values be stored in existing registers and the address of these registers referenced in the instruction? Since there are 32 general purpose registers in RISC-V, their addresses are 5-bits long each. 6 5-bit addresses is 30 bits in total, which, by itself could fit in an instruction. While this couldn't be combined with the edge collision instruction, perhaps a second instruction could be defined that contained the addresses of all 6, or even 3, of the registers containing the edge's coordinates. This was decided against for a few reasons, but mainly because \textbf{storing floating-point numbers in integer registers}, while theoretically possible, is extremely bad practice. To store floating point values in registers, a new register set would need to be defined.
 
     \subsubsection{Edge Registers}
+    6 floating point registers were defined for the Xedgcol extension. These registers are specifically for the purpose of holding the coordinates of the edge for which intersections will be calculated. Table \ref{table:edge_registers} lists these registers.
+
+    \begin{table}
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Register} & \textbf{ABI Name} & \textbf{Description} \\
+    \hline
+    \texttt{e0}     & \texttt{px0}      & X coordinate of edge's first point \\
+    \hline
+    \texttt{e1}     & \texttt{py0}      & Y coordinate of edge's first point \\
+    \hline
+    \texttt{e2}     & \texttt{pz0}      & Z coordinate of edge's first point \\
+    \hline
+    \texttt{e3}     & \texttt{px1}      & X coordinate of edge's second point \\
+    \hline
+    \texttt{e4}     & \texttt{py1}      & Y coordinate of edge's second point \\
+    \hline
+    \texttt{e5}     & \texttt{pz1}      & Z coordinate of edge's second point \\
+    \hline
+    \end{tabular}
+    \caption{Edge Coordinate Registers}{ as defined in the Xedgcol ISA extension}
+    \label{table:edge_registers}
+    \end{center}
+    \end{table}
+
+    \subsubsection{Load Immediate Edge Instruction}
+    Since Xedgcol was designed to be implemented alongside only RV32I (which does not support floating-point binary representation), a new instruction was defined to load an immediate float value into one of the 6 edge registers. Defining a new instruction also allowed for more space in the instruction for the immediate value. To build this instruction, an opcode and a destination register is required. Xedgcol has an opcode width of 3, and since there are only 6 edge registers, they are addressable by a 3 bit address. This leaves 26 bits remaining instruction for the immediate. A floating point immediate is 32 bits, so the 6 \glspl{LSB} are truncated in the instruction. The implementation then must extend this floating point number with zeros in the \glspl{LSB}.

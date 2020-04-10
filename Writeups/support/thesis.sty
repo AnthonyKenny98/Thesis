@@ -160,7 +160,7 @@
             description={#2},
             long={#2},
             first={#2 (#1)\glsadd{#1_g}},see=[Glossary:]{#1_g},
-            firstplural={\glsentrylong{#1}\glspluralsuffix    (\glsentryname{#1}\glspluralsuffix)},
+            firstplural={\glsentrylong{#1}\glspluralsuffix \    (\glsentryname{#1}\glspluralsuffix)},
             plural={\glsentryname{#1}\glspluralsuffix}
         }
         \fi
@@ -177,6 +177,8 @@
 
 % Allows for forcing figure to top of next page
 \usepackage{afterpage}
+
+\usepackage{setspace}
 
 \endinput
 %%

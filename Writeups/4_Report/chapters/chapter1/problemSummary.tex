@@ -1,24 +1,22 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-02-23 12:45:54
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-05 08:04:35
+% @Last Modified time: 2020-04-10 11:45:42
 
-\subsection{Background}
+\subsection{Background \& Motivation}
     
-    The \gls{UAV} has been utilised in military applications extensively throughout the late 20th and early 21st century. However, over the last decade, their use in non-military applications, such as commerical, scientific, agricultural, and recreational, has increased such that the number of civilian drones vastly outnumber military \gls{UAV}s. \todo{cite}Particularly in the commercial sector, such rapid growth in the number and range of applications means that autonomy is key for the profitable adoption of \gls{UAV}s. Such autonomy relies on efficient computation of motion planning algorithms. However, the implementation of these algorithms can be quite computationally expensive, and thus slow and/or detrimentally power consuming. As such, this thesis aims to design specialized hardware to more efficiently compute motion plans for autonomous drones.
+    % The \gls{UAV} has been utilised in military applications extensively throughout the late 20th and early 21st century. However, over the last decade, their use in non-military applications, such as commerical, scientific, agricultural, and recreational, has increased such that the number of civilian drones vastly outnumber military \gls{UAV}s. \todo{cite}Particularly in the commercial sector, such rapid growth in the number and range of applications means that autonomy is key for the profitable adoption of \gls{UAV}s. Such autonomy relies on efficient computation of motion planning algorithms. However, the implementation of these algorithms can be quite computationally expensive, and thus slow and/or detrimentally power consuming. As such, this thesis aims to design specialized hardware to more efficiently compute motion plans for autonomous drones.
 
     \subsubsection{Autonomous Robotics}
-        For well over 2000 years, the concept of robotics, albeit not always with such a term, has fascinated humans. As early as the first century A.D., the Greek mathematician and engineer, Heron of Alexandria, described more than 100 different machines and \gls{automata} in \textit{Pneumatica} and \textit{Automata} \cite{Alexandrinus}. In 1898, Nikola Tesla demonstrated the first radio-controlled vessel. Since then, the world has seen widespread application of robotics in manufacturing, mining, transport, exploration, and weaponry. For the last few decades, robots have operated in controlled, largely unchanging environments (e.g.\ an assembly line) where their environment and movements are largely known \textit{\gls{a priori}}.
+        For well over 2000 years, the concept of robotics, albeit not always with such a term, has fascinated humans. As early as the first century A.D., the Greek mathematician and engineer, Heron of Alexandria, described more than 100 different machines and \gls{automata} in \textit{Pneumatica} and \textit{Automata} \cite{Alexandrinus}. In 1898, Nikola Tesla demonstrated the first radio-controlled vessel. Since then, the world has seen widespread application of robotics in manufacturing, mining, transport, exploration, and weaponry. For the last few decades, robots have operated in controlled, largely unchanging environments (e.g.\ an assembly line) where their environment and movements are largely known \textit{\gls{a priori}} (prior to execution).
 
-        However, in recent years a new generation of autonomous robots has been developed for a wide range complex applications. These new robots are required to adapt to the changing environments in which they operate; most often, this means planning their own paths through space. As such, they must perform motion planning in \gls{real-time}.
-
-        % \input{chapters/chapter1/figures/useOfAutonomousRobots.tex}
+        In recent years a new generation of fully autonomous robots has been developed for a wide range complex applications. A specific case is the autonomous \gls{UAV}. The \gls{UAV} has been utilised in military applications extensively throughout the late 20th and early 21st century. Only recently has their potential in industry begun to be realised. As technology improves, \glspl{UAV} are going from being remotely piloted to being able to pilot themselves without human control. These autonomous \glspl{UAV} are required to pilot themselves through complex, ever-changing environments. This means executing motion planning software.
 
     \subsubsection{Motion Planning}
         
         While most creatures in the animal kingdom find it relatively easy to navigate their surroundings, autonomous robots must be taught explicitly how to do so by their programmers. Motion Planning refers to the problem of algorithmically determining a collision-free path between two points in an obstacle-ridden space. Chapter \ref{chap:MotionPlanningInSoftware} provides a detailed explanation of motion planning and of \glsfirst{RRT}, a commonly used motion planning algorithm.
 
-        On the algorithmic and software level, motion planning has been extensively studied and optimized. Even so, current software implementations running on regular \glspl{CPU} are too slow to execute in \gls{real-time} for robots to operate in rapidly chainging, high complexity environments. More powerful, highly parallelized \glspl{GPU} can be used in tethered robot applications (e.g.\ robotic arms autonomously executing pick-and-place functions). However, such \glspl{GPU} consume far too much power to be used in autonomous drones, which are untethered and must sustain flight for useful periods of time. (A typical \gls{CPU} uses between 65-85 watts, while some \glspl{GPU} can use up to 270 watts\todo{cite}).
+        On the algorithmic and software level, motion planning has been extensively studied and optimized. Even so, current software implementations execute too slowly on regular \glspl{CPU} for autonomous \glspl{UAV} to operate in rapidly changing, high complexity environments. More powerful, highly parallelized \glspl{GPU} can be used in tethered robot applications (e.g.\ robotic arms autonomously executing pick-and-place functions). However, such \glspl{GPU} consume far too much power to be used in autonomous drones, which are untethered and must sustain flight for useful periods of time. (A typical \gls{CPU} uses between 65-85 watts, while some \glspl{GPU} can use up to 270 watts).
 
         
     \subsubsection{Application Specific Processors}
@@ -27,22 +25,19 @@
 
         However, designing a functional, high performance processor from scratch is no small task. It requires expertise in a variety of disciplines (compilers, digital logic, operating systems, etc), and an extradordinary amount of time and effort to develop and verify before it can be used. In short, it's an expensive process, which is why the market for computer processors is dominated by companies like Intel, AMD, and ARM. The sharing of processor designs is also not possible, as commercial designs are proprietary and competing designs are not encouraged.
 
-        Finally, even if one were to design an \gls{ASP} from scratch, or build off an existing commercial design (which means paying royalties), the \glsfirst{ISA} that the processor implements are not designed for are not designed for extendability, meaning that even a highly specialized processor is limited to a small number of instructions.
-
-        \todo[inline]{Discuss Moore's law and denard scaling}
+        Finally, even if one were to design an \gls{ASP} from scratch, or build off an existing commercial design (which means paying royalties), commerical \glsfirstplural{ISA} are not designed for extendability, meaning that even a highly specialized processor is limited by general purpose instructions.
 
     \subsubsection{RISC-V}
-        RISC-V (pronounced ``risk-five'') is an \gls{ISA} developed by the University of California, Berkeley. It is established on the principles of a \gls{RISC}, a class of instruction sets that allow a processor to have fewer \gls{CPI} than a \gls{CISC} (x86, the \gls{ISA} on which macOS and linux operating systems run, is an example of a \gls{CISC} instruction set). 
+        RISC-V (pronounced ``risk-five'') is an \gls{ISA} developed by the University of California, Berkeley. It is established on the principles of modularity, extendibility, and open-source contribution. RISC-V was started with the philosophy of creating a practical \gls{ISA} that was usable in any hardware or software without royalites. The first report describing the RISC-V Instruction Set was published in 2011\cite{Isa2012}. \\
 
-        What makes RISC-V unique is its open-source nature. RISC-V was started with the philosophy of creating a practical, open-source \gls{ISA} that was usable in any hardware or software without royalites. The first report describing the RISC-V Instruction Set was published in 2011 by Andrew Waterman, Yunsup Lee, David A. Patterson, and Krste Asanović \cite{Isa2012}.
+        Due to its flexibility, it has excellent potential in the space of application specific processors. However, as of April 2020, no attempts have been made to develop a motion planning processor using the RISC-V \gls{ISA}. As such, this thesis serves as a proof-of-concept for this neglected opportunity.
     
 
 \newpage
 \subsection{Problem Definition}
 
     \subsubsection*{Problem Statement}
-    Motion planning algorithms implemented in software that runs on general purpose \gls{CPU}s cannot execute quickly enough for fully autonomous \gls{UAV}s to operate in high-complexity environments. The state-of-the-art strategy of using power-hungry \gls{GPU}s to accelerate the execution of these algorithms requires too much power to be cost-effective or feasible for \gls{UAV}s to sustain flight for useful periods of time. \todo[size=\small, inline, caption={Improve Problem Statement}]{Existing research into accelerating robotic motion planning is <reason for RISC-V, inaccessable?> and mainly focussed on tethered arm moveing robots.}
+    Motion planning software running on general purpose \gls{CPU}s cannot execute quickly enough for fully autonomous \gls{UAV}s to operate in high-complexity environments. The common strategy of using power-hungry \gls{GPU}s to accelerate the execution of this software requires too much power to be feasible for \gls{UAV}s to sustain flight for useful periods of time. While there are significant barriers to designing application specific processors, RISC-V presents an excellent, but neglected, \gls{ISA} with which specialized motion planning processors can be implemented. 
 
-    \subsubsection*{End User}
-    This thesis aims to provide developers of autonomous drones with specialized hardware for motion planning. Such developers have a need for computing hardware that executes motion planning algorithms faster and more power efficiently than existing methods. This thesis will provide a processor design that is synthesizable on an \gls{FPGA}, giving developers a processer for which a \gls{RTOS}, or bare metal code, can be deployed.
-    \todo[inline]{Revise End User}
+    \subsubsection*{Intended Audience}
+    This thesis has been written such that it can be understood by those with no background in computer architecture. However, the project was conducted with computer architects in mind, with the aspiration of proving the merits of the RISC-V ISA in designing motion planning specific processors.
