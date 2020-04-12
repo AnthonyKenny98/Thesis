@@ -1,17 +1,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {algocf}{\numberline {2.1}{\ignorespaces Rapidly-Exploring Random Tree in Free \Gls {configuration} Space\relax }}{13}{algocf.2.1}
-\contentsline {algocf}{\numberline {2.2}{\ignorespaces Rapidly-Exploring Random Tree with Collision Detection\relax }}{15}{algocf.2.2}
+\contentsline {algocf}{\numberline {2.1}{\ignorespaces Rapidly-Exploring Random Tree in Free \Gls {configuration} Space\relax }}{12}{algocf.2.1}
+\contentsline {algocf}{\numberline {2.2}{\ignorespaces Rapidly-Exploring Random Tree with Collision Detection\relax }}{14}{algocf.2.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {algocf}{\numberline {B.1}{\ignorespaces \texttt {getRandomConfig()} as implemented for \gls {RRT}\relax }}{68}{algocf.B.1}
-\contentsline {algocf}{\numberline {B.2}{\ignorespaces \texttt {findNearestConfig()} as implemented for \gls {RRT}\relax }}{68}{algocf.B.2}
-\contentsline {algocf}{\numberline {B.3}{\ignorespaces \texttt {stepFromNearest()} as implemented for \gls {RRT}\relax }}{69}{algocf.B.3}
-\contentsline {algocf}{\numberline {B.4}{\ignorespaces \texttt {configCollision()} as implemented for \gls {RRT}\relax }}{69}{algocf.B.4}
-\contentsline {algocf}{\numberline {B.5}{\ignorespaces \texttt {configCollision()} as implemented for \gls {RRT} for 3D\relax }}{70}{algocf.B.5}
+\contentsline {algocf}{\numberline {B.1}{\ignorespaces \texttt {getRandomConfig()} as implemented for \gls {RRT}\relax }}{67}{algocf.B.1}
+\contentsline {algocf}{\numberline {B.2}{\ignorespaces \texttt {findNearestConfig()} as implemented for \gls {RRT}\relax }}{67}{algocf.B.2}
+\contentsline {algocf}{\numberline {B.3}{\ignorespaces \texttt {stepFromNearest()} as implemented for \gls {RRT}\relax }}{68}{algocf.B.3}
+\contentsline {algocf}{\numberline {B.4}{\ignorespaces \texttt {configCollision()} as implemented for \gls {RRT}\relax }}{68}{algocf.B.4}
+\contentsline {algocf}{\numberline {B.5}{\ignorespaces \texttt {configCollision()} as implemented for \gls {RRT} for 3D\relax }}{69}{algocf.B.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

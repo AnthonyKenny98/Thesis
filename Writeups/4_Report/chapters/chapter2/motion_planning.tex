@@ -1,7 +1,7 @@
 % @Author: AnthonyKenny98
 % @Date:   2020-04-04 10:01:40
 % @Last Modified by:   AnthonyKenny98
-% @Last Modified time: 2020-04-10 14:31:04
+% @Last Modified time: 2020-04-11 03:26:29
 
 A funny paradox in computer science is the fact that it is relatively easy to teach a computer to perform tasks that humans find very complicated, but extremely difficult to program one to execute functions that humans master during infancy. Consider, it was as early as 1949 that Claude Shannon presented his paper \textit{Programming a Computer for Playing Chess}\cite{Shannon1950}, and by 1997 the \textit{Deep Blue} computer defeated Garry Kasparov, the reigning world champion, in a six game chess match.\cite{Campbell2002} Compare that with some of the most advanced autonomous humanoid robots to date displaying dexterity only comparable with that of a toddler. The task of finding a collision free path, performed constantly without thought by a human, is an example of this paradigm. For a robot to plan its own paths, it relies on a set of Motion Planning Algorithms.
 
@@ -12,7 +12,7 @@ Motion Planning Algorithms refer to the set of algorithms that find possible seq
     The \gls{workspace}, more loosely known as the \textbf{map}, is the space which the robot and obstacles occupy. Obviously, \textbf{obstacles} refer to anything with which the robot cannot intersect.
     
     \subsubsection{Configuration}
-    A configuration describes the position, orientation, and pose of the robot. The complexity of a robot's configuration is therefore dependant on the dimension of the \gls{workspace}, the complexity of the robot itself, and in what level of detail the robot must be represented. For example:
+    A configuration describes the position and orientation of the robot. The complexity of a robot's configuration is dependant on the dimension of the \gls{workspace}, the complexity of the robot itself, and in what level of detail the robot must be represented. For example:
     \begin{itemize}
         \item Most simply, a robot can be represented as a point; by the Cartesian coordinates $(x,y)$ in \gls{2D} space and $(x,y,z)$ in \gls{3D} space.
         \item More realistically, a robot such as a drone may be represented in \gls{3D} as a 3D rectangular prism; by an origin point $(x,y,z)$ and 3 Euler angles $(\alpha,\beta,\gamma)$ describing its orientation.
@@ -49,7 +49,7 @@ Motion Planning Algorithms refer to the set of algorithms that find possible seq
         \input{chapters/chapter2/algorithms/rrt_alg}
 
         % Explanation of Algorithm, referencing visual step by step figure
-        Algorithm \ref{algorithm:rrt} can be visually represented in Figure \ref{fig:rrt-step-by-step}, with the example showing a \gls{2D} robot operating in a \gls{2D} workspace.
+        Algorithm \ref{algorithm:rrt} can be visually represented in Figure \ref{fig:rrt-step-by-step} for a 2D robot.
 
         % Step By Step RRT Figure
         \input{chapters/chapter2/figures/rrt-step-by-step}
