@@ -1,11 +1,11 @@
-\glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{vii}
-\glossaryentry{Rapidly-exploring Random Tree?\glossentry{RRT_g}|setentrycounter[]{page}\glsnumberformat}{vii}
-\glossaryentry{Reduced Instruction Set Computer?\glossentry{RISC_g}|setentrycounter[]{page}\glsnumberformat}{viii}
-\glossaryentry{Hardware Description Language?\glossentry{HDL_g}|setentrycounter[]{page}\glsnumberformat}{xii}
-\glossaryentry{Field Programmable Gate Array?\glossentry{FPGA_g}|setentrycounter[]{page}\glsnumberformat}{xii}
-\glossaryentry{High Level Synthesis?\glossentry{HLS_g}|setentrycounter[]{page}\glsnumberformat}{xii}
-\glossaryentry{Instruction Set Architecture?\glossentry{ISA_g}|setentrycounter[]{page}\glsnumberformat}{xiii}
-\glossaryentry{Complex Instruction Set Computer?\glossentry{CISC_g}|setentrycounter[]{page}\glsnumberformat}{xiii}
+\glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{vi}
+\glossaryentry{Rapidly-exploring Random Tree?\glossentry{RRT_g}|setentrycounter[]{page}\glsnumberformat}{vi}
+\glossaryentry{Reduced Instruction Set Computer?\glossentry{RISC_g}|setentrycounter[]{page}\glsnumberformat}{vii}
+\glossaryentry{Hardware Description Language?\glossentry{HDL_g}|setentrycounter[]{page}\glsnumberformat}{xi}
+\glossaryentry{Field Programmable Gate Array?\glossentry{FPGA_g}|setentrycounter[]{page}\glsnumberformat}{xi}
+\glossaryentry{High Level Synthesis?\glossentry{HLS_g}|setentrycounter[]{page}\glsnumberformat}{xi}
+\glossaryentry{Instruction Set Architecture?\glossentry{ISA_g}|setentrycounter[]{page}\glsnumberformat}{xii}
+\glossaryentry{Complex Instruction Set Computer?\glossentry{CISC_g}|setentrycounter[]{page}\glsnumberformat}{xii}
 \glossaryentry{automata?\glossentry{automata}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{a priori?\glossentry{a priori}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{Unmanned Aerial Vehicle?\glossentry{UAV_g}|setentrycounter[]{page}\glsnumberformat}{2}
@@ -15,19 +15,19 @@
 \glossaryentry{RISC-V 32-Bit Integer?\glossentry{RV32I_g}|setentrycounter[]{page}\glsnumberformat}{8}
 \glossaryentry{Rapidly-exploring Random Tree?\glossentry{RRT_g}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{9}
-\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{10}
-\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{9}
+\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{Degree-of-Freedom?\glossentry{DOF_g}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{10}
-\glossaryentry{Occupancy Grid Map?\glossentry{OGM_g}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{Occupancy Grid Map?\glossentry{OGM_g}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{workspace?\glossentry{workspace}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{Rapidly-exploring Random Tree?\glossentry{RRT_g}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{Occupancy Grid Map?\glossentry{OGM_g}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{a priori?\glossentry{a priori}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{dijkstra's algorithm?\glossentry{dijkstra's algorithm}|setentrycounter[]{page}\glsnumberformat}{12}
+\glossaryentry{dijkstra's algorithm?\glossentry{dijkstra's algorithm}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{configuration?\glossentry{configuration}|setentrycounter[]{page}\glsnumberformat}{12}
@@ -56,10 +56,10 @@
 \glossaryentry{IEEE Standard for Floating-Point Arithmetic?\glossentry{IEEE754_g}|setentrycounter[]{page}\glsnumberformat}{30}
 \glossaryentry{bit-width?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{30}
 \glossaryentry{bit-width?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{30}
-\glossaryentry{bit-width?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{bit-width?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{31}
+\glossaryentry{bit-width?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{30}
+\glossaryentry{bit-width?\glossentry{bit-width}|setentrycounter[]{page}\glsnumberformat}{30}
 \glossaryentry{Hardware Description Language?\glossentry{HDL_g}|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{Field Programmable Gate Array?\glossentry{FPGA_g}|setentrycounter[]{page}\glsnumberformat}{32}
+\glossaryentry{Field Programmable Gate Array?\glossentry{FPGA_g}|setentrycounter[]{page}\glsnumberformat}{31}
 \glossaryentry{pragma?\glossentry{pragma}|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{pragma?\glossentry{pragma}|setentrycounter[]{page}\glsnumberformat}{37}
 \glossaryentry{Instruction Set Architecture?\glossentry{ISA_g}|setentrycounter[]{page}\glsnumberformat}{42}

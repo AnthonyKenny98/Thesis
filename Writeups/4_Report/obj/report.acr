@@ -2,15 +2,15 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{glssymbols}\relax \glsresetentrylist %
 \glossentry{2D}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xi}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{10}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{15\delimN 16}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{15\delimR 17}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{65}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{69}}}%
 \glossentry{3D}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xi}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{10}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{15\delimN 16}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{15\delimR 17}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{24}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{27}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{30}\delimN 
@@ -30,8 +30,11 @@
 		\glsseeformat[Glossary:]{ASP_g}{Z}}}\glsgroupskip
 \glsgroupheading{C}\relax \glsresetentrylist %
 \glossentry{CISC}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{86}\delimN 
 		\glsseeformat[Glossary:]{CISC_g}{Z}}}%
+\glossentry{CPI}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xii}}}%
 \glossentry{CPU}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{2\delimR 4}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{6}\delimN 
@@ -46,8 +49,9 @@
 		\glsseeformat[Glossary:]{DOF_g}{Z}}}\glsgroupskip
 \glsgroupheading{F}\relax \glsresetentrylist %
 \glossentry{FPGA}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xi}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{27}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{32}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{31}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{75}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{77}\delimN 
 		\glsseeformat[Glossary:]{FPGA_g}{Z}}}\glsgroupskip
@@ -59,18 +63,20 @@
 \glsgroupheading{H}\relax \glsresetentrylist %
 \glossentry{HB-A}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{33}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{35\delimR 37}}}%
+		\setentrycounter[]{page}\glsnumberformat{35\delimN 36}}}%
 \glossentry{HB-B}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{35\delimR 39}}}%
 \glossentry{HB-C}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{35}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{39}}}%
 \glossentry{HDL}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xi}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{31\delimR 33}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{54}\delimN 
 		\glsseeformat[Glossary:]{HDL_g}{Z}}}%
 \glossentry{HLS}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{33}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{xi}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{32\delimN 33}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{35}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{60}\delimN 
 		\glsseeformat[Glossary:]{HLS_g}{Z}}}\glsgroupskip
@@ -80,9 +86,11 @@
 		\setentrycounter[]{page}\glsnumberformat{78}\delimN 
 		\glsseeformat[Glossary:]{IEEE754_g}{Z}}}%
 \glossentry{ISA}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{3\delimR 6}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{41\delimN 42}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{45\delimR 48}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{44}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{46\delimN 47}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{60}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{72}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{86}\delimN 
@@ -98,7 +106,7 @@
 		\setentrycounter[]{page}\glsnumberformat{27}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{33}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{37}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{40}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{39}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{77}\delimN 
 		\glsseeformat[Glossary:]{LUT_g}{Z}}}\glsgroupskip
 \glsgroupheading{M}\relax \glsresetentrylist %
@@ -109,7 +117,7 @@
 		\setentrycounter[]{page}\glsnumberformat{84\delimN 85}}}\glsgroupskip
 \glsgroupheading{O}\relax \glsresetentrylist %
 \glossentry{OGM}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{11\delimN 12}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{10\delimR 12}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{16}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{20\delimN 21}\delimN 
@@ -124,7 +132,8 @@
 \glsgroupheading{R}\relax \glsresetentrylist %
 \glossentry{RISC}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{vii}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{45}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{xii}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{44\delimN 45}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{86}\delimN 
 		\glsseeformat[Glossary:]{RISC_g}{Z}}}%
 \glossentry{RRT}{\glossaryentrynumbers{\relax 
@@ -154,8 +163,7 @@
 \glossentry{UAV}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{2}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{4}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{15\delimN 16}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{15\delimR 18}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{59\delimN 60}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{64\delimN 65}\delimN 
 		\glsseeformat[Glossary:]{UAV_g}{Z}}}%
